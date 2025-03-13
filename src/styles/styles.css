@@ -1,0 +1,316 @@
+html, body {
+  font-size: 16px;
+  margin: 0 auto;
+  padding: 0;
+  background-color: #000;
+  min-height: 100vh;
+  scroll-behavior: smooth;
+  max-width: 1920px;
+}
+
+*:where(:not(html, iframe, canvas, img, svg, video, audio):not(svg *, symbol *)) {
+  all: unset;
+  display: revert;
+}
+
+*, *::after, *::before {
+  box-sizing: border-box;
+}
+
+table, th, td {
+  border: 0;
+  vertical-align: top;
+  padding: 0;
+}
+
+/* Fix mobile Safari increase font-size on landscape mode */
+html {
+  -moz-text-size-adjust: none;
+  -webkit-text-size-adjust: none;
+  text-size-adjust: none;
+  scroll-behavior: smooth;
+}
+
+/* Reapply the pointer cursor for anchor tags */
+a,
+button {
+  cursor: revert;
+}
+
+/* Remove list styles (bullets/numbers) */
+ol,
+ul,
+menu,
+summary {
+  list-style: none;
+}
+
+/* For images to not be able to exceed their container */
+img {
+  max-inline-size: 100%;
+  max-block-size: 100%;
+}
+
+/* removes spacing between cells in tables */
+table {
+  border-collapse: collapse;
+}
+
+/* Safari - solving issue when using user-select:none on the <body> text input doesn't working */
+input,
+textarea {
+  -webkit-user-select: auto;
+}
+
+/* revert the 'white-space' property for textarea elements on Safari */
+textarea {
+  white-space: revert;
+}
+
+/* minimum style to allow to style meter element */
+meter {
+  -webkit-appearance: revert;
+  appearance: revert;
+}
+
+/* preformatted text - use only for this feature */
+:where(pre) {
+  all: revert;
+  box-sizing: border-box;
+}
+
+/* reset default text opacity of input placeholder */
+::placeholder {
+  color: unset;
+}
+
+/* fix the feature of 'hidden' attribute.
+   display:revert; revert to element instead of attribute */
+:where([hidden]) {
+  display: none;
+}
+
+/* revert for bug in Chromium browsers
+   - fix for the content editable attribute will work properly.
+   - webkit-user-select: auto; added for Safari in case of using user-select:none on wrapper element*/
+:where([contenteditable]:not([contenteditable=false])) {
+  -moz-user-modify: read-write;
+  -webkit-user-modify: read-write;
+  overflow-wrap: break-word;
+  -webkit-line-break: after-white-space;
+  -webkit-user-select: auto;
+}
+
+/* apply back the draggable feature - exist only in Chromium and Safari */
+:where([draggable=true]) {
+  -webkit-user-drag: element;
+}
+
+/* Revert Modal native behavior */
+:where(dialog:modal) {
+  all: revert;
+  box-sizing: border-box;
+}
+
+/* Remove details summary webkit styles */
+::-webkit-details-marker {
+  display: none;
+}
+
+strong {
+  font-weight: 600;
+}
+
+.ot-floating-button__open,
+.ot-floating-button__close {
+  display: grid;
+  place-items: center;
+}
+
+.header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  width: 100%;
+  background-color: transparent;
+  color: #fff;
+  padding-inline: 80px;
+  margin-top: 40px;
+  font-family: "Outfit";
+}
+.header__nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.header__container {
+  position: relative;
+}
+.header__list {
+  display: flex;
+  gap: 40px;
+  align-items: center;
+}
+.header__list li {
+  display: flex;
+  gap: 10px;
+  font-size: clamp(14px, 1vw, 18px);
+  cursor: pointer;
+}
+.header__list li span {
+  transition: all 0.2s ease-in-out;
+}
+.header__list li:hover span {
+  transform: rotate(180deg);
+}
+.header__buttons {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+.header__buttons img {
+  cursor: pointer;
+}
+.header__switch {
+  border: 3px solid #323232;
+  border-radius: 8px;
+  background-color: #323232;
+  position: relative;
+  z-index: 0;
+}
+.header__button {
+  padding: 5px 14px;
+  line-height: 24px;
+  position: relative;
+  font-size: 14px;
+  z-index: 2;
+  cursor: pointer;
+}
+.header__button--slider {
+  position: absolute;
+  border-radius: 6px;
+  width: 50%;
+  height: 100%;
+  background-color: #3B5EAB;
+  left: 0px;
+  top: 0px;
+  z-index: 1;
+}
+
+.swiper {
+  height: 950px;
+  color: #fff;
+  font-family: "Outfit";
+}
+.swiper__gradient {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: linear-gradient(#000, transparent);
+  z-index: 1;
+  height: 280px;
+}
+.swiper__image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.swiper__content {
+  position: absolute;
+  bottom: 72px;
+  left: 80px;
+  max-width: 710px;
+}
+.swiper__header {
+  font-family: "DrukWide";
+  text-transform: uppercase;
+  line-height: 1.2;
+  letter-spacing: 0.04em;
+  font-size: clamp(32px, 3vw, 64px);
+}
+.swiper__text {
+  opacity: 0.7;
+  font-weight: 300;
+  letter-spacing: 0.06em;
+  margin-block: 14px 24px;
+}
+.swiper__buttons {
+  display: flex;
+  gap: 16px;
+}
+.swiper .swiper-pagination-bullet {
+  width: 12px;
+  height: 12px;
+}
+.swiper .swiper-pagination-bullet-active {
+  background-color: #fff;
+}
+.swiper .swiper-button-prev {
+  position: absolute;
+  background-color: #fff;
+  right: 80px;
+  top: 53%;
+  left: auto;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  transition: all 0.2s ease-in-out;
+}
+.swiper .swiper-button-prev::after {
+  display: none;
+}
+.swiper .swiper-button-prev img {
+  transform: rotate(180deg);
+}
+.swiper .swiper-button-prev:hover {
+  filter: invert(1);
+}
+.swiper .swiper-button-next {
+  position: absolute;
+  right: 80px;
+  top: 47%;
+  background-color: #fff;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  transition: all 0.2s ease-in-out;
+}
+.swiper .swiper-button-next::after {
+  display: none;
+}
+.swiper .swiper-button-next:hover {
+  filter: invert(1);
+}
+
+.button__blue {
+  padding: 16px 48px;
+  text-transform: uppercase;
+  border: 2px solid #3B5EAB;
+  background-color: #3B5EAB;
+  font-family: "Poppins";
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+.button__blue:hover {
+  background-color: #fff;
+  color: #3B5EAB;
+}
+.button__black {
+  padding: 16px 48px;
+  text-transform: uppercase;
+  border: 2px solid #3B5EAB;
+  background-color: transparent;
+  font-family: "Poppins";
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+.button__black:hover {
+  background-color: #3B5EAB;
+  color: #fff;
+}
+
+/*# sourceMappingURL=styles.css.map */

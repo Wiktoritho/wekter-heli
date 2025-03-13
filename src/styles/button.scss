@@ -1,0 +1,32 @@
+@use "variables" as *;
+.button {
+  &__blue {
+    padding: 16px 48px;
+    text-transform: uppercase;
+    border: 2px solid $blue;
+    background-color: $blue;
+    font-family: "Poppins";
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+
+    &:hover {
+      background-color: $white;
+      color: $blue;
+    }
+  }
+  &__black {
+    padding: 16px 48px;
+    text-transform: uppercase;
+    border: 2px solid $blue;
+    background-color: transparent;
+    font-family: "Poppins";
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+    &:hover {
+      background-color: $blue;
+      color: $white;
+    }
+  }
+}
