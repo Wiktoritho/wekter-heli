@@ -21,19 +21,116 @@
   &__list {
     display: flex;
     gap: 40px;
+    height: 44px;
     align-items: center;
     li {
+      position: relative;
       display: flex;
       gap: 10px;
       font-size: clamp(14px, 1vw, 18px);
       cursor: pointer;
+      height: 100%;
+      align-items: center;
       span {
         transition: all 0.2s ease-in-out;
       }
       &:hover {
         span {
-            transform: rotate(180deg);
+          transform: rotate(180deg);
         }
+      }
+      &::after {
+        position: absolute;
+        bottom: -10px;
+        left: 0;
+        width: 100%;
+        height: 10px;
+        background-color: transparent;
+        content: "";
+      }
+    }
+    li:first-of-type:hover {
+      .header__offers {
+        display: flex;
+      }
+    }
+  }
+  &__offers {
+    display: none;
+    position: absolute;
+    background-color: $white;
+    color: $black;
+    top: 50px;
+    gap: 48px;
+    padding: 24px;
+    width: 700px;
+    justify-content: space-between;
+    
+  }
+  &__offer {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    position: relative;
+    &:first-of-type {
+      &::before {
+        position: absolute;
+        top: -30px;
+        left: 0;
+        content: "";
+        width: 0px;
+        height: 0px;
+        border-left: 15px solid transparent;
+        border-right: 15px solid transparent;
+        border-bottom: 10px solid $white;
+      }
+    }
+  }
+  &__offer-header {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding-bottom: 12px;
+    border-bottom: 1px solid $grayborder;
+    div {
+      background-color: $blue;
+      width: 32px;
+      height: 32px;
+      min-width: 32px;
+      min-height: 32px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    h3 {
+      font-family: 'DrukWide';
+      font-weight: bold;
+      text-transform: uppercase;
+      font-size: clamp(14px, 1.5vw, 18px);
+      text-wrap: nowrap;
+      width: 100%;
+    }
+  }
+  &__offer-list {
+    margin-top: 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    li {
+      display: flex;
+      width: 100%;
+      justify-content: space-between;
+      align-items: center;
+      text-wrap: nowrap;
+      padding-block: 8px;
+      transition: all 0.2s ease-in-out;
+      img {
+        transform: rotate(180deg);
+      }
+      &:hover {
+        background-color: $grayborder;
+        padding-inline: 10px;
+        border-radius: 8px;
       }
     }
   }

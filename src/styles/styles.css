@@ -150,19 +150,111 @@ strong {
 .header__list {
   display: flex;
   gap: 40px;
+  height: 44px;
   align-items: center;
 }
 .header__list li {
+  position: relative;
   display: flex;
   gap: 10px;
   font-size: clamp(14px, 1vw, 18px);
   cursor: pointer;
+  height: 100%;
+  align-items: center;
 }
 .header__list li span {
   transition: all 0.2s ease-in-out;
 }
 .header__list li:hover span {
   transform: rotate(180deg);
+}
+.header__list li::after {
+  position: absolute;
+  bottom: -10px;
+  left: 0;
+  width: 100%;
+  height: 10px;
+  background-color: transparent;
+  content: "";
+}
+.header__list li:first-of-type:hover .header__offers {
+  display: flex;
+}
+.header__offers {
+  display: none;
+  position: absolute;
+  background-color: #fff;
+  color: #000;
+  top: 50px;
+  gap: 48px;
+  padding: 24px;
+  width: 700px;
+  justify-content: space-between;
+}
+.header__offer {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  position: relative;
+}
+.header__offer:first-of-type::before {
+  position: absolute;
+  top: -30px;
+  left: 0;
+  content: "";
+  width: 0px;
+  height: 0px;
+  border-left: 15px solid transparent;
+  border-right: 15px solid transparent;
+  border-bottom: 10px solid #fff;
+}
+.header__offer-header {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid #DEDEDE;
+}
+.header__offer-header div {
+  background-color: #3B5EAB;
+  width: 32px;
+  height: 32px;
+  min-width: 32px;
+  min-height: 32px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.header__offer-header h3 {
+  font-family: "DrukWide";
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: clamp(14px, 1.5vw, 18px);
+  text-wrap: nowrap;
+  width: 100%;
+}
+.header__offer-list {
+  margin-top: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.header__offer-list li {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+  text-wrap: nowrap;
+  padding-block: 8px;
+  transition: all 0.2s ease-in-out;
+}
+.header__offer-list li img {
+  transform: rotate(180deg);
+}
+.header__offer-list li:hover {
+  background-color: #DEDEDE;
+  padding-inline: 10px;
+  border-radius: 8px;
 }
 .header__buttons {
   display: flex;
