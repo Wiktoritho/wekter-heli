@@ -610,7 +610,7 @@ strong {
 }
 .offers__container {
   background-color: #f7f7f7;
-  padding-block: 80px 0;
+  padding-block: 80px 120px;
   margin-inline: auto;
   max-width: 95%;
   border-radius: 8px;
@@ -734,7 +734,6 @@ strong {
 }
 .offers__show-more {
   margin-top: 48px;
-  padding-bottom: 120px;
   color: #3B5EAB;
   font-family: "Poppins";
   font-weight: 700;
@@ -751,6 +750,64 @@ strong {
 }
 .offers__show-more:hover {
   color: #000;
+}
+
+.fleet {
+  padding: 120px 80px;
+  font-family: "Outfit";
+  color: #fff;
+}
+.fleet__logo {
+  background-color: #313131;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  border-radius: 10px;
+  padding: 8px 10px;
+  color: #fff;
+  font-family: "DrukWide";
+  font-size: 10px;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  width: max-content;
+  margin-bottom: 60px;
+}
+.fleet__logo span {
+  line-height: 18px;
+  transform: translateY(1px);
+  text-wrap: nowrap;
+}
+.fleet__header {
+  font-size: clamp(32px, 3vw, 48px);
+  line-height: 56px;
+}
+.fleet__text--big {
+  font-size: clamp(20px, 2vw, 24px);
+  line-height: 32px;
+  margin-bottom: 16px;
+}
+.fleet__choppers {
+  display: flex;
+  gap: 60px;
+}
+.fleet__choppers-info {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  width: 37%;
+}
+.fleet__examples {
+  display: flex;
+  width: 59%;
+  border-left: 1px solid #323232;
+}
+.fleet__example {
+  padding-inline: 24px;
+  border-right: 1px solid #323232;
+}
+.fleet__example--active {
+  padding-inline: 24px;
+  border-right: 1px solid #323232;
 }
 
 /*# sourceMappingURL=styles.css.map */

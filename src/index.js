@@ -1,8 +1,10 @@
 import { initSwiper } from "./scripts/swiper";
+import { initOffers } from "./scripts/offers";
 
 document.addEventListener("DOMContentLoaded", () => {
     loadComponent("components/header.html", "header-container");
-    const swiper = initSwiper();
+  initSwiper();
+  initOffers();
 });
 
 async function loadComponent(url, elementId) {
