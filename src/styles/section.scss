@@ -1,0 +1,33 @@
+@use "variables" as *;
+.section {
+  &--black {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    color: $white;
+    h4 {
+      margin: 80px 280px 140px;
+      font-family: "Outfit";
+      font-size: clamp(24px, 2vw, 36px);
+      font-weight: 300;
+      text-align: center;
+      line-height: 52px;
+      span {
+        text-decoration: underline;
+        text-underline-offset: 8px;
+        opacity: 0.5;
+        transition: all 0.2s ease-in-out;
+        &:hover {
+          opacity: 1;
+        }
+      }
+    }
+    &__image {
+      position: absolute;
+      bottom: -44px;
+      left: 50%;
+      transform: translate(-50%);
+    }
+  }
+}

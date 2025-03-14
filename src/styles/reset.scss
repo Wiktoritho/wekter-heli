@@ -1,5 +1,8 @@
 @use 'variables' as *;
-html, body {
+html {
+  background-color: white;
+}
+body {
     font-size: 16px;
     margin: 0 auto;
     padding: 0;

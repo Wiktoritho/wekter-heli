@@ -1,4 +1,8 @@
-html, body {
+html {
+  background-color: white;
+}
+
+body {
   font-size: 16px;
   margin: 0 auto;
   padding: 0;
@@ -290,10 +294,15 @@ strong {
   z-index: 1;
 }
 
+#header-container {
+  position: relative;
+}
+
 .swiper {
   height: 950px;
   color: #fff;
   font-family: "Outfit";
+  background-color: #000;
 }
 .swiper__gradient {
   position: absolute;
@@ -313,7 +322,7 @@ strong {
   position: absolute;
   bottom: 72px;
   left: 80px;
-  max-width: 710px;
+  max-width: 660px;
 }
 .swiper__header {
   font-family: "DrukWide";
@@ -385,6 +394,9 @@ strong {
   font-weight: bold;
   cursor: pointer;
   transition: all 0.2s ease-in-out;
+  color: #fff;
+  text-wrap: nowrap;
+  max-width: min-content;
 }
 .button__blue:hover {
   background-color: #fff;
@@ -403,6 +415,149 @@ strong {
 .button__black:hover {
   background-color: #3B5EAB;
   color: #fff;
+}
+
+.section--black {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  color: #fff;
+}
+.section--black h4 {
+  margin: 80px 280px 140px;
+  font-family: "Outfit";
+  font-size: clamp(24px, 2vw, 36px);
+  font-weight: 300;
+  text-align: center;
+  line-height: 52px;
+}
+.section--black h4 span {
+  text-decoration: underline;
+  text-underline-offset: 8px;
+  opacity: 0.5;
+  transition: all 0.2s ease-in-out;
+}
+.section--black h4 span:hover {
+  opacity: 1;
+}
+.section--black__image {
+  position: absolute;
+  bottom: -44px;
+  left: 50%;
+  transform: translate(-50%);
+}
+
+.introduction {
+  background-color: #fff;
+}
+.introduction__header--small {
+  padding-top: 160px;
+  font-family: "DrukWide";
+  color: #727272;
+  text-align: center;
+  width: 100%;
+  font-size: 14px;
+  text-transform: uppercase;
+}
+.introduction__header--big {
+  font-family: "Outfit";
+  text-align: center;
+  margin-block: 24px 66px;
+  font-size: clamp(32px, 3vw, 48px);
+  margin-inline: 20%;
+  line-height: 1.2;
+  font-weight: 500;
+}
+.introduction__container {
+  background-color: #f7f7f7;
+  padding-block: 80px;
+  margin-inline: auto;
+  max-width: 95%;
+  border-radius: 8px;
+}
+.introduction__informations {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 48px;
+  padding-bottom: 80px;
+  border-bottom: 1px solid #DEDEDE;
+  padding-inline: 170px;
+}
+.introduction__statistics {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 28px;
+  padding-block: 48px;
+  padding-inline: 170px;
+}
+.introduction__statistics-block {
+  width: calc((100% - 56px) / 3);
+  padding-block: 40px;
+  padding-left: 32px;
+  border: 1px solid #DEDEDE;
+  border-radius: 8px;
+  display: flex;
+  gap: 32px;
+  align-items: center;
+  justify-content: flex-start;
+  transition: all 0.2s ease-in-out;
+}
+.introduction__statistics-block:hover {
+  border: 1px solid #3B5EAB;
+}
+.introduction__statistics-block-icon {
+  width: 50px;
+  height: 50px;
+  background-color: rgba(0, 56, 50, 0.0784313725);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 4px;
+}
+.introduction__statistics-block-text {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  font-family: "DrukWide";
+}
+.introduction__statistics-block-text p:first-of-type {
+  font-size: 28px;
+}
+.introduction__statistics-block-text p:last-of-type {
+  color: #727272;
+  font-size: 18px;
+  font-family: "Outfit";
+}
+.introduction__text-content {
+  width: calc((100% - 48px) / 2);
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  color: #2B2B2B;
+  font-family: "Outfit";
+}
+.introduction__text--big {
+  font-weight: 500;
+  font-size: clamp(20px, 1.5vw, 24px);
+  line-height: 32px;
+}
+.introduction__text--small {
+  font-weight: 300;
+  font-size: clamp(16px, 1.5vw, 20px);
+  line-height: 24px;
+  margin-bottom: 24px;
+}
+.introduction__mosaic {
+  width: calc((100% - 48px) / 2);
+}
+.introduction__mosaic img {
+  width: 100%;
+  height: 100%;
+  max-height: 100%;
+  object-fit: cover;
 }
 
 /*# sourceMappingURL=styles.css.map */

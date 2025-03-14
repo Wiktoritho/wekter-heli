@@ -3,6 +3,7 @@
   height: 950px;
   color: $white;
   font-family: "Outfit";
+  background-color: $black;
   &__gradient {
     position: absolute;
     top: 0;
@@ -21,7 +22,7 @@
     position: absolute;
     bottom: 72px;
     left: 80px;
-    max-width: 710px;
+    max-width: 660px;
   }
   &__header {
     font-family: "DrukWide";
