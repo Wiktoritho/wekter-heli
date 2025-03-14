@@ -344,6 +344,8 @@ strong {
 .swiper .swiper-pagination-bullet {
   width: 12px;
   height: 12px;
+  background-color: #323232;
+  opacity: 1;
 }
 .swiper .swiper-pagination-bullet-active {
   background-color: #fff;
@@ -471,10 +473,12 @@ strong {
 }
 .introduction__container {
   background-color: #f7f7f7;
-  padding-block: 80px;
+  padding-block: 80px 0;
   margin-inline: auto;
   max-width: 95%;
   border-radius: 8px;
+  position: relative;
+  z-index: 1;
 }
 .introduction__informations {
   display: flex;
@@ -562,6 +566,191 @@ strong {
   height: 100%;
   max-height: 100%;
   object-fit: cover;
+}
+
+.photo-text {
+  width: 100%;
+  max-height: 810px;
+  margin-top: -80px;
+  position: relative;
+  overflow: hidden;
+}
+.photo-text img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.photo-text__content {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  right: 72px;
+  top: 50%;
+  transform: translateY(-50%);
+  max-width: 670px;
+}
+.photo-text__header--small {
+  font-family: "DrukWide";
+  font-size: 14px;
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+.photo-text__header--big {
+  font-family: "Outfit";
+  font-size: clamp(20px, 2vw, 36px);
+  color: #fff;
+  margin-bottom: 16px;
+  line-height: 1.22;
+}
+
+.offers {
+  background-color: #fff;
+}
+.offers__container {
+  background-color: #f7f7f7;
+  padding-block: 80px 0;
+  margin-inline: auto;
+  max-width: 95%;
+  border-radius: 8px;
+  position: relative;
+  z-index: 1;
+  margin-top: -80px;
+}
+.offers__header--small {
+  padding-top: 40px;
+  font-family: "DrukWide";
+  color: #727272;
+  text-align: center;
+  width: 100%;
+  font-size: 14px;
+  text-transform: uppercase;
+}
+.offers__header--big {
+  font-family: "Outfit";
+  text-align: center;
+  margin-block: 24px;
+  font-size: clamp(32px, 3vw, 48px);
+  margin-inline: 25%;
+  line-height: 1.2;
+  font-weight: 500;
+}
+.offers__buttons {
+  margin-inline: auto;
+  width: min-content;
+  display: flex;
+}
+.offers__button--blue {
+  padding: 8px 20px;
+  text-transform: uppercase;
+  border: 2px solid #3B5EAB;
+  background-color: #3B5EAB;
+  font-family: "Poppins";
+  font-weight: bold;
+  font-size: 12px;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+  color: #fff;
+  text-wrap: nowrap;
+  max-width: min-content;
+}
+.offers__button--blue:hover {
+  background-color: #fff;
+  color: #3B5EAB;
+}
+.offers__button--white {
+  padding: 8px 20px;
+  text-transform: uppercase;
+  border: 2px solid #f7f7f7;
+  background-color: #f7f7f7;
+  font-family: "Poppins";
+  font-weight: bold;
+  font-size: 12px;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+  color: #727272;
+  text-wrap: nowrap;
+  max-width: min-content;
+}
+.offers__button--white:hover {
+  background-color: #fff;
+  color: #3B5EAB;
+  border: 2px solid #3B5EAB;
+}
+.offers__list {
+  padding-inline: 170px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  width: 100%;
+  margin-block: 48px 0;
+}
+.offers__list-element {
+  display: flex;
+  gap: 24px;
+  border-radius: 4px;
+  width: 100%;
+}
+.offers__list-container {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  background-color: #fff;
+  width: 100%;
+  padding: 32px;
+  gap: 16px;
+  font-family: "Outfit";
+  position: relative;
+  border: 2px solid #fff;
+  border-radius: 4px;
+  transition: all 0.2s ease-in-out;
+  cursor: pointer;
+}
+.offers__list-container:hover {
+  border: 2px solid #000;
+}
+.offers__list-container:hover div {
+  margin-left: 20px;
+}
+.offers__list-container div {
+  width: 31px;
+  height: 31px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.2s ease-in-out;
+}
+.offers__list-container p {
+  font-size: clamp(20px, 2vw, 28px);
+}
+.offers__list-container span {
+  position: absolute;
+  right: 32px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-weight: 700;
+  color: #727272;
+}
+.offers__show-more {
+  margin-top: 48px;
+  padding-bottom: 120px;
+  color: #3B5EAB;
+  font-family: "Poppins";
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  text-decoration: underline;
+  margin-inline: auto;
+  width: min-content;
+  text-wrap: nowrap;
+  text-underline-offset: 10px;
+  text-decoration-thickness: 2px;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+.offers__show-more:hover {
+  color: #000;
 }
 
 /*# sourceMappingURL=styles.css.map */

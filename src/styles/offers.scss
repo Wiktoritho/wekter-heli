@@ -1,0 +1,152 @@
+@use "variables" as *;
+.offers {
+  background-color: $white;
+  &__container {
+    background-color: $beige;
+    padding-block: 80px 0;
+    margin-inline: auto;
+    max-width: 95%;
+    border-radius: 8px;
+    position: relative;
+    z-index: 1;
+    margin-top: -80px;
+  }
+  &__header {
+    &--small {
+      padding-top: 40px;
+      font-family: "DrukWide";
+      color: $headergray;
+      text-align: center;
+      width: 100%;
+      font-size: 14px;
+      text-transform: uppercase;
+    }
+    &--big {
+      font-family: "Outfit";
+      text-align: center;
+      margin-block: 24px;
+      font-size: clamp(32px, 3vw, 48px);
+      margin-inline: 25%;
+      line-height: 1.2;
+      font-weight: 500;
+    }
+  }
+  &__buttons {
+    margin-inline: auto;
+    width: min-content;
+    display: flex;
+  }
+  &__button {
+    &--blue {
+      padding: 8px 20px;
+      text-transform: uppercase;
+      border: 2px solid $blue;
+      background-color: $blue;
+      font-family: "Poppins";
+      font-weight: bold;
+      font-size: 12px;
+      cursor: pointer;
+      transition: all 0.2s ease-in-out;
+      color: $white;
+      text-wrap: nowrap;
+      max-width: min-content;
+      &:hover {
+        background-color: $white;
+        color: $blue;
+      }
+    }
+    &--white {
+      padding: 8px 20px;
+      text-transform: uppercase;
+      border: 2px solid $beige;
+      background-color: $beige;
+      font-family: "Poppins";
+      font-weight: bold;
+      font-size: 12px;
+      cursor: pointer;
+      transition: all 0.2s ease-in-out;
+      color: $headergray;
+      text-wrap: nowrap;
+      max-width: min-content;
+      &:hover {
+        background-color: $white;
+        color: $blue;
+        border: 2px solid $blue;
+      }
+    }
+  }
+  &__list {
+    padding-inline: 170px;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    width: 100%;
+    margin-block: 48px 0;
+  }
+  &__list-element {
+    display: flex;
+    gap: 24px;
+    border-radius: 4px;
+    width: 100%;
+  }
+  &__list-container {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    background-color: $white;
+    width: 100%;
+    padding: 32px;
+    gap: 16px;
+    font-family: "Outfit";
+    position: relative;
+    border: 2px solid $white;
+    border-radius: 4px;
+    transition: all 0.2s ease-in-out;
+    cursor: pointer;
+    &:hover {
+      border: 2px solid $black;
+      div {
+        margin-left: 20px;
+      }
+    }
+    div {
+      width: 31px;
+      height: 31px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      transition: all 0.2s ease-in-out;
+    }
+    p {
+      font-size: clamp(20px, 2vw, 28px);
+    }
+    span {
+      position: absolute;
+      right: 32px;
+      top: 50%;
+      transform: translateY(-50%);
+      font-weight: 700;
+      color: $headergray;
+    }
+  }
+  &__show-more {
+    margin-top: 48px;
+    padding-bottom: 120px;
+    color: $blue;
+    font-family: 'Poppins';
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    text-decoration: underline;
+    margin-inline: auto;
+    width: min-content;
+    text-wrap: nowrap;
+    text-underline-offset: 10px;
+    text-decoration-thickness: 2px;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+    &:hover {
+        color: $black;
+    }
+  }
+}
