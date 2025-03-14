@@ -508,6 +508,9 @@ strong {
 .introduction__statistics-block:hover {
   border: 1px solid #3B5EAB;
 }
+.introduction__statistics-block:hover .introduction__statistics-block-icon {
+  transform: rotate(360deg);
+}
 .introduction__statistics-block-icon {
   width: 50px;
   height: 50px;
@@ -516,6 +519,7 @@ strong {
   justify-content: center;
   align-items: center;
   border-radius: 4px;
+  transition: all 0.5s ease-in-out;
 }
 .introduction__statistics-block-text {
   display: flex;
