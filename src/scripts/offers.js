@@ -49,6 +49,13 @@ export function initOffers() {
 
   buttons.forEach((button, index) => {
     button.addEventListener("click", () => {
+      buttons.forEach((btn) => {
+        btn.classList.remove("offers__button--blue");
+        btn.classList.add("offers__button--white");
+      });
+      
+      button.classList.remove("offers__button--white");
+      button.classList.add("offers__button--blue");
       showList(lists[index]);
     });
   });

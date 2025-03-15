@@ -1,10 +1,19 @@
 import { initSwiper } from "./scripts/swiper";
 import { initOffers } from "./scripts/offers";
+import { initFleet } from "./scripts/fleet";
+import { initPricesSwiper } from "./scripts/prices-swiper";
+import { ringProgress } from "./scripts/prices-swiper";
+import { handlePrices } from "./scripts/prices";
 
 document.addEventListener("DOMContentLoaded", () => {
-    loadComponent("components/header.html", "header-container");
+  loadComponent("components/header.html", "header-container");
   initSwiper();
   initOffers();
+  initFleet();
+  initPricesSwiper();
+  ringProgress();
+  handlePrices();
+  loadComponent("components/footer.html", "footer-container");
 });
 
 async function loadComponent(url, elementId) {

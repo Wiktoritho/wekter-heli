@@ -1,0 +1,107 @@
+@use "variables" as *;
+.footer {
+  padding: 100px 80px;
+  display: flex;
+  flex-direction: column;
+  gap: 120px;
+  color: $white;
+  font-family: "Outfit";
+  &__content {
+    display: flex;
+    justify-content: space-between;
+  }
+  &__main {
+    width: 62%;
+    display: flex;
+    flex-direction: column;
+    gap: 64px;
+  }
+  &__newsletter {
+    width: 23%;
+    background-color: $gray;
+    border-radius: 8px;
+    padding: 32px;
+    img {
+        margin-bottom: 16px;
+    }
+    h3 {
+        font-family: 'DrukWide';
+        font-size: 18px;
+        line-height: 22px;
+        text-transform: uppercase;
+        letter-spacing: 0.04em;
+        margin-bottom: 8px;
+    }
+    p {
+        line-height: 24px;
+        opacity: .6;
+        max-width: 220px;
+        margin-bottom: 40px;
+    }   
+  }
+  &__logos {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    height: 80px;
+    border-bottom: 1px solid rgba($grayborder, 0.24);
+  }
+  &__icons {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    a {
+      width: 40px;
+      height: 40px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border: 2px solid $footerborder;
+      border-radius: 50%;
+      transition: all 0.2s ease-in-out;
+      img {
+        transform: translateX(1px);
+      }
+      &:hover {
+        border: 2px solid $white;
+        opacity: 0.7;
+      }
+    }
+  }
+  &__lists {
+    display: flex;
+    gap: 32px;
+  }
+  &__list {
+    width: calc((100% - 96px) / 4);
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    opacity: 0.6;
+    h3 {
+      font-size: 14px;
+      font-family: "DrukWide";
+      line-height: 18px;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      color: $headergray;
+    }
+    ul {
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+    }
+    a {
+      cursor: pointer;
+      line-height: 24px;
+    }
+  }
+  &__creators {
+    display: flex;
+    justify-content: space-between;
+    color: $headergray;
+    a {
+        color: $white;
+    }
+  }
+}
