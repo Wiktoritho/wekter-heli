@@ -31,3 +31,31 @@
     }
   }
 }
+@media screen and (max-width: 1400px) {
+  .section {
+    &--black {
+      h4 {
+        margin: 40px 260px 70px;
+      }
+    } 
+  }
+}
+@media screen and (max-width: 1120px) {
+  .section {
+    &--black {
+      h4 {
+        margin: 40px 120px 70px;
+      }
+    }
+  }
+}
+@media screen and (max-width: 900px) {
+  .section {
+    &--black {
+      h4 {
+        line-height: 32px;
+        margin: 48px 20px 96px;
+      }
+    }
+  }
+}

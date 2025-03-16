@@ -73,3 +73,23 @@ export function initFleet() {
     });
   });
 }
+
+import Swiper from "swiper";
+import "swiper/css";
+import "swiper/css/pagination";
+
+import { Pagination } from "swiper/modules";
+
+
+export function initFleetSwiper() {
+  return new Swiper(".fleet__examples", {
+    modules: [Pagination],
+    loop: false,
+    slidesPerView: 1.2,
+    spaceBetween: 12,
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true,
+    },
+  });
+}

@@ -87,3 +87,41 @@
     }
   }
 }
+@media screen and (max-width: 1120px) {
+  .swiper {
+    height: 700px;
+    &__header {
+      font-size: 28px;
+    }
+    .swiper-button-next {
+      top: 45%;
+    }
+    .swiper-button-prev {
+      top: 55%;
+    }
+  }
+}
+@media screen and (max-width: 900px) {
+  .swiper {
+    height: 850px;
+    .swiper-button-next, .swiper-button-prev {
+      display: none;
+    }
+    &__buttons {
+      gap: 16px;
+      justify-content: space-between;
+    }
+    &__header {
+      font-size: 32px;
+      line-height: 36px;
+    }
+    &__text {
+      font-size: 18px;
+      line-height: 24px;
+    }
+    &__content {
+      left: 20px;
+      right: 20px;
+    }
+  }
+}

@@ -69,6 +69,9 @@
     width: 59%;
     border-left: 1px solid $gray;
     height: 570px;
+    .swiper-wrapper {
+      display: none;
+    }
   }
   &__example {
     padding-inline: 24px;
@@ -229,7 +232,7 @@
       margin-bottom: 44px;
       transition: all 0.2s ease-in-out;
       font-weight: 300;
-      font-size: clamp(16px, 2vw, 20px);
+      font-size: clamp(15px, 1vw, 20px);
       line-height: 24px;
     }
   }
@@ -255,11 +258,12 @@
   }
   &__advantages-cities-header {
     display: flex;
+    justify-content: space-between;
     color: $black;
   }
   &__advantages-cities-header-text {
     font-weight: 400;
-    font-size: clamp(20px, 1.5vw, 24px);
+    font-size: clamp(14px, 1vw, 24px);
     line-height: 32px;
     width: calc((100% - 20px) / 2);
   }
@@ -354,6 +358,194 @@
         font-size: 16px;
         line-height: 18px;
         font-weight: 400;
+      }
+    }
+  }
+}
+@media screen and (max-width: 1400px) {
+  .fleet {
+    padding: 60px 80px;
+    &__examples {
+      height: 500px;
+    }
+    &__header {
+      line-height: 46px;
+    }
+    &__advantages-header {
+      padding-block: 30px;
+      &--active {
+        padding-block: 30px;
+      }
+    }
+  }
+}
+@media screen and (max-width: 1120px) {
+  .fleet {
+    &__advantages-cities-header {
+      flex-direction: column;
+      gap: 5px;
+    }
+    &__advantages-cities-header-text {
+      width: 100%;
+      text-align: center;
+      font-size: 16px;
+    }
+    &__advantages-cities-buttons {
+      width: 100%;
+    }
+    &__advantages-table {
+      &--active {
+        th {
+          padding: 8px 12px;
+        }
+        td {
+          padding: 12px;
+        }
+      }
+    }
+  }
+}
+@media screen and (max-width: 1120px) {
+  .fleet {
+    &__header {
+      line-height: 36px;
+    }
+    &__examples {
+      height: 420px;
+    }
+    &__advantages-cities {
+      width: 70%;
+      padding: 120px 42px;
+    }
+  }
+}
+@media screen and (max-width: 900px) {
+  .fleet {
+    padding: 72px 20px;
+    overflow: hidden;
+    border-bottom: 1px solid $headergray;
+    &__logo {
+      padding: 5px 10px;
+      margin-bottom: 30px;
+      span {
+        font-size: 10px;
+      }
+    }
+    &__choppers {
+      flex-direction: column;
+      gap: 48px;
+    }
+    &__choppers-info {
+      &--small,
+      &--big {
+        width: 100%;
+        gap: 16px;
+        .button__blue {
+          width: 100%;
+        }
+      }
+    }
+    &__text {
+      &--small {
+        margin-bottom: 8px;
+      }
+    }
+    &__container {
+      flex-direction: column;
+      align-items: none;
+      .button__blue {
+        width: 100%;
+      }
+    }
+    &__examples {
+      height: auto;
+      width: 100%;
+      position: relative;
+      .swiper-wrapper {
+        display: flex;
+      }
+      .swiper-slide {
+        filter: grayscale(1);
+        opacity: 0.6;
+      }
+      .swiper-slide-active {
+        filter: grayscale(0);
+        opacity: 1;
+      }
+      .swiper-pagination {
+        transform: translateY(50px);
+      }
+      .swiper-pagination-bullet {
+        width: 12px;
+        height: 12px;
+        background-color: $gray;
+        opacity: 1;
+        &-active {
+          background-color: $white;
+        }
+      }
+    }
+    &__example {
+      &--active {
+        display: none;
+      }
+      display: none;
+    }
+    &__swiper-index {
+      font-weight: 700;
+      color: $blue;
+      margin-bottom: 10px;
+    }
+    &__swiper-header {
+      margin-bottom: 10px;
+      font-family: "DrukWide";
+      font-size: 20px;
+      line-height: 20px;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+    }
+    &__swiper-text {
+      line-height: 24px;
+      margin-bottom: 24px;
+      height: 120px;
+    }
+    &__advantages {
+      margin-top: 48px;
+      flex-direction: column;
+    }
+    &__advantages-content {
+      width: 100%;
+      padding-right: 0;
+    }
+    &__advantages-text {
+      &--active {
+        font-size: 20px;
+      }
+    }
+    &__advantages-cities-container {
+      padding: 24px 16px;
+    }
+    &__advantages-cities {
+      width: 100%;
+      padding: 20px;
+    }
+    &__advantages-cities-header {
+      gap: 16px;
+    }
+    &__advantages-cities-header-text {
+      font-size: 24px;
+      text-align: left;
+    }
+    &__advantages-block {
+      height: 200px;
+    }
+    &__advantages-table {
+      &--active {
+        tr {
+          td:nth-of-type(3) {
+            display: none;
+          }
+        }
       }
     }
   }

@@ -1,11 +1,20 @@
 @use "variables" as *;
 .footer {
-  padding: 100px 80px;
+  padding: 100px 80px 0px;
   display: flex;
   flex-direction: column;
   gap: 120px;
   color: $white;
   font-family: "Outfit";
+  overflow: hidden;
+  &::after {
+    content: '';
+    width: 100%;
+    height: 16px;
+    transform: translateY(8px);
+    border-radius: 8px;
+    background-color: $blue;
+  }
   &__content {
     display: flex;
     justify-content: space-between;
@@ -82,18 +91,26 @@
       font-size: 14px;
       font-family: "DrukWide";
       line-height: 18px;
+      height: 18px;
       letter-spacing: 0.04em;
       text-transform: uppercase;
       color: $headergray;
+      span {
+        display: none;
+      }
     }
     ul {
       display: flex;
       flex-direction: column;
-      gap: 4px;
     }
     a {
       cursor: pointer;
       line-height: 24px;
+    }
+  }
+  &__list:nth-of-type(3) {
+    li:nth-of-type(7), li:nth-of-type(8), li:nth-of-type(9), li:nth-of-type(6){
+      display: none;
     }
   }
   &__creators {
@@ -102,6 +119,113 @@
     color: $headergray;
     a {
         color: $white;
+    }
+  }
+}
+@media screen and (max-width: 1400px) {
+  .footer {
+    padding: 50px 40px 0px;
+    gap: 60px;
+    &__main {
+      gap: 32px;
+    }
+    &__logos {
+      height: 60px;
+    }
+    &__lists {
+      gap: 16px;
+    }
+    &__list {
+      width: calc((100% - 48px) / 4);
+    }
+  }
+}
+@media screen and (max-width: 1120px) {
+  .footer {
+    &__newsletter {
+      width: 25%;
+      padding: 16px;
+      h3 {
+        font-size: 14px;
+      }
+      p {
+        font-size: 14px;
+      }
+    }
+  }
+}
+@media screen and (max-width: 900px) {
+  .footer {
+    padding: 72px 20px 0px;
+    gap: 40px;
+    &__content {
+      flex-direction: column;
+      gap: 40px;
+    }
+    &__main {
+      width: 100%;
+      gap: 0px;
+    }
+    &__logos {
+      flex-direction: column;
+      gap: 24px;
+      height: auto;
+      padding-bottom: 40px;
+    }
+    &__icons {
+      a {
+        img {
+          transform: translateX(0);
+        }
+      }
+    }
+    &__lists {
+      flex-direction: column;
+      gap: 0px;
+    }
+    &__list {
+      width: 100%;
+      padding-block: 23px;
+      border-bottom: 1px solid rgba($grayborder, 0.24);
+      color: $white;
+      opacity: 1;
+      h3 {
+        color: $white;
+        display: flex;
+        justify-content: space-between;
+        span {
+          display: flex;
+        }
+      }
+      &:last-of-type {
+        display: none;
+      }
+    }
+    &__list:nth-of-type(3) {
+    li:nth-of-type(7), li:nth-of-type(8), li:nth-of-type(9), li:nth-of-type(6){
+      display: block;
+    }
+  }
+    ul {
+      display: none;
+      gap: 5px;
+    }
+    &__newsletter {
+      width: 100%;
+      h3 {
+        font-size: 18px;
+      }
+      p {
+        font-size: 16px;
+        max-width: 80%;
+      }
+      button {
+        letter-spacing: 0.08em;
+      }
+    }
+    &__creators {
+      flex-direction: column;
+      gap: 16px;
     }
   }
 }

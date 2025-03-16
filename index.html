@@ -29,7 +29,7 @@
           <div class="swiper__gradient"></div>
           <div class="swiper__content">
             <h1 class="swiper__header">Air Taxi dla twojego biznesu</h1>
-            <p class="swiper__text">Oferujemy kompleksową usługę przewozu lotniczego śmigłowcamiRobinson R44 oraz R66. Komfort podróży w niemal każdychwarunkach.</p>
+            <p class="swiper__text">Oferujemy kompleksową usługę przewozu lotniczego śmigłowcami Robinson R44 oraz R66. Komfort podróży w niemal każdych warunkach.</p>
             <div class="swiper__buttons">
               <button class="button__blue">Zamów lot</button>
               <button class="button__black">Czytaj więcej</button>
@@ -69,7 +69,9 @@
             <button class="button__blue">Kup Voucher</button>
           </div>
           <div class="introduction__mosaic">
-            <img src="/src/assets/images/mosaic.png" alt="Mosaic" />
+            <img class="introduction__mosaic--desktop" src="/src/assets/images/mosaic.png" alt="Mosaic" />
+            <img class="introduction__mosaic--mobile" src="/src/assets/images/mosaic1.png" alt="Mosaic" />
+            <img class="introduction__mosaic--mobile" src="/src/assets/images/mosaic2.png" alt="Mosaic" />
           </div>
         </div>
         <div class="introduction__statistics">
@@ -104,7 +106,8 @@
       </div>
     </section>
     <section class="photo-text">
-      <img src="/src/assets/images/photo-text.png" alt="Helicopter pilot" />
+      <img class="photo-text__desktop-image" src="/src/assets/images/photo-text.png" alt="Helicopter pilot" />
+      <img class="photo-text__mobile-image" src="/src/assets/images/photo-text-mobile.png" alt="Helicopter pilot" />
       <div class="photo-text__content">
         <p class="photo-text__header--small">Kim jesteśmy?</p>
         <p class="photo-text__header--big">
@@ -258,6 +261,23 @@
             </div>
             <img src="/src/assets/images/chopper2.jpg" alt="Chopper" />
           </div>
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <p class="fleet__swiper-index">01</p>
+              <h4 class="fleet__swiper-header">Robinson R66 Turbine</h4>
+              <p class="fleet__swiper-text">
+                Najpopularniejszy czteromiejscowy śmigłowiec świata, stworzony specjalnie dla lotnictwa cywilnego. Helikopter ten zaliczany jest do najbezpieczniejszych śmigłowców na świecie.
+              </p>
+              <img src="/src/assets/images/chopper1.jpg" alt="Chopper" />
+            </div>
+            <div class="swiper-slide">
+              <p class="fleet__swiper-index">02</p>
+              <h4 class="fleet__swiper-header">Robinson R44 Raven II</h4>
+              <p class="fleet__swiper-text">Śmigłowiec z silnikiem turbinowym posiadający 4 miejsca pasażerskie i dużą dodatkową przestrzeń bagażową, w którą zmieścisz 2-3 walizki kabinowe.</p>
+              <img src="/src/assets/images/chopper2.jpg" alt="Chopper" />
+            </div>
+          </div>
+          <div class="swiper-pagination"></div>
         </div>
       </div>
     </section>
@@ -576,7 +596,8 @@
         </div>
       </div>
       <div class="prices__business">
-        <img src="/src/assets/images/heli-guy.png" alt="Guy" />
+        <img class="prices__business-desktop-image" src="/src/assets/images/heli-guy.png" alt="Guy" />
+        <img class="prices__business-mobile-image" src="/src/assets/images/heli-guy-mobile.png" alt="Guy" />
         <div class="prices__business-content">
           <h3 class="prices__business-header">Loty biznesowe</h3>
           <p class="prices__business-text">
@@ -592,7 +613,7 @@
     </section>
     <section class="prices">
       <div class="prices__border"></div>
-      <h4 class="prices__header--small">Ceny voucherów</h4>
+      <h4 class="prices__header--small">Lokalizacje heliportów</h4>
       <h2 class="prices__header--big">Nasze heliporty to komfortowe warunki dla śmigłowców i ich pasażerów</h2>
       <p class="prices__header-text">
         Pakiety godzin to idealne rozwiązanie dla Twojej firmy, umożliwia wygodne korzystanie z AirTaxi z priorytetowym dostępem do śmigłowca. Nie musisz kupować śmigłowca, aby poczuć się jak jego
@@ -638,6 +659,39 @@
             </p>
           </div>
         </div>
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <img class="prices__swiper-localization-image" src="/src/assets/images/sosnowka.png" alt="Sosnówka" />
+            <div class="prices__swiper-localization-content">
+              <h4 class="prices__swiper-localization-header">Sosnówka</h4>
+              <p class="prices__swiper-localization-text">Miejsce bazowania i lądowisko macierzyste naszych helikopterów.</p>
+              <p class="prices__swiper-localization-link">
+                Zobacz więcej <span><img src="/src/assets/icons/arrow-side.png" alt="Arrow" /></span>
+              </p>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <img class="prices__swiper-localization-image" src="/src/assets/images/polkowice.png" alt="Polkowice" />
+            <div class="prices__swiper-localization-content">
+              <h4 class="prices__swiper-localization-header">Polkowice</h4>
+              <p class="prices__swiper-localization-text">Miejsce bazowania i lądowisko macierzyste naszych helikopterów.</p>
+              <p class="prices__swiper-localization-link">
+                Zobacz więcej <span><img src="/src/assets/icons/arrow-side.png" alt="Arrow" /></span>
+              </p>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <img class="prices__swiper-localization-image" src="/src/assets/images/wroclaw.png" alt="Wrocław" />
+            <div class="prices__swiper-localization-content">
+              <h4 class="prices__swiper-localization-header">Wrocław</h4>
+              <p class="prices__swiper-localization-text">Miejsce bazowania i lądowisko macierzyste naszych helikopterów.</p>
+              <p class="prices__swiper-localization-link">
+                Zobacz więcej <span><img src="/src/assets/icons/arrow-side.png" alt="Arrow" /></span>
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-pagination-localizations"></div>
         <div class="prices__chopper">
           <img src="/src/assets/images/chopper-buy1.jpg" alt="Chopper" />
           <div class="prices__chopper-content">
@@ -674,9 +728,50 @@
             </div>
           </div>
         </div>
+        <div class="prices__swiper-choppers">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <img src="/src/assets/images/chopper-buy1.jpg" alt="Chopper" />
+              <div class="prices__swiper-chopper-content">
+                <h4 class="prices__swiper-chopper-header">Robinson R66 Turbine</h4>
+                <div class="prices__swiper-chopper-info">
+                  <p>10H</p>
+                  <p>1375€<span>/godz</span></p>
+                </div>
+                <div class="prices__swiper-chopper-info">
+                  <p>20H</p>
+                  <p>1350€<span>/godz</span></p>
+                </div>
+                <div class="prices__swiper-chopper-info">
+                  <p>30H</p>
+                  <p>1325€<span>/godz</span></p>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <img src="/src/assets/images/chopper-buy2.jpg" alt="Chopper" />
+              <div class="prices__swiper-chopper-content">
+                <h4 class="prices__swiper-chopper-header">Robinson R44 Raven II</h4>
+                <div class="prices__swiper-chopper-info">
+                  <p>10H</p>
+                  <p>825€<span>/godz</span></p>
+                </div>
+                <div class="prices__swiper-chopper-info">
+                  <p>20H</p>
+                  <p>800€<span>/godz</span></p>
+                </div>
+                <div class="prices__swiper-chopper-info">
+                  <p>30H</p>
+                  <p>775€<span>/godz</span></p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-pagination-choppers"></div>
+        </div>
       </div>
     </section>
     <div id="footer-container"></div>
-    <script type="module" src="/src/index.js"></script>
+    <script type="module" defer src="/src/index.js"></script>
   </body>
 </html>
