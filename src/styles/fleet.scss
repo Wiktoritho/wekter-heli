@@ -72,6 +72,9 @@
     .swiper-wrapper {
       display: none;
     }
+    .swiper-pagination-examples {
+      display: none;
+    }
   }
   &__example {
     padding-inline: 24px;
@@ -461,6 +464,7 @@
       height: auto;
       width: 100%;
       position: relative;
+      border-left: none;
       .swiper-wrapper {
         display: flex;
       }
@@ -472,8 +476,10 @@
         filter: grayscale(0);
         opacity: 1;
       }
-      .swiper-pagination {
-        transform: translateY(50px);
+      .swiper-pagination-examples {
+        position: absolute;
+        display: flex;
+        transform: translateY(50px) translateX(45%);
       }
       .swiper-pagination-bullet {
         width: 12px;

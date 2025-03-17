@@ -13,7 +13,7 @@ import { handleFooterLists } from "./scripts/footer";
 import { handleMobileMenu } from "./scripts/header";
 
 document.addEventListener("DOMContentLoaded", () => {
-  loadComponent("components/header.html", "header-container");
+  // loadComponent("/wekter-heli/components/header.html", "header-container");
   initSwiper();
   initOffers();
   initFleet();
@@ -27,7 +27,7 @@ document.addEventListener("DOMContentLoaded", () => {
   initChoppersSwiper();
   handleFooterLists();
   handleMobileMenu();
-  loadComponent("components/footer.html", "footer-container");
+  // loadComponent("/wekter-heli/components/footer.html", "footer-container");
 });
 
 function debounce(func, wait) {

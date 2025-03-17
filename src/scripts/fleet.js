@@ -88,7 +88,7 @@ export function initFleetSwiper() {
     slidesPerView: 1.2,
     spaceBetween: 12,
     pagination: {
-      el: ".swiper-pagination",
+      el: ".swiper-pagination-examples",
       clickable: true,
     },
   });

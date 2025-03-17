@@ -1328,6 +1328,9 @@ strong {
 .fleet__examples .swiper-wrapper {
   display: none;
 }
+.fleet__examples .swiper-pagination-examples {
+  display: none;
+}
 .fleet__example {
   padding-inline: 24px;
   border-right: 1px solid #323232;
@@ -1701,6 +1704,7 @@ strong {
     height: auto;
     width: 100%;
     position: relative;
+    border-left: none;
   }
   .fleet__examples .swiper-wrapper {
     display: flex;
@@ -1713,8 +1717,10 @@ strong {
     filter: grayscale(0);
     opacity: 1;
   }
-  .fleet__examples .swiper-pagination {
-    transform: translateY(50px);
+  .fleet__examples .swiper-pagination-examples {
+    position: absolute;
+    display: flex;
+    transform: translateY(50px) translateX(45%);
   }
   .fleet__examples .swiper-pagination-bullet {
     width: 12px;
