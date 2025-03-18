@@ -1,18 +1,21 @@
 import { defineConfig } from "vite"
-import { createHtmlPlugin } from "vite-plugin-html";
 import injectHTML from 'vite-plugin-html-inject';
+import { resolve } from 'path';
 
 export default defineConfig(
   {
-  base: "/wekter-heli/",
-  build: {
+    base: '/wekter-heli/',
+    build: {
     outDir: 'dist',
-    assetsDir: 'assets',
+      assetsDir: 'assets',
+    rollupOptions: {
+      input: {
+        main: resolve(__dirname, 'index.html'),
+        about: resolve(__dirname, 'about.html'),
+      },
+    },
   },
   plugins: [
-    createHtmlPlugin({
-      minify: true,
-    }),
     injectHTML()
   ]
 }

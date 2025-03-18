@@ -1,34 +1,77 @@
-import { initSwiper } from "./scripts/swiper";
+import Swiper from "swiper";
+import "swiper/css";
+import "swiper/css/pagination";
+import "swiper/css/navigation";
+
+import { Pagination, Navigation } from "swiper/modules";
+
 import { initOffers } from "./scripts/offers";
 import { initFleet } from "./scripts/fleet";
-import { initPricesSwiper } from "./scripts/prices-swiper";
-import { ringProgress } from "./scripts/prices-swiper";
 import { handlePrices } from "./scripts/prices";
-import { handleHeaderSwitcher } from "./scripts/header";
-import { handleMenu } from "./scripts/header";
-import { initFleetSwiper } from "./scripts/fleet";
-import { initLocalizationsSwiper } from "./scripts/prices-swiper";
-import { initChoppersSwiper } from "./scripts/prices-swiper";
-import { handleFooterLists } from "./scripts/footer";
-import { handleMobileMenu } from "./scripts/header";
+import { handleHeaderSwitcher, handleMenu, handleMobileMenu } from "./scripts/header";
+
+let startedWidth = window.innerWidth;
 
 document.addEventListener("DOMContentLoaded", () => {
-  // loadComponent("/wekter-heli/components/header.html", "header-container");
-  initSwiper();
+  initAllSwipers();
   initOffers();
   initFleet();
-  initPricesSwiper();
   ringProgress();
   handlePrices();
   handleHeaderSwitcher();
   handleMenu();
-  initFleetSwiper();
-  initLocalizationsSwiper();
-  initChoppersSwiper();
   handleFooterLists();
   handleMobileMenu();
-  // loadComponent("/wekter-heli/components/footer.html", "footer-container");
 });
+
+function initAllSwipers() {
+  const swiperConfigs = [
+    {
+      selector: ".swiper",
+      options: { loop: true, slidesPerView: 1, pagination: { el: ".swiper-pagination", clickable: true }, navigation: { nextEl: ".swiper-button-next", prevEl: ".swiper-button-prev" } },
+    },
+    {
+      selector: ".prices__swiper",
+      options: {
+        loop: false,
+        slidesPerView: 5,
+        navigation: { nextEl: ".swiper-button-next", prevEl: ".swiper-button-prev" },
+        breakpoints: { 1400: { slidesPerView: 5 }, 1100: { slidesPerView: 4 }, 800: { slidesPerView: 3 }, 100: { slidesPerView: 2.25 } },
+      },
+    },
+    { selector: ".prices__swiper-choppers", options: { loop: false, slidesPerView: 1.2, spaceBetween: 16, pagination: { el: ".swiper-pagination-choppers", clickable: true } } },
+    { selector: ".prices__localizations", options: { loop: false, slidesPerView: 1.2, spaceBetween: 16, pagination: { el: ".swiper-pagination-localizations", clickable: true } } },
+    { selector: ".fleet__examples", options: { loop: false, slidesPerView: 1.2, spaceBetween: 12, pagination: { el: ".swiper-pagination-examples", clickable: true } } },
+  ];
+
+  swiperConfigs.forEach((config) => new Swiper(config.selector, { modules: [Pagination, Navigation], ...config.options }));
+}
+
+function ringProgress() {
+  document.querySelectorAll(".swiper-slide").forEach((slide) => {
+    const valueElement = slide.querySelector(".prices__ring-value");
+    const ringOutside = slide.querySelector(".prices__ring--outside");
+
+    if (!valueElement || !ringOutside) return;
+
+    const minutes = parseInt(valueElement.textContent.trim().split(":")[1] || "0", 10);
+    const degrees = (minutes / 60) * 360;
+
+    ringOutside.style.background = `conic-gradient(#3B5EAB ${degrees}deg, #ddd ${degrees}deg)`;
+  });
+}
+
+function handleFooterLists() {
+  const headers = document.querySelectorAll(".footer__list h3");
+  headers.forEach((header) => {
+    header.addEventListener("click", function () {
+      const ul = this.nextElementSibling;
+      if (ul && ul.tagName.toLowerCase() === "ul") {
+        ul.style.display = ul.style.display === "block" ? "none" : "block";
+      }
+    });
+  });
+}
 
 function debounce(func, wait) {
   let timeout;
@@ -38,38 +81,14 @@ function debounce(func, wait) {
   };
 }
 
-let startedWidth = window.innerWidth;
-
 window.addEventListener(
   "resize",
   debounce(() => {
     const breakpoint = 900;
-    if (startedWidth > breakpoint && window.innerWidth < breakpoint) {
-      initPricesSwiper();
-      initFleetSwiper();
-      initLocalizationsSwiper();
-      initChoppersSwiper();
-      initOffers();
-      startedWidth = window.innerWidth;
-    } else if (startedWidth <= breakpoint && window.innerWidth >= breakpoint) {
-      initPricesSwiper();
-      initFleetSwiper();
-      initLocalizationsSwiper();
-      initChoppersSwiper();
+    if ((startedWidth > breakpoint && window.innerWidth < breakpoint) || (startedWidth <= breakpoint && window.innerWidth >= breakpoint)) {
+      initAllSwipers();
       initOffers();
       startedWidth = window.innerWidth;
     }
   }, 200)
 );
-
-async function loadComponent(url, elementId) {
-  const container = document.getElementById(elementId);
-  try {
-    const response = await fetch(url);
-    if (!response.ok) throw new Error(response.status);
-    const html = await response.text();
-    container.innerHTML = html;
-  } catch (error) {
-    console.log(error);
-  }
-}

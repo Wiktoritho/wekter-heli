@@ -1,5 +1,4 @@
 export function handleHeaderSwitcher() {
-  setTimeout(() => {
     const switcher = document.querySelector(".header__button--slider");
     const mobileSwitcher = document.querySelector(".header__mobile-button--slider");
     const headerButtons = document.querySelectorAll(".header__button--active, .header__button");
@@ -7,6 +6,8 @@ export function handleHeaderSwitcher() {
     const offersButtons = document.querySelectorAll(".offers__buttons button");
     const pricesButtons = document.querySelectorAll(".prices__buttons button");
 
+    
+  
     headerButtons.forEach((button) => {
       button.addEventListener("click", function () {
         if (!this.classList.contains("header__button--active")) {
@@ -42,11 +43,9 @@ export function handleHeaderSwitcher() {
         }
       });
     });
-  }, 500);
 }
 
 export function handleMenu() {
-  setTimeout(() => {
     const menuIcon = document.getElementById("menu-icon");
     const closeIcon = document.getElementById("close-icon");
     const headerMobile = document.querySelector(".header__mobile");
@@ -75,11 +74,9 @@ export function handleMenu() {
 
     menuIcon.addEventListener("click", handleMenuShow);
     closeIcon.addEventListener("click", handleMenuShow);
-  }, 500);
 }
 
 export function handleMobileMenu() {
-  setTimeout(() => {
     const main = document.querySelector(".header__mobile-top-main");
     const offerButton = document.getElementById("mobile-offer");
     const heliportButton = document.getElementById("mobile-heliports");
@@ -106,5 +103,4 @@ export function handleMobileMenu() {
       main.style.transform = "translateX(-100%)";
       offersList.style.transform = "translateX(224%)";
     });
-  }, 500);
 }
