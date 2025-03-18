@@ -1,141 +1,141 @@
 @use "variables" as *;
 .introduction {
-  background-color: $white;
-  &__header {
-    &--small {
-      padding-top: 160px;
-      font-family: "DrukWide";
-      color: $headergray;
-      text-align: center;
-      width: 100%;
-      font-size: 14px;
-      text-transform: uppercase;
+  @include respond-to("desktop") {
+    background-color: $white;
+    &__header {
+      &--small {
+        padding-top: 160px;
+        font-family: $font-family-header;
+        color: $headergray;
+        text-align: center;
+        width: 100%;
+        font-size: 14px;
+        text-transform: uppercase;
+      }
+      &--big {
+        font-family: $font-family-primary;
+        text-align: center;
+        margin-block: $margin-medium 66px;
+        font-size: clamp(32px, 3vw, 48px);
+        margin-inline: 20%;
+        line-height: 1.2;
+        font-weight: 500;
+      }
     }
-    &--big {
-      font-family: "Outfit";
-      text-align: center;
-      margin-block: 24px 66px;
-      font-size: clamp(32px, 3vw, 48px);
-      margin-inline: 20%;
-      line-height: 1.2;
-      font-weight: 500;
+    &__container {
+      background-color: $beige;
+      padding-block: 80px 0;
+      margin-inline: auto;
+      max-width: 95%;
+      border-radius: 8px;
+      position: relative;
+      z-index: 1;
     }
-  }
-  &__container {
-    background-color: $beige;
-    padding-block: 80px 0;
-    margin-inline: auto;
-    max-width: 95%;
-    border-radius: 8px;
-    position: relative;
-    z-index: 1;
-  }
-  &__informations {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 48px;
-    padding-bottom: 80px;
-    border-bottom: 1px solid $grayborder;
-    padding-inline: 170px;
-  }
-  &__statistics {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 28px;
-    padding-block: 48px;
-    padding-inline: 170px;
-  }
-  &__statistics-block {
-    width: calc((100% - 56px)/3);
-    padding-block: 40px;
-    padding-left: 32px;
-    border: 1px solid $grayborder;
-    border-radius: 8px;
-    display: flex;
-    gap: 32px;
-    align-items: center;
-    justify-content: flex-start;
-    transition: all 0.2s ease-in-out;
-    &:hover {
+    &__informations {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 48px;
+      padding-bottom: 80px;
+      border-bottom: 1px solid $grayborder;
+      padding-inline: 170px;
+    }
+    &__statistics {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 28px;
+      padding-block: $padding-extra;
+      padding-inline: 170px;
+    }
+    &__statistics-block {
+      width: calc((100% - 56px) / 3);
+      padding-block: 40px;
+      padding-left: $padding-large;
+      border: 1px solid $grayborder;
+      border-radius: 8px;
+      display: flex;
+      gap: 32px;
+      align-items: center;
+      justify-content: flex-start;
+      transition: all 0.2s ease-in-out;
+      &:hover {
         border: 1px solid $blue;
         .introduction__statistics-block-icon {
-            transform: rotate(360deg);
+          transform: rotate(360deg);
         }
+      }
     }
-  }
-  &__statistics-block-icon {
-    width: 50px;
-    height: 50px;
-    background-color: #00383214;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 4px;
-    transition: all 0.5s ease-in-out;
-  }
-  &__statistics-block-text {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    font-family: 'DrukWide';
-    p:first-of-type {
+    &__statistics-block-icon {
+      width: 50px;
+      height: 50px;
+      background-color: #00383214;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: 4px;
+      transition: all 0.5s ease-in-out;
+    }
+    &__statistics-block-text {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      font-family: $font-family-header;
+      p:first-of-type {
         font-size: 28px;
-    }
-    p:last-of-type {
+      }
+      p:last-of-type {
         color: $headergray;
         font-size: 18px;
-        font-family: 'Outfit';
+        font-family: $font-family-primary;
+      }
     }
-  }
-  &__text-content {
-    width: calc((100% - 48px)/2);
-    display: flex;
-    flex-direction: column;
-    gap: 32px;
-    color: $textdark;
-    font-family: 'Outfit';
-  }
-  &__text{
-    &--big {
+    &__text-content {
+      width: calc((100% - 48px) / 2);
+      display: flex;
+      flex-direction: column;
+      gap: 32px;
+      color: $textdark;
+      font-family: $font-family-primary;
+    }
+    &__text {
+      &--big {
         font-weight: 500;
         font-size: clamp(20px, 1.5vw, 24px);
         line-height: 32px;
-    }
-    &--small {
+      }
+      &--small {
         font-weight: 300;
         font-size: clamp(16px, 1.5vw, 20px);
         line-height: 24px;
         margin-bottom: 24px;
+      }
+    }
+    &__mosaic {
+      &--desktop {
+        img {
+          width: 100%;
+          height: 100%;
+          max-height: 100%;
+          object-fit: cover;
+        }
+      }
+      &--mobile {
+        display: none;
+      }
     }
   }
-  &__mosaic {
-    &--desktop {
-    img {
-        width: 100%;
-        height: 100%;
-        max-height: 100%;
-        object-fit: cover;
-    }
-    }
-    &--mobile {
-      display: none;
-    }
-  }
-}
-@media screen and (max-width: 1400px) {
-  .introduction {
-    &__header{
+  @include respond-to("large") {
+    &__header {
       &--small {
         padding-top: 80px;
       }
       &--big {
-        margin-block: 24px 30px;
+        margin-block: $margin-medium 30px;
       }
     }
     &__container {
-    padding-block: 40px 0px;
+      padding-block: 40px 0px;
     }
     &__informations {
       padding-bottom: 40px;
@@ -146,7 +146,7 @@
     }
     &__statistics-block {
       padding-block: 20px;
-      padding-left: 16px;
+      padding-left: $padding-medium;
     }
     &__statistics-block-icon {
       width: 35px;
@@ -161,9 +161,7 @@
       }
     }
   }
-}
-@media screen and (max-width: 1120px) {
-  .introduction {
+  @include respond-to("medium") {
     &__statistics-block {
       gap: 16px;
     }
@@ -176,21 +174,19 @@
       }
     }
   }
-}
-@media screen and (max-width: 900px) {
-  .introduction {
+  @include respond-to("small") {
     &__header {
       &--small {
         padding-top: 96px;
       }
       &--big {
         margin-inline: 20px;
-        margin-block: 24px 48px;
+        margin-block: $margin-medium $margin-large;
       }
     }
     &__container {
       margin-inline: 20px;
-      padding-block: 48px 0px;
+      padding-block: $padding-extra 0px;
     }
     &__informations {
       flex-direction: column;
@@ -220,14 +216,14 @@
       }
       &--mobile {
         display: block;
-        width: calc((100% - 8px)/2);
+        width: calc((100% - 8px) / 2);
       }
     }
     &__statistics {
       padding-inline: 20px;
       padding-block: 20px;
     }
-    &__statistics-block{
+    &__statistics-block {
       padding: 30px;
       width: 100%;
       &:not(:first-of-type) {

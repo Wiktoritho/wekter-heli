@@ -1,17 +1,50 @@
 $black: #000;
 $white: #fff;
-$blue: #3B5EAB;
+$blue: #3b5eab;
 $gray: #323232;
 $headergray: #727272;
-$grayborder: #DEDEDE;
+$grayborder: #dedede;
 $beige: #f7f7f7;
 $graybuttons: #f3f3f4;
-$textdark: #2B2B2B;
+$textdark: #2b2b2b;
 $backgrounddark: #313131;
-$headerblue: #5C79B9;
-$headergraysmall: #57585C;
-$swiperborder: #F2DEE5;
+$headerblue: #5c79b9;
+$headergraysmall: #57585c;
+$swiperborder: #f2dee5;
 $ringoutside: #f3f3f3;
 $ringinside: #f8f8f8;
 $link: #c5c5c5;
 $footerborder: #3a3a3a;
+
+$font-family-header: "DrukWide", sans-serif;
+$font-family-secondary: "Poppins", sans-serif;
+$font-family-primary: "Outfit", sans-serif;
+
+$padding-small: 8px;
+$padding-medium: 16px;
+$padding-large: 32px;
+$padding-extra: 48px;
+
+$margin-small: 16px;
+$margin-medium: 24px;
+$margin-large: 48px;
+
+@mixin respond-to($breakpoint) {
+  @if $breakpoint == "small" {
+    @media screen and (max-width: 900px) {
+      @content;
+    }
+  } @else if $breakpoint == "medium" {
+    @media screen and (max-width: 1120px) {
+      @content;
+    }
+  } @else if $breakpoint == "large" {
+    @media screen and (max-width: 1400px) {
+      @content;
+    }
+  } @else if $breakpoint == "desktop" {
+    @media screen and (max-width: 1920px) {
+      @content;
+    }
+  }
+}

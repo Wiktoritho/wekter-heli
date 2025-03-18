@@ -1,75 +1,73 @@
-@use 'variables' as *;
+@use "variables" as *;
 .photo-text {
+  @include respond-to("desktop") {
     width: 100%;
     max-height: 810px;
     margin-top: -80px;
     position: relative;
     overflow: hidden;
     img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
     }
     &__mobile-image {
-        display: none;
+      display: none;
     }
     &__content {
-        position: absolute;
-        display: flex;
-        flex-direction: column;
-        gap: 24px;
-        right: 72px;
-        top: 50%;
-        transform: translateY(-50%);
-        max-width: 670px;
+      position: absolute;
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+      right: 72px;
+      top: 50%;
+      transform: translateY(-50%);
+      max-width: 670px;
     }
-    &__header{
-        &--small {
-            font-family: 'DrukWide';
-            font-size: 14px;
-            color: $white;
-            text-transform: uppercase;
-            letter-spacing: 0.04em;
-        }
-        &--big {
-            font-family: 'Outfit';
-            font-size: clamp(20px, 1.5vw, 36px);
-            color: $white;
-            margin-bottom: 16px;
-            line-height: 1.22;
-        }
+    &__header {
+      &--small {
+        font-family: $font-family-header;
+        font-size: 14px;
+        color: $white;
+        text-transform: uppercase;
+        letter-spacing: 0.04em;
+      }
+      &--big {
+        font-family: $font-family-primary;
+        font-size: clamp(20px, 1.5vw, 36px);
+        color: $white;
+        margin-bottom: $margin-small;
+        line-height: 1.22;
+      }
     }
-}
-@media screen and (max-width: 1400px) {
-    .photo-text {
-        &__content {
-            max-width: 450px;
-        }
+  }
+  @include respond-to("large") {
+    &__content {
+      max-width: 450px;
     }
-}
-@media screen and (max-width: 900px) {
-    .photo-text {
-        margin-top: -40px;
-        &__mobile-image {
-            display: block;
-        }
-        &__desktop-image {
-            display: none;
-        }
-        &__content {
-            gap: 16px;
-            right: 20px;
-            left: 20px;
-            top: 190px;
-            transform: translateY(0%);
-            .button__blue {
-                width: 100%;
-            }
-        }
-        &__header{
-            &--big {
-                margin-bottom: 8px;
-            }
-        }
+  }
+  @include respond-to("small") {
+    margin-top: -40px;
+    &__mobile-image {
+      display: block;
     }
+    &__desktop-image {
+      display: none;
+    }
+    &__content {
+      gap: 16px;
+      right: 20px;
+      left: 20px;
+      top: 190px;
+      transform: translateY(0%);
+      .button__blue {
+        width: 100%;
+      }
+    }
+    &__header {
+      &--big {
+        margin-bottom: 8px;
+      }
+    }
+  }
 }

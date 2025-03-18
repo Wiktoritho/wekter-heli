@@ -1,4 +1,6 @@
 import { defineConfig } from "vite"
+import { createHtmlPlugin } from "vite-plugin-html";
+import injectHTML from 'vite-plugin-html-inject';
 
 export default defineConfig(
   {
@@ -6,6 +8,12 @@ export default defineConfig(
   build: {
     outDir: 'dist',
     assetsDir: 'assets',
-  }
+  },
+  plugins: [
+    createHtmlPlugin({
+      minify: true,
+    }),
+    injectHTML()
+  ]
 }
 )

@@ -1,372 +1,384 @@
 @use "variables" as *;
 .fleet {
-  padding: 120px 80px;
-  font-family: "Outfit";
-  color: $white;
-  &__logo {
-    background-color: $backgrounddark;
-    display: flex;
-    align-items: center;
-    gap: 5px;
-    border-radius: 10px;
-    padding: 8px 10px;
+  @include respond-to("desktop") {
+    padding: 120px 80px;
+    font-family: $font-family-primary;
     color: $white;
-    font-family: "DrukWide";
-    font-size: 10px;
-    letter-spacing: 0.04em;
-    text-transform: uppercase;
-    width: max-content;
-    margin-bottom: 60px;
-    span {
-      line-height: 18px;
-      transform: translateY(1px);
-      text-wrap: nowrap;
-    }
-  }
-  &__container {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-end;
-  }
-  &__header {
-    font-size: clamp(32px, 3vw, 48px);
-    line-height: 56px;
-  }
-  &__text {
-    &--small {
-      font-size: clamp(20px, 2vw, 24px);
-      line-height: 32px;
-      margin-bottom: 16px;
-      max-width: 530px;
-    }
-    &--big {
-      font-size: clamp(20px, 2vw, 24px);
-      line-height: 32px;
-      margin-bottom: 16px;
-      max-width: 580px;
-    }
-  }
-  &__choppers {
-    display: flex;
-    gap: 60px;
-  }
-  &__choppers-info {
-    &--small {
+    &__logo {
+      background-color: $backgrounddark;
       display: flex;
-      flex-direction: column;
-      gap: 24px;
-      width: 37%;
-    }
-    &--big {
-      display: flex;
-      flex-direction: column;
-      gap: 24px;
-      width: 51%;
-    }
-  }
-  &__examples {
-    display: flex;
-    width: 59%;
-    border-left: 1px solid $gray;
-    height: 570px;
-    .swiper-wrapper {
-      display: none;
-    }
-    .swiper-pagination-examples {
-      display: none;
-    }
-  }
-  &__example {
-    padding-inline: 24px;
-    border-right: 1px solid $gray;
-    width: 40%;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    gap: 24px;
-    transition: all 0.2s ease-in-out;
-    cursor: pointer;
-    div {
-      display: flex;
-      flex-direction: column;
-      gap: 10px;
-    }
-    img {
-      filter: grayscale(1);
-      border-radius: 4px;
-      transition: all 0.2s ease-in-out;
-    }
-    &:hover {
-      img {
-        filter: none;
-      }
-      .fleet__example-index,
-      .fleet__example-header {
-        opacity: 1;
+      align-items: center;
+      gap: 5px;
+      border-radius: 10px;
+      padding: $padding-small 10px;
+      color: $white;
+      font-family: $font-family-header;
+      font-size: 10px;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      width: max-content;
+      margin-bottom: 60px;
+      span {
+        line-height: 18px;
+        transform: translateY(1px);
+        text-wrap: nowrap;
       }
     }
-    &--active {
+    &__container {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+    }
+    &__header {
+      font-size: clamp(32px, 3vw, 48px);
+      line-height: 56px;
+    }
+    &__text {
+      &--small {
+        font-size: clamp(20px, 2vw, 24px);
+        line-height: 32px;
+        margin-bottom: 16px;
+        max-width: 530px;
+      }
+      &--big {
+        font-size: clamp(20px, 2vw, 24px);
+        line-height: 32px;
+        margin-bottom: 16px;
+        max-width: 580px;
+      }
+    }
+    &__choppers {
+      display: flex;
+      gap: 60px;
+    }
+    &__choppers-info {
+      &--small {
+        display: flex;
+        flex-direction: column;
+        gap: 24px;
+        width: 37%;
+      }
+      &--big {
+        display: flex;
+        flex-direction: column;
+        gap: 24px;
+        width: 51%;
+      }
+    }
+    &__examples {
+      display: flex;
+      width: 59%;
+      border-left: 1px solid $gray;
+      height: 570px;
+      .swiper-wrapper {
+        display: none;
+      }
+      .swiper-pagination-examples {
+        display: none;
+      }
+    }
+    &__example {
       padding-inline: 24px;
       border-right: 1px solid $gray;
-      width: 60%;
+      width: 40%;
       display: flex;
       flex-direction: column;
       justify-content: space-between;
-      transition: all 0.2s ease-in-out;
       gap: 24px;
+      transition: all 0.2s ease-in-out;
+      cursor: pointer;
       div {
         display: flex;
         flex-direction: column;
         gap: 10px;
       }
       img {
+        filter: grayscale(1);
         border-radius: 4px;
+        transition: all 0.2s ease-in-out;
+      }
+      &:hover {
+        img {
+          filter: none;
+        }
+        .fleet__example-index,
+        .fleet__example-header {
+          opacity: 1;
+        }
+      }
+      &--active {
+        padding-inline: 24px;
+        border-right: 1px solid $gray;
+        width: 60%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        transition: all 0.2s ease-in-out;
+        gap: 24px;
+        div {
+          display: flex;
+          flex-direction: column;
+          gap: 10px;
+        }
+        img {
+          border-radius: 4px;
+        }
       }
     }
-  }
-  &__example-index {
-    color: $white;
-    opacity: 0.4;
-    font-weight: 700;
-    transition: all 0.2s ease-in-out;
-    &--active {
-      color: $headerblue;
+    &__example-index {
+      color: $white;
+      opacity: 0.4;
       font-weight: 700;
+      transition: all 0.2s ease-in-out;
+      &--active {
+        color: $headerblue;
+        font-weight: 700;
+      }
     }
-  }
-  &__example-header {
-    font-family: "DrukWide";
-    opacity: 0.4;
-    font-size: clamp(16px, 1.5vw, 20px);
-    max-width: 250px;
-    transition: all 0.2s ease-in-out;
-    &--active {
-      font-family: "DrukWide";
+    &__example-header {
+      font-family: $font-family-header;
+      opacity: 0.4;
       font-size: clamp(16px, 1.5vw, 20px);
       max-width: 250px;
+      transition: all 0.2s ease-in-out;
+      &--active {
+        font-family: $font-family-header;
+        font-size: clamp(16px, 1.5vw, 20px);
+        max-width: 250px;
+      }
     }
-  }
-  &__example-text {
-    display: none;
-    &--active {
-      font-size: clamp(16px, 1.5vw, 20px);
-      font-weight: 300;
-      line-height: 24px;
+    &__example-text {
+      display: none;
+      &--active {
+        font-size: clamp(16px, 1.5vw, 20px);
+        font-weight: 300;
+        line-height: 24px;
+      }
     }
-  }
-  &__advantages {
-    display: flex;
-    margin-top: 60px;
-    width: 100%;
-  }
-  &__advantages-content {
-    display: flex;
-    flex-direction: column;
-    padding-right: 40px;
-    width: 50%;
-  }
-  &__advantages-element {
-    display: flex;
-    flex-direction: column;
-    &:last-of-type::before {
+    &__advantages {
+      display: flex;
+      margin-top: 60px;
       width: 100%;
-      content: "";
-      height: 2px;
-      background: linear-gradient(to right, $white 0%, $white 50%, $gray 50%, $gray 100%);
-      opacity: 0.8;
     }
-    &--active {
+    &__advantages-content {
+      display: flex;
+      flex-direction: column;
+      padding-right: 40px;
+      width: 50%;
+    }
+    &__advantages-element {
       display: flex;
       flex-direction: column;
       &:last-of-type::before {
         width: 100%;
         content: "";
         height: 2px;
-        background: linear-gradient(to right, $gray 0%, $gray 50%, $white 50%, $white 100%);
+        background: linear-gradient(
+          to right,
+          $white 0%,
+          $white 50%,
+          $gray 50%,
+          $gray 100%
+        );
         opacity: 0.8;
       }
+      &--active {
+        display: flex;
+        flex-direction: column;
+        &:last-of-type::before {
+          width: 100%;
+          content: "";
+          height: 2px;
+          background: linear-gradient(
+            to right,
+            $gray 0%,
+            $gray 50%,
+            $white 50%,
+            $white 100%
+          );
+          opacity: 0.8;
+        }
+      }
     }
-  }
-  &__advantages-header {
-    display: flex;
-    align-items: center;
-    gap: 16px;
-    padding-block: 44px;
-    font-family: "DrukWide";
-    opacity: 0.4;
-    font-size: clamp(16px, 1.5vw, 20px);
-    letter-spacing: 0.04em;
-    text-transform: uppercase;
-    line-height: 20px;
-    transition: all 0.2s ease-in-out;
-    cursor: pointer;
-    &:hover {
-      opacity: 1;
-    }
-    span {
-      font-family: "Outfit";
-      font-weight: 700;
-      font-size: 16px;
-      color: $white;
-    }
-
-    &--active {
+    &__advantages-header {
       display: flex;
       align-items: center;
       gap: 16px;
       padding-block: 44px;
-      font-family: "DrukWide";
+      font-family: $font-family-header;
+      opacity: 0.4;
       font-size: clamp(16px, 1.5vw, 20px);
       letter-spacing: 0.04em;
       text-transform: uppercase;
+      line-height: 20px;
       transition: all 0.2s ease-in-out;
+      cursor: pointer;
+      &:hover {
+        opacity: 1;
+      }
       span {
-        font-family: "Outfit";
+        font-family: $font-family-primary;
         font-weight: 700;
         font-size: 16px;
-        color: $headerblue;
+        color: $white;
+      }
+
+      &--active {
+        display: flex;
+        align-items: center;
+        gap: 16px;
+        padding-block: 44px;
+        font-family: $font-family-header;
+        font-size: clamp(16px, 1.5vw, 20px);
+        letter-spacing: 0.04em;
+        text-transform: uppercase;
+        transition: all 0.2s ease-in-out;
+        span {
+          font-family: $font-family-primary;
+          font-weight: 700;
+          font-size: 16px;
+          color: $headerblue;
+        }
       }
     }
-  }
-  &__advantages-text {
-    display: none;
-    transition: all 0.2s ease-in-out;
-    &--active {
-      margin-bottom: 44px;
+    &__advantages-text {
+      display: none;
       transition: all 0.2s ease-in-out;
-      font-weight: 300;
-      font-size: clamp(15px, 1vw, 20px);
-      line-height: 24px;
+      &--active {
+        margin-bottom: 44px;
+        transition: all 0.2s ease-in-out;
+        font-weight: 300;
+        font-size: clamp(15px, 1vw, 20px);
+        line-height: 24px;
+      }
     }
-  }
-  &__advantages-cities {
-    background-image: url("/src/assets/images/advantages-bg.png");
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-    width: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 68px 42px;
-    border-radius: 4px;
-  }
-  &__advantages-cities-container {
-    background-color: $white;
-    border-radius: 20px;
-    padding: 32px;
-    width: 100%;
-    height: 100%;
-    box-shadow: 0px 0px 0px 10px rgba(255, 255, 255, 0.5);
-  }
-  &__advantages-cities-header {
-    display: flex;
-    justify-content: space-between;
-    color: $black;
-  }
-  &__advantages-cities-header-text {
-    font-weight: 400;
-    font-size: clamp(14px, 1vw, 24px);
-    line-height: 32px;
-    width: calc((100% - 20px) / 2);
-  }
-  &__advantages-cities-buttons {
-    display: flex;
-    align-items: center;
-    position: relative;
-    padding-block: 5px;
-    border-radius: 6px;
-    background-color: $graybuttons;
-    width: calc((100% - 20px) / 2);
-  }
-  &__advantages-city {
-    width: 50%;
-    font-size: 14px;
-    font-weight: 500;
-    line-height: 24px;
-    text-align: center;
-    color: $headergraysmall;
-    position: relative;
-    z-index: 1;
-    cursor: pointer;
-    &--active {
+    &__advantages-cities {
+      background-image: url("/src/assets/images/advantages-bg.png");
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: cover;
+      width: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 68px 42px;
+      border-radius: 4px;
+    }
+    &__advantages-cities-container {
+      background-color: $white;
+      border-radius: 20px;
+      padding: $padding-large;
+      width: 100%;
+      height: 100%;
+      box-shadow: 0px 0px 0px 10px rgba(255, 255, 255, 0.5);
+    }
+    &__advantages-cities-header {
+      display: flex;
+      justify-content: space-between;
+      color: $black;
+    }
+    &__advantages-cities-header-text {
+      font-weight: 400;
+      font-size: clamp(14px, 1vw, 24px);
+      line-height: 32px;
+      width: calc((100% - 20px) / 2);
+    }
+    &__advantages-cities-buttons {
+      display: flex;
+      align-items: center;
+      position: relative;
+      padding-block: 5px;
+      border-radius: 6px;
+      background-color: $graybuttons;
+      width: calc((100% - 20px) / 2);
+    }
+    &__advantages-city {
       width: 50%;
       font-size: 14px;
       font-weight: 500;
       line-height: 24px;
       text-align: center;
+      color: $headergraysmall;
       position: relative;
       z-index: 1;
-    }
-  }
-  &__advantages-city-switch {
-    position: absolute;
-    width: 50%;
-    background-color: $white;
-    border-radius: 6px;
-    top: 0px;
-    left: 3px;
-    transform: translateY(8%);
-    height: 85%;
-    box-shadow: 0px 2px 4px #0f141926;
-    transition: all 0.5s ease-in-out;
-  }
-  &__advantages-block {
-    height: 320px;
-    margin-top: 32px;
-    overflow-y: scroll;
-    width: 100%;
-  }
-  &__advantages-table {
-    display: none;
-    &--active {
-      width: 100%;
-      tr:first-of-type {
-        height: 42px;
-        color: $headergray;
-        font-size: 16px;
-        line-height: 18px;
-        font-weight: 400;
-        position: sticky;
-        top: 0;
+      cursor: pointer;
+      &--active {
+        width: 50%;
+        font-size: 14px;
+        font-weight: 500;
+        line-height: 24px;
+        text-align: center;
+        position: relative;
         z-index: 1;
-        background-color: $white;
       }
-      th {
-        padding: 12px 16px;
-      }
-      td {
-        padding: 16px;
-        span {
-          color: $blue;
-          cursor: pointer;
-          font-weight: 600;
-          text-decoration: underline;
-          text-underline-offset: 5px;
-          transition: all 0.2s ease-in-out;
-          &:hover {
-            opacity: 0.7;
+    }
+    &__advantages-city-switch {
+      position: absolute;
+      width: 50%;
+      background-color: $white;
+      border-radius: 6px;
+      top: 0px;
+      left: 3px;
+      transform: translateY(8%);
+      height: 85%;
+      box-shadow: 0px 2px 4px #0f141926;
+      transition: all 0.5s ease-in-out;
+    }
+    &__advantages-block {
+      height: 320px;
+      margin-top: 32px;
+      overflow-y: scroll;
+      width: 100%;
+    }
+    &__advantages-table {
+      display: none;
+      &--active {
+        width: 100%;
+        tr:first-of-type {
+          height: 42px;
+          color: $headergray;
+          font-size: 16px;
+          line-height: 18px;
+          font-weight: 400;
+          position: sticky;
+          top: 0;
+          z-index: 1;
+          background-color: $white;
+        }
+        th {
+          padding: 12px $padding-medium;
+        }
+        td {
+          padding: $padding-medium;
+          span {
+            color: $blue;
+            cursor: pointer;
+            font-weight: 600;
+            text-decoration: underline;
+            text-underline-offset: 5px;
+            transition: all 0.2s ease-in-out;
+            &:hover {
+              opacity: 0.7;
+            }
+          }
+          &:first-of-type {
+            width: 45%;
+          }
+          &:nth-of-type(2) {
+            width: 27%;
           }
         }
-        &:first-of-type {
-          width: 45%;
+        tr {
+          height: 50px;
+          color: $textdark;
+          font-size: 16px;
+          line-height: 18px;
+          font-weight: 400;
         }
-        &:nth-of-type(2) {
-          width: 27%;
-        }
-      }
-      tr {
-        height: 50px;
-        color: $textdark;
-        font-size: 16px;
-        line-height: 18px;
-        font-weight: 400;
       }
     }
   }
-}
-@media screen and (max-width: 1400px) {
-  .fleet {
+  @include respond-to("large") {
     padding: 60px 80px;
     &__examples {
       height: 500px;
@@ -381,9 +393,7 @@
       }
     }
   }
-}
-@media screen and (max-width: 1120px) {
-  .fleet {
+  @include respond-to("medium") {
     &__advantages-cities-header {
       flex-direction: column;
       gap: 5px;
@@ -399,17 +409,13 @@
     &__advantages-table {
       &--active {
         th {
-          padding: 8px 12px;
+          padding: $padding-small 12px;
         }
         td {
           padding: 12px;
         }
       }
     }
-  }
-}
-@media screen and (max-width: 1120px) {
-  .fleet {
     &__header {
       line-height: 36px;
     }
@@ -421,9 +427,7 @@
       padding: 120px 42px;
     }
   }
-}
-@media screen and (max-width: 900px) {
-  .fleet {
+  @include respond-to("small") {
     padding: 72px 20px;
     overflow: hidden;
     border-bottom: 1px solid $headergray;
@@ -504,7 +508,7 @@
     }
     &__swiper-header {
       margin-bottom: 10px;
-      font-family: "DrukWide";
+      font-family: $font-family-header;
       font-size: 20px;
       line-height: 20px;
       letter-spacing: 0.04em;
@@ -512,11 +516,11 @@
     }
     &__swiper-text {
       line-height: 24px;
-      margin-bottom: 24px;
+      margin-bottom: $margin-medium;
       height: 120px;
     }
     &__advantages {
-      margin-top: 48px;
+      margin-top: $margin-large;
       flex-direction: column;
     }
     &__advantages-content {
@@ -529,7 +533,7 @@
       }
     }
     &__advantages-cities-container {
-      padding: 24px 16px;
+      padding: 24px $padding-medium;
     }
     &__advantages-cities {
       width: 100%;
