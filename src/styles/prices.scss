@@ -53,40 +53,39 @@
     }
     &__button {
       &--blue {
-        padding: $padding-small 20px;
+        padding: 8px 20px;
         text-transform: uppercase;
         border: 2px solid $blue;
         background-color: $blue;
-        font-family: $font-family-secondary;
         font-weight: bold;
         font-size: 12px;
+        letter-spacing: 0.04em;
         cursor: pointer;
-        transition: all 0.2s ease-in-out;
         color: $white;
         text-wrap: nowrap;
-        max-width: min-content;
+        width: 150px;
+        font-family: $font-family-button;
         &:hover {
-          background-color: $white;
-          color: $blue;
+          background-color: $bluehover;
+          border: 2px solid $bluehover;
         }
       }
       &--white {
         padding: $padding-small 20px;
+        font-family: $font-family-secondary;
         text-transform: uppercase;
         border: 2px solid $beige;
         background-color: $beige;
-        font-family: $font-family-secondary;
-        font-weight: bold;
+        font-weight: 500;
         font-size: 12px;
         cursor: pointer;
-        transition: all 0.2s ease-in-out;
         color: $headergray;
+        letter-spacing: 0.04em;
         text-wrap: nowrap;
-        max-width: min-content;
+        width: 150px;
         &:hover {
-          background-color: $white;
-          color: $blue;
-          border: 2px solid $blue;
+          color: $black;
+          border: 2px solid transparent;
         }
       }
     }
@@ -331,6 +330,7 @@
     &__localization {
       width: calc((100% - 64px) / 3);
       position: relative;
+      overflow: hidden;
       cursor: pointer;
       &:hover {
         .prices__localization-text {
@@ -348,6 +348,9 @@
             filter: invert(1);
           }
         }
+        .prices__localization-image {
+          scale: 1.1;
+        }
       }
     }
     &__localization-image {
@@ -355,6 +358,7 @@
       height: 100%;
       object-fit: cover;
       border-radius: 6px;
+      transition: all 0.2s ease-in-out;
     }
     &__localization-content {
       position: absolute;

@@ -165,10 +165,14 @@
       flex-direction: column;
       padding-right: 40px;
       width: 50%;
+      overflow: hidden;
     }
     &__advantages-element {
       display: flex;
       flex-direction: column;
+      transition: all 0.5s ease-in-out;
+      position: relative;
+        background-color: $black;
       &:last-of-type::before {
         width: 100%;
         content: "";
@@ -185,6 +189,10 @@
       &--active {
         display: flex;
         flex-direction: column;
+        z-index: 2;
+        position: relative;
+        background-color: $black;
+        transition: all 0.5s ease-in-out;
         &:last-of-type::before {
           width: 100%;
           content: "";
@@ -224,15 +232,16 @@
       }
 
       &--active {
-        display: flex;
-        align-items: center;
-        gap: 16px;
-        padding-block: 44px;
-        font-family: $font-family-header;
+       display: flex;
+      align-items: center;
+      gap: 16px;
+      padding-block: 44px;
+      font-family: $font-family-header;
         font-size: clamp(16px, 1.5vw, 20px);
-        letter-spacing: 0.04em;
-        text-transform: uppercase;
-        transition: all 0.2s ease-in-out;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      line-height: 20px;
+      transition: all 0.2s ease-in-out;
         span {
           font-family: $font-family-primary;
           font-weight: 700;
@@ -242,11 +251,16 @@
       }
     }
     &__advantages-text {
-      display: none;
-      transition: all 0.2s ease-in-out;
+      margin-bottom: 44px;
+        transition: all 0.5s ease-in-out;
+        font-weight: 300;
+        font-size: clamp(15px, 1vw, 20px);
+        line-height: 24px;
       &--active {
+        position: relative;
+        background-color: $black;
         margin-bottom: 44px;
-        transition: all 0.2s ease-in-out;
+        transition: all 0.5s ease-in-out;
         font-weight: 300;
         font-size: clamp(15px, 1vw, 20px);
         line-height: 24px;
@@ -526,6 +540,7 @@
     &__advantages-content {
       width: 100%;
       padding-right: 0;
+      height: auto;
     }
     &__advantages-text {
       &--active {

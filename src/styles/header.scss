@@ -134,9 +134,8 @@
           transform: rotate(180deg);
         }
         &:hover {
-          background-color: $grayborder;
+          background-color: $beige;
           padding-inline: 10px;
-          border-radius: 8px;
         }
       }
     }
@@ -152,9 +151,9 @@
       display: none;
     }
     &__switch {
-      border: 3px solid $gray;
+      border: 3px solid rgba($headergray, 0);
       border-radius: 8px;
-      background-color: $gray;
+      background-color: rgba($headergray, 0.5);
       position: relative;
       display: flex;
       z-index: 0;
@@ -164,6 +163,7 @@
       line-height: 24px;
       position: relative;
       font-size: 14px;
+      font-weight: 300;
       z-index: 2;
       cursor: pointer;
       transition: all 0.2s ease-in-out;
@@ -183,6 +183,7 @@
         padding: 5px 14px;
         line-height: 24px;
         position: relative;
+        font-weight: 300;
         font-size: 14px;
         z-index: 2;
         cursor: pointer;

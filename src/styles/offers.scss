@@ -43,36 +43,35 @@
         text-transform: uppercase;
         border: 2px solid $blue;
         background-color: $blue;
-        font-family: "Poppins";
         font-weight: bold;
         font-size: 12px;
+        letter-spacing: 0.04em;
         cursor: pointer;
-        transition: all 0.2s ease-in-out;
         color: $white;
         text-wrap: nowrap;
-        max-width: min-content;
+        width: 150px;
+        font-family: $font-family-button;
         &:hover {
-          background-color: $white;
-          color: $blue;
+          background-color: $bluehover;
+          border: 2px solid $bluehover;
         }
       }
       &--white {
         padding: $padding-small 20px;
+        font-family: $font-family-secondary;
         text-transform: uppercase;
         border: 2px solid $beige;
         background-color: $beige;
-        font-family: "Poppins";
-        font-weight: bold;
+        font-weight: 500;
         font-size: 12px;
         cursor: pointer;
-        transition: all 0.2s ease-in-out;
         color: $headergray;
+        letter-spacing: 0.04em;
         text-wrap: nowrap;
-        max-width: min-content;
+        width: 150px;
         &:hover {
-          background-color: $white;
-          color: $blue;
-          border: 2px solid $blue;
+          color: $black;
+          border: 2px solid transparent;
         }
       }
     }
@@ -105,9 +104,8 @@
       transition: all 0.2s ease-in-out;
       cursor: pointer;
       &:hover {
-        border: 2px solid $black;
-        div {
-          margin-left: 20px;
+        span {
+          color: $blue;
         }
       }
       div {

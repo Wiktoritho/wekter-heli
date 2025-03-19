@@ -262,9 +262,8 @@ strong {
     transform: rotate(180deg);
   }
   .header__offer-list li:hover {
-    background-color: #dedede;
+    background-color: #f7f7f7;
     padding-inline: 10px;
-    border-radius: 8px;
   }
   .header__buttons {
     display: flex;
@@ -278,9 +277,9 @@ strong {
     display: none;
   }
   .header__switch {
-    border: 3px solid #323232;
+    border: 3px solid rgba(114, 114, 114, 0);
     border-radius: 8px;
-    background-color: #323232;
+    background-color: rgba(114, 114, 114, 0.5);
     position: relative;
     display: flex;
     z-index: 0;
@@ -290,6 +289,7 @@ strong {
     line-height: 24px;
     position: relative;
     font-size: 14px;
+    font-weight: 300;
     z-index: 2;
     cursor: pointer;
     transition: all 0.2s ease-in-out;
@@ -310,6 +310,7 @@ strong {
     padding: 5px 14px;
     line-height: 24px;
     position: relative;
+    font-weight: 300;
     font-size: 14px;
     z-index: 2;
     cursor: pointer;
@@ -671,28 +672,32 @@ strong {
     font-family: "Poppins", sans-serif;
     font-weight: bold;
     cursor: pointer;
+    line-height: 20px;
     transition: all 0.2s ease-in-out;
     color: #fff;
     text-wrap: nowrap;
     max-width: min-content;
+    letter-spacing: 0.08em;
   }
   .button__blue:hover {
-    background-color: #fff;
-    color: #3b5eab;
+    background-color: #6581BE;
+    border: 2px solid #6581BE;
   }
   .button__black {
     padding: 16px 48px;
     text-transform: uppercase;
     border: 2px solid #3b5eab;
-    background-color: transparent;
+    background-color: #000;
     font-family: "Poppins", sans-serif;
     font-weight: bold;
+    letter-spacing: 0.08em;
+    line-height: 20px;
     cursor: pointer;
     transition: all 0.2s ease-in-out;
   }
   .button__black:hover {
-    background-color: #3b5eab;
-    color: #fff;
+    background-color: rgba(255, 255, 255, 0.1);
+    border: 2px solid #6581BE;
   }
 }
 @media screen and (max-width: 1400px) {
@@ -739,7 +744,7 @@ strong {
     position: relative;
     color: #fff;
   }
-  .section--black h4 {
+  .section--black__header {
     margin: 80px 280px 140px;
     font-family: "Outfit", sans-serif;
     font-size: clamp(24px, 2vw, 36px);
@@ -747,14 +752,23 @@ strong {
     text-align: center;
     line-height: 52px;
   }
-  .section--black h4 span {
+  .section--black__header .line {
+    opacity: 0.2;
+    transform: translateY(10px);
+    transition: opacity 0.5s ease-in-out, transform 0.5s ease-out;
+  }
+  .section--black__header .line span {
     text-decoration: underline;
     text-underline-offset: 8px;
     opacity: 0.5;
     transition: all 0.2s ease-in-out;
   }
-  .section--black h4 span:hover {
+  .section--black__header .line span:hover {
     opacity: 1;
+  }
+  .section--black__header .visible {
+    opacity: 1;
+    transform: translateY(0);
   }
   .section--black__image {
     position: absolute;
@@ -764,17 +778,17 @@ strong {
   }
 }
 @media screen and (max-width: 1400px) {
-  .section--black h4 {
+  .section--black__header {
     margin: 40px 260px 70px;
   }
 }
 @media screen and (max-width: 1120px) {
-  .section--black h4 {
+  .section--black__header {
     margin: 40px 120px 70px;
   }
 }
 @media screen and (max-width: 900px) {
-  .section--black h4 {
+  .section--black__header {
     line-height: 32px;
     margin: 48px 20px 96px;
   }
@@ -839,12 +853,6 @@ strong {
     align-items: center;
     justify-content: flex-start;
     transition: all 0.2s ease-in-out;
-  }
-  .introduction__statistics-block:hover {
-    border: 1px solid #3b5eab;
-  }
-  .introduction__statistics-block:hover .introduction__statistics-block-icon {
-    transform: rotate(360deg);
   }
   .introduction__statistics-block-icon {
     width: 50px;
@@ -1121,37 +1129,36 @@ strong {
     text-transform: uppercase;
     border: 2px solid #3b5eab;
     background-color: #3b5eab;
-    font-family: "Poppins";
     font-weight: bold;
     font-size: 12px;
+    letter-spacing: 0.04em;
     cursor: pointer;
-    transition: all 0.2s ease-in-out;
     color: #fff;
     text-wrap: nowrap;
-    max-width: min-content;
+    width: 150px;
+    font-family: "AvantGarde", sans-serif;
   }
   .offers__button--blue:hover {
-    background-color: #fff;
-    color: #3b5eab;
+    background-color: #6581BE;
+    border: 2px solid #6581BE;
   }
   .offers__button--white {
     padding: 8px 20px;
+    font-family: "Poppins", sans-serif;
     text-transform: uppercase;
     border: 2px solid #f7f7f7;
     background-color: #f7f7f7;
-    font-family: "Poppins";
-    font-weight: bold;
+    font-weight: 500;
     font-size: 12px;
     cursor: pointer;
-    transition: all 0.2s ease-in-out;
     color: #727272;
+    letter-spacing: 0.04em;
     text-wrap: nowrap;
-    max-width: min-content;
+    width: 150px;
   }
   .offers__button--white:hover {
-    background-color: #fff;
-    color: #3b5eab;
-    border: 2px solid #3b5eab;
+    color: #000;
+    border: 2px solid transparent;
   }
   .offers__list {
     padding-inline: 170px;
@@ -1182,11 +1189,8 @@ strong {
     transition: all 0.2s ease-in-out;
     cursor: pointer;
   }
-  .offers__list-container:hover {
-    border: 2px solid #000;
-  }
-  .offers__list-container:hover div {
-    margin-left: 20px;
+  .offers__list-container:hover span {
+    color: #3b5eab;
   }
   .offers__list-container div {
     width: 31px;
@@ -1433,10 +1437,14 @@ strong {
     flex-direction: column;
     padding-right: 40px;
     width: 50%;
+    overflow: hidden;
   }
   .fleet__advantages-element {
     display: flex;
     flex-direction: column;
+    transition: all 0.5s ease-in-out;
+    position: relative;
+    background-color: #000;
   }
   .fleet__advantages-element:last-of-type::before {
     width: 100%;
@@ -1448,6 +1456,10 @@ strong {
   .fleet__advantages-element--active {
     display: flex;
     flex-direction: column;
+    z-index: 2;
+    position: relative;
+    background-color: #000;
+    transition: all 0.5s ease-in-out;
   }
   .fleet__advantages-element--active:last-of-type::before {
     width: 100%;
@@ -1488,6 +1500,7 @@ strong {
     font-size: clamp(16px, 1.5vw, 20px);
     letter-spacing: 0.04em;
     text-transform: uppercase;
+    line-height: 20px;
     transition: all 0.2s ease-in-out;
   }
   .fleet__advantages-header--active span {
@@ -1497,12 +1510,17 @@ strong {
     color: #5c79b9;
   }
   .fleet__advantages-text {
-    display: none;
-    transition: all 0.2s ease-in-out;
+    margin-bottom: 44px;
+    transition: all 0.5s ease-in-out;
+    font-weight: 300;
+    font-size: clamp(15px, 1vw, 20px);
+    line-height: 24px;
   }
   .fleet__advantages-text--active {
+    position: relative;
+    background-color: #000;
     margin-bottom: 44px;
-    transition: all 0.2s ease-in-out;
+    transition: all 0.5s ease-in-out;
     font-weight: 300;
     font-size: clamp(15px, 1vw, 20px);
     line-height: 24px;
@@ -1776,6 +1794,7 @@ strong {
   .fleet__advantages-content {
     width: 100%;
     padding-right: 0;
+    height: auto;
   }
   .fleet__advantages-text--active {
     font-size: 20px;
@@ -1858,37 +1877,36 @@ strong {
     text-transform: uppercase;
     border: 2px solid #3b5eab;
     background-color: #3b5eab;
-    font-family: "Poppins", sans-serif;
     font-weight: bold;
     font-size: 12px;
+    letter-spacing: 0.04em;
     cursor: pointer;
-    transition: all 0.2s ease-in-out;
     color: #fff;
     text-wrap: nowrap;
-    max-width: min-content;
+    width: 150px;
+    font-family: "AvantGarde", sans-serif;
   }
   .prices__button--blue:hover {
-    background-color: #fff;
-    color: #3b5eab;
+    background-color: #6581BE;
+    border: 2px solid #6581BE;
   }
   .prices__button--white {
     padding: 8px 20px;
+    font-family: "Poppins", sans-serif;
     text-transform: uppercase;
     border: 2px solid #f7f7f7;
     background-color: #f7f7f7;
-    font-family: "Poppins", sans-serif;
-    font-weight: bold;
+    font-weight: 500;
     font-size: 12px;
     cursor: pointer;
-    transition: all 0.2s ease-in-out;
     color: #727272;
+    letter-spacing: 0.04em;
     text-wrap: nowrap;
-    max-width: min-content;
+    width: 150px;
   }
   .prices__button--white:hover {
-    background-color: #fff;
-    color: #3b5eab;
-    border: 2px solid #3b5eab;
+    color: #000;
+    border: 2px solid transparent;
   }
   .prices__swiper {
     width: 100%;
@@ -2120,6 +2138,7 @@ strong {
   .prices__localization {
     width: calc((100% - 64px) / 3);
     position: relative;
+    overflow: hidden;
     cursor: pointer;
   }
   .prices__localization:hover .prices__localization-text {
@@ -2137,11 +2156,15 @@ strong {
   .prices__localization:hover .prices__localization-link span {
     filter: invert(1);
   }
+  .prices__localization:hover .prices__localization-image {
+    scale: 1.1;
+  }
   .prices__localization-image {
     width: 100%;
     height: 100%;
     object-fit: cover;
     border-radius: 6px;
+    transition: all 0.2s ease-in-out;
   }
   .prices__localization-content {
     position: absolute;
@@ -2710,7 +2733,6 @@ strong {
     display: flex;
     flex-direction: column;
     gap: 24px;
-    opacity: 0.6;
   }
   .footer__list h3 {
     font-size: 14px;
@@ -2720,6 +2742,7 @@ strong {
     letter-spacing: 0.04em;
     text-transform: uppercase;
     color: #727272;
+    opacity: 0.6;
   }
   .footer__list h3 span {
     display: none;
@@ -2731,6 +2754,12 @@ strong {
   .footer__list a {
     cursor: pointer;
     line-height: 24px;
+    transition: all 0.2s ease-in-out;
+    opacity: 0.6;
+  }
+  .footer__list a:hover {
+    color: #fff;
+    opacity: 1;
   }
   .footer__list:nth-of-type(3) li:nth-of-type(7),
   .footer__list:nth-of-type(3) li:nth-of-type(8),

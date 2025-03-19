@@ -59,12 +59,6 @@
       align-items: center;
       justify-content: flex-start;
       transition: all 0.2s ease-in-out;
-      &:hover {
-        border: 1px solid $blue;
-        .introduction__statistics-block-icon {
-          transform: rotate(360deg);
-        }
-      }
     }
     &__statistics-block-icon {
       width: 50px;

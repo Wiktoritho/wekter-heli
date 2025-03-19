@@ -5,6 +5,7 @@ export function handleHeaderSwitcher() {
     const mobileHeaderButtons = document.querySelectorAll(".header__mobile-button--active, .header__mobile-button");
     const offersButtons = document.querySelectorAll(".offers__buttons button");
     const pricesButtons = document.querySelectorAll(".prices__buttons button");
+    const swiper = document.querySelector(".swiper");
   
     headerButtons.forEach((button) => {
       button.addEventListener("click", function () {
@@ -15,10 +16,14 @@ export function handleHeaderSwitcher() {
             switcher.style.left = "50%";
             offersButtons[1]?.click();
             pricesButtons[1]?.click();
+            // console.log(Object.keys(swiper));
+            swiper.swiper.slideNext()
+            
           } else {
             switcher.style.left = "0px";
             offersButtons[0]?.click();
             pricesButtons[0]?.click();
+            swiper.swiper.slidePrev();
           }
         }
       });

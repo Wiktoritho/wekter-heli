@@ -9,27 +9,31 @@
       font-family: $font-family-secondary;
       font-weight: bold;
       cursor: pointer;
+      line-height: 20px;
       transition: all 0.2s ease-in-out;
       color: $white;
       text-wrap: nowrap;
       max-width: min-content;
+      letter-spacing: 0.08em;
       &:hover {
-        background-color: $white;
-        color: $blue;
+        background-color: $bluehover;
+        border: 2px solid $bluehover;
       }
     }
     &__black {
       padding: $padding-medium $padding-extra;
       text-transform: uppercase;
       border: 2px solid $blue;
-      background-color: transparent;
+      background-color: $black;
       font-family: $font-family-secondary;
       font-weight: bold;
+      letter-spacing: 0.08em;
+      line-height: 20px;
       cursor: pointer;
       transition: all 0.2s ease-in-out;
       &:hover {
-        background-color: $blue;
-        color: $white;
+        background-color: rgba(white, 0.1);
+        border: 2px solid $bluehover;
       }
     }
   }

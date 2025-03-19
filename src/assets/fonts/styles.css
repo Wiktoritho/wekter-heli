@@ -43,3 +43,8 @@
     src: url('./DrukWideBold.ttf') format('truetype');
     font-weight: bold;
 }
+@font-face {
+    font-family: 'AvantGarde';
+    src: url('./ITCAvantGardeStd-Bold.ttf') format('truetype');
+    font-weight: bold;
+}

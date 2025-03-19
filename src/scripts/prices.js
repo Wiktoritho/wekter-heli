@@ -10,14 +10,16 @@ export function handlePrices() {
   const text = document.querySelector(".prices__header-text");
   const businessSection = document.querySelector(".prices__business");
   const choppersSwiper = document.querySelector(".prices__swiper-choppers");
-  const pricesButtons = document.querySelectorAll(".prices__buttons button");
   const headerButtons = document.querySelectorAll(".header__button--active, .header__button");
   const mobileHeaderButtons = document.querySelectorAll(".header__mobile-button--active, .header__mobile-button");
 
   function setDisplay(elements, displayValue) {
-    elements.forEach((el) => {
+    if (elements) {
+      elements.forEach((el) => {
       el.style.display = displayValue;
     });
+    }
+    
   }
 
   function changeHeaders(index) {
@@ -25,12 +27,14 @@ export function handlePrices() {
       { big: "Nasze heliporty to komfortowe warunki dla śmigłowców i ich pasażerów", small: "Lokalizacje heliportów" },
       { big: "Kup udział w śmigłowcu i oszczędzaj na każdej godzinie spędzonej w powietrzu", small: "Oferta dla firm" },
     ];
-
-    headers[1].textContent = headersText[index].big;
+    if (headersText) {
+      headers[1].textContent = headersText[index].big;
     smallHeaders[1].textContent = headersText[index].small;
+    }
+    
   }
-
-  buttons.forEach((button, index) => {
+  if (buttons) {
+    buttons.forEach((button, index) => {
     button.addEventListener("click", function () {
       buttons.forEach((btn) => {
         btn.classList.remove("prices__button--blue");
@@ -80,4 +84,6 @@ export function handlePrices() {
       changeHeaders(index);
     });
   });
+  }
+  
 }

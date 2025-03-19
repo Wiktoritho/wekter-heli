@@ -7,21 +7,30 @@
       align-items: center;
       position: relative;
       color: $white;
-      h4 {
+      &__header {
         margin: 80px 280px 140px;
         font-family: $font-family-primary;
         font-size: clamp(24px, 2vw, 36px);
         font-weight: 300;
         text-align: center;
         line-height: 52px;
-        span {
-          text-decoration: underline;
-          text-underline-offset: 8px;
-          opacity: 0.5;
-          transition: all 0.2s ease-in-out;
-          &:hover {
-            opacity: 1;
+        .line {
+          opacity: 0.2;
+          transform: translateY(10px);
+            transition: opacity 0.5s ease-in-out, transform 0.5s ease-out;
+          span {
+            text-decoration: underline;
+            text-underline-offset: 8px;
+            opacity: 0.5;
+            transition: all 0.2s ease-in-out;
+            &:hover {
+              opacity: 1;
+            }
           }
+        }
+        .visible {
+          opacity: 1;
+          transform: translateY(0);
         }
       }
       &__image {
@@ -34,21 +43,21 @@
   }
   @include respond-to("large") {
     &--black {
-      h4 {
+      &__header {
         margin: 40px 260px 70px;
       }
     }
   }
   @include respond-to("medium") {
     &--black {
-      h4 {
+      &__header {
         margin: 40px 120px 70px;
       }
     }
   }
   @include respond-to("small") {
     &--black {
-      h4 {
+      &__header {
         line-height: 32px;
         margin: $margin-large 20px 96px;
       }
