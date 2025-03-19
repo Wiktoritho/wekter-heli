@@ -518,37 +518,33 @@
         text-transform: uppercase;
         border: 2px solid $blue;
         background-color: $blue;
-        font-family: $font-family-secondary;
         font-weight: bold;
         font-size: 12px;
         letter-spacing: 0.04em;
         cursor: pointer;
-        transition: all 0.2s ease-in-out;
         color: $white;
         text-wrap: nowrap;
-        max-width: min-content;
+        font-family: $font-family-button;
         &:hover {
-          background-color: $white;
-          color: $blue;
+          background-color: $bluehover;
+          border: 2px solid $bluehover;
         }
       }
       &--white {
         padding: 12px 40px;
-        text-transform: uppercase;
-        border: 2px solid $blue;
-        background-color: $white;
         font-family: $font-family-secondary;
-        font-weight: bold;
+        text-transform: uppercase;
+        border: 2px solid $white;
+        background-color: $white;
+        font-weight: 500;
         font-size: 12px;
-        letter-spacing: 0.04em;
         cursor: pointer;
-        transition: all 0.2s ease-in-out;
-        color: $blue;
+        color: $headergray;
+        letter-spacing: 0.04em;
         text-wrap: nowrap;
-        max-width: min-content;
         &:hover {
-          background-color: $blue;
-          color: $white;
+          color: $black;
+          border: 2px solid transparent;
         }
       }
     }
