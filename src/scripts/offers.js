@@ -1,6 +1,8 @@
 export function initOffers() {
   const buttons = document.querySelectorAll(".offers__buttons button");
   const lists = document.querySelectorAll(".offers__list");
+  const headerButtons = document.querySelectorAll(".header__button--active, .header__button");
+  const mobileHeaderButtons = document.querySelectorAll(".header__mobile-button--active, .header__mobile-button");
   let activeList = lists[0];
   let visibleItems = window.innerWidth <= 900 ? 5 : 3;
 
@@ -50,7 +52,7 @@ export function initOffers() {
   updateListVisibility(activeList);
 
   buttons.forEach((button, index) => {
-    button.addEventListener("click", () => {
+    button.addEventListener("click", function () {
       buttons.forEach((btn) => {
         btn.classList.remove("offers__button--blue");
         btn.classList.add("offers__button--white");
@@ -58,6 +60,13 @@ export function initOffers() {
       
       button.classList.remove("offers__button--white");
       button.classList.add("offers__button--blue");
+      if (this.textContent.trim() === "Loty biznesowe") {
+        headerButtons[1]?.click();
+        mobileHeaderButtons[1].click();
+      } else {
+        headerButtons[0]?.click();
+        mobileHeaderButtons[0]?.click();
+      }
       showList(lists[index]);
     });
   });

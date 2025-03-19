@@ -10,6 +10,9 @@ export function handlePrices() {
   const text = document.querySelector(".prices__header-text");
   const businessSection = document.querySelector(".prices__business");
   const choppersSwiper = document.querySelector(".prices__swiper-choppers");
+  const pricesButtons = document.querySelectorAll(".prices__buttons button");
+  const headerButtons = document.querySelectorAll(".header__button--active, .header__button");
+  const mobileHeaderButtons = document.querySelectorAll(".header__mobile-button--active, .header__mobile-button");
 
   function setDisplay(elements, displayValue) {
     elements.forEach((el) => {
@@ -20,7 +23,7 @@ export function handlePrices() {
   function changeHeaders(index) {
     const headersText = [
       { big: "Nasze heliporty to komfortowe warunki dla śmigłowców i ich pasażerów", small: "Lokalizacje heliportów" },
-      { big: "Kup udział w śmigłowcu i oszczędzaj na każdej godzinie spędzonej w powietrzu", small: "Oferta dla firm" }
+      { big: "Kup udział w śmigłowcu i oszczędzaj na każdej godzinie spędzonej w powietrzu", small: "Oferta dla firm" },
     ];
 
     headers[1].textContent = headersText[index].big;
@@ -28,7 +31,7 @@ export function handlePrices() {
   }
 
   buttons.forEach((button, index) => {
-    button.addEventListener("click", () => {
+    button.addEventListener("click", function () {
       buttons.forEach((btn) => {
         btn.classList.remove("prices__button--blue");
         btn.classList.add("prices__button--white");
@@ -36,6 +39,14 @@ export function handlePrices() {
 
       button.classList.remove("prices__button--white");
       button.classList.add("prices__button--blue");
+
+      if (this.textContent.trim() === "Loty biznesowe") {
+        headerButtons[1]?.click();
+        mobileHeaderButtons[1].click();
+      } else {
+        headerButtons[0]?.click();
+        mobileHeaderButtons[0]?.click();
+      }
 
       if (index === 0) {
         swiperSection.style.display = "block";

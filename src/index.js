@@ -73,6 +73,23 @@ function handleFooterLists() {
   });
 }
 
+function changeChoppers() {
+  const choppersSwiper = document.querySelector(".prices__swiper-choppers");
+  const choppers = document.querySelectorAll(".prices__chopper");
+
+  if (window.innerWidth <= 900) {
+    choppersSwiper.style.display = "flex";
+    choppers.forEach((slide) => {
+      slide.style.display = "none"
+    });
+  } else {
+    choppersSwiper.style.display = "none";
+    choppers.forEach((slide) => {
+      slide.style.display = "flex"
+    });
+  }
+}
+
 function debounce(func, wait) {
   let timeout;
   return function (...args) {
@@ -88,6 +105,7 @@ window.addEventListener(
     if ((startedWidth > breakpoint && window.innerWidth < breakpoint) || (startedWidth <= breakpoint && window.innerWidth >= breakpoint)) {
       initAllSwipers();
       initOffers();
+      changeChoppers();
       startedWidth = window.innerWidth;
     }
   }, 200)

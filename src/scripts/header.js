@@ -5,8 +5,6 @@ export function handleHeaderSwitcher() {
     const mobileHeaderButtons = document.querySelectorAll(".header__mobile-button--active, .header__mobile-button");
     const offersButtons = document.querySelectorAll(".offers__buttons button");
     const pricesButtons = document.querySelectorAll(".prices__buttons button");
-
-    
   
     headerButtons.forEach((button) => {
       button.addEventListener("click", function () {
