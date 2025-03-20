@@ -71,10 +71,20 @@
       &__header {
         margin: 40px 260px 70px;
       }
+      &__text {
+        margin-inline: 10%;
+        line-height: 42px;
+      }
+      &__gallery {
+        width: 100%;
+      }
     }
   }
   @include respond-to("medium") {
     &--black {
+      &--padding {
+        padding: 40px 20px 0px;
+      }
       &__header {
         margin: 40px 120px 70px;
       }
@@ -85,6 +95,20 @@
       &__header {
         line-height: 32px;
         margin: $margin-large 20px 96px;
+      }
+      &__text {
+        margin-inline: 0px;
+        line-height: 36px;
+      }
+      &__gallery {
+        img:first-of-type {
+          width: calc((100% - 16px)/2);
+          margin-bottom: 10%;
+        }
+        img:last-of-type {
+          width: calc((100% - 16px)/2);
+          margin-top: 10%;
+        }
       }
     }
   }

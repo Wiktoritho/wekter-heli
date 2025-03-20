@@ -1,3 +1,5 @@
+import Arrow from "../assets/icons/arrow-side-header.svg";
+
 export function initBanner(data) {
   const banner = document.querySelector(".baner");
   const headerSwitch = document.querySelector(".header__switch");
@@ -8,8 +10,8 @@ export function initBanner(data) {
         <img class="baner__image" src="${data.image}" alt="Baner"/>
         <div class="baner__content baner__content--${data.version}">
             <p class="baner__link">
-                <a href="/">Strona główna</a>
-                <img src="/wekter-heli/src/assets/icons/arrow-side-header.svg" alt="Arrow"/>
+                <a href="/wekter-heli/">Strona główna</a>
+                <img src="${Arrow}" alt="Arrow"/>
                 <a>${data.from}</a>
             </p>
             <h2 class="baner__title">${data.title}</h2>

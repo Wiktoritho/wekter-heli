@@ -1,7 +1,7 @@
 export function handlePrices() {
   const buttons = document.querySelectorAll(".prices__buttons button");
-  const headers = document.querySelectorAll(".prices__header--big");
-  const smallHeaders = document.querySelectorAll(".prices__header--small");
+  const headers = document.querySelectorAll(".prices .headers--big");
+  const smallHeaders = document.querySelectorAll(".prices .headers--small");
   const choppers = document.querySelectorAll(".prices__chopper");
   const swiperSection = document.querySelector(".prices__swiper");
   const localizations = document.querySelectorAll(".prices__localization");
@@ -16,10 +16,9 @@ export function handlePrices() {
   function setDisplay(elements, displayValue) {
     if (elements) {
       elements.forEach((el) => {
-      el.style.display = displayValue;
-    });
+        el.style.display = displayValue;
+      });
     }
-    
   }
 
   function changeHeaders(index) {
@@ -29,63 +28,61 @@ export function handlePrices() {
     ];
     if (headersText) {
       headers[1].textContent = headersText[index].big;
-    smallHeaders[1].textContent = headersText[index].small;
+      smallHeaders[1].textContent = headersText[index].small;
     }
-    
   }
   if (buttons) {
     buttons.forEach((button, index) => {
-    button.addEventListener("click", function () {
-      buttons.forEach((btn) => {
-        btn.classList.remove("button", "button--blue", "button--medium", "button--fonted");
-        btn.classList.add("button", "button--white", "button--medium");
+      button.addEventListener("click", function () {
+        buttons.forEach((btn) => {
+          btn.classList.remove("button", "button--blue", "button--medium", "button--fonted");
+          btn.classList.add("button", "button--white", "button--medium");
+        });
+
+        button.classList.remove("button", "button--white", "button--medium");
+        button.classList.add("button", "button--blue", "button--medium", "button--fonted");
+
+        if (this.textContent.trim() === "Loty biznesowe") {
+          headerButtons[1]?.click();
+          mobileHeaderButtons[1].click();
+        } else {
+          headerButtons[0]?.click();
+          mobileHeaderButtons[0]?.click();
+        }
+
+        if (index === 0) {
+          swiperSection.style.display = "block";
+          choppersSwiper.style.display = "none";
+          setDisplay(choppers, "none");
+
+          if (window.innerWidth <= 900) {
+            pricesSwiper.style.display = "flex";
+            pricesSwiperPagination.style.display = "block";
+          } else {
+            setDisplay(localizations, "flex");
+          }
+          text.style.display = "none";
+          businessSection.style.display = "none";
+        } else if (index === 1) {
+          swiperSection.style.display = "none";
+          text.style.display = "block";
+          setDisplay(localizations, "none");
+          pricesSwiper.style.display = "none";
+          pricesSwiperPagination.style.display = "none";
+
+          if (window.innerWidth <= 900) {
+            choppersSwiper.style.display = "flex";
+          } else {
+            setDisplay(choppers, "flex");
+          }
+
+          businessSection.style.display = "block";
+        }
+
+        changeHeaders(index);
       });
-
-      button.classList.remove("button", "button--white", "button--medium");
-      button.classList.add("button", "button--blue", "button--medium", "button--fonted");
-
-      if (this.textContent.trim() === "Loty biznesowe") {
-        headerButtons[1]?.click();
-        mobileHeaderButtons[1].click();
-      } else {
-        headerButtons[0]?.click();
-        mobileHeaderButtons[0]?.click();
-      }
-
-      if (index === 0) {
-        swiperSection.style.display = "block";
-        choppersSwiper.style.display = "none";
-        setDisplay(choppers, "none");
-
-        if (window.innerWidth <= 900) {
-          pricesSwiper.style.display = "flex";
-          pricesSwiperPagination.style.display = "block";
-        } else {
-          setDisplay(localizations, "flex");
-        }
-        text.style.display = "none";
-        businessSection.style.display = "none";
-      } else if (index === 1) {
-        swiperSection.style.display = "none";
-        text.style.display = "block";
-        setDisplay(localizations, "none");
-        pricesSwiper.style.display = "none";
-        pricesSwiperPagination.style.display = "none";
-
-        if (window.innerWidth <= 900) {
-          choppersSwiper.style.display = "flex";
-        } else {
-          setDisplay(choppers, "flex");
-        }
-
-        businessSection.style.display = "block";
-      }
-
-      changeHeaders(index);
     });
-  });
   }
-  
 }
 
 export function changeChoppers() {
@@ -93,14 +90,12 @@ export function changeChoppers() {
   const choppers = document.querySelectorAll(".prices__chopper");
   const buttons = document.querySelectorAll(".prices__buttons button");
 
-  if (!choppersSwiper || !choppers.length) return;
-
   if (window.innerWidth <= 900) {
     choppersSwiper.style.display = "flex";
     choppers.forEach((slide) => {
       slide.style.display = "none";
     });
-  } else if (window.innerWidth > 900 && buttons[1].classList.value.includes("prices__button--blue")) {
+  } else if (window.innerWidth > 900 && buttons[1].classList.value.includes("button--blue")) {
     choppersSwiper.style.display = "none";
     choppers.forEach((slide) => {
       slide.style.display = "flex";

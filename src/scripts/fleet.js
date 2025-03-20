@@ -1,4 +1,31 @@
+const flightData1 = [
+  { city: "Warszawa", time: "1h 45m" },
+  { city: "Poznań", time: "0h 50m" },
+  { city: "Gdańsk", time: "2h 15m" },
+  { city: "Zakopane", time: "1h 40m" },
+  { city: "Szczecin", time: "1h 45m" },
+  { city: "Warszawa", time: "1h 45m" },
+  { city: "Warszawa", time: "1h 45m" },
+  { city: "Warszawa", time: "1h 45m" },
+];
+
+const flightData2 = [
+  { city: "Wrocław", time: "1h 45m" },
+  { city: "Poznań", time: "0h 50m" },
+  { city: "Gdańsk", time: "2h 15m" },
+  { city: "Zakopane", time: "1h 40m" },
+  { city: "Szczecin", time: "1h 45m" },
+  { city: "Wrocław", time: "1h 45m" },
+  { city: "Wrocław", time: "1h 45m" },
+  { city: "Wrocław", time: "1h 45m" },
+];
+
+
+
 export function initFleet() {
+  countFleetBlockHeight();
+  generateFleetTables(flightData1, true);
+  generateFleetTables(flightData2, false);
   const examples = document.querySelectorAll(".fleet__example, .fleet__example--active");
   const elements = document.querySelectorAll(".fleet__advantages-element, .fleet__advantages-element--active");
   const texts = document.querySelectorAll(".fleet__advantages-text, .fleet__advantages-text--active");
@@ -60,7 +87,7 @@ export function initFleet() {
           texts[currentIndex].style.transform = `translateY(-${texts[currentIndex - 1].offsetHeight + 44}px)`;
           content.style.height = `${headers[currentIndex].offsetHeight + headers[currentIndex - 1].offsetHeight + texts[currentIndex].offsetHeight}px`;
           texts[currentIndex].style.zindex = "2";
-        } else if (index === 0 && window.innerWidth > 900){
+        } else if (index === 0 && window.innerWidth > 900) {
           currentIndex = index;
           elements[currentIndex + 1].style.transform = "translateY(0px)";
           texts[currentIndex + 1].style.transform = "translateY(0px)";
@@ -99,11 +126,39 @@ export function initFleet() {
   }
 }
 
-export function countFleetBlockHeight() {
+function countFleetBlockHeight() {
   if (window.innerWidth > 900) {
     const content = document.querySelector(".fleet__advantages-content");
-  const texts = document.querySelectorAll(".fleet__advantages-text, .fleet__advantages-text--active");
-  const headers = document.querySelectorAll(".fleet__advantages-header, .fleet__advantages-header--active");
-  content.style.height = `${headers[0].offsetHeight + headers[1].offsetHeight + texts[0].offsetHeight + 44}px`;
+    const texts = document.querySelectorAll(".fleet__advantages-text, .fleet__advantages-text--active");
+    const headers = document.querySelectorAll(".fleet__advantages-header, .fleet__advantages-header--active");
+    content.style.height = `${headers[0].offsetHeight + headers[1].offsetHeight + texts[0].offsetHeight + 44}px`;
   }
+}
+
+
+function generateFleetTables(data, active) {
+  const container = document.querySelector(".fleet__advantages-block");
+  if (!container) return;
+
+  const tableHTML = `
+    <table class="${active ? "fleet__advantages-table--active" : "fleet__advantages-table"}">
+        <tr>
+          <th>Miasto docelowe</th>
+          <th colspan="2">Czas lotu</th>
+        </tr>
+        ${data
+          .map(
+            (item) => `
+          <tr>
+            <td>${item.city}</td>
+            <td>${item.time}</td>
+            <td><span>Zamów</span></td>
+          </tr>
+        `
+          )
+          .join("")}
+    </table>
+  `;
+
+  container.insertAdjacentHTML("beforeend", tableHTML);
 }

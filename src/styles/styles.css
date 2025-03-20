@@ -910,8 +910,18 @@ strong {
   .section--black__header {
     margin: 40px 260px 70px;
   }
+  .section--black__text {
+    margin-inline: 10%;
+    line-height: 42px;
+  }
+  .section--black__gallery {
+    width: 100%;
+  }
 }
 @media screen and (max-width: 1120px) {
+  .section--black--padding {
+    padding: 40px 20px 0px;
+  }
   .section--black__header {
     margin: 40px 120px 70px;
   }
@@ -920,6 +930,18 @@ strong {
   .section--black__header {
     line-height: 32px;
     margin: 48px 20px 96px;
+  }
+  .section--black__text {
+    margin-inline: 0px;
+    line-height: 36px;
+  }
+  .section--black__gallery img:first-of-type {
+    width: calc((100% - 16px) / 2);
+    margin-bottom: 10%;
+  }
+  .section--black__gallery img:last-of-type {
+    width: calc((100% - 16px) / 2);
+    margin-top: 10%;
   }
 }
 

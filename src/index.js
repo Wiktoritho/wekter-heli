@@ -1,5 +1,5 @@
-import { initOffers, createOfferLists } from "./scripts/offers";
-import { initFleet, countFleetBlockHeight } from "./scripts/fleet";
+import { initOffers } from "./scripts/offers";
+import { initFleet } from "./scripts/fleet";
 import { handlePrices, changeChoppers, ringProgress } from "./scripts/prices";
 import { handleHeaderSwitcher, handleMenu, handleMobileMenu } from "./scripts/header";
 import { initAllSwipers, changeSwiperSlides } from "./scripts/swipers";
@@ -11,7 +11,6 @@ let startedWidth = window.innerWidth;
 
 document.addEventListener("DOMContentLoaded", () => {
   initAllSwipers();
-  createOfferLists();
   initOffers();
   initFleet();
   ringProgress();
@@ -22,7 +21,6 @@ document.addEventListener("DOMContentLoaded", () => {
   handleMobileMenu();
   changeSwiperSlides();
   animateMainText();
-  countFleetBlockHeight();
 
   window.addEventListener(
     "resize",
