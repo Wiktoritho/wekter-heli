@@ -20,74 +20,10 @@
       background-color: $grayborder;
       margin-bottom: 120px;
     }
-    &__header {
-      &--small {
-        font-family: $font-family-header;
-        color: #727272;
-        text-align: center;
-        width: 100%;
-        font-size: 14px;
-        text-transform: uppercase;
-      }
-      &--big {
-        text-align: center;
-        margin-block: $margin-medium 0px;
-        font-size: clamp(32px, 3vw, 48px);
-        width: 100%;
-        line-height: 1.2;
-        font-weight: 500;
-        &::after {
-          content: "";
-          width: 100%;
-          height: 1px;
-          background-color: $grayborder;
-          display: block;
-          margin-block: $margin-medium 0px;
-        }
-      }
-    }
     &__buttons {
       margin: $margin-medium auto;
       width: min-content;
       display: flex;
-    }
-    &__button {
-      &--blue {
-        padding: 8px 20px;
-        text-transform: uppercase;
-        border: 2px solid $blue;
-        background-color: $blue;
-        font-weight: bold;
-        font-size: 12px;
-        letter-spacing: 0.04em;
-        cursor: pointer;
-        color: $white;
-        text-wrap: nowrap;
-        width: 150px;
-        font-family: $font-family-button;
-        &:hover {
-          background-color: $bluehover;
-          border: 2px solid $bluehover;
-        }
-      }
-      &--white {
-        padding: $padding-small 20px;
-        font-family: $font-family-secondary;
-        text-transform: uppercase;
-        border: 2px solid $beige;
-        background-color: $beige;
-        font-weight: 500;
-        font-size: 12px;
-        cursor: pointer;
-        color: $headergray;
-        letter-spacing: 0.04em;
-        text-wrap: nowrap;
-        width: 150px;
-        &:hover {
-          color: $black;
-          border: 2px solid transparent;
-        }
-      }
     }
     &__swiper {
       width: 100%;
@@ -511,42 +447,6 @@
       margin-top: 32px;
       display: flex;
       gap: 16px;
-    }
-    &__business-button {
-      &--blue {
-        padding: 12px 40px;
-        text-transform: uppercase;
-        border: 2px solid $blue;
-        background-color: $blue;
-        font-weight: bold;
-        font-size: 12px;
-        letter-spacing: 0.04em;
-        cursor: pointer;
-        color: $white;
-        text-wrap: nowrap;
-        font-family: $font-family-button;
-        &:hover {
-          background-color: $bluehover;
-          border: 2px solid $bluehover;
-        }
-      }
-      &--white {
-        padding: 12px 40px;
-        font-family: $font-family-secondary;
-        text-transform: uppercase;
-        border: 2px solid $white;
-        background-color: $white;
-        font-weight: 500;
-        font-size: 12px;
-        cursor: pointer;
-        color: $headergray;
-        letter-spacing: 0.04em;
-        text-wrap: nowrap;
-        &:hover {
-          color: $black;
-          border: 2px solid transparent;
-        }
-      }
     }
   }
   @include respond-to("large") {

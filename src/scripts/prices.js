@@ -37,12 +37,12 @@ export function handlePrices() {
     buttons.forEach((button, index) => {
     button.addEventListener("click", function () {
       buttons.forEach((btn) => {
-        btn.classList.remove("prices__button--blue");
-        btn.classList.add("prices__button--white");
+        btn.classList.remove("button", "button--blue", "button--medium", "button--fonted");
+        btn.classList.add("button", "button--white", "button--medium");
       });
 
-      button.classList.remove("prices__button--white");
-      button.classList.add("prices__button--blue");
+      button.classList.remove("button", "button--white", "button--medium");
+      button.classList.add("button", "button--blue", "button--medium", "button--fonted");
 
       if (this.textContent.trim() === "Loty biznesowe") {
         headerButtons[1]?.click();
@@ -86,4 +86,38 @@ export function handlePrices() {
   });
   }
   
+}
+
+export function changeChoppers() {
+  const choppersSwiper = document.querySelector(".prices__swiper-choppers");
+  const choppers = document.querySelectorAll(".prices__chopper");
+  const buttons = document.querySelectorAll(".prices__buttons button");
+
+  if (!choppersSwiper || !choppers.length) return;
+
+  if (window.innerWidth <= 900) {
+    choppersSwiper.style.display = "flex";
+    choppers.forEach((slide) => {
+      slide.style.display = "none";
+    });
+  } else if (window.innerWidth > 900 && buttons[1].classList.value.includes("prices__button--blue")) {
+    choppersSwiper.style.display = "none";
+    choppers.forEach((slide) => {
+      slide.style.display = "flex";
+    });
+  }
+}
+
+export function ringProgress() {
+  document.querySelectorAll(".swiper-slide").forEach((slide) => {
+    const valueElement = slide.querySelector(".prices__ring-value");
+    const ringOutside = slide.querySelector(".prices__ring--outside");
+
+    if (!valueElement || !ringOutside) return;
+
+    const minutes = parseInt(valueElement.textContent.trim().split(":")[1] || "0", 10);
+    const degrees = (minutes / 60) * 360;
+
+    ringOutside.style.background = `conic-gradient(#3B5EAB ${degrees}deg, #ddd ${degrees}deg)`;
+  });
 }

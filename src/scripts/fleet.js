@@ -98,3 +98,12 @@ export function initFleet() {
     });
   }
 }
+
+export function countFleetBlockHeight() {
+  if (window.innerWidth > 900) {
+    const content = document.querySelector(".fleet__advantages-content");
+  const texts = document.querySelectorAll(".fleet__advantages-text, .fleet__advantages-text--active");
+  const headers = document.querySelectorAll(".fleet__advantages-header, .fleet__advantages-header--active");
+  content.style.height = `${headers[0].offsetHeight + headers[1].offsetHeight + texts[0].offsetHeight + 44}px`;
+  }
+}

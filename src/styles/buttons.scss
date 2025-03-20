@@ -1,0 +1,87 @@
+@use "variables" as *;
+.button {
+  @include respond-to("desktop") {
+    padding: $padding-medium $padding-extra;
+    text-transform: uppercase;
+    font-family: $font-family-secondary;
+    font-weight: bold;
+    letter-spacing: 0.08em;
+    line-height: 20px;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+    text-wrap: nowrap;
+    border: 2px solid transparent;
+    width: fit-content;
+    display: flex;
+    justify-content: center;
+    &--blue {
+      background-color: $blue;
+      border-color: $blue;
+      color: $white;
+
+      &:hover {
+        background-color: $bluehover;
+        border-color: $bluehover;
+      }
+    }
+    &--black {
+      background-color: $black;
+      border-color: $blue;
+
+      &:hover {
+        background-color: rgba(white, 0.1);
+        border-color: $bluehover;
+      }
+    }
+    &--white {
+      background-color: transparent;
+      border-color: transparent;
+      color: $headergray;
+      font-family: $font-family-secondary;
+      font-weight: 400;
+      &:hover {
+        color: $black;
+        border-color: transparent;
+      }
+    }
+    &--medium {
+      padding: 8px 20px;
+      width: 150px;
+      font-size: 12px;
+      letter-spacing: 0.04em;
+    }
+    &--large {
+      padding: 12px 40px;
+      font-size: 12px;
+      letter-spacing: 0.04em;
+    }
+    &--fonted {
+      font-family: $font-family-button;
+    }
+  }
+  @include respond-to("small") {
+    &--blue {
+      font-size: 14px;
+      padding: $padding-medium 0px;
+      width: calc((100% - 16px) / 2);
+      text-align: center;
+      max-width: 100%;
+    }
+    &--black {
+      font-size: 14px;
+      padding: $padding-medium 0px;
+      width: calc((100% - 16px) / 2);
+      text-align: center;
+      max-width: 100%;
+      background-color: transparent;
+    }
+    &--long {
+      width: 100%;
+    }
+    &--medium {
+      padding: 8px 20px;
+      width: 150px;
+      font-size: 12px;
+    }
+  }
+}

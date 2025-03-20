@@ -5,8 +5,12 @@
       display: flex;
       justify-content: center;
       align-items: center;
+      flex-direction: column;
       position: relative;
       color: $white;
+      &--padding {
+        padding: 80px 80px 0px;
+      }
       &__header {
         margin: 80px 280px 140px;
         font-family: $font-family-primary;
@@ -31,6 +35,27 @@
         .visible {
           opacity: 1;
           transform: translateY(0);
+        }
+      }
+      &__text {
+        font-family: $font-family-primary;
+        font-size: clamp(24px, 3vw, 36px);
+        line-height: 52px;
+        margin-inline: 22%;
+        margin-block: $margin-medium $margin-large;
+        text-align: center;
+      }
+      &__gallery {
+        width: calc(100% - 240px);
+        display: flex;
+        justify-content: space-between;
+        img:first-of-type {
+          width: calc((100% - 24px)/2);
+          margin-bottom: 10%;
+        }
+        img:last-of-type {
+          width: calc((100% - 24px)/2);
+          margin-top: 10%;
         }
       }
       &__image {

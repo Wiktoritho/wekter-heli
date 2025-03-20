@@ -12,68 +12,10 @@
       z-index: 1;
       margin-top: -80px;
     }
-    &__header {
-      &--small {
-        padding-top: 40px;
-        font-family: $font-family-header;
-        color: $headergray;
-        text-align: center;
-        width: 100%;
-        font-size: 14px;
-        text-transform: uppercase;
-      }
-      &--big {
-        font-family: $font-family-primary;
-        text-align: center;
-        margin-block: 24px;
-        font-size: clamp(32px, 3vw, 48px);
-        margin-inline: 25%;
-        line-height: 1.2;
-        font-weight: 500;
-      }
-    }
     &__buttons {
       margin-inline: auto;
       width: min-content;
       display: flex;
-    }
-    &__button {
-      &--blue {
-        padding: 8px 20px;
-        text-transform: uppercase;
-        border: 2px solid $blue;
-        background-color: $blue;
-        font-weight: bold;
-        font-size: 12px;
-        letter-spacing: 0.04em;
-        cursor: pointer;
-        color: $white;
-        text-wrap: nowrap;
-        width: 150px;
-        font-family: $font-family-button;
-        &:hover {
-          background-color: $bluehover;
-          border: 2px solid $bluehover;
-        }
-      }
-      &--white {
-        padding: $padding-small 20px;
-        font-family: $font-family-secondary;
-        text-transform: uppercase;
-        border: 2px solid $beige;
-        background-color: $beige;
-        font-weight: 500;
-        font-size: 12px;
-        cursor: pointer;
-        color: $headergray;
-        letter-spacing: 0.04em;
-        text-wrap: nowrap;
-        width: 150px;
-        &:hover {
-          color: $black;
-          border: 2px solid transparent;
-        }
-      }
     }
     &__list {
       padding-inline: 170px;
@@ -161,15 +103,6 @@
       margin-top: -40px;
       margin-inline: 20px;
       padding-block: 0px 100px;
-    }
-    &__header {
-      &--small {
-        padding-top: $padding-extra;
-      }
-      &--big {
-        margin-inline: 20px;
-        line-height: 40px;
-      }
     }
     &__buttons {
       display: none;

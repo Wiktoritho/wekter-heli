@@ -1,0 +1,16 @@
+@use "variables" as *;
+.texts {
+  @include respond-to("desktop") {
+    &--small {
+      font-size: clamp(20px, 2vw, 24px);
+      line-height: 32px;
+      margin-bottom: $margin-small;
+    }
+    &--width-small {
+      max-width: 530px;
+    }
+    &--width-big {
+      max-width: 580px;
+    }
+  }
+}

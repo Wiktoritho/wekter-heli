@@ -29,24 +29,6 @@
       justify-content: space-between;
       align-items: flex-end;
     }
-    &__header {
-      font-size: clamp(32px, 3vw, 48px);
-      line-height: 56px;
-    }
-    &__text {
-      &--small {
-        font-size: clamp(20px, 2vw, 24px);
-        line-height: 32px;
-        margin-bottom: 16px;
-        max-width: 530px;
-      }
-      &--big {
-        font-size: clamp(20px, 2vw, 24px);
-        line-height: 32px;
-        margin-bottom: 16px;
-        max-width: 580px;
-      }
-    }
     &__choppers {
       display: flex;
       gap: 60px;
@@ -397,9 +379,6 @@
     &__examples {
       height: 500px;
     }
-    &__header {
-      line-height: 46px;
-    }
     &__advantages-header {
       padding-block: 30px;
       &--active {
@@ -430,9 +409,6 @@
         }
       }
     }
-    &__header {
-      line-height: 36px;
-    }
     &__examples {
       height: 420px;
     }
@@ -461,22 +437,11 @@
       &--big {
         width: 100%;
         gap: 16px;
-        .button__blue {
-          width: 100%;
-        }
-      }
-    }
-    &__text {
-      &--small {
-        margin-bottom: 8px;
       }
     }
     &__container {
       flex-direction: column;
       align-items: none;
-      .button__blue {
-        width: 100%;
-      }
     }
     &__examples {
       height: auto;

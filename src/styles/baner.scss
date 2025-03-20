@@ -1,0 +1,87 @@
+@use "variables" as *;
+.baner {
+  @include respond-to("desktop") {
+    width: 100%;
+    position: relative;
+    min-height: 450px;
+    &__image {
+      width: 100%;
+      height: 100%;
+      min-height: 450px;
+      object-fit: cover;
+    }
+    &__content {
+      position: absolute;
+      color: $white;
+      font-family: $font-family-primary;
+      left: 80px;
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      max-width: 44%;
+      &--high {
+        top: 150px;
+      }
+      &--low {
+        top: 250px;
+      }
+    }
+    &__link {
+      margin-bottom: $margin-medium;
+      display: flex;
+      gap: 8px;
+      align-items: center;
+      font-weight: 400;
+      font-size: 12px;
+      line-height: 20px;
+      letter-spacing: 0.03em;
+      text-transform: uppercase;
+      img {
+        filter: invert(1);
+        width: 9px;
+        height: 9px;
+      }
+      a:first-of-type::after {
+        display: block;
+        content: "";
+        width: 0%;
+        height: 2px;
+        background-color: $white;
+        transition: all 0.2s ease-in-out;
+      }
+      a:first-of-type:hover::after {
+        width: 100%;
+      }
+    }
+    &__title {
+      font-size: clamp(36px, 3vw, 48px);
+      line-height: 56px;
+      font-weight: 500;
+    }
+    &__text {
+      font-weight: 400;
+      opacity: 0.7;
+      line-height: 24px;
+      letter-spacing: 0.04em;
+    }
+  }
+  @include respond-to("large") {
+    &__content {
+        &--high {
+            top: 100px;
+        }
+        &--low {
+            top: 125px;
+        }
+    }
+  }
+  @include respond-to("medium") {
+    &__content {
+        max-width: 70%;
+        left: 40px;
+    }
+    &__title {
+        line-height: 40px;
+    }
+  }
+}

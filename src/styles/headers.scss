@@ -1,0 +1,68 @@
+@use "variables" as *;
+.headers {
+  @include respond-to("desktop") {
+    width: 100%;
+    text-align: center;
+    &--small {
+      text-transform: uppercase;
+      font-family: $font-family-header;
+      font-size: 14px;
+      letter-spacing: 0.04em;
+    }
+    &--big {
+      font-family: $font-family-primary;
+      font-size: clamp(32px, 3vw, 48px);
+      line-height: 1.2;
+      font-weight: 500;
+      width: auto;
+    }
+    &--gray {
+      color: $headergray;
+    }
+    &--white {
+      color: $white;
+      text-align: left;
+    }
+    &--padding-big {
+      padding-top: 160px;
+    }
+    &--padding-small {
+      padding-top: 40px;
+    }
+    &--margin-big {
+      margin: $margin-medium 20% 66px;
+    }
+    &--margin-medium {
+      margin: $margin-medium 25%;
+    }
+    &--margin-semi-medium {
+      margin: $margin-medium 22%;
+    }
+    &--margin-small {
+      margin: $margin-medium 0px 0px;
+    }
+  }
+  @include respond-to("small") {
+    &--small {
+      line-height: 18px;
+    }
+    &--big {
+      line-height: 40px;
+    }
+    &--white {
+      max-width: 90%;
+    }
+    &--margin-big {
+      margin: $margin-medium 20px 48px;
+    }
+    &--margin-medium {
+      margin: $margin-medium 20px 40px;
+    }
+    &--margin-semi-medium {
+      margin: $margin-medium 20px $margin-small;
+    }
+    &--padding-big {
+      padding-top: 92px;
+    }
+  }
+}
