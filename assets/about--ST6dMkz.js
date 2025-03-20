@@ -9,4 +9,4 @@ import"./styles-BRm-xZGA.js";function a(e){const r=document.querySelector(".bane
             <h2 class="baner__title">${e.title}</h2>
             <p class="baner__text">${e.text}</p>
         </div>
-        `;r.innerHTML=n}t.style.display="none",s.forEach(n=>{n.innerText.trim()===e.from&&n.classList.add("show-before")})}document.addEventListener("DOMContentLoaded",()=>{a({image:"/wekter-heli/src/assets/images/about-baner.png",title:"Wekter Helicopters to przede wszystkim spełnione marzenia",text:"Nie tylko naszych pasażerów, ale również wszystkich nas – członków załogi.",from:"O nas",version:"high"})});
+        `;r.innerHTML=n}t.style.display="none",s.forEach(n=>{n.innerText.trim()===e.from&&n.classList.add("show-before")})}const i="/wekter-heli/assets/about-baner-DNq97Zec.png";document.addEventListener("DOMContentLoaded",()=>{a({image:i,title:"Wekter Helicopters to przede wszystkim spełnione marzenia",text:"Nie tylko naszych pasażerów, ale również wszystkich nas – członków załogi.",from:"O nas",version:"high"})});
