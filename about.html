@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Wekter Helicopters" />
+    <title>Wekter Helicopters</title>
+    <link rel="icon" href="/wekter-heli/assets/favicon-DQqi2Rl8.svg" />
+    <script type="module" crossorigin src="/wekter-heli/assets/about--iYds13L.js"></script>
+    <link rel="modulepreload" crossorigin href="/wekter-heli/assets/styles-BRm-xZGA.js">
+    <link rel="stylesheet" crossorigin href="/wekter-heli/assets/styles-GZ0NPVg1.css">
+  </head>
+
+  <body>
+    <div id="app">
+        <header class="header">
+    <nav class="header__nav">
+      <a href="/">
+        <img src="data:image/png;base64,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" alt="Wekter Logo" />
+      </a>
+      <div class="header__container">
+        <ul class="header__list">
+          <li>
+            Oferta <span><img src="data:image/svg+xml,%3csvg%20width='14'%20height='8'%20viewBox='0%200%2014%208'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M1.05176%201L7.05176%207L13.0518%201'%20stroke='white'%20stroke-width='1.5'%20stroke-linecap='round'%20stroke-linejoin='round'/%3e%3c/svg%3e" alt="Arrow Icon" /></span>
+            <div class="header__offers">
+              <div class="header__offer">
+                <div class="header__offer-header">
+                  <div>
+                    <img src="data:image/svg+xml,%3csvg%20width='14'%20height='14'%20viewBox='0%200%2014%2014'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M7.65297%205.66666H6.31364V6.99999H7.65297V5.66666Z'%20fill='white'/%3e%3cpath%20fill-rule='evenodd'%20clip-rule='evenodd'%20d='M4.14144%200.666656C4.14144%200.390514%204.3653%200.166656%204.64144%200.166656H9.31898C9.59513%200.166656%209.81898%200.390514%209.81898%200.666656V2.49999H13.3267C13.6054%202.49999%2013.8333%202.72575%2013.8333%203.00666V5.88864L13.81%205.96228C13.674%206.39219%2013.4501%206.78036%2013.1607%207.12725V13.3333C13.1607%2013.6095%2012.9368%2013.8333%2012.6607%2013.8333H1.30094C1.0248%2013.8333%200.800944%2013.6095%200.800944%2013.3333V7.02936C0.56123%206.72062%200.3592%206.37889%200.203504%206.00254L0.165527%205.91075V3.00666C0.165527%202.72576%200.393451%202.49999%200.67221%202.49999H4.14144V0.666656ZM5.14144%202.49999H8.81898V1.16666H5.14144V2.49999ZM1.80094%207.99319V12.8333H12.1607V8.016C11.9007%208.19221%2011.6215%208.35075%2011.3296%208.49175C10.1584%209.0575%208.71688%209.37509%207.26839%209.42314C5.81986%209.47119%204.33113%209.25077%203.06811%208.70878C2.61541%208.51451%202.18778%208.27697%201.80094%207.99319ZM1.16553%205.7085V3.49999H12.8333V5.72998C12.573%206.46379%2011.8954%207.1079%2010.8947%207.5913C9.8706%208.08598%208.57047%208.3794%207.23524%208.42369C5.90003%208.46798%204.56297%208.26208%203.46246%207.78982C2.3971%207.33265%201.58232%206.64036%201.16553%205.7085Z'%20fill='white'/%3e%3c/svg%3e" alt="Briefcase Icon" />
+                  </div>
+                  <h3>Biznes</h3>
+                </div>
+                <ul class="header__offer-list">
+                  <li>
+                    Air Taxi <span><img src="data:image/svg+xml,%3csvg%20width='14'%20height='13'%20viewBox='0%200%2014%2013'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M6.44203%200.235535C6.70535%20-0.0108749%207.12614%20-0.00967383%207.38792%200.238244L13.2798%205.81812C13.6759%206.19325%2013.6759%206.80623%2013.2798%207.18135L7.38792%2012.7612C7.12614%2013.0091%206.70535%2013.0104%206.44203%2012.7639C6.17199%2012.5112%206.17069%2012.0954%206.43915%2011.8412L11.4008%207.14223H0.670428C0.300162%207.14223%200%206.85458%200%206.49974C0%206.1449%200.300162%205.85725%200.670428%205.85725H11.4008L6.43915%201.1583C6.17069%200.904055%206.17199%200.488231%206.44203%200.235535Z'%20fill='%233A3A3A'/%3e%3c/svg%3e" alt="Arrow Icon" /></span>
+                  </li>
+                  <li>
+                    Cargo <span><img src="data:image/svg+xml,%3csvg%20width='14'%20height='13'%20viewBox='0%200%2014%2013'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M6.44203%200.235535C6.70535%20-0.0108749%207.12614%20-0.00967383%207.38792%200.238244L13.2798%205.81812C13.6759%206.19325%2013.6759%206.80623%2013.2798%207.18135L7.38792%2012.7612C7.12614%2013.0091%206.70535%2013.0104%206.44203%2012.7639C6.17199%2012.5112%206.17069%2012.0954%206.43915%2011.8412L11.4008%207.14223H0.670428C0.300162%207.14223%200%206.85458%200%206.49974C0%206.1449%200.300162%205.85725%200.670428%205.85725H11.4008L6.43915%201.1583C6.17069%200.904055%206.17199%200.488231%206.44203%200.235535Z'%20fill='%233A3A3A'/%3e%3c/svg%3e" alt="Arrow Icon" /></span>
+                  </li>
+                  <li>
+                    Eventy i wydarzenia <span><img src="data:image/svg+xml,%3csvg%20width='14'%20height='13'%20viewBox='0%200%2014%2013'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M6.44203%200.235535C6.70535%20-0.0108749%207.12614%20-0.00967383%207.38792%200.238244L13.2798%205.81812C13.6759%206.19325%2013.6759%206.80623%2013.2798%207.18135L7.38792%2012.7612C7.12614%2013.0091%206.70535%2013.0104%206.44203%2012.7639C6.17199%2012.5112%206.17069%2012.0954%206.43915%2011.8412L11.4008%207.14223H0.670428C0.300162%207.14223%200%206.85458%200%206.49974C0%206.1449%200.300162%205.85725%200.670428%205.85725H11.4008L6.43915%201.1583C6.17069%200.904055%206.17199%200.488231%206.44203%200.235535Z'%20fill='%233A3A3A'/%3e%3c/svg%3e" alt="Arrow Icon" /></span>
+                  </li>
+                  <li>
+                    Udziały <span><img src="data:image/svg+xml,%3csvg%20width='14'%20height='13'%20viewBox='0%200%2014%2013'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M6.44203%200.235535C6.70535%20-0.0108749%207.12614%20-0.00967383%207.38792%200.238244L13.2798%205.81812C13.6759%206.19325%2013.6759%206.80623%2013.2798%207.18135L7.38792%2012.7612C7.12614%2013.0091%206.70535%2013.0104%206.44203%2012.7639C6.17199%2012.5112%206.17069%2012.0954%206.43915%2011.8412L11.4008%207.14223H0.670428C0.300162%207.14223%200%206.85458%200%206.49974C0%206.1449%200.300162%205.85725%200.670428%205.85725H11.4008L6.43915%201.1583C6.17069%200.904055%206.17199%200.488231%206.44203%200.235535Z'%20fill='%233A3A3A'/%3e%3c/svg%3e" alt="Arrow Icon" /></span>
+                  </li>
+                  <li>
+                    Fotografowanie i filmowanie <span><img src="data:image/svg+xml,%3csvg%20width='14'%20height='13'%20viewBox='0%200%2014%2013'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M6.44203%200.235535C6.70535%20-0.0108749%207.12614%20-0.00967383%207.38792%200.238244L13.2798%205.81812C13.6759%206.19325%2013.6759%206.80623%2013.2798%207.18135L7.38792%2012.7612C7.12614%2013.0091%206.70535%2013.0104%206.44203%2012.7639C6.17199%2012.5112%206.17069%2012.0954%206.43915%2011.8412L11.4008%207.14223H0.670428C0.300162%207.14223%200%206.85458%200%206.49974C0%206.1449%200.300162%205.85725%200.670428%205.85725H11.4008L6.43915%201.1583C6.17069%200.904055%206.17199%200.488231%206.44203%200.235535Z'%20fill='%233A3A3A'/%3e%3c/svg%3e" alt="Arrow Icon" /></span>
+                  </li>
+                </ul>
+              </div>
+              <div class="header__offer">
+                <div class="header__offer-header">
+                  <div>
+                    <img src="data:image/svg+xml,%3csvg%20width='16'%20height='16'%20viewBox='0%200%2016%2016'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20fill-rule='evenodd'%20clip-rule='evenodd'%20d='M0.666626%2014.5047H11.3206L11.3193%2014.504C11.4993%2014.504%2011.6673%2014.4074%2011.758%2014.2514C11.8486%2014.096%2011.8493%2013.902%2011.76%2013.7454L11.7513%2013.7307L8.20822%208.41708C8.49565%208.07745%209.15419%207.83545%209.84071%207.83545C10.4714%207.83545%2011.0727%208.09944%2011.4907%208.55944C11.86%208.9661%2012.036%209.47278%2011.9867%209.98545C11.9674%2010.1808%2011.9167%2010.3714%2011.836%2010.5528L12.7494%2010.9594C12.8047%2010.8348%2012.8514%2010.7068%2012.888%2010.5768C13.2074%2010.6481%2013.5014%2010.8041%2013.7274%2011.0294C14.01%2011.3108%2014.166%2011.6761%2014.166%2012.0568C14.166%2012.7328%2013.6694%2013.3348%2012.9574%2013.5214L13.211%2014.4874C14.3622%2014.1859%2015.166%2013.186%2015.166%2012.0561C15.166%2011.4074%2014.9054%2010.7908%2014.4327%2010.3201C14.044%209.93278%2013.5334%209.67344%2012.9847%209.5761C12.9314%208.95944%2012.6727%208.37345%2012.2307%207.88678C11.624%207.21811%2010.7527%206.83478%209.84071%206.83478C9.08571%206.83478%208.20986%207.06555%207.64243%207.56855L3.75396%201.73069C3.65996%201.58936%203.50196%201.5047%203.33263%201.5047L3.05995%201.50804L0.771297%204.94202L1.53129%206.84336C1.62862%207.09336%201.90729%207.22604%202.16462%207.14004L2.19862%207.12869L3.33329%206.56069L4.46796%207.12869L4.50196%207.14004C4.75929%207.22537%205.03796%207.09269%205.13529%206.84269L5.44262%206.0707L10.3993%2013.5047H0.666626V14.5047ZM2.26262%205.97802L1.89529%205.05935L3.33329%202.90203L4.76863%205.05935L4.4033%205.97736L3.33329%205.44202L2.26262%205.97802Z'%20fill='white'/%3e%3cpath%20d='M7.08155%203.06748L6.24931%203.62189L7.58248%205.62316L8.41472%205.06875L7.08155%203.06748Z'%20fill='white'/%3e%3c/svg%3e" alt="Avalanche Icon" />
+                  </div>
+                  <h3>loty widokowe</h3>
+                </div>
+                <ul class="header__offer-list">
+                  <li>
+                    Loty widokowe <span><img src="data:image/svg+xml,%3csvg%20width='14'%20height='13'%20viewBox='0%200%2014%2013'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M6.44203%200.235535C6.70535%20-0.0108749%207.12614%20-0.00967383%207.38792%200.238244L13.2798%205.81812C13.6759%206.19325%2013.6759%206.80623%2013.2798%207.18135L7.38792%2012.7612C7.12614%2013.0091%206.70535%2013.0104%206.44203%2012.7639C6.17199%2012.5112%206.17069%2012.0954%206.43915%2011.8412L11.4008%207.14223H0.670428C0.300162%207.14223%200%206.85458%200%206.49974C0%206.1449%200.300162%205.85725%200.670428%205.85725H11.4008L6.43915%201.1583C6.17069%200.904055%206.17199%200.488231%206.44203%200.235535Z'%20fill='%233A3A3A'/%3e%3c/svg%3e" alt="Arrow Icon" /></span>
+                  </li>
+                  <li>
+                    Loty grupowe <span><img src="data:image/svg+xml,%3csvg%20width='14'%20height='13'%20viewBox='0%200%2014%2013'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M6.44203%200.235535C6.70535%20-0.0108749%207.12614%20-0.00967383%207.38792%200.238244L13.2798%205.81812C13.6759%206.19325%2013.6759%206.80623%2013.2798%207.18135L7.38792%2012.7612C7.12614%2013.0091%206.70535%2013.0104%206.44203%2012.7639C6.17199%2012.5112%206.17069%2012.0954%206.43915%2011.8412L11.4008%207.14223H0.670428C0.300162%207.14223%200%206.85458%200%206.49974C0%206.1449%200.300162%205.85725%200.670428%205.85725H11.4008L6.43915%201.1583C6.17069%200.904055%206.17199%200.488231%206.44203%200.235535Z'%20fill='%233A3A3A'/%3e%3c/svg%3e" alt="Arrow Icon" /></span>
+                  </li>
+                  <li>
+                    Loty zapoznawcze <span><img src="data:image/svg+xml,%3csvg%20width='14'%20height='13'%20viewBox='0%200%2014%2013'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M6.44203%200.235535C6.70535%20-0.0108749%207.12614%20-0.00967383%207.38792%200.238244L13.2798%205.81812C13.6759%206.19325%2013.6759%206.80623%2013.2798%207.18135L7.38792%2012.7612C7.12614%2013.0091%206.70535%2013.0104%206.44203%2012.7639C6.17199%2012.5112%206.17069%2012.0954%206.43915%2011.8412L11.4008%207.14223H0.670428C0.300162%207.14223%200%206.85458%200%206.49974C0%206.1449%200.300162%205.85725%200.670428%205.85725H11.4008L6.43915%201.1583C6.17069%200.904055%206.17199%200.488231%206.44203%200.235535Z'%20fill='%233A3A3A'/%3e%3c/svg%3e" alt="Arrow Icon" /></span>
+                  </li>
+                  <li>
+                    Zaręczyny <span><img src="data:image/svg+xml,%3csvg%20width='14'%20height='13'%20viewBox='0%200%2014%2013'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M6.44203%200.235535C6.70535%20-0.0108749%207.12614%20-0.00967383%207.38792%200.238244L13.2798%205.81812C13.6759%206.19325%2013.6759%206.80623%2013.2798%207.18135L7.38792%2012.7612C7.12614%2013.0091%206.70535%2013.0104%206.44203%2012.7639C6.17199%2012.5112%206.17069%2012.0954%206.43915%2011.8412L11.4008%207.14223H0.670428C0.300162%207.14223%200%206.85458%200%206.49974C0%206.1449%200.300162%205.85725%200.670428%205.85725H11.4008L6.43915%201.1583C6.17069%200.904055%206.17199%200.488231%206.44203%200.235535Z'%20fill='%233A3A3A'/%3e%3c/svg%3e" alt="Arrow Icon" /></span>
+                  </li>
+                  <li>
+                    Szkolenia licencyjne dla pilotów <span><img src="data:image/svg+xml,%3csvg%20width='14'%20height='13'%20viewBox='0%200%2014%2013'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M6.44203%200.235535C6.70535%20-0.0108749%207.12614%20-0.00967383%207.38792%200.238244L13.2798%205.81812C13.6759%206.19325%2013.6759%206.80623%2013.2798%207.18135L7.38792%2012.7612C7.12614%2013.0091%206.70535%2013.0104%206.44203%2012.7639C6.17199%2012.5112%206.17069%2012.0954%206.43915%2011.8412L11.4008%207.14223H0.670428C0.300162%207.14223%200%206.85458%200%206.49974C0%206.1449%200.300162%205.85725%200.670428%205.85725H11.4008L6.43915%201.1583C6.17069%200.904055%206.17199%200.488231%206.44203%200.235535Z'%20fill='%233A3A3A'/%3e%3c/svg%3e" alt="Arrow Icon" /></span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </li>
+          <li><a href="/wekter-heli/about">O nas</a></li>
+          <li>Vouchery</li>
+          <li>
+            Heliporty <span><img src="data:image/svg+xml,%3csvg%20width='14'%20height='8'%20viewBox='0%200%2014%208'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M1.05176%201L7.05176%207L13.0518%201'%20stroke='white'%20stroke-width='1.5'%20stroke-linecap='round'%20stroke-linejoin='round'/%3e%3c/svg%3e" alt="Arrow Icon" /></span>
+            <div class="header__offers">
+              <div class="header__offer">
+                <div class="header__offer-header">
+                  <div>
+                    <img src="data:image/svg+xml,%3csvg%20width='14'%20height='14'%20viewBox='0%200%2014%2014'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M7.65297%205.66666H6.31364V6.99999H7.65297V5.66666Z'%20fill='white'/%3e%3cpath%20fill-rule='evenodd'%20clip-rule='evenodd'%20d='M4.14144%200.666656C4.14144%200.390514%204.3653%200.166656%204.64144%200.166656H9.31898C9.59513%200.166656%209.81898%200.390514%209.81898%200.666656V2.49999H13.3267C13.6054%202.49999%2013.8333%202.72575%2013.8333%203.00666V5.88864L13.81%205.96228C13.674%206.39219%2013.4501%206.78036%2013.1607%207.12725V13.3333C13.1607%2013.6095%2012.9368%2013.8333%2012.6607%2013.8333H1.30094C1.0248%2013.8333%200.800944%2013.6095%200.800944%2013.3333V7.02936C0.56123%206.72062%200.3592%206.37889%200.203504%206.00254L0.165527%205.91075V3.00666C0.165527%202.72576%200.393451%202.49999%200.67221%202.49999H4.14144V0.666656ZM5.14144%202.49999H8.81898V1.16666H5.14144V2.49999ZM1.80094%207.99319V12.8333H12.1607V8.016C11.9007%208.19221%2011.6215%208.35075%2011.3296%208.49175C10.1584%209.0575%208.71688%209.37509%207.26839%209.42314C5.81986%209.47119%204.33113%209.25077%203.06811%208.70878C2.61541%208.51451%202.18778%208.27697%201.80094%207.99319ZM1.16553%205.7085V3.49999H12.8333V5.72998C12.573%206.46379%2011.8954%207.1079%2010.8947%207.5913C9.8706%208.08598%208.57047%208.3794%207.23524%208.42369C5.90003%208.46798%204.56297%208.26208%203.46246%207.78982C2.3971%207.33265%201.58232%206.64036%201.16553%205.7085Z'%20fill='white'/%3e%3c/svg%3e" alt="Briefcase Icon" />
+                  </div>
+                  <h3>Lokalizacje</h3>
+                </div>
+                <ul class="header__offer-list">
+                  <li>
+                    Sosnówka <span><img src="data:image/svg+xml,%3csvg%20width='14'%20height='13'%20viewBox='0%200%2014%2013'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M6.44203%200.235535C6.70535%20-0.0108749%207.12614%20-0.00967383%207.38792%200.238244L13.2798%205.81812C13.6759%206.19325%2013.6759%206.80623%2013.2798%207.18135L7.38792%2012.7612C7.12614%2013.0091%206.70535%2013.0104%206.44203%2012.7639C6.17199%2012.5112%206.17069%2012.0954%206.43915%2011.8412L11.4008%207.14223H0.670428C0.300162%207.14223%200%206.85458%200%206.49974C0%206.1449%200.300162%205.85725%200.670428%205.85725H11.4008L6.43915%201.1583C6.17069%200.904055%206.17199%200.488231%206.44203%200.235535Z'%20fill='%233A3A3A'/%3e%3c/svg%3e" alt="Arrow Icon" /></span>
+                  </li>
+                  <li>
+                    Polkowice <span><img src="data:image/svg+xml,%3csvg%20width='14'%20height='13'%20viewBox='0%200%2014%2013'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M6.44203%200.235535C6.70535%20-0.0108749%207.12614%20-0.00967383%207.38792%200.238244L13.2798%205.81812C13.6759%206.19325%2013.6759%206.80623%2013.2798%207.18135L7.38792%2012.7612C7.12614%2013.0091%206.70535%2013.0104%206.44203%2012.7639C6.17199%2012.5112%206.17069%2012.0954%206.43915%2011.8412L11.4008%207.14223H0.670428C0.300162%207.14223%200%206.85458%200%206.49974C0%206.1449%200.300162%205.85725%200.670428%205.85725H11.4008L6.43915%201.1583C6.17069%200.904055%206.17199%200.488231%206.44203%200.235535Z'%20fill='%233A3A3A'/%3e%3c/svg%3e" alt="Arrow Icon" /></span>
+                  </li>
+                  <li>
+                    Wrocław <span><img src="data:image/svg+xml,%3csvg%20width='14'%20height='13'%20viewBox='0%200%2014%2013'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M6.44203%200.235535C6.70535%20-0.0108749%207.12614%20-0.00967383%207.38792%200.238244L13.2798%205.81812C13.6759%206.19325%2013.6759%206.80623%2013.2798%207.18135L7.38792%2012.7612C7.12614%2013.0091%206.70535%2013.0104%206.44203%2012.7639C6.17199%2012.5112%206.17069%2012.0954%206.43915%2011.8412L11.4008%207.14223H0.670428C0.300162%207.14223%200%206.85458%200%206.49974C0%206.1449%200.300162%205.85725%200.670428%205.85725H11.4008L6.43915%201.1583C6.17069%200.904055%206.17199%200.488231%206.44203%200.235535Z'%20fill='%233A3A3A'/%3e%3c/svg%3e" alt="Arrow Icon" /></span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </li>
+          <li>Blog</li>
+          <li>Kontakt</li>
+        </ul>
+      </div>
+      <div class="header__buttons">
+        <div class="header__switch">
+          <button class="header__button--active">Loty widokowe</button>
+          <button class="header__button">Loty biznesowe</button>
+          <div class="header__button--slider"></div>
+        </div>
+        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABsAAAAUCAYAAAB8gkaAAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAMOSURBVHgBvZZbSFNxHMe/53g2FQ0W0U3Cpj3YS816CnqoWWBEboJoUA9ODbMnZz34ZM56qojNiIxu24K9BIWXyCJrIkWF0rwQKKUz8h6llbdd3L/z/7Nz9OTMLcgPHPa//f6//+X3//7GzXAgEBHKzVBbrbSIkbEZlJxrYb8SzS4jts5/xVx6GqtzWi0SB7yoc/bg5v0eeZx+/zZcKN2JhKpKBJ0OuV04luPgOY2GVYK1NjYRGRxEypYk3L16GBk7NIiFssJdsBanQp2TrXBEN6FubASf8N4DfruWNVJH83v3iAOdzOGDW0dxMi9jVSfrklW4WLkPp1O/wafXI9TVKe+ezk9PjXHkRD0Z6h0iPpOJ0COVPr/FQiTqnN1keHSahLxeuX82Tcv6Gp72k96P30nAZlPYz2VmsvGUF6++kEP5D+3YneUi1CFt8FuqFQZ0QsmAEskZxWc2K+x8pkISmpxkfZeudxDqQ5flsvNSQFScb8MdbR6WHWuWnh3rSgRqath9S6iqq6G2OzDqU6HkbAtcj/rkPsGQnS5XRsZn8HhiE3LcbgRqa4GpKdYeam0FMRojOuN0OgiFJlbmDx6Qyw3PBsR7T4ZB/FiQCHHi6mNgpWOMErvgLypCtJDwThliORZbLj4enPSo/zsEDh5riCBdaDSQH1NYqK9nZao8ccbcqG3pMa5tgFRdfit7PyNqW8rmJBYI9P1gSUCowiIdCTqWvkkZcdf0vbk/TMP9eog1qQUOsoK0d47Jq5/TapWKYC7/686oWvypIpL6UKmTFAT5pU+Y7lEW3G4yu16jMArYrGR4bJr8/OWL6Iz2SUSSuwWPh7wUpfB4WbMdiwMtyoGi06DovN0zzna+khDfcHST4ornstOA3R5hwTZ2ZzwJP85AjWUxcsKp4fbnDcuSaCQ6uiaYDvb1T0IwmRT6SvFXmOE3GMDT/KPIqLm5CLa9w6lrn1C3JAOvBl1QQWkzy9x0sfGivvK6TLk/2NQEXkp0FBpB3iv3UFD5hq32X6B/EWiEjyZuRIJnSeIU+Q0GqR/he+KFXAAAAABJRU5ErkJggg==" alt="Flag Icon" />
+        <img src="data:image/svg+xml,%3csvg%20width='25'%20height='25'%20viewBox='0%200%2025%2025'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M12.77%202.31877C7.24717%202.31877%202.77002%206.79592%202.77002%2012.3188C2.77002%2017.8416%207.24717%2022.3188%2012.77%2022.3188C18.2929%2022.3188%2022.77%2017.8416%2022.77%2012.3188C22.77%206.79592%2018.2929%202.31877%2012.77%202.31877Z'%20stroke='white'%20stroke-width='2'%20stroke-linecap='round'%20stroke-linejoin='round'/%3e%3cpath%20d='M5.04102%2018.6645C5.04102%2018.6645%207.27004%2015.8188%2012.77%2015.8188C18.27%2015.8188%2020.4991%2018.6645%2020.4991%2018.6645'%20stroke='white'%20stroke-width='2'%20stroke-linecap='round'%20stroke-linejoin='round'/%3e%3cpath%20d='M12.77%2012.3188C14.4269%2012.3188%2015.77%2010.9756%2015.77%209.31877C15.77%207.66192%2014.4269%206.31877%2012.77%206.31877C11.1132%206.31877%209.77002%207.66192%209.77002%209.31877C9.77002%2010.9756%2011.1132%2012.3188%2012.77%2012.3188Z'%20stroke='white'%20stroke-width='2'%20stroke-linecap='round'%20stroke-linejoin='round'/%3e%3c/svg%3e" alt="Profile Icon" />
+        <div class="header__icon-container">
+          <img src="data:image/svg+xml,%3csvg%20width='25'%20height='25'%20viewBox='0%200%2025%2025'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M20.0309%2010.0147L21.4155%2019.0147C21.6019%2020.2262%2020.6646%2021.3188%2019.4388%2021.3188H6.10124C4.87547%2021.3188%203.93811%2020.2262%204.1245%2019.0147L5.50911%2010.0147C5.65922%209.03899%206.49872%208.31877%207.48586%208.31877H18.0542C19.0413%208.31877%2019.8808%209.03899%2020.0309%2010.0147Z'%20stroke='white'%20stroke-width='2'%20stroke-linecap='round'%20stroke-linejoin='round'/%3e%3cpath%20d='M9.77002%2011.3188L9.77002%2018.3188'%20stroke='white'%20stroke-width='2'%20stroke-linecap='round'%20stroke-linejoin='round'/%3e%3cpath%20d='M15.77%2011.3188L15.77%2018.3188'%20stroke='white'%20stroke-width='2'%20stroke-linecap='round'%20stroke-linejoin='round'/%3e%3cpath%20d='M14.77%205.31877C14.77%204.2142%2013.8746%203.31877%2012.77%203.31877C11.6654%203.31877%2010.77%204.2142%2010.77%205.31877'%20stroke='white'%20stroke-width='2'%20stroke-linecap='round'%20stroke-linejoin='round'/%3e%3c/svg%3e" alt="Shopping Bag Icon" />
+        </div>
+        <img id="menu-icon" src="data:image/svg+xml,%3csvg%20width='21'%20height='13'%20viewBox='0%200%2021%2013'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3crect%20x='0.77002'%20y='0.318771'%20width='20'%20height='2'%20fill='white'/%3e%3crect%20x='0.77002'%20y='5.31877'%20width='20'%20height='2'%20fill='white'/%3e%3crect%20x='0.77002'%20y='10.3188'%20width='20'%20height='2'%20fill='white'/%3e%3c/svg%3e" alt="Menu Icon" />
+      </div>
+      <div class="header__mobile">
+        <div class="header__mobile-top">
+          <div class="header__mobile-top-nav">
+            <a href="/">
+              <img src="data:image/png;base64,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" alt="Wekter Logo" />
+            </a>
+            <div class="header__mobile-icons">
+              <img src="data:image/svg+xml,%3csvg%20width='25'%20height='25'%20viewBox='0%200%2025%2025'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M12.77%202.31877C7.24717%202.31877%202.77002%206.79592%202.77002%2012.3188C2.77002%2017.8416%207.24717%2022.3188%2012.77%2022.3188C18.2929%2022.3188%2022.77%2017.8416%2022.77%2012.3188C22.77%206.79592%2018.2929%202.31877%2012.77%202.31877Z'%20stroke='white'%20stroke-width='2'%20stroke-linecap='round'%20stroke-linejoin='round'/%3e%3cpath%20d='M5.04102%2018.6645C5.04102%2018.6645%207.27004%2015.8188%2012.77%2015.8188C18.27%2015.8188%2020.4991%2018.6645%2020.4991%2018.6645'%20stroke='white'%20stroke-width='2'%20stroke-linecap='round'%20stroke-linejoin='round'/%3e%3cpath%20d='M12.77%2012.3188C14.4269%2012.3188%2015.77%2010.9756%2015.77%209.31877C15.77%207.66192%2014.4269%206.31877%2012.77%206.31877C11.1132%206.31877%209.77002%207.66192%209.77002%209.31877C9.77002%2010.9756%2011.1132%2012.3188%2012.77%2012.3188Z'%20stroke='white'%20stroke-width='2'%20stroke-linecap='round'%20stroke-linejoin='round'/%3e%3c/svg%3e" alt="Profile Icon" />
+              <img src="data:image/svg+xml,%3csvg%20width='25'%20height='25'%20viewBox='0%200%2025%2025'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M20.0309%2010.0147L21.4155%2019.0147C21.6019%2020.2262%2020.6646%2021.3188%2019.4388%2021.3188H6.10124C4.87547%2021.3188%203.93811%2020.2262%204.1245%2019.0147L5.50911%2010.0147C5.65922%209.03899%206.49872%208.31877%207.48586%208.31877H18.0542C19.0413%208.31877%2019.8808%209.03899%2020.0309%2010.0147Z'%20stroke='white'%20stroke-width='2'%20stroke-linecap='round'%20stroke-linejoin='round'/%3e%3cpath%20d='M9.77002%2011.3188L9.77002%2018.3188'%20stroke='white'%20stroke-width='2'%20stroke-linecap='round'%20stroke-linejoin='round'/%3e%3cpath%20d='M15.77%2011.3188L15.77%2018.3188'%20stroke='white'%20stroke-width='2'%20stroke-linecap='round'%20stroke-linejoin='round'/%3e%3cpath%20d='M14.77%205.31877C14.77%204.2142%2013.8746%203.31877%2012.77%203.31877C11.6654%203.31877%2010.77%204.2142%2010.77%205.31877'%20stroke='white'%20stroke-width='2'%20stroke-linecap='round'%20stroke-linejoin='round'/%3e%3c/svg%3e" alt="Shopping Bag Icon" />
+              <img id="close-icon" src="data:image/svg+xml,%3csvg%20width='16'%20height='16'%20viewBox='0%200%2016%2016'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M1.77002%202.31877L13.77%2014.3188'%20stroke='white'%20stroke-width='1.5'%20stroke-linecap='round'%20stroke-linejoin='round'/%3e%3cpath%20d='M1.77002%2014.3188L13.77%202.31877'%20stroke='white'%20stroke-width='1.5'%20stroke-linecap='round'%20stroke-linejoin='round'/%3e%3cpath%20d='M1.77002%202.31877L13.77%2014.3188'%20stroke='white'%20stroke-width='2'%20stroke-linecap='square'%20stroke-linejoin='round'/%3e%3cpath%20d='M1.77002%2014.3188L13.77%202.31877'%20stroke='white'%20stroke-width='2'%20stroke-linecap='square'%20stroke-linejoin='round'/%3e%3c/svg%3e" alt="Close Icon" />
+            </div>
+          </div>
+          <div class="header__mobile-top-main">
+            <ul>
+              <li>Strona główna</li>
+              <li id="mobile-offer">
+                Oferta <span><img src="data:image/svg+xml,%3csvg%20width='10'%20height='16'%20viewBox='0%200%2010%2016'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M2%2013.6375L8%207.63754L2%201.63754'%20stroke='white'%20stroke-width='2'%20stroke-linecap='square'/%3e%3c/svg%3e" alt="Arrow" /></span>
+                <div class="header__mobile-offer">
+                  <p id="mobile-offer-close">
+                    <span><img src="data:image/svg+xml,%3csvg%20width='10'%20height='16'%20viewBox='0%200%2010%2016'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M2%2013.6375L8%207.63754L2%201.63754'%20stroke='white'%20stroke-width='2'%20stroke-linecap='square'/%3e%3c/svg%3e" alt="Arrow Icon" /></span>Oferta
+                  </p>
+                  <ul>
+                    <li>Air Taxi</li>
+                    <li>Loty widokowe</li>
+                    <li>Cargo</li>
+                    <li>Eventy i wydarzenia</li>
+                    <li>Loty grupowe</li>
+                    <li>Zaręczyny</li>
+                    <li>Loty zapoznawcze</li>
+                    <li>Fotografowanie i filmowanie</li>
+                    <li>Szkolenia do licencji</li>
+                  </ul>
+                </div>
+              </li>
+              <li>Vouchery</li>
+              <li id="mobile-heliports">
+                Heliporty <span><img src="data:image/svg+xml,%3csvg%20width='10'%20height='16'%20viewBox='0%200%2010%2016'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M2%2013.6375L8%207.63754L2%201.63754'%20stroke='white'%20stroke-width='2'%20stroke-linecap='square'/%3e%3c/svg%3e" alt="Arrow" /></span>
+                <div class="header__mobile-heliports">
+                  <p id="mobile-heliports-close">
+                    <span><img src="data:image/svg+xml,%3csvg%20width='10'%20height='16'%20viewBox='0%200%2010%2016'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M2%2013.6375L8%207.63754L2%201.63754'%20stroke='white'%20stroke-width='2'%20stroke-linecap='square'/%3e%3c/svg%3e" alt="Arrow Icon" /></span>Heliporty
+                  </p>
+                  <ul>
+                    <li>Sosnówka</li>
+                    <li>Polkowice</li>
+                    <li>Wrocław</li>
+                  </ul>
+                </div>
+              </li>
+              <li>Blog</li>
+              <li>Kontakt</li>
+            </ul>
+          </div>
+        </div>
+        <div class="header__mobile-bottom">
+          <div class="header__mobile-switch">
+            <button class="header__mobile-button--active">Loty widokowe</button>
+            <button class="header__mobile-button">Loty biznesowe</button>
+            <div class="header__mobile-button--slider"></div>
+          </div>
+          <div class="header__mobile-footer">
+            <div class="header__mobile-languages">
+              <div class="header__mobile-language--active">EN</div>
+              <div class="header__mobile-language">PL</div>
+            </div>
+            <div class="header__mobile-rights">Copyright © 2025 by Wekter Helicopters. All rights reserved.</div>
+          </div>
+        </div>
+      </div>
+    </nav>
+  </header>
+      <div class="baner"></div>
+      <section class="section--black section--black--padding">
+        <h4 class="headers headers--small headers--gray">Nasza misja</h4>
+        <p class="section--black__text">Lot helikopterem to przestrzeń, wolność, piękne widoki i niemal nieograniczone możliwości przemieszczania się w dowolnym
+        kierunku, w którym tylko poniosą nas oczy.</p>
+        <div class="section--black__gallery">
+          <img src="/wekter-heli/assets/gallery1-Dhmek6pG.png" alt="Gallery image" />
+          <img src="/wekter-heli/assets/gallery2-C55v2yqH.png" alt="Gallery image" />
+        </div>
+      </section>
+      <footer class="footer">
+    <div class="footer__content">
+      <div class="footer__main">
+        <div class="footer__logos">
+          <a href="/">
+            <img src="data:image/png;base64,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" alt="Wekter Logo" />
+          </a>
+          <div class="footer__icons">
+            <a href="https://x.com" target="_blank">
+              <img src="data:image/svg+xml,%3csvg%20width='21'%20height='18'%20viewBox='0%200%2021%2018'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M16.0844%200.423828H19.1513L12.4512%207.85888L20.3333%2017.9763H14.1616L9.32781%2011.8401L3.79685%2017.9763H0.728172L7.89458%2010.0237L0.333252%200.423828H6.66149L11.0309%206.03254L16.0844%200.423828ZM15.0081%2016.1941H16.7074L5.73818%202.11245H3.91458L15.0081%2016.1941Z'%20fill='white'/%3e%3c/svg%3e" alt="X Icon" />
+            </a>
+            <a href="https://instagram.pl" target="_blank">
+              <img src="data:image/svg+xml,%3csvg%20width='21'%20height='21'%20viewBox='0%200%2021%2021'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20fill-rule='evenodd'%20clip-rule='evenodd'%20d='M10.3808%201.6582C12.2064%201.65819%2013.6403%201.65818%2014.7598%201.8087C15.907%201.96294%2016.8172%202.28547%2017.5324%203.00063C18.2476%203.7158%2018.5701%204.62601%2018.7243%205.77322C18.8749%206.89273%2018.8748%208.32662%2018.8748%2010.1522V10.2475C18.8748%2012.0731%2018.8749%2013.507%2018.7243%2014.6265C18.5701%2015.7737%2018.2476%2016.6839%2017.5324%2017.3991C16.8172%2018.1143%2015.907%2018.4368%2014.7598%2018.591C13.6403%2018.7416%2012.2064%2018.7415%2010.3808%2018.7415H10.2855C8.45995%2018.7415%207.02603%2018.7416%205.90652%2018.591C4.75931%2018.4368%203.8491%2018.1143%203.13393%2017.3991C2.41877%2016.6839%202.09624%2015.7737%201.942%2014.6265C1.79148%2013.507%201.79149%2012.0731%201.7915%2010.2475V10.1522C1.79149%208.32664%201.79148%206.89274%201.942%205.77322C2.09624%204.62601%202.41877%203.7158%203.13393%203.00063C3.8491%202.28547%204.75931%201.96294%205.90652%201.8087C7.02603%201.65818%208.45992%201.65819%2010.2855%201.6582H10.3808ZM14.0832%2010.1999C14.0832%2012.2709%2012.4042%2013.9499%2010.3332%2013.9499C8.2621%2013.9499%206.58317%2012.2709%206.58317%2010.1999C6.58317%208.1288%208.2621%206.44987%2010.3332%206.44987C12.4042%206.44987%2014.0832%208.1288%2014.0832%2010.1999ZM14.9267%206.44987C15.3849%206.44987%2015.7563%206.07677%2015.7563%205.61654C15.7563%205.1563%2015.3849%204.7832%2014.9267%204.7832H14.9193C14.4611%204.7832%2014.0897%205.1563%2014.0897%205.61654C14.0897%206.07677%2014.4611%206.44987%2014.9193%206.44987H14.9267Z'%20fill='white'/%3e%3c/svg%3e" alt="Instagram Icon" />
+            </a>
+            <a href="https://facebook.pl" target="_blank">
+              <img src="data:image/svg+xml,%3csvg%20width='21'%20height='21'%20viewBox='0%200%2021%2021'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cg%20clip-path='url(%23clip0_196_4641)'%3e%3cpath%20d='M20%2010.2002C20%204.67734%2015.5229%200.200195%2010%200.200195C4.47715%200.200195%200%204.67734%200%2010.2002C0%2015.1914%203.65684%2019.3285%208.4375%2020.0787V13.0908H5.89844V10.2002H8.4375V7.99707C8.4375%205.49082%209.93047%204.10645%2012.2146%204.10645C13.3084%204.10645%2014.4531%204.30176%2014.4531%204.30176V6.7627H13.1922C11.95%206.7627%2011.5625%207.53359%2011.5625%208.3252V10.2002H14.3359L13.8926%2013.0908H11.5625V20.0787C16.3432%2019.3285%2020%2015.1914%2020%2010.2002Z'%20fill='white'/%3e%3c/g%3e%3cdefs%3e%3cclipPath%20id='clip0_196_4641'%3e%3crect%20width='20'%20height='20'%20fill='white'%20transform='translate(0%200.200195)'/%3e%3c/clipPath%3e%3c/defs%3e%3c/svg%3e" alt="Facebook Icon" />
+            </a>
+            <a href="https://linkedin.pl" target="_blank">
+              <img src="data:image/svg+xml,%3csvg%20width='21'%20height='21'%20viewBox='0%200%2021%2021'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M15%202.2002H5.66658C3.82592%202.2002%202.33325%203.69287%202.33325%205.53353V14.8669C2.33325%2016.7075%203.82592%2018.2002%205.66658%2018.2002H15C16.8413%2018.2002%2018.3333%2016.7075%2018.3333%2014.8669V5.53353C18.3333%203.69287%2016.8413%202.2002%2015%202.2002ZM7.66658%2014.8669H5.66658V7.53353H7.66658V14.8669ZM6.66658%206.6882C6.02258%206.6882%205.49992%206.16153%205.49992%205.5122C5.49992%204.86286%206.02258%204.3362%206.66658%204.3362C7.31058%204.3362%207.83325%204.86286%207.83325%205.5122C7.83325%206.16153%207.31125%206.6882%206.66658%206.6882ZM15.6666%2014.8669H13.6666V11.1309C13.6666%208.88553%2011%209.05553%2011%2011.1309V14.8669H8.99992V7.53353H11V8.7102C11.9306%206.9862%2015.6666%206.85887%2015.6666%2010.3609V14.8669Z'%20fill='white'/%3e%3c/svg%3e" alt="Linkedin Icon" />
+            </a>
+          </div>
+        </div>
+        <div class="footer__lists">
+          <div class="footer__list">
+            <h3>
+              Wekter <span><img src="data:image/svg+xml,%3csvg%20width='16'%20height='17'%20viewBox='0%200%2016%2017'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3crect%20x='7'%20y='0.637695'%20width='2'%20height='16'%20fill='white'/%3e%3crect%20y='9.6377'%20width='2'%20height='16'%20transform='rotate(-90%200%209.6377)'%20fill='white'/%3e%3c/svg%3e" alt="Plus icon" /></span>
+            </h3>
+            <ul>
+              <li>
+                <a>O nas</a>
+              </li>
+              <li>
+                <a>Vouchery</a>
+              </li>
+              <li>
+                <a>Blog</a>
+              </li>
+              <li>
+                <a>Kontakt</a>
+              </li>
+            </ul>
+          </div>
+          <div class="footer__list">
+            <h3>
+              Zakupy <span><img src="data:image/svg+xml,%3csvg%20width='16'%20height='17'%20viewBox='0%200%2016%2017'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3crect%20x='7'%20y='0.637695'%20width='2'%20height='16'%20fill='white'/%3e%3crect%20y='9.6377'%20width='2'%20height='16'%20transform='rotate(-90%200%209.6377)'%20fill='white'/%3e%3c/svg%3e" alt="Plus icon" /></span>
+            </h3>
+            <ul>
+              <li>
+                <a>Koszyk</a>
+              </li>
+              <li>
+                <a>Rejestracja</a>
+              </li>
+              <li>
+                <a>Logowanie</a>
+              </li>
+            </ul>
+          </div>
+          <div class="footer__list">
+            <h3>
+              Oferta <span><img src="data:image/svg+xml,%3csvg%20width='16'%20height='17'%20viewBox='0%200%2016%2017'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3crect%20x='7'%20y='0.637695'%20width='2'%20height='16'%20fill='white'/%3e%3crect%20y='9.6377'%20width='2'%20height='16'%20transform='rotate(-90%200%209.6377)'%20fill='white'/%3e%3c/svg%3e" alt="Plus icon" /></span>
+            </h3>
+            <ul>
+              <li>
+                <a>Air Taxi</a>
+              </li>
+              <li>
+                <a>Loty widokowe</a>
+              </li>
+              <li>
+                <a>Cargo</a>
+              </li>
+              <li>
+                <a>Szkolenia licencyjne</a>
+              </li>
+              <li>
+                <a>Eventy i wydarzenia</a>
+              </li>
+              <li>
+                <a>Loty grupowe</a>
+              </li>
+              <li>
+                <a>Zaręczyny</a>
+              </li>
+              <li>
+                <a>Loty zapoznawcze</a>
+              </li>
+              <li>
+                <a>Fotografowanie i filmowanie</a>
+              </li>
+            </ul>
+          </div>
+          <div class="footer__list">
+            <h3></h3>
+            <ul>
+              <li>
+                <a>Loty grupowe</a>
+              </li>
+              <li>
+                <a>Zaręczyny</a>
+              </li>
+              <li>
+                <a>Loty zapoznawcze</a>
+              </li>
+              <li>
+                <a>Fotografowanie i filmowanie</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="footer__newsletter">
+        <img src="data:image/png;base64,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" alt="Newsletter Icon" />
+        <h3>Newsletter</h3>
+        <p>Bądź na bieżąco z nowościami, promocjami i ciekawymi artykułami!</p>
+        <button class="button button--blue">zapisz się</button>
+      </div>
+    </div>
+    <div class="footer__creators">
+      <p>
+        Copyright © 2025 by Wekter Helicopters.<br />
+        All rights reserved.
+      </p>
+      <p>Design & wdrożenie: <a href="crafton.pl" target="_blank">Crafton.pl</a></p>
+    </div>
+  </footer>
+    </div>
+  </body>
+</html>
