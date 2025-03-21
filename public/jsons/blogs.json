@@ -1,52 +1,60 @@
 [
   {
-    "image": "path/to/image1.jpg",
+    "image": "blog-1.png",
     "date": "18 kwietnia 2023",
     "category": "Podróże",
-    "title": "Strach przed lataniem. Jak można poradzić sobie z tym problemem?"
+    "title": "Strach przed lataniem. Jak można poradzić sobie z tym problemem?",
+    "url": "strach-przed-lataniem"
   },
   {
     "image": "path/to/image2.jpg",
     "date": "19 kwietnia 2023",
     "category": "Turystyka",
-    "title": "Co zobaczyć w Karkonoszach? Atrakcje turystyczne"
+    "title": "Co zobaczyć w Karkonoszach? Atrakcje turystyczne",
+    "url": "co-zobaczyc-w-karkonoszach-atrakcje-turystyczne"
   },
   {
-    "image": "path/to/image3.jpg",
-    "date": "18 kwietnia 2023",
+    "image": "blog-3.png",
+    "date": "23 marca 2023",
     "category": "Loty widokowe",
     "title": "Lot widokowy helikopterem nad Karkonoszami – co warto wiedzieć?",
+    "url": "lot-widokowy-helikopterem-nad-karkonoszami-co-warto-wiedziec",
     "highlight": true
   },
   {
     "image": "path/to/image4.jpg",
     "date": "21 kwietnia 2023",
     "category": "Zaręczyny",
-    "title": "Jak zorganizować niezapomniane zaręczyny? Postaw na lot widokowy helikopterem!"
+    "title": "Jak zorganizować niezapomniane zaręczyny? Postaw na lot widokowy helikopterem!",
+    "url": "jak-zorganizowac-niezapomniane-zareczyny"
   },
   {
     "image": "path/to/image5.jpg",
     "date": "22 kwietnia 2023",
     "category": "Loty helikopterem",
-    "title": "Ile kosztuje lot helikopterem?"
+    "title": "Ile kosztuje lot helikopterem?",
+    "url": "ile-kosztuje-lot-helikopterem"
   },
   {
     "image": "path/to/image6.jpg",
     "date": "23 kwietnia 2023",
     "category": "Przygotowanie",
-    "title": "Jak przygotować się do lotu helikopterem?"
+    "title": "Jak przygotować się do lotu helikopterem?",
+    "url": "jak-przygotowac-sie-do-lotu-helikopterem"
   },
   {
     "image": "path/to/image7.jpg",
     "date": "10 kwietnia 2023",
     "category": "Przygotowanie",
-    "title": "Jak przygotować się do lotu helikopterem?"
+    "title": "Jak przygotować się do lotu helikopterem?",
+    "url": "jak-przygotowac-sie-do-lotu-helikopterem"
   },
   {
     "image": "blog-8.png",
-    "date": "8 kwietnia 2023",
+    "date": "24 kwietnia 2024",
     "category": "Przygotowanie",
     "title": "Trendsetter transportu lotniczego — AIR Taxi: podróżuj szybko i wygodnie",
+    "url": "trendsetter-transportu-lotniczego-air-taxi",
     "highlight": true
   }
 ]
