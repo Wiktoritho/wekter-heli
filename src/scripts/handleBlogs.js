@@ -33,10 +33,8 @@ export async function handleBlogs() {
     
 }
 
-
-
 async function fetchData() {
-    const response = await axios.get("/wekter-heli/src/assets/jsons/blogs.json")
+    const response = await axios.get("/wekter-heli/jsons/blogs.json")
     data = response.data;
     categories = data.map((el) => el.category)
     highlightedDatas = data.filter((el) => el.highlight)

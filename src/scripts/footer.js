@@ -1,7 +1,6 @@
 export function handleFooterLists() {
   const headers = document.querySelectorAll(".footer__list h3");
   const lists = document.querySelectorAll(".footer__list");
-  const gap = 24;
   
   if (!headers.length) return;
 

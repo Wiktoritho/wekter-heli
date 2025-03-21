@@ -79,44 +79,37 @@ export function initOffers() {
   });
 }
 
-import LotyWidokowe from "../assets/images/loty-widokowe.png";
-import SzkoleniaLicencyjne from "../assets/images/szkolenia-licencyjne.png";
-import Zareczyny from "../assets/images/zareczyny.png";
-import AirTaxi from "../assets/images/air-taxi.png";
-import Cargo from "../assets/images/cargo.png";
-import EventyIWydarzenia from "../assets/images/eventy-i-wydarzenia.png";
-import Arrow from "../assets/icons/arrow-side.svg";
 
 export function createOfferLists() {
   const offersContainer = document.querySelector(".offers__container");
 
   const offersData1 = [
     {
-      image: LotyWidokowe,
+      image: '/wekter-heli/images/loty-widokowe.png',
       alt: "Loty widokowe",
       text: "Loty widokowe",
       number: ".01",
     },
     {
-      image: SzkoleniaLicencyjne,
+      image: '/wekter-heli/images/szkolenia-licencyjne.png',
       alt: "Szkolenia Licencyjne",
       text: "Szkolenia Licencyjne",
       number: ".02",
     },
     {
-      image: Zareczyny,
+      image: '/wekter-heli/images/zareczyny.png',
       alt: "Zaręczyny",
       text: "Zaręczyny",
       number: ".03",
     },
     {
-      image: LotyWidokowe,
+      image: '/wekter-heli/images/loty-widokowe.png',
       alt: "Loty zapoznawcze",
       text: "Loty zapoznawcze",
       number: ".04",
     },
     {
-      image: SzkoleniaLicencyjne,
+      image: '/wekter-heli/images/szkolenia-licencyjne.png',
       alt: "Loty grupowe",
       text: "Loty grupowe",
       number: ".05",
@@ -125,31 +118,31 @@ export function createOfferLists() {
 
   const offersData2 = [
     {
-      image: AirTaxi,
+      image: '/wekter-heli/images/air-taxi.png',
       alt: "Air Taxi",
       text: "Air Taxi",
       number: ".01",
     },
     {
-      image: Cargo,
+      image: '/wekter-heli/images/cargo.png',
       alt: "Cargo",
       text: "Cargo",
       number: ".02",
     },
     {
-      image: EventyIWydarzenia,
+      image: '/wekter-heli/images/eventy-i-wydarzenia.png',
       alt: "Eventy i Wydarzenia",
       text: "Eventy i wydarzenia",
       number: ".03",
     },
     {
-      image: LotyWidokowe,
+      image: '/wekter-heli/images/loty-widokowe.png',
       alt: "Udziały",
       text: "Udziały",
       number: ".04",
     },
     {
-      image: SzkoleniaLicencyjne,
+      image: '/wekter-heli/images/szkolenia-licencyjne.png',
       alt: "Fotografowanie i filmowanie",
       text: "Fotografowanie i filmowanie",
       number: ".05",
@@ -170,7 +163,7 @@ export function createOfferLists() {
             </div>
             <div class="offers__list-container">
                     <div>
-                        <img src="${Arrow}" alt="Arrow Right">
+                        <img src="/wekter-heli/icons/arrow-side.svg" alt="Arrow Right">
                     </div>
                     <p>${offer.text}</p>
                     <span>${offer.number}</span>
