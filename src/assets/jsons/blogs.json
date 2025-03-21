@@ -1,0 +1,52 @@
+[
+  {
+    "image": "path/to/image1.jpg",
+    "date": "18 kwietnia 2023",
+    "category": "Podróże",
+    "title": "Strach przed lataniem. Jak można poradzić sobie z tym problemem?"
+  },
+  {
+    "image": "path/to/image2.jpg",
+    "date": "19 kwietnia 2023",
+    "category": "Turystyka",
+    "title": "Co zobaczyć w Karkonoszach? Atrakcje turystyczne"
+  },
+  {
+    "image": "path/to/image3.jpg",
+    "date": "18 kwietnia 2023",
+    "category": "Loty widokowe",
+    "title": "Lot widokowy helikopterem nad Karkonoszami – co warto wiedzieć?",
+    "highlight": true
+  },
+  {
+    "image": "path/to/image4.jpg",
+    "date": "21 kwietnia 2023",
+    "category": "Zaręczyny",
+    "title": "Jak zorganizować niezapomniane zaręczyny? Postaw na lot widokowy helikopterem!"
+  },
+  {
+    "image": "path/to/image5.jpg",
+    "date": "22 kwietnia 2023",
+    "category": "Loty helikopterem",
+    "title": "Ile kosztuje lot helikopterem?"
+  },
+  {
+    "image": "path/to/image6.jpg",
+    "date": "23 kwietnia 2023",
+    "category": "Przygotowanie",
+    "title": "Jak przygotować się do lotu helikopterem?"
+  },
+  {
+    "image": "path/to/image7.jpg",
+    "date": "10 kwietnia 2023",
+    "category": "Przygotowanie",
+    "title": "Jak przygotować się do lotu helikopterem?"
+  },
+  {
+    "image": "blog-8.png",
+    "date": "8 kwietnia 2023",
+    "category": "Przygotowanie",
+    "title": "Trendsetter transportu lotniczego — AIR Taxi: podróżuj szybko i wygodnie",
+    "highlight": true
+  }
+]

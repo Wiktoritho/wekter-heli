@@ -7,6 +7,7 @@ document.addEventListener("DOMContentLoaded", () => {
     title: "Wekter Helicopters to przede wszystkim spełnione marzenia",
     text: "Nie tylko naszych pasażerów, ale również wszystkich nas – członków załogi.",
     from: "O nas",
+    titleVersion: "small",
     version: "high",
     hideButtonsFromHeader: true,
     

@@ -14,7 +14,7 @@ export function initBanner(data) {
                 <img src="${Arrow}" alt="Arrow"/>
                 <a>${data.from}</a>
             </p>
-            <h2 class="baner__title">${data.title}</h2>
+            <h2 class="baner__title baner__title--${data.titleVersion}">${data.title}</h2>
             <p class="baner__text">${data.text}</p>
         </div>
         `;

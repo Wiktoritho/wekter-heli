@@ -1,0 +1,9 @@
+@use 'variables' as *;
+.blogs {
+    padding: 80px 80px 120px;
+    background-color: $white;
+    &__recommended {
+        display: flex;
+
+    }
+}
