@@ -20,8 +20,6 @@ const flightData2 = [
   { city: "Wrocław", time: "1h 45m" },
 ];
 
-
-
 export function initFleet() {
   countFleetBlockHeight();
   generateFleetTables(flightData1, true);
@@ -80,22 +78,34 @@ export function initFleet() {
         if (texts[index]) {
           texts[index].classList.replace("fleet__advantages-text", "fleet__advantages-text--active");
         }
-        let currentIndex = 0;
-        if (index === 1 && window.innerWidth > 900) {
-          currentIndex = index;
-          elements[currentIndex].style.transform = `translateY(-${texts[currentIndex - 1].offsetHeight + 44}px)`;
-          texts[currentIndex].style.transform = `translateY(-${texts[currentIndex - 1].offsetHeight + 44}px)`;
-          content.style.height = `${headers[currentIndex].offsetHeight + headers[currentIndex - 1].offsetHeight + texts[currentIndex].offsetHeight}px`;
-          texts[currentIndex].style.zindex = "2";
-        } else if (index === 0 && window.innerWidth > 900) {
-          currentIndex = index;
+
+        let currentIndex = index;
+        const isWide = window.innerWidth > 900;
+        const isFirst = index === 0;
+        const isSecond = index === 1;
+
+        const prevTextHeight = texts[currentIndex - 1]?.offsetHeight || 0;
+        const baseOffset = 44;
+        const mobileExtraOffset = 72;
+        const yTranslate = isSecond ? `translateY(-${prevTextHeight + (isWide ? baseOffset : -28)}px)` : "translateY(0px)";
+
+        if (isSecond) {
+          elements[currentIndex].style.transform = isWide ? yTranslate : "translateY(-231%)";
+          texts[currentIndex].style.transform = yTranslate;
+        } else {
           elements[currentIndex + 1].style.transform = "translateY(0px)";
           texts[currentIndex + 1].style.transform = "translateY(0px)";
-          content.style.height = `${headers[currentIndex].offsetHeight + headers[currentIndex + 1].offsetHeight + texts[currentIndex].offsetHeight + 44}px`;
-          setTimeout(() => {
-            texts[currentIndex].style.zindex = "2";
-          }, 500);
         }
+
+        const heightOffset = isSecond ? 100 : baseOffset + (isWide ? 0 : mobileExtraOffset);
+        content.style.height = `${headers[currentIndex].offsetHeight + headers[currentIndex + (isFirst ? 1 : -1)].offsetHeight + texts[currentIndex].offsetHeight + heightOffset}px`;
+
+        setTimeout(
+          () => {
+            texts[currentIndex].style.zIndex = "2";
+          },
+          isFirst ? 500 : 0
+        );
       });
     });
   }
@@ -127,14 +137,12 @@ export function initFleet() {
 }
 
 function countFleetBlockHeight() {
-  if (window.innerWidth > 900) {
-    const content = document.querySelector(".fleet__advantages-content");
-    const texts = document.querySelectorAll(".fleet__advantages-text, .fleet__advantages-text--active");
-    const headers = document.querySelectorAll(".fleet__advantages-header, .fleet__advantages-header--active");
-    content.style.height = `${headers[0].offsetHeight + headers[1].offsetHeight + texts[0].offsetHeight + 44}px`;
-  }
-}
+  const content = document.querySelector(".fleet__advantages-content");
+  const texts = document.querySelectorAll(".fleet__advantages-text, .fleet__advantages-text--active");
+  const headers = document.querySelectorAll(".fleet__advantages-header, .fleet__advantages-header--active");
 
+  content.style.height = `${headers[0].offsetHeight + headers[1].offsetHeight + texts[0].offsetHeight + 44}px`;
+}
 
 function generateFleetTables(data, active) {
   const container = document.querySelector(".fleet__advantages-block");

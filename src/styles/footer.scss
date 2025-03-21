@@ -194,6 +194,10 @@
       border-bottom: 1px solid rgba($grayborder, 0.24);
       color: $white;
       opacity: 1;
+      gap: 24px;
+      transition: all 0.3s ease-in-out;
+      overflow: hidden;
+      height: 67px;
       h3 {
         color: $white;
         display: flex;
@@ -215,8 +219,10 @@
       }
     }
     ul {
-      display: none;
       gap: 5px;
+      z-index: 0;
+      overflow: hidden;
+      transition: all 0.2s ease-in-out;
     }
     &__newsletter {
       width: 100%;

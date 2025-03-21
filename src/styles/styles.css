@@ -161,6 +161,7 @@ strong {
   }
   .header__list li {
     position: relative;
+    user-select: none;
     display: flex;
     gap: 10px;
     font-size: clamp(14px, 1vw, 18px);
@@ -168,10 +169,16 @@ strong {
     height: 100%;
     align-items: center;
   }
-  .header__list li span {
+  .header__list li span, .header__list li a {
     transition: all 0.2s ease-in-out;
   }
+  .header__list li:hover a {
+    opacity: 0.5;
+  }
   .header__list li:hover span {
+    opacity: 0.5;
+  }
+  .header__list li:hover span:last-of-type {
     transform: rotate(180deg);
   }
   .header__list li::after {
@@ -282,6 +289,10 @@ strong {
   }
   .header__buttons img {
     cursor: pointer;
+    transition: all 0.2s ease-in-out;
+  }
+  .header__buttons img:hover {
+    opacity: 0.5;
   }
   .header__buttons > img:last-of-type {
     display: none;
@@ -655,6 +666,13 @@ strong {
   .swiper .swiper-button-prev {
     display: none;
   }
+  .swiper .swiper-slide:first-of-type .swiper__image {
+    min-width: 160%;
+  }
+  .swiper .swiper-slide:last-of-type .swiper__image {
+    min-width: 160%;
+    object-position: center right;
+  }
   .swiper__buttons {
     gap: 16px;
     justify-content: space-between;
@@ -675,6 +693,7 @@ strong {
 
 @media screen and (max-width: 1920px) {
   .button {
+    user-select: none;
     padding: 16px 48px;
     text-transform: uppercase;
     font-family: "Poppins", sans-serif;
@@ -688,6 +707,18 @@ strong {
     width: fit-content;
     display: flex;
     justify-content: center;
+    z-index: 1;
+  }
+  .button--active {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 50%;
+    height: 100%;
+    background-color: #3b5eab;
+    border-color: #3b5eab;
+    color: #fff;
+    transition: all 0.2s ease-in-out;
   }
   .button--blue {
     background-color: #3b5eab;
@@ -695,6 +726,13 @@ strong {
     color: #fff;
   }
   .button--blue:hover {
+    background-color: #6581BE;
+    border-color: #6581BE;
+  }
+  .button--reset {
+    color: #fff;
+  }
+  .button--reset:hover {
     background-color: #6581BE;
     border-color: #6581BE;
   }
@@ -841,6 +879,9 @@ strong {
 }
 
 @media screen and (max-width: 1920px) {
+  .section--animated {
+    margin-top: -15vh;
+  }
   .section--black {
     display: flex;
     justify-content: center;
@@ -848,12 +889,14 @@ strong {
     flex-direction: column;
     position: relative;
     color: #fff;
+    padding-bottom: 44px;
+    background: linear-gradient(#000 0%, #000 calc(100% - 44px), #fff calc(100% - 44px), #fff 100%);
   }
   .section--black--padding {
     padding: 80px 80px 0px;
   }
   .section--black__header {
-    margin: 80px 280px 140px;
+    margin: 140px 280px 140px;
     font-family: "Outfit", sans-serif;
     font-size: clamp(24px, 2vw, 36px);
     font-weight: 300;
@@ -901,14 +944,14 @@ strong {
   }
   .section--black__image {
     position: absolute;
-    bottom: -44px;
+    bottom: 0px;
     left: 50%;
     transform: translate(-50%);
   }
 }
 @media screen and (max-width: 1400px) {
   .section--black__header {
-    margin: 40px 260px 70px;
+    margin: 140px 260px 70px;
   }
   .section--black__text {
     margin-inline: 10%;
@@ -923,13 +966,13 @@ strong {
     padding: 40px 20px 0px;
   }
   .section--black__header {
-    margin: 40px 120px 70px;
+    margin: 140px 120px 70px;
   }
 }
 @media screen and (max-width: 900px) {
   .section--black__header {
     line-height: 32px;
-    margin: 48px 20px 96px;
+    margin: 100px 20px 96px;
   }
   .section--black__text {
     margin-inline: 0px;
@@ -1239,6 +1282,7 @@ strong {
     margin-inline: auto;
     width: min-content;
     display: flex;
+    position: relative;
   }
   .offers__list {
     padding-inline: 170px;
@@ -1253,6 +1297,30 @@ strong {
     gap: 24px;
     border-radius: 4px;
     width: 100%;
+    cursor: pointer;
+  }
+  .offers__list-element:hover .offers__list-container {
+    padding-left: 48px;
+  }
+  .offers__list-element:hover span {
+    color: #3b5eab;
+  }
+  .offers__list-element:hover .offers__list-image img {
+    scale: 1.1;
+  }
+  .offers__list-image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    border-radius: 4px;
+    max-height: 103px;
+  }
+  .offers__list-image img {
+    transition: all 0.2s ease-in-out;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
   }
   .offers__list-container {
     display: flex;
@@ -1267,10 +1335,6 @@ strong {
     border: 2px solid #fff;
     border-radius: 4px;
     transition: all 0.2s ease-in-out;
-    cursor: pointer;
-  }
-  .offers__list-container:hover span {
-    color: #3b5eab;
   }
   .offers__list-container div {
     width: 31px;
@@ -1351,7 +1415,7 @@ strong {
 
 @media screen and (max-width: 1920px) {
   .fleet {
-    padding: 120px 80px;
+    padding: 250px 80px;
     font-family: "Outfit", sans-serif;
     color: #fff;
   }
@@ -1710,7 +1774,7 @@ strong {
 }
 @media screen and (max-width: 1400px) {
   .fleet {
-    padding: 60px 80px;
+    padding: 160px 80px;
   }
   .fleet__examples {
     height: 500px;
@@ -1751,7 +1815,7 @@ strong {
 }
 @media screen and (max-width: 900px) {
   .fleet {
-    padding: 72px 20px;
+    padding: 160px 20px;
     overflow: hidden;
     border-bottom: 1px solid #727272;
   }
@@ -1865,7 +1929,7 @@ strong {
 
 @media screen and (max-width: 1920px) {
   .prices {
-    padding: 120px 171px;
+    padding: 120px 171px 250px;
     background-color: #fff;
     font-family: "Outfit", sans-serif;
   }
@@ -1889,6 +1953,7 @@ strong {
     margin: 24px auto;
     width: min-content;
     display: flex;
+    position: relative;
   }
   .prices__swiper {
     width: 100%;
@@ -2122,6 +2187,7 @@ strong {
     position: relative;
     overflow: hidden;
     cursor: pointer;
+    border-radius: 8px;
   }
   .prices__localization:hover .prices__localization-text {
     transform: translateY(0);
@@ -2303,7 +2369,7 @@ strong {
 }
 @media screen and (max-width: 1400px) {
   .prices {
-    padding: 60px 100px;
+    padding: 60px 100px 150px;
   }
   .prices:last-of-type {
     padding-block: 0px 130px;
@@ -2350,7 +2416,7 @@ strong {
 }
 @media screen and (max-width: 900px) {
   .prices {
-    padding: 72px 20px;
+    padding: 72px 20px 150px;
     overflow: hidden;
   }
   .prices .swiper-button-next,
@@ -2782,6 +2848,10 @@ strong {
     border-bottom: 1px solid rgba(222, 222, 222, 0.24);
     color: #fff;
     opacity: 1;
+    gap: 24px;
+    transition: all 0.3s ease-in-out;
+    overflow: hidden;
+    height: 67px;
   }
   .footer__list h3 {
     color: #fff;
@@ -2801,8 +2871,10 @@ strong {
     display: block;
   }
   .footer ul {
-    display: none;
     gap: 5px;
+    z-index: 0;
+    overflow: hidden;
+    transition: all 0.2s ease-in-out;
   }
   .footer__newsletter {
     width: 100%;

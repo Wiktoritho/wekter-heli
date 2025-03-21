@@ -106,6 +106,17 @@
     .swiper-button-prev {
       display: none;
     }
+    .swiper-slide:first-of-type {
+      .swiper__image {
+        min-width: 160%;
+      }
+    }
+    .swiper-slide:last-of-type {
+      .swiper__image {
+        min-width: 160%;
+        object-position: center right;
+      }
+    }
     &__buttons {
       gap: 16px;
       justify-content: space-between;

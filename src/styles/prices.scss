@@ -1,7 +1,7 @@
 @use "variables" as *;
 .prices {
   @include respond-to("desktop") {
-    padding: 120px 171px;
+    padding: 120px 171px 250px;
     background-color: $white;
     font-family: $font-family-primary;
     &:last-of-type {
@@ -24,6 +24,7 @@
       margin: $margin-medium auto;
       width: min-content;
       display: flex;
+      position: relative;
     }
     &__swiper {
       width: 100%;
@@ -268,6 +269,7 @@
       position: relative;
       overflow: hidden;
       cursor: pointer;
+      border-radius: 8px;
       &:hover {
         .prices__localization-text {
           transform: translateY(0);
@@ -450,7 +452,7 @@
     }
   }
   @include respond-to("large") {
-    padding: 60px 100px;
+    padding: 60px 100px 150px;
     &:last-of-type {
       padding-block: 0px 130px;
       .prices__header--big {
@@ -499,7 +501,7 @@
     }
   }
   @include respond-to("small") {
-    padding: 72px 20px;
+    padding: 72px 20px 150px;
     overflow: hidden;
     .swiper-button-next,
     .swiper-button-prev {

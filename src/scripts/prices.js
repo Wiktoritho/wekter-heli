@@ -9,6 +9,7 @@ export function handlePrices() {
   const pricesSwiperPagination = document.querySelector(".swiper-pagination-localizations");
   const text = document.querySelector(".prices__header-text");
   const businessSection = document.querySelector(".prices__business");
+  const switcher = document.querySelector(".prices__buttons .button--active");
   const choppersSwiper = document.querySelector(".prices__swiper-choppers");
   const headerButtons = document.querySelectorAll(".header__button--active, .header__button");
   const mobileHeaderButtons = document.querySelectorAll(".header__mobile-button--active, .header__mobile-button");
@@ -35,19 +36,23 @@ export function handlePrices() {
     buttons.forEach((button, index) => {
       button.addEventListener("click", function () {
         buttons.forEach((btn) => {
-          btn.classList.remove("button", "button--blue", "button--medium", "button--fonted");
+          btn.classList.remove("button", "button--medium", "button--fonted", "button--reset");
           btn.classList.add("button", "button--white", "button--medium");
         });
 
         button.classList.remove("button", "button--white", "button--medium");
-        button.classList.add("button", "button--blue", "button--medium", "button--fonted");
-
+        button.classList.add("button", "button--medium", "button--fonted");
+        setTimeout(() => {
+          button.classList.add("button--reset");
+        }, 200);
         if (this.textContent.trim() === "Loty biznesowe") {
           headerButtons[1]?.click();
           mobileHeaderButtons[1].click();
+          switcher.style.left = "50%";
         } else {
           headerButtons[0]?.click();
           mobileHeaderButtons[0]?.click();
+          switcher.style.left = "0%";
         }
 
         if (index === 0) {

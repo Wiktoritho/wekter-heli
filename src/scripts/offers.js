@@ -4,6 +4,7 @@ export function initOffers() {
   const lists = document.querySelectorAll(".offers__list");
   const headerButtons = document.querySelectorAll(".header__button--active, .header__button");
   const mobileHeaderButtons = document.querySelectorAll(".header__mobile-button--active, .header__mobile-button");
+  const switcher = document.querySelector(".button--active");
   let activeList = lists[0];
   let visibleItems = window.innerWidth <= 900 ? 5 : 3;
 
@@ -55,18 +56,23 @@ export function initOffers() {
   buttons.forEach((button, index) => {
     button.addEventListener("click", function () {
       buttons.forEach((btn) => {
-        btn.classList.remove("button", "button--blue", "button--medium", "button--fonted");
+        btn.classList.remove("button", "button--medium", "button--fonted", "button--reset");
         btn.classList.add("button", "button--white", "button--medium");
       });
 
       button.classList.remove("button", "button--white", "button--medium");
-      button.classList.add("button", "button--blue", "button--medium", "button--fonted");
+      button.classList.add("button", "button--medium", "button--fonted");
+      setTimeout(() => {
+        button.classList.add("button--reset");
+      }, 200);
       if (this.textContent.trim() === "Loty biznesowe") {
         headerButtons[1]?.click();
         mobileHeaderButtons[1].click();
+        switcher.style.left = "50%";
       } else {
         headerButtons[0]?.click();
         mobileHeaderButtons[0]?.click();
+        switcher.style.left = "0%"
       }
       showList(lists[index]);
     });
@@ -159,7 +165,9 @@ export function createOfferLists() {
       offerItem.classList.add("offers__list-element");
 
       offerItem.innerHTML = `
-            <img src="${offer.image}" alt="${offer.alt}">
+            <div class="offers__list-image">
+              <img src="${offer.image}" alt="${offer.alt}">
+            </div>
             <div class="offers__list-container">
                     <div>
                         <img src="${Arrow}" alt="Arrow Right">

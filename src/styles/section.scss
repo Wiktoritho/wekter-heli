@@ -1,6 +1,9 @@
 @use "variables" as *;
 .section {
   @include respond-to("desktop") {
+    &--animated {
+      margin-top: -15vh;
+    }
     &--black {
       display: flex;
       justify-content: center;
@@ -8,11 +11,13 @@
       flex-direction: column;
       position: relative;
       color: $white;
+      padding-bottom: 44px;
+      background: linear-gradient($black 0%, $black calc(100% - 44px), $white calc(100% - 44px) , $white 100%);
       &--padding {
         padding: 80px 80px 0px;
       }
       &__header {
-        margin: 80px 280px 140px;
+        margin: 140px 280px 140px;
         font-family: $font-family-primary;
         font-size: clamp(24px, 2vw, 36px);
         font-weight: 300;
@@ -60,7 +65,7 @@
       }
       &__image {
         position: absolute;
-        bottom: -44px;
+        bottom: 0px;
         left: 50%;
         transform: translate(-50%);
       }
@@ -69,7 +74,7 @@
   @include respond-to("large") {
     &--black {
       &__header {
-        margin: 40px 260px 70px;
+        margin: 140px 260px 70px;
       }
       &__text {
         margin-inline: 10%;
@@ -86,7 +91,7 @@
         padding: 40px 20px 0px;
       }
       &__header {
-        margin: 40px 120px 70px;
+        margin: 140px 120px 70px;
       }
     }
   }
@@ -94,7 +99,7 @@
     &--black {
       &__header {
         line-height: 32px;
-        margin: $margin-large 20px 96px;
+        margin: 100px 20px 96px;
       }
       &__text {
         margin-inline: 0px;

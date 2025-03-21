@@ -7,6 +7,8 @@ import { handleFooterLists } from "./scripts/footer";
 import { animateMainText } from "./scripts/animations";
 import { debounce } from "./scripts/utils";
 
+
+
 let startedWidth = window.innerWidth;
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -26,6 +28,8 @@ document.addEventListener("DOMContentLoaded", () => {
     "resize",
     debounce(() => handleResize(), 200)
   );
+
+  
 });
 
 function handleResize() {

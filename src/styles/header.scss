@@ -26,17 +26,24 @@
       align-items: center;
       li {
         position: relative;
+        user-select: none;
         display: flex;
         gap: 10px;
         font-size: clamp(14px, 1vw, 18px);
         cursor: pointer;
         height: 100%;
         align-items: center;
-        span {
+        span, a {
           transition: all 0.2s ease-in-out;
         }
         &:hover {
+          a {
+            opacity: 0.5;
+          }
           span {
+            opacity: 0.5;
+          }
+          span:last-of-type {
             transform: rotate(180deg);
           }
         }
@@ -155,6 +162,10 @@
       gap: 20px;
       img {
         cursor: pointer;
+        transition: all 0.2s ease-in-out;
+        &:hover {
+          opacity: 0.5;
+        }
       }
     }
     &__buttons > img:last-of-type {

@@ -20,12 +20,19 @@ export function initAllSwipers() {
         breakpoints: { 1400: { slidesPerView: 5 }, 1100: { slidesPerView: 4 }, 800: { slidesPerView: 3 }, 100: { slidesPerView: 2.25 } },
       },
     },
-    { selector: ".prices__swiper-choppers", options: { loop: false, slidesPerView: 1.2, spaceBetween: 16, pagination: { el: ".swiper-pagination-choppers", clickable: true } } },
-    { selector: ".prices__localizations", options: { loop: false, slidesPerView: 1.2, spaceBetween: 16, pagination: { el: ".swiper-pagination-localizations", clickable: true } } },
-    { selector: ".fleet__examples", options: { loop: false, slidesPerView: 1.2, spaceBetween: 12, pagination: { el: ".swiper-pagination-examples", clickable: true } } },
+    { selector: ".prices__swiper-choppers", options: { loop: false, slidesPerView: 1.2, watchSlidesProgress: true, spaceBetween: 16, pagination: { el: ".swiper-pagination-choppers", clickable: true } } },
+    { selector: ".prices__localizations", options: { loop: false, slidesPerView: 1.2, watchSlidesProgress: true, spaceBetween: 16, pagination: { el: ".swiper-pagination-localizations", clickable: true } } },
+    { selector: ".fleet__examples", options: { loop: false, slidesPerView: 1.2, watchSlidesProgress: true, spaceBetween: 12, pagination: { el: ".swiper-pagination-examples", clickable: true } } },
   ];
 
-  swiperConfigs.forEach((config) => new Swiper(config.selector, { modules: [Pagination, Navigation], ...config.options }));
+  swiperConfigs.forEach((config) => {
+    const swiper = new Swiper(config.selector, { modules: [Pagination, Navigation], ...config.options })
+
+    swiper.on('slideChange', function () {
+      console.log('update');
+      swiper.pagination.update();
+    })
+  });
 }
 
 export function changeSwiperSlides() {
