@@ -1,0 +1,50 @@
+@font-face {
+    font-family: 'Outfit';
+    src: url('./Outfit-Regular.ttf') format('truetype');
+    font-weight: normal;
+}
+@font-face {
+    font-family: 'Outfit';
+    src: url('./Outfit-Bold.ttf') format('truetype');
+    font-weight: bold;
+}
+@font-face {
+    font-family: 'Outfit';
+    src: url('./Outfit-SemiBold.ttf') format('truetype');
+    font-weight: 600;
+}
+@font-face {
+    font-family: 'Outfit';
+    src: url('./Outfit-Medium.ttf') format('truetype');
+    font-weight: 500;
+}
+@font-face {
+    font-family: 'Outfit';
+    src: url('./Outfit-Light.ttf') format('truetype');
+    font-weight: 300;
+}
+@font-face {
+    font-family: 'Poppins';
+    src: url('./Poppins-Regular.ttf') format('truetype');
+    font-weight: normal;
+}
+@font-face {
+    font-family: 'Poppins';
+    src: url('./Poppins-Bold.ttf') format('truetype');
+    font-weight: bold;
+}
+@font-face {
+    font-family: 'Poppins';
+    src: url('./Poppins-Light.ttf') format('truetype');
+    font-weight: 300;
+}
+@font-face {
+    font-family: 'DrukWide';
+    src: url('./DrukWideBold.ttf') format('truetype');
+    font-weight: bold;
+}
+@font-face {
+    font-family: 'AvantGarde';
+    src: url('./ITCAvantGardeStd-Bold.ttf') format('truetype');
+    font-weight: bold;
+}
