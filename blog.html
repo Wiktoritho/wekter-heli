@@ -6,12 +6,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content="Wekter Helicopters" />
     <link rel="stylesheet" href="/wekter-heli/fonts/styles.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/choices.js/public/assets/styles/choices.min.css">
     <title>Wekter Helicopters</title>
     <link rel="icon" href="/wekter-heli/icons/favicon.svg" />
-  <script type="module" crossorigin src="/wekter-heli/assets/blog-etdkgEMy.js"></script>
-  <link rel="modulepreload" crossorigin href="/wekter-heli/assets/styles-t3-vjCh-.js">
+  <script type="module" crossorigin src="/wekter-heli/assets/blog-DpKTQmhF.js"></script>
+  <link rel="modulepreload" crossorigin href="/wekter-heli/assets/styles-CQ1PTsJP.js">
   <link rel="modulepreload" crossorigin href="/wekter-heli/assets/baner-DgibVVQk.js">
-  <link rel="stylesheet" crossorigin href="/wekter-heli/assets/styles-CHVf4qfM.css">
+  <link rel="modulepreload" crossorigin href="/wekter-heli/assets/animations-_XyNZepc.js">
+  <link rel="stylesheet" crossorigin href="/wekter-heli/assets/styles-DcSlp_6g.css">
 </head>
 
 <body>
@@ -203,6 +205,25 @@
         <div class="baner"></div>
         <section class="blogs">
             <div class="blogs__recommended"></div>
+            <div class="blogs__filters">
+    <div class="blogs__filters-content">
+        <p class="blogs__filters-header">Filtruj</p>
+        <div class="blogs__filters-wrapper">
+            <select id="category-select">
+            </select>
+            <div class="blogs__filters-border"></div>
+            <select id="sort-select">
+            </select>
+            <div class="blogs__filters-border"></div>
+            <div class="blogs__filters-input-wrapper">
+                <input class="blogs__filters-input" type="text" id="search" placeholder="Szukaj...">
+            </div>
+        </div>
+    </div>
+    <p class="blogs__filters-reset">Resetuj filtry</p>
+</div>
+            <ul class="blogs__list"></ul>
+            <div class="blogs__pagination"></div>
         </section>
         <footer class="footer">
     <div class="footer__content">
@@ -319,7 +340,7 @@
         <img src="/wekter-heli/icons/newsletter.png" alt="Newsletter Icon" />
         <h3>Newsletter</h3>
         <p>Bądź na bieżąco z nowościami, promocjami i ciekawymi artykułami!</p>
-        <button class="button button--blue">zapisz się</button>
+        <button class="button button--blue button--long">zapisz się</button>
       </div>
     </div>
     <div class="footer__creators">
