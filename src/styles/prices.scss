@@ -1,7 +1,7 @@
 @use "variables" as *;
 .prices {
   @include respond-to("desktop") {
-    padding: 120px 171px 250px;
+    padding: 120px 171px 200px;
     background-color: $white;
     font-family: $font-family-primary;
     .carousel {
@@ -520,6 +520,10 @@
   @include respond-to("small") {
     padding: 72px 20px 150px;
     overflow: hidden;
+    .swiper-button-next,
+    .swiper-button-prev {
+      display: none;
+    }
     &__buttons {
       margin-bottom: $margin-medium;
     }

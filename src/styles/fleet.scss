@@ -1,7 +1,7 @@
 @use "variables" as *;
 .fleet {
   @include respond-to("desktop") {
-    padding: 250px 80px;
+    padding: 200px 80px;
     font-family: $font-family-primary;
     color: $white;
     &__logo {
@@ -419,7 +419,7 @@
     }
   }
   @include respond-to("small") {
-    padding: 160px 20px;
+    padding: 120px 20px 70px;
     overflow: hidden;
     border-bottom: 1px solid $headergray;
     &__logo {
@@ -466,7 +466,7 @@
         filter: none;
       }
       .carousel__pagination {
-        bottom: -50px;
+        bottom: 0px;
         gap: 8px;
       }
       .carousel__pagination-button {

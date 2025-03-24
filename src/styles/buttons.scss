@@ -81,14 +81,14 @@
   }
   @include respond-to("small") {
     &--blue {
-      font-size: 14px;
+      font-size: 12px;
       padding: $padding-medium 0px;
       width: calc((100% - 16px) / 2);
       text-align: center;
       max-width: 100%;
     }
     &--black {
-      font-size: 14px;
+      font-size: 12px;
       padding: $padding-medium 0px;
       width: calc((100% - 16px) / 2);
       text-align: center;

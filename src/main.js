@@ -9,7 +9,7 @@ import AboutPage from "./views/About.vue";
 import BlogPage from "./views/Blog.vue";
 
 const blogRoutes = {
-  test: () => import("./views/blogs/test.vue"),
+  'trendsetter-transportu-lotniczego-air-taxi': () => import("./views/blogs/trendsetter-transportu-lotniczego-air-taxi.vue"),
 };
 
 export const router = createRouter({
@@ -20,7 +20,7 @@ export const router = createRouter({
     { path: "/blog", component: BlogPage },
     {
       path: "/blog/:slug",
-      component: blogRoutes["test"],
+      component: blogRoutes["trendsetter-transportu-lotniczego-air-taxi"],
     },
   ],
 });

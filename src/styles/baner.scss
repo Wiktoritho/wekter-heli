@@ -17,14 +17,18 @@
       left: 80px;
       display: flex;
       flex-direction: column;
-      gap: 16px;
-      max-width: 44%;
+      max-width: 45%;
       &--high {
         top: 150px;
       }
       &--low {
         top: 250px;
       }
+    }
+    &__link-wrapper {
+      display: flex;
+      gap: 8px;
+      align-items: center;
     }
     &__link {
       margin-bottom: $margin-medium;
@@ -40,8 +44,9 @@
         filter: invert(1);
         width: 9px;
         height: 9px;
+        transform: translateY(-2px);
       }
-      a:first-of-type::after {
+      & a:first-of-type::after {
         display: block;
         content: "";
         width: 0%;
@@ -74,6 +79,12 @@
       line-height: 24px;
       letter-spacing: 0.04em;
       max-width: 600px;
+      &--big {
+        font-size: 20px;
+        letter-spacing: unset;
+        max-width: 100%;
+        line-height: 28px;
+      }
     }
   }
   @include respond-to("large") {

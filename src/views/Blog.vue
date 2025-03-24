@@ -4,10 +4,11 @@
     image="/images/blog-baner.png"
     title="Wszystko o lotach"
     text="Wszystko, co musisz wiedzieć o lataniu helikopterami – od najnowszych technologii i konstrukcji po relacje z lotów, ciekawostki i porady"
-    from="Blog"
+    :from="['Blog']"
     titleVersion="big"
     version="low"
-    :hideButtonsFromHeader=true></Baner>
+    :gap="16"
+  ></Baner>
   <Blogs></Blogs>
   <Footer></Footer>
 </template>

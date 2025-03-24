@@ -44,6 +44,7 @@ import axios from "axios";
 import RecommendedBlogs from "./recommendedBlogs.vue";
 import AllBlogs from "./allBlogs.vue";
 import Multiselect from "@vueform/multiselect";
+import { useStore } from "../store";
 
 export default {
   components: {
@@ -91,6 +92,7 @@ export default {
     async fetchBlogs() {
       const response = await axios.get("/jsons/blogs.json");
       this.allData = response.data;
+      useStore().set('blogs', this.allData);
       const uniqueCategories = [...new Set(this.allData.map((el) => el.category))];
       this.categories = ["Wszystkie", ...uniqueCategories];
 

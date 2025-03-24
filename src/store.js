@@ -4,6 +4,7 @@ export const useStore = defineStore({
   id: "appStore",
   state: () => ({
     switch: "Loty widokowe",
+    blogs: [],
   }),
   actions: {
     set(key, value) {

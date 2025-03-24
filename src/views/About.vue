@@ -4,10 +4,10 @@
     image="/images/about-baner.png"
     title="Wekter Helicopters to przede wszystkim spełnione marzenia"
     text="Nie tylko naszych pasażerów, ale również wszystkich nas – członków załogi."
-    from="O nas"
+    :from="['O nas']"
     titleVersion="small"
     version="high"
-    hideButtonsFromHeader="true"></Baner>
+    :gap="16"></Baner>
   <section class="section--black section--black--padding">
     <h4 class="headers headers--small headers--gray">Nasza misja</h4>
     <p class="section--black__text">

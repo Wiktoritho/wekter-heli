@@ -61,7 +61,7 @@
               </div>
             </div>
           </li>
-          <li><a href="/about">O nas</a></li>
+          <li><a href="/o-nas">O nas</a></li>
           <li><a>Vouchery</a></li>
           <li>
             <span>Heliporty</span> <span><img src="/icons/arrow-down.svg" alt="Arrow Icon" /></span>
@@ -157,7 +157,7 @@
                 </div>
               </li>
               <li>
-                <a href="/about">O nas</a>
+                <a href="/o-nas">O nas</a>
               </li>
               <li>Vouchery</li>
               <li id="mobile-heliports" @click="heliportsMobile = true">

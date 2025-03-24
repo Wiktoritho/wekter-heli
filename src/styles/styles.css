@@ -566,6 +566,9 @@ strong {
   .carousel .carousel__slide {
     overflow: hidden;
   }
+  .carousel .carousel__slide .swiper__image {
+    object-position: center left;
+  }
   .carousel .carousel__slide:nth-of-type(2) .swiper__image {
     object-position: center right;
   }
@@ -637,14 +640,14 @@ strong {
     justify-content: space-between;
   }
   .swiper__image {
-    min-width: 160%;
+    min-width: 220%;
   }
   .swiper__header {
-    font-size: 32px;
+    font-size: 28px;
     line-height: 36px;
   }
   .swiper__text {
-    font-size: 18px;
+    font-size: 16px;
     line-height: 24px;
   }
   .swiper__content {
@@ -734,14 +737,14 @@ strong {
 }
 @media screen and (max-width: 900px) {
   .button--blue {
-    font-size: 14px;
+    font-size: 12px;
     padding: 16px 0px;
     width: calc((100% - 16px) / 2);
     text-align: center;
     max-width: 100%;
   }
   .button--black {
-    font-size: 14px;
+    font-size: 12px;
     padding: 16px 0px;
     width: calc((100% - 16px) / 2);
     text-align: center;
@@ -1219,7 +1222,7 @@ strong {
     gap: 16px;
     right: 20px;
     left: 20px;
-    top: 190px;
+    top: 160px;
     transform: translateY(0%);
   }
   .photo-text__text {
@@ -1381,7 +1384,7 @@ strong {
 
 @media screen and (max-width: 1920px) {
   .fleet {
-    padding: 250px 80px;
+    padding: 200px 80px;
     font-family: "Outfit", sans-serif;
     color: #fff;
   }
@@ -1782,7 +1785,7 @@ strong {
 }
 @media screen and (max-width: 900px) {
   .fleet {
-    padding: 160px 20px;
+    padding: 120px 20px 70px;
     overflow: hidden;
     border-bottom: 1px solid #727272;
   }
@@ -1828,7 +1831,7 @@ strong {
     filter: none;
   }
   .fleet__examples .carousel__pagination {
-    bottom: -50px;
+    bottom: 0px;
     gap: 8px;
   }
   .fleet__examples .carousel__pagination-button {
@@ -1910,7 +1913,7 @@ strong {
 
 @media screen and (max-width: 1920px) {
   .prices {
-    padding: 120px 171px 250px;
+    padding: 120px 171px 200px;
     background-color: #fff;
     font-family: "Outfit", sans-serif;
   }
@@ -2422,6 +2425,10 @@ strong {
     padding: 72px 20px 150px;
     overflow: hidden;
   }
+  .prices .swiper-button-next,
+  .prices .swiper-button-prev {
+    display: none;
+  }
   .prices__buttons {
     margin-bottom: 24px;
   }
@@ -2920,14 +2927,18 @@ strong {
     left: 80px;
     display: flex;
     flex-direction: column;
-    gap: 16px;
-    max-width: 44%;
+    max-width: 45%;
   }
   .baner__content--high {
     top: 150px;
   }
   .baner__content--low {
     top: 250px;
+  }
+  .baner__link-wrapper {
+    display: flex;
+    gap: 8px;
+    align-items: center;
   }
   .baner__link {
     margin-bottom: 24px;
@@ -2944,6 +2955,7 @@ strong {
     filter: invert(1);
     width: 9px;
     height: 9px;
+    transform: translateY(-2px);
   }
   .baner__link a:first-of-type::after {
     display: block;
@@ -2975,6 +2987,12 @@ strong {
     line-height: 24px;
     letter-spacing: 0.04em;
     max-width: 600px;
+  }
+  .baner__text--big {
+    font-size: 20px;
+    letter-spacing: unset;
+    max-width: 100%;
+    line-height: 28px;
   }
 }
 @media screen and (max-width: 1400px) {
@@ -3486,6 +3504,167 @@ strong {
   }
   .blogs__filters-reset {
     width: 100%;
+  }
+}
+
+@media screen and (max-width: 1920px) {
+  .blog {
+    position: relative;
+    background-color: #fff;
+    padding-inline: 100px 195px;
+  }
+  .blog__absolute-container {
+    position: absolute;
+    display: flex;
+    left: 0px;
+    width: 100%;
+    top: -300px;
+  }
+  .blog__absolute-container img {
+    width: 72%;
+    max-width: 1100px;
+    max-height: 640px;
+  }
+  .blog__absolute-share {
+    margin-left: 28px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    color: #fff;
+    line-height: 24px;
+    font-family: "Outfit", sans-serif;
+  }
+  .blog__absolute-block {
+    display: flex;
+    align-items: center;
+  }
+  .blog__absolute-block span:first-of-type {
+    width: 80px;
+    display: flex;
+    color: #727272;
+    margin-right: 24px;
+  }
+  .blog__absolute-block a {
+    width: 32px;
+    height: 32px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 8px;
+    background-color: #3b5eab;
+    border-radius: 50%;
+  }
+  .blog__absolute-block a img {
+    width: 16px;
+  }
+  .blog__main {
+    width: 100%;
+    display: flex;
+    gap: 100px;
+    padding-top: 400px;
+    font-family: "Outfit", sans-serif;
+  }
+  .blog__main-side {
+    width: 22%;
+    display: flex;
+    gap: 24px;
+    flex-direction: column;
+    position: sticky;
+    top: 116px;
+    height: 750px;
+  }
+  .blog__side-bar {
+    width: 100%;
+    height: 4px;
+  }
+  .blog__side-time {
+    width: 100%;
+    padding-block: 24px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+    font-weight: 600;
+    line-height: 24px;
+    border-bottom: 1px solid #dedede;
+  }
+  .blog__side-time span {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .blog__side-header {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding-block: 24px;
+    font-size: 20px;
+    line-height: 28px;
+    font-weight: 500;
+  }
+  .blog__side-content {
+    width: 100%;
+    max-height: 450px;
+    overflow-y: scroll;
+    padding: 12px;
+  }
+  .blog__side-content p {
+    color: #727272;
+    line-height: 24px;
+    margin-bottom: 20px;
+    cursor: pointer;
+  }
+  .blog__side-content p:hover {
+    color: #3b5eab;
+    font-weight: 500;
+  }
+  .blog__side-content-list {
+    list-style: decimal;
+    padding-left: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  .blog__side-content-element {
+    color: #727272;
+    line-height: 24px;
+    max-width: 95%;
+    cursor: pointer;
+  }
+  .blog__side-content-element:hover {
+    color: #3b5eab;
+    font-weight: 500;
+  }
+  .blog__side-share p {
+    font-weight: 600;
+    line-height: 24px;
+    padding-block: 24px 16px;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    border-top: 1px solid #dedede;
+  }
+  .blog__side-share div {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    gap: 8px;
+    align-items: center;
+  }
+  .blog__side-share div a {
+    width: 32px;
+    height: 32px;
+    background-color: #3b5eab;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+  }
+  .blog__side-share div a img {
+    width: 16px;
+  }
+  .blog__main-content {
+    height: 2000px;
   }
 }
 

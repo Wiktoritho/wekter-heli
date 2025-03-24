@@ -7,6 +7,9 @@
     height: 700px !important;
     .carousel__slide {
       overflow: hidden;
+      .swiper__image {
+        object-position: center left;
+      }
     }
     .carousel__slide:nth-of-type(2) {
       .swiper__image {
@@ -76,14 +79,14 @@
       justify-content: space-between;
     }
     &__image {
-      min-width: 160%;
+      min-width: 220%;
     }
     &__header {
-      font-size: 32px;
+      font-size: 28px;
       line-height: 36px;
     }
     &__text {
-      font-size: 18px;
+      font-size: 16px;
       line-height: 24px;
     }
     &__content {
