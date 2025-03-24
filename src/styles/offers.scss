@@ -132,8 +132,15 @@
       margin-block: $margin-small 0px;
       padding-inline: 20px;
     }
-    &__list-element > img {
-      display: none;
+    &__list-element {
+      .offers__list-image {
+        display: none;
+      }
+      &:hover {
+        .offers__list-container {
+          padding-left: 24px;
+        }
+      }
     }
     &__list-container {
       padding: 24px $padding-medium;

@@ -29,6 +29,10 @@
       justify-content: space-between;
       align-items: flex-end;
     }
+    &__carousel-wrapper {
+      display: none;
+      width: 100%;
+    }
     &__choppers {
       display: flex;
       gap: 60px;
@@ -327,8 +331,6 @@
       width: 100%;
     }
     &__advantages-table {
-      display: none;
-      &--active {
         width: 100%;
         tr:first-of-type {
           height: 42px;
@@ -371,7 +373,6 @@
           line-height: 18px;
           font-weight: 400;
         }
-      }
     }
   }
   @include respond-to("large") {
@@ -428,6 +429,9 @@
         font-size: 10px;
       }
     }
+    &__carousel-wrapper {
+      display: flex;
+    }
     &__choppers {
       flex-direction: column;
       gap: 48px;
@@ -448,28 +452,38 @@
       width: 100%;
       position: relative;
       border-left: none;
-      .swiper-wrapper {
+      .carousel {
+        height: 500px !important;
         display: flex;
       }
-      .swiper-slide {
+      .carousel__slide {
+        flex-direction: column;
+        justify-content: unset;
+        align-items: unset;
         filter: grayscale(1);
-        opacity: 0.6;
       }
-      .swiper-slide-active {
-        filter: grayscale(0);
-        opacity: 1;
+      .carousel__slide--active {
+        filter: none;
       }
-      .swiper-pagination-examples {
-        position: absolute;
-        display: flex;
-        transform: translateY(50px) translateX(45%);
+      .carousel__pagination {
+        bottom: -50px;
+        gap: 8px;
       }
-      .swiper-pagination-bullet {
+      .carousel__pagination-button {
         width: 12px;
         height: 12px;
-        background-color: $gray;
-        opacity: 1;
-        &-active {
+        border-radius: 50%;
+        background-color: $footerborder;
+        &:hover {
+          background-color: $white;
+        }
+      }
+      .carousel__pagination-button--active {
+        width: 12px;
+        height: 12px;
+        border-radius: 50%;
+        background-color: $white;
+        &:hover {
           background-color: $white;
         }
       }
@@ -496,7 +510,7 @@
     &__swiper-text {
       line-height: 24px;
       margin-bottom: $margin-medium;
-      height: 120px;
+      height: 100px;
     }
     &__advantages {
       margin-top: $margin-large;
@@ -518,6 +532,7 @@
     &__advantages-cities {
       width: 100%;
       padding: 20px;
+      margin-top: 40px;
     }
     &__advantages-cities-header {
       gap: 16px;
@@ -530,13 +545,11 @@
       height: 200px;
     }
     &__advantages-table {
-      &--active {
-        tr {
+      tr {
           td:nth-of-type(3) {
             display: none;
           }
         }
-      }
     }
   }
 }
