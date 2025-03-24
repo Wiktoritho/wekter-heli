@@ -2,60 +2,60 @@
   <header class="header" ref="headerRef">
     <nav class="header__nav">
       <a href="/">
-        <img src="/src/assets/images/wekter_logo.png" alt="Wekter Logo" />
+        <img src="/images/wekter_logo.png" alt="Wekter Logo" />
       </a>
       <div class="header__container">
         <ul class="header__list">
           <li>
-            <span>Oferta</span> <span><img src="/src/assets/icons/arrow-down.svg" alt="Arrow Icon" /></span>
+            <span>Oferta</span> <span><img src="/icons/arrow-down.svg" alt="Arrow Icon" /></span>
             <div class="header__offers">
               <div class="header__offer">
                 <div class="header__offer-header">
                   <div>
-                    <img src="/src/assets/icons/briefcase.svg" alt="Briefcase Icon" />
+                    <img src="/icons/briefcase.svg" alt="Briefcase Icon" />
                   </div>
                   <h3>Biznes</h3>
                 </div>
                 <ul class="header__offer-list">
                   <li>
-                    Air Taxi <span><img src="/src/assets/icons/arrow-side-header.svg" alt="Arrow Icon" /></span>
+                    Air Taxi <span><img src="/icons/arrow-side-header.svg" alt="Arrow Icon" /></span>
                   </li>
                   <li>
-                    Cargo <span><img src="/src/assets/icons/arrow-side-header.svg" alt="Arrow Icon" /></span>
+                    Cargo <span><img src="/icons/arrow-side-header.svg" alt="Arrow Icon" /></span>
                   </li>
                   <li>
-                    Eventy i wydarzenia <span><img src="/src/assets/icons/arrow-side-header.svg" alt="Arrow Icon" /></span>
+                    Eventy i wydarzenia <span><img src="/icons/arrow-side-header.svg" alt="Arrow Icon" /></span>
                   </li>
                   <li>
-                    Udziały <span><img src="/src/assets/icons/arrow-side-header.svg" alt="Arrow Icon" /></span>
+                    Udziały <span><img src="/icons/arrow-side-header.svg" alt="Arrow Icon" /></span>
                   </li>
                   <li>
-                    Fotografowanie i filmowanie <span><img src="/src/assets/icons/arrow-side-header.svg" alt="Arrow Icon" /></span>
+                    Fotografowanie i filmowanie <span><img src="/icons/arrow-side-header.svg" alt="Arrow Icon" /></span>
                   </li>
                 </ul>
               </div>
               <div class="header__offer">
                 <div class="header__offer-header">
                   <div>
-                    <img src="/src/assets/icons/avalanche.svg" alt="Avalanche Icon" />
+                    <img src="/icons/avalanche.svg" alt="Avalanche Icon" />
                   </div>
                   <h3>loty widokowe</h3>
                 </div>
                 <ul class="header__offer-list">
                   <li>
-                    Loty widokowe <span><img src="/src/assets/icons/arrow-side-header.svg" alt="Arrow Icon" /></span>
+                    Loty widokowe <span><img src="/icons/arrow-side-header.svg" alt="Arrow Icon" /></span>
                   </li>
                   <li>
-                    Loty grupowe <span><img src="/src/assets/icons/arrow-side-header.svg" alt="Arrow Icon" /></span>
+                    Loty grupowe <span><img src="/icons/arrow-side-header.svg" alt="Arrow Icon" /></span>
                   </li>
                   <li>
-                    Loty zapoznawcze <span><img src="/src/assets/icons/arrow-side-header.svg" alt="Arrow Icon" /></span>
+                    Loty zapoznawcze <span><img src="/icons/arrow-side-header.svg" alt="Arrow Icon" /></span>
                   </li>
                   <li>
-                    Zaręczyny <span><img src="/src/assets/icons/arrow-side-header.svg" alt="Arrow Icon" /></span>
+                    Zaręczyny <span><img src="/icons/arrow-side-header.svg" alt="Arrow Icon" /></span>
                   </li>
                   <li>
-                    Szkolenia licencyjne dla pilotów <span><img src="/src/assets/icons/arrow-side-header.svg" alt="Arrow Icon" /></span>
+                    Szkolenia licencyjne dla pilotów <span><img src="/icons/arrow-side-header.svg" alt="Arrow Icon" /></span>
                   </li>
                 </ul>
               </div>
@@ -64,24 +64,24 @@
           <li><a href="/about">O nas</a></li>
           <li><a>Vouchery</a></li>
           <li>
-            <span>Heliporty</span> <span><img src="/src/assets/icons/arrow-down.svg" alt="Arrow Icon" /></span>
+            <span>Heliporty</span> <span><img src="/icons/arrow-down.svg" alt="Arrow Icon" /></span>
             <div class="header__offers">
               <div class="header__offer">
                 <div class="header__offer-header">
                   <div>
-                    <img src="/src/assets/icons/briefcase.svg" alt="Briefcase Icon" />
+                    <img src="/icons/briefcase.svg" alt="Briefcase Icon" />
                   </div>
                   <h3>Lokalizacje</h3>
                 </div>
                 <ul class="header__offer-list">
                   <li>
-                    Sosnówka <span><img src="/src/assets/icons/arrow-side-header.svg" alt="Arrow Icon" /></span>
+                    Sosnówka <span><img src="/icons/arrow-side-header.svg" alt="Arrow Icon" /></span>
                   </li>
                   <li>
-                    Polkowice <span><img src="/src/assets/icons/arrow-side-header.svg" alt="Arrow Icon" /></span>
+                    Polkowice <span><img src="/icons/arrow-side-header.svg" alt="Arrow Icon" /></span>
                   </li>
                   <li>
-                    Wrocław <span><img src="/src/assets/icons/arrow-side-header.svg" alt="Arrow Icon" /></span>
+                    Wrocław <span><img src="/icons/arrow-side-header.svg" alt="Arrow Icon" /></span>
                   </li>
                 </ul>
               </div>
@@ -115,33 +115,33 @@
           </button>
           <div class="header__button--slider" :style="{ left: switchValue === 'Loty biznesowe' ? '50%' : '0%' }"></div>
         </div>
-        <img src="/src/assets/icons/flag.png" alt="Flag Icon" />
-        <img src="/src/assets/icons/profile.svg" alt="Profile Icon" />
+        <img src="/icons/flag.png" alt="Flag Icon" />
+        <img src="/icons/profile.svg" alt="Profile Icon" />
         <div class="header__icon-container">
-          <img src="/src/assets/icons/shopping-bag.svg" alt="Shopping Bag Icon" />
+          <img src="/icons/shopping-bag.svg" alt="Shopping Bag Icon" />
         </div>
-        <img id="menu-icon" src="/src/assets/icons/menu.svg" alt="Menu Icon" @click="mobileMenu = true" />
+        <img id="menu-icon" src="/icons/menu.svg" alt="Menu Icon" @click="mobileMenu = true" />
       </div>
       <div class="header__mobile" :style="{ transform: `${mobileMenu ? 'translateX(0%)' : 'translateX(100%)'}` }">
         <div class="header__mobile-top">
           <div class="header__mobile-top-nav">
             <a href="/">
-              <img src="/src/assets/images/wekter_logo.png" alt="Wekter Logo" />
+              <img src="/images/wekter_logo.png" alt="Wekter Logo" />
             </a>
             <div class="header__mobile-icons">
-              <img src="/src/assets/icons/profile.svg" alt="Profile Icon" />
-              <img src="/src/assets/icons/shopping-bag.svg" alt="Shopping Bag Icon" />
-              <img id="close-icon" src="/src/assets/icons/close.svg" alt="Close Icon" @click="mobileMenu = false" />
+              <img src="/icons/profile.svg" alt="Profile Icon" />
+              <img src="/icons/shopping-bag.svg" alt="Shopping Bag Icon" />
+              <img id="close-icon" src="/icons/close.svg" alt="Close Icon" @click="mobileMenu = false" />
             </div>
           </div>
           <div class="header__mobile-top-main" :style="{ transform: `${(offerMobile || heliportsMobile) && mobileMenu ? 'translateX(-100%)' : 'translateX(0%)'}` }">
             <ul>
               <li>Strona główna</li>
               <li id="mobile-offer" @click="offerMobile = true">
-                Oferta <span><img src="/src/assets/icons/arrow-mobile.svg" alt="Arrow" /></span>
+                Oferta <span><img src="/icons/arrow-mobile.svg" alt="Arrow" /></span>
                 <div class="header__mobile-offer" :style="{ transform: `${heliportsMobile ? 'translateX(224%)' : 'translateX(112%)'}` }">
                   <p id="mobile-offer-close" @click.stop="offerMobile = false">
-                    <span><img src="/src/assets/icons/arrow-mobile.svg" alt="Arrow Icon" /></span>Oferta
+                    <span><img src="/icons/arrow-mobile.svg" alt="Arrow Icon" /></span>Oferta
                   </p>
                   <ul>
                     <li>Air Taxi</li>
@@ -161,10 +161,10 @@
               </li>
               <li>Vouchery</li>
               <li id="mobile-heliports" @click="heliportsMobile = true">
-                Heliporty <span><img src="/src/assets/icons/arrow-mobile.svg" alt="Arrow" /></span>
+                Heliporty <span><img src="/icons/arrow-mobile.svg" alt="Arrow" /></span>
                 <div class="header__mobile-heliports" :style="{ transform: `${offerMobile ? 'translateX(224%)' : 'translateX(112%)'}` }">
                   <p id="mobile-heliports-close" @click.stop="heliportsMobile = false">
-                    <span><img src="/src/assets/icons/arrow-mobile.svg" alt="Arrow Icon" /></span>Heliporty
+                    <span><img src="/icons/arrow-mobile.svg" alt="Arrow Icon" /></span>Heliporty
                   </p>
                   <ul>
                     <li>Sosnówka</li>

@@ -5,17 +5,17 @@
     <h4 class="section--black__header">
       <span v-for="(text, index) in linesText" :key="index" ref="lines" class="line" v-html="text"> </span>
     </h4>
-    <img class="section--black__image" src="/src/assets/icons/section-vector.png" alt="Section Vector" />
+    <img class="section--black__image" src="/icons/section-vector.png" alt="Section Vector" />
   </section>
   <Introduction></Introduction>
   <section class="photo-text">
     <img
       class="photo-text__desktop-image"
       ref="parallax"
-      src="/src/assets/images/photo-text.png"
+      src="/images/photo-text.png"
       alt="Helicopter pilot"
       :style="{ transform: `translateY(${scrollPosition * parallaxSpeed + 400}px) translateZ(0px)`}" />
-    <img class="photo-text__mobile-image" src="/src/assets/images/photo-text-mobile.png" alt="Helicopter pilot" :style="{ transform: `translateY(${scrollPosition * (parallaxSpeed/2) + 250}px) translateZ(0px)`}"/>
+    <img class="photo-text__mobile-image" src="/images/photo-text-mobile.png" alt="Helicopter pilot" :style="{ transform: `translateY(${scrollPosition * (parallaxSpeed/2) + 250}px) translateZ(0px)`}"/>
     <div class="photo-text__content">
       <p class="headers headers--small headers--white">Kim jesteśmy?</p>
       <p class="photo-text__text">

@@ -7,12 +7,12 @@
         <div class="blogs__filters-wrapper">
           <div class="blogs__multiselect-wrapper">
             <Multiselect v-model="selectedCategory" :options="categories" :canClear="false" :canDeselect="false" :caret="false"></Multiselect>
-            <img src="/src/assets/icons/arrow-search.svg" />
+            <img src="/icons/arrow-search.svg" />
           </div>
           <div class="blogs__filters-border"></div>
           <div class="blogs__multiselect-wrapper">
             <Multiselect v-model="selectedSort" :options="sort" :canClear="false" :canDeselect="false" :caret="false"></Multiselect>
-            <img src="/src/assets/icons/arrow-search.svg" />
+            <img src="/icons/arrow-search.svg" />
           </div>
           <div class="blogs__filters-border"></div>
           <div class="blogs__filters-input-wrapper">
@@ -25,7 +25,7 @@
     <AllBlogs :data="paginatedData" :imagePaths="imagePaths"></AllBlogs>
     <div class="blogs__pagination" v-if="totalPages > 1">
       <button class="blogs__pagination-button blogs__pagination-button--prev" @click="prevPage" :disabled="currentPage === 1">
-        <img src="/src/assets/icons/arrow-side-header.svg" />
+        <img src="/icons/arrow-side-header.svg" />
       </button>
 
       <button v-for="page in paginationPages" :key="page" class="blogs__pagination-button" :class="{ 'blogs__pagination-button--active': page === currentPage }" @click="changePage(page)">
@@ -33,7 +33,7 @@
       </button>
 
       <button class="blogs__pagination-button blogs__pagination-button--next" @click="nextPage" :disabled="currentPage === totalPages">
-        <img src="/src/assets/icons/arrow-side-header.svg" />
+        <img src="/icons/arrow-side-header.svg" />
       </button>
     </div>
   </section>
@@ -89,7 +89,7 @@ export default {
   },
   methods: {
     async fetchBlogs() {
-      const response = await axios.get("/src/jsons/blogs.json");
+      const response = await axios.get("/jsons/blogs.json");
       this.allData = response.data;
       const uniqueCategories = [...new Set(this.allData.map((el) => el.category))];
       this.categories = ["Wszystkie", ...uniqueCategories];

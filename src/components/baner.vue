@@ -4,7 +4,7 @@
         <div :class='`baner__content baner__content--${version}`'>
             <p class="baner__link">
                 <a href="/">Strona główna</a>
-                <img src="/src/assets/icons/arrow-side-header.svg" alt="Arrow"/>
+                <img src="/icons/arrow-side-header.svg" alt="Arrow"/>
                 <a>{{ from }}</a>
             </p>
             <h2 :class="`baner__title baner__title--${titleVersion}`">{{ title }}</h2>

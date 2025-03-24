@@ -16,17 +16,17 @@
         </div>
         <div class="introduction__mosaic">
           <div class="introduction__mosaic--desktop">
-            <img src="/src/assets/images/mosaic1.png" alt="Mosaic" />
-            <img src="/src/assets/images/mosaic2.png" alt="Mosaic" />
+            <img src="/images/mosaic1.png" alt="Mosaic" />
+            <img src="/images/mosaic2.png" alt="Mosaic" />
           </div>
-          <img class="introduction__mosaic--mobile" src="/src/assets/images/mosaic1.png" alt="Mosaic" />
-          <img class="introduction__mosaic--mobile" src="/src/assets/images/mosaic2.png" alt="Mosaic" />
+          <img class="introduction__mosaic--mobile" src="/images/mosaic1.png" alt="Mosaic" />
+          <img class="introduction__mosaic--mobile" src="/images/mosaic2.png" alt="Mosaic" />
         </div>
       </div>
       <div class="introduction__statistics" ref="statistics">
         <div class="introduction__statistics-block">
           <div class="introduction__statistics-block-icon">
-            <img src="/src/assets/icons/clock.svg" alt="Clock Icon" />
+            <img src="/icons/clock.svg" alt="Clock Icon" />
           </div>
           <div class="introduction__statistics-block-text">
             <p>
@@ -38,7 +38,7 @@
         </div>
         <div class="introduction__statistics-block">
           <div class="introduction__statistics-block-icon">
-            <img src="/src/assets/icons/helicopter.svg" alt="Clock Icon" />
+            <img src="/icons/helicopter.svg" alt="Clock Icon" />
           </div>
           <div class="introduction__statistics-block-text">
             <p>
@@ -49,7 +49,7 @@
         </div>
         <div class="introduction__statistics-block">
           <div class="introduction__statistics-block-icon">
-            <img src="/src/assets/icons/star.svg" alt="Clock Icon" />
+            <img src="/icons/star.svg" alt="Clock Icon" />
           </div>
           <div class="introduction__statistics-block-text">
             <p>

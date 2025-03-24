@@ -29,7 +29,7 @@
           </div>
           <div class="offers__list-container">
             <div>
-              <img src="/src/assets/icons/arrow-side.svg" alt="Arrow Right" />
+              <img src="/icons/arrow-side.svg" alt="Arrow Right" />
             </div>
             <p>{{ offer.text }}</p>
             <span>{{ offer.number }}</span>
@@ -44,7 +44,7 @@
           </div>
           <div class="offers__list-container">
             <div>
-              <img src="/src/assets/icons/arrow-side.svg" alt="Arrow Right" />
+              <img src="/icons/arrow-side.svg" alt="Arrow Right" />
             </div>
             <p>{{ offer.text }}</p>
             <span>{{ offer.number }}</span>
@@ -69,31 +69,31 @@ export default {
     return {
       offersList1: [
         {
-          image: "/src/assets/images/loty-widokowe.png",
+          image: "/images/loty-widokowe.png",
           alt: "Loty widokowe",
           text: "Loty widokowe",
           number: ".01",
         },
         {
-          image: "/src/assets/images/szkolenia-licencyjne.png",
+          image: "/images/szkolenia-licencyjne.png",
           alt: "Szkolenia Licencyjne",
           text: "Szkolenia Licencyjne",
           number: ".02",
         },
         {
-          image: "/src/assets/images/zareczyny.png",
+          image: "/images/zareczyny.png",
           alt: "Zaręczyny",
           text: "Zaręczyny",
           number: ".03",
         },
         {
-          image: "/src/assets/images/loty-widokowe.png",
+          image: "/images/loty-widokowe.png",
           alt: "Loty zapoznawcze",
           text: "Loty zapoznawcze",
           number: ".04",
         },
         {
-          image: "/src/assets/images/szkolenia-licencyjne.png",
+          image: "/images/szkolenia-licencyjne.png",
           alt: "Loty grupowe",
           text: "Loty grupowe",
           number: ".05",
@@ -101,31 +101,31 @@ export default {
       ],
       offersList2: [
         {
-          image: "/src/assets/images/air-taxi.png",
+          image: "/images/air-taxi.png",
           alt: "Air Taxi",
           text: "Air Taxi",
           number: ".01",
         },
         {
-          image: "/src/assets/images/cargo.png",
+          image: "/images/cargo.png",
           alt: "Cargo",
           text: "Cargo",
           number: ".02",
         },
         {
-          image: "/src/assets/images/eventy-i-wydarzenia.png",
+          image: "/images/eventy-i-wydarzenia.png",
           alt: "Eventy i Wydarzenia",
           text: "Eventy i wydarzenia",
           number: ".03",
         },
         {
-          image: "/src/assets/images/loty-widokowe.png",
+          image: "/images/loty-widokowe.png",
           alt: "Udziały",
           text: "Udziały",
           number: ".04",
         },
         {
-          image: "/src/assets/images/szkolenia-licencyjne.png",
+          image: "/images/szkolenia-licencyjne.png",
           alt: "Fotografowanie i filmowanie",
           text: "Fotografowanie i filmowanie",
           number: ".05",

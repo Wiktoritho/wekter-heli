@@ -34,14 +34,14 @@ export default {
     return {
       slides: [
         {
-          src: "/src/assets/images/slide1.png",
+          src: "/images/slide1.png",
           header: "Latanie to nasza pasja",
           text: "Lot helikopterem to przestrzeń, wolność, piękne widoki i niemal nieograniczone możliwości przemieszczania się w dowolnym kierunku",
           buttonFirst: "Voucher na przelot",
           buttonSecond: "Więcej o nas",
         },
         {
-          src: "/src/assets/images/slide2.png",
+          src: "/images/slide2.png",
           header: "Air Taxi dla twojego biznesu",
           text: "Oferujemy kompleksową usługę przewozu lotniczego śmigłowcami Robinson R44 oraz R66. Komfort podróży w niemal każdych warunkach.",
           buttonFirst: "Zamów lot",

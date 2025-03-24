@@ -4,20 +4,20 @@
       <div class="footer__main">
         <div class="footer__logos">
           <a href="/">
-            <img src="/src/assets/images/wekter_logo.png" alt="Wekter Logo" />
+            <img src="/images/wekter_logo.png" alt="Wekter Logo" />
           </a>
           <div class="footer__icons">
             <a href="https://x.com" target="_blank">
-              <img src="/src/assets/icons/x.svg" alt="X Icon" />
+              <img src="/icons/x.svg" alt="X Icon" />
             </a>
             <a href="https://instagram.pl" target="_blank">
-              <img src="/src/assets/icons/ig.svg" alt="Instagram Icon" />
+              <img src="/icons/ig.svg" alt="Instagram Icon" />
             </a>
             <a href="https://facebook.pl" target="_blank">
-              <img src="/src/assets/icons/fb.svg" alt="Facebook Icon" />
+              <img src="/icons/fb.svg" alt="Facebook Icon" />
             </a>
             <a href="https://linkedin.pl" target="_blank">
-              <img src="/src/assets/icons/linkedin.svg" alt="Linkedin Icon" />
+              <img src="/icons/linkedin.svg" alt="Linkedin Icon" />
             </a>
           </div>
         </div>
@@ -30,7 +30,7 @@
               height: expandedLists[index] ? (list.header === 'Oferta' ? '350px' : '200px') : '67px',
             }">
             <h3 @click="toggleList(index)">
-              {{ list.header }} <span><img src="/src/assets/icons/plus.svg" alt="Plus icon" /></span>
+              {{ list.header }} <span><img src="/icons/plus.svg" alt="Plus icon" /></span>
             </h3>
             <ul>
               <li v-for="(link, linkIndex) in list.links" :key="linkIndex">
@@ -41,7 +41,7 @@
         </div>
       </div>
       <div class="footer__newsletter">
-        <img src="/src/assets/icons/newsletter.png" alt="Newsletter Icon" />
+        <img src="/icons/newsletter.png" alt="Newsletter Icon" />
         <h3>Newsletter</h3>
         <p>Bądź na bieżąco z nowościami, promocjami i ciekawymi artykułami!</p>
         <button class="button button--blue button--long">zapisz się</button>

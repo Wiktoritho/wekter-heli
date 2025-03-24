@@ -1,7 +1,7 @@
 <template>
   <section class="fleet section--animated" ref="sectionAnimated">
     <div class="fleet__logo">
-      <img src="/src/assets/icons/wekter-icon.svg" alt="Wekter Icon" />
+      <img src="/icons/wekter-icon.svg" alt="Wekter Icon" />
       <span>Flota Wekter Helicopters</span>
     </div>
     <div class="fleet__choppers">
@@ -45,7 +45,7 @@
   </section>
   <section class="fleet section--animated" ref="sectionAnimated">
     <div class="fleet__logo">
-      <img src="/src/assets/icons/wekter-icon.svg" alt="Wekter Icon" />
+      <img src="/icons/wekter-icon.svg" alt="Wekter Icon" />
       <span>Air Taxi - wygoda i niezawodność</span>
     </div>
     <div class="fleet__container">
@@ -166,13 +166,13 @@ export default {
           index: "01",
           header: "Robinson R66 Turbine",
           text: "Najpopularniejszy czteromiejscowy śmigłowiec świata, stworzony specjalnie dla lotnictwa cywilnego. Helikopter ten zaliczany jest do najbezpieczniejszych śmigłowców na świecie.",
-          src: "/src/assets/images/chopper1.jpg",
+          src: "/images/chopper1.jpg",
         },
         {
           index: "02",
           header: "Robinson R44 Raven II",
           text: "Śmigłowiec z silnikiem turbinowym posiadający 4 miejsca pasażerskie i dużą dodatkową przestrzeń bagażową, w którą zmieścisz 2-3 walizki kabinowe.",
-          src: "/src/assets/images/chopper2.jpg",
+          src: "/images/chopper2.jpg",
         },
       ],
       activeIndex: 0,

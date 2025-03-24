@@ -61,20 +61,20 @@
       </Carousel>
       <div class="prices__swiper-gradient"></div>
       <div class="swiper-button-prev" :class="{ 'swiper--button-disabled': carouselIndex <= 2 }" @click="handleSlides('prev')">
-        <img src="/src/assets/icons/arrow-blue.svg" alt="Arrow Left" />
+        <img src="/icons/arrow-blue.svg" alt="Arrow Left" />
       </div>
       <div class="swiper-button-next" :class="{ 'swiper--button-disabled': carouselIndex >= 4 }" @click="handleSlides('next')">
-        <img src="/src/assets/icons/arrow-blue.svg" alt="Arrow Right" />
+        <img src="/icons/arrow-blue.svg" alt="Arrow Right" />
       </div>
     </div>
     <div v-if="switchValue === 'Loty widokowe'" class="prices__swiper-supplement">
-      <img src="/src/assets/icons/arrow-gradient.png" alt="Arrow Gradient" />
+      <img src="/icons/arrow-gradient.png" alt="Arrow Gradient" />
       <p>Przesuń w bok aby zobaczyć wszystkie produkty</p>
-      <img src="/src/assets/icons/arrow-gradient.png" alt="Arrow Gradient" />
+      <img src="/icons/arrow-gradient.png" alt="Arrow Gradient" />
     </div>
     <div v-if="switchValue === 'Loty biznesowe'" class="prices__business">
-      <img class="prices__business-desktop-image" src="/src/assets/images/heli-guy.png" alt="Guy" />
-      <img class="prices__business-mobile-image" src="/src/assets/images/heli-guy-mobile.png" alt="Guy" />
+      <img class="prices__business-desktop-image" src="/images/heli-guy.png" alt="Guy" />
+      <img class="prices__business-mobile-image" src="/images/heli-guy-mobile.png" alt="Guy" />
       <div class="prices__business-content">
         <h3 class="prices__business-header">Loty biznesowe</h3>
         <p class="prices__business-text">
@@ -107,7 +107,7 @@
           <p class="prices__localization-link">
             Zobacz więcej
             <span>
-              <img src="/src/assets/icons/arrow-side.svg" alt="Arrow" />
+              <img src="/icons/arrow-side.svg" alt="Arrow" />
             </span>
           </p>
         </div>
@@ -119,7 +119,7 @@
             <h4 class="prices__swiper-localization-header">{{ localization.city }}</h4>
             <p class="prices__swiper-localization-text">{{ localization.text }}</p>
             <p class="prices__swiper-localization-link">
-              Zobacz więcej <span><img src="/src/assets/icons/arrow-side.svg" alt="Arrow" /></span>
+              Zobacz więcej <span><img src="/icons/arrow-side.svg" alt="Arrow" /></span>
             </p>
           </div>
         </Slide>
@@ -198,13 +198,13 @@ export default {
       maxCarouselIndex: 4,
       choppers: [
         {
-          image: "/src/assets/images/chopper-buy1.jpg",
+          image: "/images/chopper-buy1.jpg",
           header: "Robinson R66 Turbine",
           hours: ["10H", "20H", "30H"],
           prices: ["1375", "1350", "1325"],
         },
         {
-          image: "/src/assets/images/chopper-buy2.jpg",
+          image: "/images/chopper-buy2.jpg",
           header: "Robinson R44 Raven II",
           hours: ["10H", "20H", "30H"],
           prices: ["825", "800", "775"],
@@ -259,17 +259,17 @@ export default {
       ],
       localizations: [
         {
-          image: "/src/assets/images/sosnowka.png",
+          image: "/images/sosnowka.png",
           city: "Sosnówka",
           text: "Miejsce bazowania i lądowisko macierzyste naszych helikopterów.",
         },
         {
-          image: "/src/assets/images/polkowice.png",
+          image: "/images/polkowice.png",
           city: "Polkowice",
           text: "Miejsce bazowania i lądowisko macierzyste naszych helikopterów.",
         },
         {
-          image: "/src/assets/images/wroclaw.png",
+          image: "/images/wroclaw.png",
           city: "Wrocław",
           text: "Miejsce bazowania i lądowisko macierzyste naszych helikopterów.",
         },

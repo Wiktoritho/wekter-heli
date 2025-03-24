@@ -7,8 +7,8 @@
           </div>
           <p class="blogs__date">{{ data.date }}</p>
           <p class="blogs__title">{{ data.title }}</p>
-          <div class="blogs__arrow-block"><img src="/src/assets/icons/arrow-side-header.svg" alt="Arrow" /></div>
-          <div class="blogs__share-block"><img src="/src/assets/icons/share-arrow.svg" alt="Share Arrow" /></div>
+          <div class="blogs__arrow-block"><img src="/icons/arrow-side-header.svg" alt="Arrow" /></div>
+          <div class="blogs__share-block"><img src="/icons/share-arrow.svg" alt="Share Arrow" /></div>
         </a>
       </li>
 </ul>
