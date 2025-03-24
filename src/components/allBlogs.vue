@@ -1,7 +1,7 @@
 <template>
 <ul class="blogs__list">
     <li class="blogs__element" v-for="(data, index) in data" :key="index">
-        <a :href="`/wekter-heli/${data.url}`">
+        <a :href="`/${data.url}`">
           <div class="blogs__image">
             <img :src="imagePaths[index]" :alt="data.title"/>
           </div>

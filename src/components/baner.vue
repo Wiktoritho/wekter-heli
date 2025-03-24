@@ -3,7 +3,7 @@
         <img class="baner__image" :src="image" alt="Baner"/>
         <div :class='`baner__content baner__content--${version}`'>
             <p class="baner__link">
-                <a href="/wekter-heli/">Strona główna</a>
+                <a href="/">Strona główna</a>
                 <img src="/src/assets/icons/arrow-side-header.svg" alt="Arrow"/>
                 <a>{{ from }}</a>
             </p>

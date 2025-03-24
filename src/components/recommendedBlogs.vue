@@ -1,7 +1,7 @@
 <template>
   <div class="blogs__recommended">
     <div v-for="(data, index) in data" :key="index" :class="index === 0 ? 'blogs__recommended-blog--highlighted' : 'blogs__recommended-blog'">
-      <a :href="`/wekter-heli/${data.url}`">
+      <a :href="`/${data.url}`">
         <div :class="index === 0 ? 'blogs__recommended-image--highlighted' : 'blogs__recommended-image'">
           <img :src="highlightedPaths[index]" :alt="data.title" />
         </div>

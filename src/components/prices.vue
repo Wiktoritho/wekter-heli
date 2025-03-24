@@ -198,13 +198,13 @@ export default {
       maxCarouselIndex: 4,
       choppers: [
         {
-          image: "/wekter-heli/src/assets/images/chopper-buy1.jpg",
+          image: "/src/assets/images/chopper-buy1.jpg",
           header: "Robinson R66 Turbine",
           hours: ["10H", "20H", "30H"],
           prices: ["1375", "1350", "1325"],
         },
         {
-          image: "/wekter-heli/src/assets/images/chopper-buy2.jpg",
+          image: "/src/assets/images/chopper-buy2.jpg",
           header: "Robinson R44 Raven II",
           hours: ["10H", "20H", "30H"],
           prices: ["825", "800", "775"],
@@ -259,17 +259,17 @@ export default {
       ],
       localizations: [
         {
-          image: "/wekter-heli/src/assets/images/sosnowka.png",
+          image: "/src/assets/images/sosnowka.png",
           city: "Sosnówka",
           text: "Miejsce bazowania i lądowisko macierzyste naszych helikopterów.",
         },
         {
-          image: "/wekter-heli/src/assets/images/polkowice.png",
+          image: "/src/assets/images/polkowice.png",
           city: "Polkowice",
           text: "Miejsce bazowania i lądowisko macierzyste naszych helikopterów.",
         },
         {
-          image: "/wekter-heli/src/assets/images/wroclaw.png",
+          image: "/src/assets/images/wroclaw.png",
           city: "Wrocław",
           text: "Miejsce bazowania i lądowisko macierzyste naszych helikopterów.",
         },

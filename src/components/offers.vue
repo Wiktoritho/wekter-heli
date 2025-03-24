@@ -69,31 +69,31 @@ export default {
     return {
       offersList1: [
         {
-          image: "/wekter-heli/src/assets/images/loty-widokowe.png",
+          image: "/src/assets/images/loty-widokowe.png",
           alt: "Loty widokowe",
           text: "Loty widokowe",
           number: ".01",
         },
         {
-          image: "/wekter-heli/src/assets/images/szkolenia-licencyjne.png",
+          image: "/src/assets/images/szkolenia-licencyjne.png",
           alt: "Szkolenia Licencyjne",
           text: "Szkolenia Licencyjne",
           number: ".02",
         },
         {
-          image: "/wekter-heli/src/assets/images/zareczyny.png",
+          image: "/src/assets/images/zareczyny.png",
           alt: "Zaręczyny",
           text: "Zaręczyny",
           number: ".03",
         },
         {
-          image: "/wekter-heli/src/assets/images/loty-widokowe.png",
+          image: "/src/assets/images/loty-widokowe.png",
           alt: "Loty zapoznawcze",
           text: "Loty zapoznawcze",
           number: ".04",
         },
         {
-          image: "/wekter-heli/src/assets/images/szkolenia-licencyjne.png",
+          image: "/src/assets/images/szkolenia-licencyjne.png",
           alt: "Loty grupowe",
           text: "Loty grupowe",
           number: ".05",
@@ -101,31 +101,31 @@ export default {
       ],
       offersList2: [
         {
-          image: "/wekter-heli/src/assets/images/air-taxi.png",
+          image: "/src/assets/images/air-taxi.png",
           alt: "Air Taxi",
           text: "Air Taxi",
           number: ".01",
         },
         {
-          image: "/wekter-heli/src/assets/images/cargo.png",
+          image: "/src/assets/images/cargo.png",
           alt: "Cargo",
           text: "Cargo",
           number: ".02",
         },
         {
-          image: "/wekter-heli/src/assets/images/eventy-i-wydarzenia.png",
+          image: "/src/assets/images/eventy-i-wydarzenia.png",
           alt: "Eventy i Wydarzenia",
           text: "Eventy i wydarzenia",
           number: ".03",
         },
         {
-          image: "/wekter-heli/src/assets/images/loty-widokowe.png",
+          image: "/src/assets/images/loty-widokowe.png",
           alt: "Udziały",
           text: "Udziały",
           number: ".04",
         },
         {
-          image: "/wekter-heli/src/assets/images/szkolenia-licencyjne.png",
+          image: "/src/assets/images/szkolenia-licencyjne.png",
           alt: "Fotografowanie i filmowanie",
           text: "Fotografowanie i filmowanie",
           number: ".05",
