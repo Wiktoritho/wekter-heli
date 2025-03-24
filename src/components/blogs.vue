@@ -97,7 +97,7 @@ export default {
       this.highlightedDatas = this.allData.filter((el) => el.highlight);
       if (this.highlightedDatas.length > 0) {
         const latestHighlightedPosts = this.highlightedDatas.sort((a, b) => this.parseDate(b.date) - this.parseDate(a.date)).slice(0, 2);
-        this.highlightedPaths = latestHighlightedPosts.map((el) => `/src/assets/images/blogs/${el.image}`);
+        this.highlightedPaths = latestHighlightedPosts.map((el) => `/images/blogs/${el.image}`);
       }
 
       this.applyFilters();
@@ -116,7 +116,7 @@ export default {
       data = data.sort((a, b) => (this.selectedSort === "Sortowanie: najnowsze" ? this.parseDate(b.date) - this.parseDate(a.date) : this.parseDate(a.date) - this.parseDate(b.date)));
 
       this.filteredData = data;
-      this.imagePaths = this.filteredData.map((el) => `/src/assets/images/blogs/${el.image}`);
+      this.imagePaths = this.filteredData.map((el) => `/images/blogs/${el.image}`);
     },
     parseDate(dateString) {
       const months = ["stycznia", "lutego", "marca", "kwietnia", "maja", "czerwca", "lipca", "sierpnia", "września", "października", "listopada", "grudnia"];
