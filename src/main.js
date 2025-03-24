@@ -15,11 +15,11 @@ const blogRoutes = {
 export const router = createRouter({
   history: createWebHistory(),
   routes: [
-    { path: "/wekter-heli/", component: HomePage },
-    { path: "/wekter-heli/o-nas", component: AboutPage },
-    { path: "/wekter-heli/blog", component: BlogPage },
+    { path: "/", component: HomePage },
+    { path: "/o-nas", component: AboutPage },
+    { path: "/blog", component: BlogPage },
     {
-      path: "/wekter-heli/blog/:slug",
+      path: "/blog/:slug",
       component: blogRoutes["test"],
     },
   ],
