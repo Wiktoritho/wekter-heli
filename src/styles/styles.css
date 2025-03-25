@@ -2991,7 +2991,7 @@ strong {
     max-width: 600px;
   }
   .baner__text--big {
-    font-size: 20px;
+    font-size: clamp(16px, 2vw, 20px);
     letter-spacing: unset;
     max-width: 100%;
     line-height: 28px;
