@@ -40,6 +40,8 @@
       line-height: 20px;
       letter-spacing: 0.03em;
       text-transform: uppercase;
+      text-wrap: nowrap;
+      flex-wrap: wrap;
       img {
         filter: invert(1);
         width: 9px;

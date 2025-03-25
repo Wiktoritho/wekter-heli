@@ -262,6 +262,7 @@
       flex-wrap: wrap;
       column-gap: 28px;
       row-gap: 48px;
+      font-family: $font-family-primary;
     }
     &__element {
       width: calc((100% - 56px) / 3);

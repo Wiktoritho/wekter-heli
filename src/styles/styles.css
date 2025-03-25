@@ -2950,6 +2950,8 @@ strong {
     line-height: 20px;
     letter-spacing: 0.03em;
     text-transform: uppercase;
+    text-wrap: nowrap;
+    flex-wrap: wrap;
   }
   .baner__link img {
     filter: invert(1);
@@ -3285,6 +3287,7 @@ strong {
     flex-wrap: wrap;
     column-gap: 28px;
     row-gap: 48px;
+    font-family: "Outfit", sans-serif;
   }
   .blogs__element {
     width: calc((100% - 56px) / 3);
@@ -3571,7 +3574,7 @@ strong {
     flex-direction: column;
     position: sticky;
     top: 116px;
-    height: 750px;
+    height: 870px;
   }
   .blog__side-bar {
     width: 100%;
@@ -3664,7 +3667,169 @@ strong {
     width: 16px;
   }
   .blog__main-content {
-    height: 2000px;
+    display: flex;
+    flex-direction: column;
+    gap: 64px;
+    width: calc(78% - 100px);
+    padding-bottom: 120px;
+  }
+  .blog__main-section {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+  }
+  .blog__main-header {
+    font-weight: 500;
+    font-size: clamp(28px, 2.5vw, 40px);
+    line-height: 120%;
+    max-width: 800px;
+  }
+  .blog__main-text {
+    font-size: clamp(16px, 2.5vw, 18px);
+    line-height: 140%;
+    color: #3a3a3a;
+  }
+  .blog__main-unorganized-list {
+    color: #3a3a3a;
+    padding-left: 30px;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+  .blog__main-unorganized-list li {
+    font-size: clamp(16px, 2.5vw, 18px);
+    line-height: 140%;
+    position: relative;
+  }
+  .blog__main-unorganized-list li span {
+    font-weight: 600;
+  }
+  .blog__main-unorganized-list li::before {
+    content: "";
+    left: -30px;
+    top: 5px;
+    position: absolute;
+    background-color: #3b5eab;
+    border-radius: 50%;
+    border: 4px solid #dedede;
+    width: 16px;
+    height: 16px;
+  }
+  .blog__main-quote {
+    padding: 24px;
+    background-color: #f3f3f3;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    width: 100%;
+  }
+  .blog__main-quote img {
+    width: 32px;
+    height: 32px;
+  }
+  .blog__main-quote p {
+    font-weight: 500;
+    font-size: clamp(16px, 2.5vw, 18px);
+    line-height: 140%;
+    text-align: justify;
+  }
+  .blog__main-image-sub {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+  .blog__main-image-sub img {
+    width: 100%;
+  }
+  .blog__main-image-sub p {
+    width: 100%;
+    text-align: center;
+    opacity: 0.5;
+    line-height: 140%;
+    font-family: "Favorit";
+  }
+  .blog__main-organized-list {
+    color: #3a3a3a;
+    padding-left: 30px;
+    list-style: decimal;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    list-style-type: bold;
+  }
+  .blog__main-organized-list li {
+    font-size: clamp(16px, 2.5vw, 18px);
+    line-height: 140%;
+    position: relative;
+  }
+  .blog__main-organized-list li span {
+    font-weight: 600;
+  }
+  .blog__main-organized-list li::marker {
+    font-weight: bold;
+  }
+  .blog__main-question {
+    padding: 32px;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    background-color: #f3f3f3;
+    width: 100%;
+    align-items: center;
+  }
+  .blog__main-question h3 {
+    font-weight: 500;
+    font-size: 32px;
+    line-height: 40px;
+    text-align: center;
+  }
+  .blog__main-question p {
+    font-size: clamp(16px, 2.5vw, 18px);
+    line-height: 140%;
+    text-align: center;
+    max-width: 750px;
+  }
+  .blog__similar {
+    width: 100%;
+    padding-block: 120px;
+    border-top: 1px solid #dedede;
+  }
+}
+@media screen and (max-width: 1400px) {
+  .blog {
+    padding-inline: 50px 100px;
+  }
+  .blog__similar {
+    padding-block: 70px;
+  }
+  .blog__main-content {
+    padding-bottom: 70px;
+  }
+  .blog__main-side {
+    height: 800px;
+  }
+}
+@media screen and (max-width: 1120px) {
+  .blog {
+    padding-inline: 50px;
+  }
+  .blog__main {
+    padding-top: 250px;
+    gap: 30px;
+  }
+  .blog__main-side {
+    display: none;
+  }
+  .blog__main-content {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 900px) {
+  .blog__absolute-container {
+    flex-direction: column-reverse;
+    top: -100px;
+    gap: 24px;
   }
 }
 

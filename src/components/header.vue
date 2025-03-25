@@ -1,5 +1,5 @@
 <template>
-  <header class="header" ref="headerRef">
+  <header class="header" ref="headerRef" :style="{overflow : mobileMenu ? 'visible !important' : 'hidden'}">
     <nav class="header__nav">
       <a href="/">
         <img src="/images/wekter_logo.png" alt="Wekter Logo" />
@@ -247,7 +247,7 @@ export default {
       end: "top top",
       onEnter: () => {
         if (window.innerWidth > 900) {
-          gsap.set(this.$refs.headerRef, { position: "fixed", top: 0, backgroundColor: "white", marginTop: "0px", paddingBlock: "40px 32px", color: "black" });
+          gsap.set(this.$refs.headerRef, { position: "fixed", top: 0, backgroundColor: "white", marginTop: "0px", paddingBlock: "40px 32px", color: "black", overflow: "visible" });
           if (document.querySelector(".header__switch")) {
             gsap.set(".header__switch", { color: "white" });
           }
@@ -258,7 +258,7 @@ export default {
           gsap.set("#menu-icon", { filter: "invert(1)" });
           gsap.fromTo(this.$refs.headerRef, { y: "-100%" }, { y: "0%", duration: 0.3, ease: "power2.out" });
         } else {
-          gsap.set(this.$refs.headerRef, { position: "fixed", top: 0, backgroundColor: "white", marginTop: "0px", paddingBlock: "20px", color: "black" });
+          gsap.set(this.$refs.headerRef, { position: "fixed", top: 0, backgroundColor: "white", marginTop: "0px", paddingBlock: "20px", color: "black", overflow: "visible" });
           if (document.querySelector(".header__mobile-switch")) {
             gsap.set(".header__mobile-switch", { color: "white" });
           }
