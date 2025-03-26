@@ -15,7 +15,7 @@ const blogRoutes = {
 export const router = createRouter({
   history: createWebHistory(),
   routes: [
-    { path: "/:slug", component: HomePage },
+    { path: "/", component: HomePage },
     // { path: "/o-nas", component: AboutPage },
     { path: "/blog", component: BlogPage },
     {
