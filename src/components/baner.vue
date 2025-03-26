@@ -41,6 +41,7 @@
         {{ text }}
       </p>
     </div>
+    <div class="baner__gradient"></div>
   </div>
 </template>
 

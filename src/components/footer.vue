@@ -4,7 +4,7 @@
       <div class="footer__main">
         <div class="footer__logos">
           <a href="/">
-            <img src="/images/wekter_logo.png" alt="Wekter Logo" />
+            <img src="/icons/wekter_logo.svg" alt="Wekter Logo" />
           </a>
           <div class="footer__icons">
             <a href="https://x.com" target="_blank">
@@ -41,7 +41,7 @@
         </div>
       </div>
       <div class="footer__newsletter">
-        <img src="/icons/newsletter.png" alt="Newsletter Icon" />
+        <img src="/icons/newsletter.svg" alt="Newsletter Icon" />
         <h3>Newsletter</h3>
         <p>Bądź na bieżąco z nowościami, promocjami i ciekawymi artykułami!</p>
         <button class="button button--blue button--long">zapisz się</button>

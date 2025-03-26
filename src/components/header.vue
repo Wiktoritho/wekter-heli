@@ -2,7 +2,7 @@
   <header class="header" ref="headerRef" :style="{overflow : mobileMenu ? 'visible !important' : 'hidden'}">
     <nav class="header__nav">
       <a href="/">
-        <img src="/images/wekter_logo.png" alt="Wekter Logo" />
+        <img src="/icons/wekter_logo.svg" alt="Wekter Logo" />
       </a>
       <div class="header__container">
         <ul class="header__list">
@@ -115,7 +115,7 @@
           </button>
           <div class="header__button--slider" :style="{ left: switchValue === 'Loty biznesowe' ? '50%' : '0%' }"></div>
         </div>
-        <img src="/icons/flag.png" alt="Flag Icon" />
+        <img src="/icons/flag.svg" alt="Flag Icon" />
         <img src="/icons/profile.svg" alt="Profile Icon" />
         <div class="header__icon-container">
           <img src="/icons/shopping-bag.svg" alt="Shopping Bag Icon" />
@@ -126,7 +126,7 @@
         <div class="header__mobile-top">
           <div class="header__mobile-top-nav">
             <a href="/">
-              <img src="/images/wekter_logo.png" alt="Wekter Logo" />
+              <img src="/icons/wekter_logo.svg" alt="Wekter Logo" />
             </a>
             <div class="header__mobile-icons">
               <img src="/icons/profile.svg" alt="Profile Icon" />
@@ -247,7 +247,7 @@ export default {
       end: "top top",
       onEnter: () => {
         if (window.innerWidth > 900) {
-          gsap.set(this.$refs.headerRef, { position: "fixed", top: 0, backgroundColor: "white", marginTop: "0px", paddingBlock: "40px 32px", color: "black", overflow: "visible" });
+          gsap.set(this.$refs.headerRef, { position: "fixed", top: 0, backgroundColor: "white", marginTop: "0px", paddingBlock: "40px 32px", color: "black", overflow: "visible", borderBottom: "1px solid black" });
           if (document.querySelector(".header__switch")) {
             gsap.set(".header__switch", { color: "white" });
           }
@@ -258,7 +258,7 @@ export default {
           gsap.set("#menu-icon", { filter: "invert(1)" });
           gsap.fromTo(this.$refs.headerRef, { y: "-100%" }, { y: "0%", duration: 0.3, ease: "power2.out" });
         } else {
-          gsap.set(this.$refs.headerRef, { position: "fixed", top: 0, backgroundColor: "white", marginTop: "0px", paddingBlock: "20px", color: "black", overflow: "visible" });
+          gsap.set(this.$refs.headerRef, { position: "fixed", top: 0, backgroundColor: "white", marginTop: "0px", paddingBlock: "20px", color: "black", overflow: "visible", borderBottom: "1px solid black" });
           if (document.querySelector(".header__mobile-switch")) {
             gsap.set(".header__mobile-switch", { color: "white" });
           }
@@ -273,7 +273,7 @@ export default {
       },
       onLeaveBack: () => {
         if (window.innerWidth > 900) {
-          gsap.set(this.$refs.headerRef, { position: "absolute", top: 0, backgroundColor: "transparent", marginTop: "40px", paddingBlock: "0px", overflow: "visible", color: "white" });
+          gsap.set(this.$refs.headerRef, { position: "absolute", top: 0, backgroundColor: "transparent", marginTop: "40px", paddingBlock: "0px", overflow: "visible", color: "white", borderBottom: "none" });
           gsap.set(".header__nav > a img", { filter: "invert(0)" });
           gsap.set(".header__list > li > span img", { filter: "invert(0)" });
           gsap.set(".header__buttons div img:last-of-type", { filter: "invert(0)" });
@@ -281,7 +281,7 @@ export default {
           gsap.set("#menu-icon", { filter: "invert(0)" });
           gsap.to(this.$refs.headerRef, { y: "0%", duration: 0.3, ease: "power2.in" });
         } else {
-          gsap.set(this.$refs.headerRef, { position: "absolute", top: 0, backgroundColor: "transparent", marginTop: "0px", paddingBlock: "20px", color: "white", overflow: "hidden", height: "auto" });
+          gsap.set(this.$refs.headerRef, { position: "absolute", top: 0, backgroundColor: "transparent", marginTop: "0px", paddingBlock: "20px", color: "white", overflow: "hidden", height: "auto", borderBottom: "none" });
           gsap.set(".header__mobile", { height: "calc(100vh + 20px)" });
           gsap.set(".header__nav > a img", { filter: "invert(0)" });
           gsap.set(".header__list > li > span img", { filter: "invert(0)" });

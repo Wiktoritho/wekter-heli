@@ -4,6 +4,15 @@
     width: 100%;
     position: relative;
     min-height: 450px;
+    &__gradient {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      background: linear-gradient($black, transparent);
+      z-index: 1;
+      height: 280px;
+    }
     &__image {
       width: 100%;
       height: 100%;
@@ -90,6 +99,9 @@
     }
   }
   @include respond-to("large") {
+    &__gradient {
+      height: 130px;
+    }
     &__content {
       &--high {
         top: 100px;
