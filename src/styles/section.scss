@@ -16,6 +16,9 @@
       &--padding {
         padding: 80px 80px 0px;
       }
+      &--bg-black {
+        background: $black;
+      }
       &__header {
         margin: 140px 280px 140px;
         font-family: $font-family-primary;
@@ -49,6 +52,20 @@
         margin-inline: 22%;
         margin-block: $margin-medium $margin-large;
         text-align: center;
+        &--normal {
+          font-family: $font-family-primary;
+          margin-block: 48px 200px;
+          font-size: clamp(16px, 2.5vw, 20px);
+          line-height: 24px;
+          letter-spacing: 0.04em;
+          width: calc(100% - 240px);
+          text-align: left;
+          span {
+            text-decoration: underline;
+            text-underline-offset: 4px;
+            color: $headergray;
+          }
+        }
       }
       &__gallery {
         width: calc(100% - 240px);

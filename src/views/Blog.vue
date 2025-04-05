@@ -8,6 +8,7 @@
     titleVersion="big"
     version="low"
     :gap="16"
+    :linkTo='"/blog"'
   ></Baner>
   <Blogs></Blogs>
   <Footer></Footer>

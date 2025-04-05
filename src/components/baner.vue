@@ -21,7 +21,7 @@
           <a
             :href="
               index === 0
-                ? '/blog'
+                ? linkTo
                 : link
                     .toLowerCase()
                     .replaceAll('—', '')
@@ -58,6 +58,7 @@ export default {
     height: Number,
     gap: Number,
     textVersion: String,
+    linkTo: String,
   },
   methods: {
     cutLink(link) {

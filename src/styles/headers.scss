@@ -29,6 +29,9 @@
     &--padding-small {
       padding-top: 40px;
     }
+    &--padding-medium {
+      padding-top: 80px;
+    }
     &--margin-big {
       margin: $margin-medium 20% 66px;
     }
@@ -40,6 +43,9 @@
     }
     &--margin-small {
       margin: $margin-medium 0px 0px;
+    }
+    &--left {
+      text-align: left;
     }
   }
   @include respond-to("small") {
