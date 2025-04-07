@@ -46,10 +46,10 @@
     </div>
   </section>
   <section class="about">
-    <AboutUsChoppers></AboutUsChoppers>
+    <!-- <AboutUsChoppers></AboutUsChoppers> -->
   </section>
   <section class="about__pilots">
-    <AboutUsPilots></AboutUsPilots>
+    <!-- <AboutUsPilots></AboutUsPilots> -->
   </section>
   <section class="about__opinions">
     <Opinions></Opinions>
@@ -65,8 +65,6 @@ import Baner from "../components/baner.vue";
 import Footer from "../components/footer.vue";
 import Header from "../components/header.vue";
 import Faq from "../components/faq.vue";
-import AboutUsChoppers from "../components/aboutUsChoppers.vue";
-import AboutUsPilots from "../components/aboutUsPilots.vue";
 import Opinions from "../components/opinions.vue";
 
 export default {
@@ -74,8 +72,6 @@ export default {
     Header,
     Footer,
     Baner,
-    AboutUsChoppers,
-    AboutUsPilots,
     Opinions,
     Faq
   },
