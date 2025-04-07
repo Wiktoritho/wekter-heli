@@ -46,10 +46,10 @@
     </div>
   </section>
   <section class="about">
-    <!-- <AboutUsChoppers></AboutUsChoppers> -->
+    <AboutChoppers></AboutChoppers>
   </section>
   <section class="about__pilots">
-    <!-- <AboutUsPilots></AboutUsPilots> -->
+    <AboutPilots></AboutPilots>
   </section>
   <section class="about__opinions">
     <Opinions></Opinions>
@@ -66,6 +66,8 @@ import Footer from "../components/footer.vue";
 import Header from "../components/header.vue";
 import Faq from "../components/faq.vue";
 import Opinions from "../components/opinions.vue";
+import AboutChoppers from "../components/aboutChoppers.vue";
+import AboutPilots from "../components/aboutPilots.vue";
 
 export default {
   components: {
@@ -73,7 +75,9 @@ export default {
     Footer,
     Baner,
     Opinions,
-    Faq
+    Faq,
+    AboutChoppers,
+    AboutPilots
   },
   data() {
     return {
