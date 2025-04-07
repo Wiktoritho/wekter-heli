@@ -41,10 +41,13 @@
                 <img :src="slide" :alt="chopper.title" />
               </Slide>
             </Carousel>
-            <div class="about__chopper-left" :class="{ 'chopper__arrow--disabled': carouselStates[chopperIndex]?.currentSlide === 0 }">
+            <div class="about__chopper-left" :class="{ 'chopper__arrow--disabled': carouselStates[chopperIndex]?.currentSlide === 0 }" @click="handleSlides(chopperIndex, 'left')">
               <img src="/icons/arrow-side.svg" alt="Arrow Left" />
             </div>
-            <div class="about__chopper-right" :class="{ 'chopper__arrow--disabled': carouselStates[chopperIndex]?.currentSlide === chopper.slides.length - 1 }">
+            <div
+              class="about__chopper-right"
+              :class="{ 'chopper__arrow--disabled': carouselStates[chopperIndex]?.currentSlide === chopper.slides.length - 1 }"
+              @click="handleSlides(chopperIndex, 'right')">
               <img src="/icons/arrow-side.svg" alt="Arrow Right" />
             </div>
             <div class="about__chopper-vr">
@@ -116,6 +119,15 @@ export default {
       } else {
         const carousel = this.$refs.carousel1;
         this.carouselStates[chopperIndex].currentSlide = carousel[chopperIndex - 1].currentSlide;
+      }
+    },
+    handleSlides(chopperIndex, direction) {
+      if (chopperIndex === 0) {
+        const carousel = this.$refs.carousel0;
+        direction === "left" ? carousel[chopperIndex].prev() : carousel[chopperIndex].next();
+      } else {
+        const carousel = this.$refs.carousel1;
+        direction === "left" ? carousel[chopperIndex - 1].prev() : carousel[chopperIndex - 1].next();
       }
     },
   },

@@ -5,6 +5,7 @@ export const useStore = defineStore({
   state: () => ({
     switch: "Loty widokowe",
     blogs: [],
+    opinions: [],
   }),
   actions: {
     set(key, value) {

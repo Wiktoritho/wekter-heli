@@ -48,6 +48,15 @@
   <section class="about">
     <AboutUsChoppers></AboutUsChoppers>
   </section>
+  <section class="about__pilots">
+    <AboutUsPilots></AboutUsPilots>
+  </section>
+  <section class="about__opinions">
+    <Opinions></Opinions>
+  </section>
+  <section class="about">
+    <Faq></Faq>
+  </section>
   <Footer></Footer>
 </template>
 
@@ -55,7 +64,10 @@
 import Baner from "../components/baner.vue";
 import Footer from "../components/footer.vue";
 import Header from "../components/header.vue";
-import AboutUsChoppers from "../components/AboutUsChoppers.vue";
+import AboutUsChoppers from "../components/aboutUsChoppers.vue";
+import AboutUsPilots from "../components/aboutUsPilots.vue";
+import Opinions from "../components/opinions.vue";
+import Faq from "../components/faq.vue";
 
 export default {
   components: {
@@ -63,6 +75,9 @@ export default {
     Footer,
     Baner,
     AboutUsChoppers,
+    AboutUsPilots,
+    Opinions,
+    Faq
   },
   data() {
     return {
