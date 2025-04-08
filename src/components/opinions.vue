@@ -1,15 +1,17 @@
 <template>
   <div>
-    <h4 class="headers headers--small headers--gray headers--padding-medium">Opinie</h4>
+    <h4 class="headers headers--small headers--gray headers--padding-medium">
+      Opinie
+    </h4>
     <h2 class="headers headers--big headers--margin-big">
       Zobacz, co nasi pasażerowie mówią <br />
       o swoich podniebnych doświadczeniach.
     </h2>
     <div class="about__opinion-carousel">
-        <OpinionCarousel :config="config1" :slides="firstHalf"></OpinionCarousel>
+      <OpinionCarousel :config="config1" :slides="firstHalf"></OpinionCarousel>
     </div>
     <div class="about__opinion-carousel">
-        <OpinionCarousel :config="config2" :slides="secondHalf"></OpinionCarousel>
+      <OpinionCarousel :config="config2" :slides="secondHalf"></OpinionCarousel>
     </div>
   </div>
 </template>
@@ -17,12 +19,12 @@
 <script>
 import axios from "axios";
 import { useStore } from "../store";
-import OpinionCarousel from "./opinionCarousel.vue"
+import OpinionCarousel from "./opinionCarousel.vue";
 
 export default {
-    components: {
-        OpinionCarousel
-    },
+  components: {
+    OpinionCarousel,
+  },
   data() {
     return {
       opinions: [],
@@ -33,15 +35,23 @@ export default {
         autoplay: 1000,
         wrapAround: true,
         transition: 7000,
-          gap: 24,
+        gap: 24,
+        breakpoints: {
+          900: { itemsToShow: 3 },
+          100: { itemsToShow: 1.5 },
         },
+      },
       config2: {
         itemsToShow: 3,
         autoplay: 1000,
         wrapAround: true,
         transition: 7000,
-          gap: 24,
-          snapAlign: 'center-even'
+        gap: 24,
+        snapAlign: "center-even",
+        breakpoints: {
+          900: { itemsToShow: 3 },
+          100: { itemsToShow: 1.5 },
+        },
       },
     };
   },

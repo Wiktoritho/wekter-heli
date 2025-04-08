@@ -1,6 +1,7 @@
 @use "variables" as *;
 .faq {
-  background-color: $beige;
+  @include respond-to("desktop") {
+    background-color: $beige;
   padding: 80px;
   border-top-right-radius: 8px;
   border-top-left-radius: 8px;
@@ -75,5 +76,22 @@
     font-size: 18px;
     line-height: 28px;
     color: $textdark;
+  }
+  }
+  @include respond-to("medium") {
+    padding: 40px;
+    &__question {
+      font-size: 16px;
+    }
+  }
+  @include respond-to("small") {
+    padding: 40px 20px;
+    flex-direction: column;
+    &__infos {
+      gap: 10px;
+    }
+    &__header {
+      line-height: 32px;
+    }
   }
 }

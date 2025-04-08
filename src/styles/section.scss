@@ -64,6 +64,10 @@
             text-decoration: underline;
             text-underline-offset: 4px;
             color: $headergray;
+            transition: all 0.2s ease-in-out;
+            &:hover {
+              color: $white;
+            }
           }
         }
       }
@@ -110,6 +114,11 @@
       &__header {
         margin: 140px 120px 70px;
       }
+      &__text {
+        &--normal {
+          text-align: center;
+        }
+      }
     }
   }
   @include respond-to("small") {
@@ -121,6 +130,9 @@
       &__text {
         margin-inline: 0px;
         line-height: 36px;
+        &--normal {
+          width: 90%;
+        }
       }
       &__gallery {
         img:first-of-type {
