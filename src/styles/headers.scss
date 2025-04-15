@@ -16,6 +16,9 @@
       font-weight: 500;
       width: auto;
     }
+    &--lightgray {
+      color: $grayborder;
+    }
     &--gray {
       color: $headergray;
     }

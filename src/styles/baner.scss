@@ -34,6 +34,9 @@
       &--low {
         top: 250px;
       }
+      &--wide {
+        max-width: 75%;
+      }
     }
     &__link-wrapper {
       display: flex;
@@ -72,17 +75,20 @@
     }
     &__title {
       &--small {
-        font-size: clamp(36px, 3vw, 48px);
+        font-size: clamp(36px, 3.5vw, 48px);
         line-height: 56px;
         font-weight: 500;
       }
       &--big {
         font-family: $font-family-header;
-        font-size: clamp(48px, 3vw, 64px);
+        font-size: clamp(48px, 3.5vw, 64px);
         line-height: 72px;
         letter-spacing: 0.04em;
         text-transform: uppercase;
         max-width: 600px;
+      }
+      &--wide {
+        max-width: 75%;
       }
     }
     &__text {
@@ -95,6 +101,12 @@
         font-size: clamp(16px, 2vw, 20px);
         letter-spacing: unset;
         max-width: 100%;
+        line-height: 28px;
+      }
+      &--medium {
+        font-size: clamp(16px, 2vw, 20px);
+        letter-spacing: unset;
+        max-width: 900px;
         line-height: 28px;
       }
     }

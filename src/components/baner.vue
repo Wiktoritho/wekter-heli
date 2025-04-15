@@ -7,7 +7,7 @@
       :style="{ backgroundColor: 'black', height: `${height}px` }"
     ></div>
     <div
-      :class="`baner__content baner__content--${version}`"
+      :class="`baner__content baner__content--${version} baner__content--${width}`"
       :style="{ gap: `${gap}px` }"
     >
       <div class="baner__link">
@@ -33,10 +33,10 @@
           >
         </div>
       </div>
-      <h2 :class="`baner__title baner__title--${titleVersion}`">{{ title }}</h2>
+      <h2 :class="`baner__title baner__title--${titleVersion} baner__title--${titleWidth}`">{{ title }}</h2>
       <p
         class="baner__text"
-        :class="{ 'baner__text--big': textVersion === 'big' }"
+        :class="{ 'baner__text--big': textVersion === 'big', 'baner__text--medium': textVersion === 'medium' }"
       >
         {{ text }}
       </p>
@@ -59,6 +59,8 @@ export default {
     gap: Number,
     textVersion: String,
     linkTo: String,
+    width: String,
+    titleWidth: String,
   },
   methods: {
     cutLink(link) {

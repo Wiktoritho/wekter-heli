@@ -7,21 +7,31 @@ import { createPinia } from "pinia";
 import HomePage from "./views/Home.vue";
 import AboutPage from "./views/About.vue";
 import BlogPage from "./views/Blog.vue";
+import OfertaPage from "./views/Oferta.vue";
 
 const blogRoutes = {
-  'trendsetter-transportu-lotniczego-air-taxi-podróżuj-szybko-i-wygodnie': () => import("./views/blogs/trendsetter-transportu-lotniczego-air-taxi-podróżuj-szybko-i-wygodnie.vue"),
+  "trendsetter-transportu-lotniczego-air-taxi-podróżuj-szybko-i-wygodnie": () => import("./views/blogs/trendsetter-transportu-lotniczego-air-taxi-podróżuj-szybko-i-wygodnie.vue"),
 };
+
+const ofertaRoutes = {
+  "air-taxi": () => import("./views/oferta/Oferta-Air-Taxi.vue"),
+}
 
 export const router = createRouter({
   history: createWebHistory(),
   routes: [
     { path: "/", component: HomePage },
+    { path: "/oferta", component: OfertaPage },
     { path: "/o-nas", component: AboutPage },
     { path: "/blog", component: BlogPage },
     {
       path: "/blog/:slug",
       component: blogRoutes["trendsetter-transportu-lotniczego-air-taxi-podróżuj-szybko-i-wygodnie"],
     },
+    {
+      path: "/oferta/:slug",
+      component: ofertaRoutes["air-taxi"],
+    }
   ],
 });
 

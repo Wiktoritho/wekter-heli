@@ -1,5 +1,5 @@
 <template>
-  <header class="header" ref="headerRef" :style="{overflow : mobileMenu ? 'visible !important' : 'hidden'}">
+  <header class="header" ref="headerRef" :style="{overflow : mobileMenu ? 'visible !important' : 'visible'}">
     <nav class="header__nav">
       <a href="/">
         <img src="/icons/wekter_logo.svg" alt="Wekter Logo" />
@@ -7,7 +7,7 @@
       <div class="header__container">
         <ul class="header__list">
           <li>
-            <span>Oferta</span> <span><img src="/icons/arrow-down.svg" alt="Arrow Icon" /></span>
+            <a href="/oferta" :style="splitedUrl === 'oferta' ? {'text-decoration': 'underline'} : {}"><span>Oferta</span> <span><img src="/icons/arrow-down.svg" alt="Arrow Icon" /></span></a>
             <div class="header__offers">
               <div class="header__offer">
                 <div class="header__offer-header">
@@ -61,7 +61,7 @@
               </div>
             </div>
           </li>
-          <li><a href="/o-nas">O nas</a></li>
+          <li><a href="/o-nas" :style="splitedUrl === 'o-nas' ? {'text-decoration': 'underline'} : {}">O nas</a></li>
           <li><a>Vouchery</a></li>
           <li>
             <span>Heliporty</span> <span><img src="/icons/arrow-down.svg" alt="Arrow Icon" /></span>
@@ -88,7 +88,7 @@
             </div>
           </li>
           <li>
-            <a href="/blog">Blog</a>
+            <a href="/blog" :style="splitedUrl === 'blog' ? {'text-decoration': 'underline'} : {}">Blog</a>
           </li>
           <li>
             <a>Kontakt</a>
@@ -234,11 +234,15 @@ export default {
       mobileMenu: false,
       offerMobile: false,
       heliportsMobile: false,
+      splitedUrl: null,
     };
   },
   methods: {
     setSwitch(string) {
       useStore().set("switch", string);
+    },
+    checkUrl() {
+      this.splitedUrl = window.location.pathname.split("/")[1]
     },
     scrollMenu() {
       _ScrollTrigger.create({
@@ -296,6 +300,7 @@ export default {
   },
   mounted() {
     this.scrollMenu();
+    this.checkUrl();
   },
   watch: {
     mobileMenu(newValue) {
