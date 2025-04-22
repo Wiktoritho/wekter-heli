@@ -526,6 +526,7 @@
   @include respond-to("small") {
     &__values {
       flex-direction: column;
+      padding: 20px;
     }
     &__values-texts {
       width: 100%;
@@ -559,6 +560,12 @@
       br {
         display: none;
       }
+    }
+    &__chopper-slider-container {
+      justify-content: flex-start;
+    }
+    &__chopper-tile {
+      padding-inline: 16px;
     }
   }
 }

@@ -94,5 +94,13 @@
     &__header {
       line-height: 32px;
     }
+    &__question {
+      font-size: 11px;
+      span {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+    }
   }
 }

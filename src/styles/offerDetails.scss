@@ -1,6 +1,7 @@
 @use "variables" as *;
 .offerDetails {
-  padding-inline: 20px;
+  @include respond-to("desktop") {
+    padding-inline: 20px;
   background-color: $white;
   font-family: $font-family-primary;
   &__localization {
@@ -254,6 +255,325 @@
         font-size: 18px;
         line-height: 24px;
         color: $grayborder;
+    }
+  }
+  &__localization-map-city[data-city="Gdańsk"] {
+    top: 40px;
+    left: 240px;
+  }
+  &__localization-map-city[data-city="Szczecin"] {
+    top: 100px;
+    left: 10px;
+  }
+  &__localization-map-city[data-city="Bydgoszcz"] {
+    top: 120px;
+    left: 190px;
+  }
+  &__localization-map-city[data-city="Olsztyn"] {
+    top: 110px;
+    left: 380px;
+  }
+  &__localization-map-city[data-city="Poznań"] {
+    top: 180px;
+    left: 160px;
+  }
+  &__localization-map-city[data-city="Warszawa"] {
+    top: 240px;
+    left: 380px;
+  }
+  &__localization-map-city[data-city="Łódź"] {
+    top: 280px;
+    left: 340px;
+  }
+  &__localization-map-city[data-city="Wrocław"] {
+    top: 330px;
+    left: 100px;
+  }
+  &__localization-map-city[data-city="Lublin"] {
+    top: 360px;
+    left: 490px;
+  }
+  &__localization-map-city[data-city="Katowice"] {
+    top: 440px;
+    left: 240px;
+  }
+  &__localization-map-city[data-city="Kraków"] {
+    top: 460px;
+    left: 320px;
+  }
+  &__localization-map-city[data-city="Rzeszów"] {
+    top: 470px;
+    left: 450px;
+  }
+  &__localization-map-city[data-city="Zakopane"] {
+    top: 520px;
+    left: 280px;
+  }
+  &__localization-map-city[data-city="Białystok"] {
+    top: 160px;
+    left: 540px;
+  }
+  }
+  @include respond-to("large") {
+    &__localization {
+      margin-top: 0px;
+      padding: 16px 0px 16px 32px;
+    }
+    &__localization-slide {
+      width: 100%;
+    }
+    &__localization-city {
+      width: 50%;
+    }
+    &__localization-header {
+      flex-direction: column;
+      align-items: start;
+      gap: 16px;
+      h4 {
+        font-size: 22px;
+      }
+    }
+    &__localization-map-container {
+      max-width: 450px;
+      max-height: 400px;
+      top: 80px;
+    }
+    &__localization-container {
+      width: 44%;
+    }
+    &__localization-table-container {
+      padding: 16px;
+    }
+    &__localization-table {
+      th {
+        text-wrap: nowrap;
+      }
+    }
+    &__localization-map-city {
+      p {
+        font-size: 10px;
+      }
+    }
+    &__localization-map-city[data-city="Gdańsk"] {
+      top: 20px;
+      left: 160px;
+    }
+    &__localization-map-city[data-city="Szczecin"] {
+      top: 60px;
+      left: 0px;
+    }
+    &__localization-map-city[data-city="Bydgoszcz"] {
+      top: 80px;
+      left: 120px;
+    }
+    &__localization-map-city[data-city="Olsztyn"] {
+      top: 70px;
+      left: 260px;
+    }
+    &__localization-map-city[data-city="Poznań"] {
+      top: 130px;
+      left: 90px;
+    }
+    &__localization-map-city[data-city="Warszawa"] {
+      top: 170px;
+      left: 260px;
+    }
+    &__localization-map-city[data-city="Łódź"] {
+      top: 200px;
+      left: 230px;
+    }
+    &__localization-map-city[data-city="Wrocław"] {
+      top: 240px;
+      left: 60px;
+    }
+    &__localization-map-city[data-city="Lublin"] {
+      top: 260px;
+      left: 330px;
+    }
+    &__localization-map-city[data-city="Katowice"] {
+      top: 300px;
+      left: 160px;
+    }
+    &__localization-map-city[data-city="Kraków"] {
+      top: 310px;
+      left: 200px;
+    }
+    &__localization-map-city[data-city="Rzeszów"] {
+      top: 320px;
+      left: 310px;
+    }
+    &__localization-map-city[data-city="Zakopane"] {
+      top: 350px;
+      left: 210px;
+    }
+    &__localization-map-city[data-city="Białystok"] {
+      top: 100px;
+      left: 360px;
+    }
+    &__image-content-left {
+      h3 {
+        font-size: 32px;
+        line-height: 42px;
+      }
+    }
+  }
+  @include respond-to("medium") {
+    &__localization-container {
+      width: 100%;
+    }
+    &__localization-map-container {
+      position: relative;
+      max-width: 100%;
+      max-height: 100%;
+      top: 0;
+      left: 0;
+    }
+    &__localization-map-inside {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    &__localization-map-city[data-city="Gdańsk"] {
+      top: 40px;
+      left: 43%;
+    }
+    &__localization-map-city[data-city="Szczecin"] {
+      top: 100px;
+      left: 19%;
+    }
+    &__localization-map-city[data-city="Bydgoszcz"] {
+      top: 120px;
+      left: 34%;
+    }
+    &__localization-map-city[data-city="Olsztyn"] {
+      top: 110px;
+      left: 56%;
+    }
+    &__localization-map-city[data-city="Poznań"] {
+      top: 180px;
+      left: 31%;
+    }
+    &__localization-map-city[data-city="Warszawa"] {
+      top: 240px;
+      left: 58%;
+    }
+    &__localization-map-city[data-city="Łódź"] {
+      top: 280px;
+      left: 56%;
+    }
+    &__localization-map-city[data-city="Wrocław"] {
+      top: 330px;
+      left: 25%;
+    }
+    &__localization-map-city[data-city="Lublin"] {
+      top: 360px;
+      left: 70%;
+    }
+    &__localization-map-city[data-city="Katowice"] {
+      top: 440px;
+      left: 42%;
+    }
+    &__localization-map-city[data-city="Kraków"] {
+      top: 460px;
+      left: 48%;
+    }
+    &__localization-map-city[data-city="Rzeszów"] {
+      top: 470px;
+      left: 66%;
+    }
+    &__localization-map-city[data-city="Zakopane"] {
+      top: 520px;
+      left: 46%;
+    }
+    &__localization-map-city[data-city="Białystok"] {
+      top: 160px;
+      left: 72%;
+    }
+    &__image-content {
+      flex-direction: row;
+      padding-inline: 32px;
+    }
+    &__image-content-left {
+      width: 100%;
+    }
+    &__image-content-right {
+      width: 100%;
+      margin-left: 20px;
+    }
+    &__content {
+      padding: 40px 30px;
+    }
+    &__image-block {
+      padding: 40px 30px;
+    }
+    &__image-gradient {
+      width: calc(100% - 60px);
+      height: calc(100% - 80px);
+      top: 40px;
+      left: 30px;
+    }
+  }
+  @include respond-to("small") {
+    &__localization {
+      padding: 16px;
+    }
+    &__localization-table {
+      td:nth-of-type(3) {
+        display: none;
+      }
+    }
+    &__localization-map-container {
+      display: none;
+    }
+    &__content {
+      padding: 20px;
+      flex-direction: column;
+      gap: 24px;
+    }
+    &__content-block {
+      width: 100%;
+    }
+    &__content-header {
+      font-size: 24px;
+      line-height: 36px;
+    }
+    &__content-block:last-of-type {
+      width: 100%;
+      padding: 0;
+      border-left: none;
+    }
+    &__image-block {
+      padding: 20px 0px;
+    }
+    &__image-gradient {
+      display: none;
+    }
+    &__image-content {
+      position: relative;
+      top: 0;
+      left: 0;
+      flex-direction: column;
+      transform: translateX(0);
+      width: 100%;
+      margin-top: 24px;
+      padding-inline: 0px;
+    }
+    &__image-content-left {
+      h4 {
+        color: $black;
+      }
+      h3 {
+        color: $textdark;
+        font-size: 24px;
+        line-height: 32px;
+      }
+    }
+    &__image-content-right {
+      margin-left: 0;
+      p {
+        color: $textdark;
+        font-size: 16px;
+      }
     }
   }
 }
