@@ -6,7 +6,6 @@
     text="Oferujemy szeroki zakres usług – od szybkiego transportu AirTaxi, przez spektakularne loty widokowe, aż po profesjonalne szkolenia pilotażowe. Realizujemy również transport cargo oraz organizujemy wyjątkowe eventy i wydarzenia z wykorzystaniem helikopterów."
     :from="['Oferta']"
     titleVersion="big"
-    titleWidth="wide"
     version="low"
     :gap="16"
     :linkTo="'/oferta'"

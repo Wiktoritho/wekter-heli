@@ -4,6 +4,24 @@
     width: 100%;
     position: relative;
     min-height: 450px;
+    &__medias {
+      padding-block: $padding-medium;
+      border-top: 1px solid $white;
+      max-width: min-content;
+      ul {
+        display: flex;
+        gap: 8px;
+        a {
+          width: 40px;
+          height: 40px;
+          border: 1px solid $footerborder;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          border-radius: 50%;
+        }
+      }
+    }
     &__gradient {
       position: absolute;
       top: 0;
@@ -96,7 +114,7 @@
       opacity: 0.7;
       line-height: 24px;
       letter-spacing: 0.04em;
-      max-width: 600px;
+      max-width: 650px;
       &--big {
         font-size: clamp(16px, 2vw, 20px);
         letter-spacing: unset;
@@ -109,6 +127,92 @@
         max-width: 900px;
         line-height: 28px;
       }
+    }
+    &__form {
+      width: 37%;
+      position: absolute;
+      right: 80px;
+      top: 196px;
+      z-index: 2;
+      font-family: $font-family-primary;
+      form {
+        background-color: $white;
+        box-shadow: 0px 0px 0px 10px rgba($formBlur, 0.5);
+        padding: 32px 48px;
+        display: flex;
+        flex-direction: column;
+        gap: 32px;
+      }
+      label {
+        font-weight: 500;
+        line-height: 20px;
+        display: flex;
+        flex-direction: column;
+        gap: 6px;
+        width: 100%;
+        position: relative;
+        label {
+          display: flex;
+          flex-direction: row;
+          gap: 18px;
+          font-weight: 400;
+          color: $headergray;
+          margin-top: 10px;
+          a {
+            color: $blue;
+            text-decoration: underline;
+          }
+        }
+        input[type="text"],
+        textarea {
+          border: 1px solid $formBorder;
+          padding: 8px 12px;
+          font-weight: 400;
+          width: 100%;
+          outline: none;
+          &::placeholder {
+            opacity: 0.5;
+          }
+          &:focus {
+            border: 1px solid $blue;
+          }
+        }
+        textarea {
+          height: 150px;
+          font-weight: 400;
+        }
+        input[type="checkbox"] {
+          min-width: 24px;
+          min-height: 24px;
+          max-width: 24px;
+          max-height: 24px;
+          appearance: none;
+          font: inherit;
+          margin: 0;
+          color: $formBorder;
+          border: 1px solid $formBorder;
+          transform: translateY(-0.075em);
+          display: grid;
+          place-content: center;
+        }
+        input[type="checkbox"]::before {
+          content: "";
+          width: 10px;
+          height: 10px;
+          transform: scale(0);
+          transition: 120ms transform ease-in-out;
+          box-shadow: inset 1em 1em $blue;
+          transform-origin: bottom left;
+          clip-path: polygon(14% 44%, 0 65%, 50% 100%, 100% 16%, 80% 0%, 43% 62%);
+        }
+        input[type="checkbox"]:checked::before {
+          transform: scale(1);
+        }
+      }
+    }
+    &__form-labels {
+      display: flex;
+      gap: 16px;
     }
   }
   @include respond-to("large") {
@@ -153,7 +257,8 @@
       margin-bottom: 0px;
     }
     &__title {
-      &--big, &--small {
+      &--big,
+      &--small {
         font-size: 24px;
         line-height: 40px;
       }

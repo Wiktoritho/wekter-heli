@@ -14,7 +14,7 @@ body {
   max-width: 1920px;
 }
 
-*:where(:not(html, iframe, canvas, img, svg, video, audio):not(svg *, symbol *)) {
+*:where(:not(html, iframe, canvas, img, svg, video, audio, input):not(svg *, symbol *)) {
   all: unset;
   display: revert;
 }
@@ -182,6 +182,7 @@ strong {
     gap: 10px;
     align-items: center;
     text-underline-offset: 5px;
+    width: 100%;
   }
   .header__list li span:last-of-type {
     display: flex;
@@ -286,6 +287,11 @@ strong {
     text-wrap: nowrap;
     padding-block: 8px;
     transition: all 0.2s ease-in-out;
+  }
+  .header__offer-list li a {
+    color: #000;
+    opacity: 1 !important;
+    justify-content: space-between;
   }
   .header__offer-list li img {
     transform: rotate(180deg);
@@ -2962,6 +2968,24 @@ strong {
     position: relative;
     min-height: 450px;
   }
+  .baner__medias {
+    padding-block: 16px;
+    border-top: 1px solid #fff;
+    max-width: min-content;
+  }
+  .baner__medias ul {
+    display: flex;
+    gap: 8px;
+  }
+  .baner__medias ul a {
+    width: 40px;
+    height: 40px;
+    border: 1px solid #3a3a3a;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+  }
   .baner__gradient {
     position: absolute;
     top: 0;
@@ -3052,7 +3076,7 @@ strong {
     opacity: 0.7;
     line-height: 24px;
     letter-spacing: 0.04em;
-    max-width: 600px;
+    max-width: 650px;
   }
   .baner__text--big {
     font-size: clamp(16px, 2vw, 20px);
@@ -3065,6 +3089,94 @@ strong {
     letter-spacing: unset;
     max-width: 900px;
     line-height: 28px;
+  }
+  .baner__form {
+    width: 37%;
+    position: absolute;
+    right: 80px;
+    top: 196px;
+    z-index: 2;
+    font-family: "Outfit", sans-serif;
+  }
+  .baner__form form {
+    background-color: #fff;
+    box-shadow: 0px 0px 0px 10px rgba(217, 217, 217, 0.5);
+    padding: 32px 48px;
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+  }
+  .baner__form label {
+    font-weight: 500;
+    line-height: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    width: 100%;
+    position: relative;
+  }
+  .baner__form label label {
+    display: flex;
+    flex-direction: row;
+    gap: 18px;
+    font-weight: 400;
+    color: #727272;
+    margin-top: 10px;
+  }
+  .baner__form label label a {
+    color: #3b5eab;
+    text-decoration: underline;
+  }
+  .baner__form label input[type=text],
+  .baner__form label textarea {
+    border: 1px solid #CBD5E1;
+    padding: 8px 12px;
+    font-weight: 400;
+    width: 100%;
+    outline: none;
+  }
+  .baner__form label input[type=text]::placeholder,
+  .baner__form label textarea::placeholder {
+    opacity: 0.5;
+  }
+  .baner__form label input[type=text]:focus,
+  .baner__form label textarea:focus {
+    border: 1px solid #3b5eab;
+  }
+  .baner__form label textarea {
+    height: 150px;
+    font-weight: 400;
+  }
+  .baner__form label input[type=checkbox] {
+    min-width: 24px;
+    min-height: 24px;
+    max-width: 24px;
+    max-height: 24px;
+    appearance: none;
+    font: inherit;
+    margin: 0;
+    color: #CBD5E1;
+    border: 1px solid #CBD5E1;
+    transform: translateY(-0.075em);
+    display: grid;
+    place-content: center;
+  }
+  .baner__form label input[type=checkbox]::before {
+    content: "";
+    width: 10px;
+    height: 10px;
+    transform: scale(0);
+    transition: 120ms transform ease-in-out;
+    box-shadow: inset 1em 1em #3b5eab;
+    transform-origin: bottom left;
+    clip-path: polygon(14% 44%, 0 65%, 50% 100%, 100% 16%, 80% 0%, 43% 62%);
+  }
+  .baner__form label input[type=checkbox]:checked::before {
+    transform: scale(1);
+  }
+  .baner__form-labels {
+    display: flex;
+    gap: 16px;
   }
 }
 @media screen and (max-width: 1400px) {

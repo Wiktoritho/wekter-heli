@@ -13,7 +13,7 @@ body {
     max-width: 1920px;
 }
 *:where(
-    :not(html, iframe, canvas, img, svg, video, audio):not(svg *, symbol *)
+    :not(html, iframe, canvas, img, svg, video, audio, input):not(svg *, symbol *)
   ) {
   all: unset;
   display: revert;

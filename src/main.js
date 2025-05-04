@@ -8,6 +8,7 @@ import HomePage from "./views/Home.vue";
 import AboutPage from "./views/About.vue";
 import BlogPage from "./views/Blog.vue";
 import OfertaPage from "./views/Oferta.vue";
+import KontaktPage from "./views/Kontakt.vue";
 
 const blogRoutes = {
   "trendsetter-transportu-lotniczego-air-taxi-podróżuj-szybko-i-wygodnie": () => import("./views/blogs/trendsetter-transportu-lotniczego-air-taxi-podróżuj-szybko-i-wygodnie.vue"),
@@ -15,7 +16,7 @@ const blogRoutes = {
 
 const ofertaRoutes = {
   "air-taxi": () => import("./views/oferta/Oferta-Air-Taxi.vue"),
-}
+};
 
 export const router = createRouter({
   history: createWebHistory(),
@@ -24,6 +25,7 @@ export const router = createRouter({
     { path: "/oferta", component: OfertaPage },
     { path: "/o-nas", component: AboutPage },
     { path: "/blog", component: BlogPage },
+    { path: "/kontakt", component: KontaktPage },
     {
       path: "/blog/:slug",
       component: blogRoutes["trendsetter-transportu-lotniczego-air-taxi-podróżuj-szybko-i-wygodnie"],
@@ -31,7 +33,7 @@ export const router = createRouter({
     {
       path: "/oferta/:slug",
       component: ofertaRoutes["air-taxi"],
-    }
+    },
   ],
 });
 

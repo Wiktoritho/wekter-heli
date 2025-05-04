@@ -33,19 +33,48 @@
           >
         </div>
       </div>
-      <h2 :class="`baner__title baner__title--${titleVersion} baner__title--${titleWidth}`">{{ title }}</h2>
+      <h2 :class="`baner__title baner__title--${titleVersion} baner__title--${titleWidth}`" :style="`letter-spacing: ${titleSpacing}`">{{ title }}</h2>
       <p
         class="baner__text"
         :class="{ 'baner__text--big': textVersion === 'big', 'baner__text--medium': textVersion === 'medium' }"
       >
         {{ text }}
       </p>
+      <div v-if="allowMediaLinks" class="baner__medias">
+        <ul>
+          <li>
+            <a href="https://x.com" target="_blank">
+              <img src="/icons/x.svg" alt="X Icon"/>
+            </a>
+          </li>
+          <li>
+            <a href="https://instagram.com" target="_blank">
+              <img src="/icons/ig.svg" alt="Ig Icon"/>
+            </a>
+          </li>
+          <li>
+            <a href="https://facebook.com" target="_blank">
+              <img src="/icons/fb.svg" alt="Fb Icon"/>
+            </a>
+          </li>
+          <li>
+            <a href="https://linkedin.com" target="_blank">
+              <img src="/icons/linkedin.svg" alt="Linkedin Icon"/>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div v-if="form" class="baner__form">
+      <BanerForm></BanerForm>
     </div>
     <div class="baner__gradient"></div>
   </div>
 </template>
 
 <script>
+import BanerForm from './BanerForm.vue';
+
 export default {
   props: {
     image: String,
@@ -61,6 +90,12 @@ export default {
     linkTo: String,
     width: String,
     titleWidth: String,
+    titleSpacing: String,
+    allowMediaLinks: Boolean,
+    form: Boolean
+  },
+  components: {
+    BanerForm
   },
   methods: {
     cutLink(link) {

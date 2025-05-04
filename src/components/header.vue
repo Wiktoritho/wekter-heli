@@ -18,19 +18,19 @@
                 </div>
                 <ul class="header__offer-list">
                   <li>
-                    Air Taxi <span><img src="/icons/arrow-side-header.svg" alt="Arrow Icon" /></span>
+                    <a href="/oferta/air-taxi">Air Taxi <span><img src="/icons/arrow-side-header.svg" alt="Arrow Icon" /></span></a>
                   </li>
                   <li>
-                    Cargo <span><img src="/icons/arrow-side-header.svg" alt="Arrow Icon" /></span>
+                    <a href="/oferta/cargo">Cargo <span><img src="/icons/arrow-side-header.svg" alt="Arrow Icon" /></span></a>
                   </li>
                   <li>
-                    Eventy i wydarzenia <span><img src="/icons/arrow-side-header.svg" alt="Arrow Icon" /></span>
+                    <a href="/oferta/eventy-i-wydarzenia">Eventy i wydarzenia <span><img src="/icons/arrow-side-header.svg" alt="Arrow Icon" /></span></a>
                   </li>
                   <li>
-                    Udziały <span><img src="/icons/arrow-side-header.svg" alt="Arrow Icon" /></span>
+                    <a href="/oferta/udzialy"> Udziały <span><img src="/icons/arrow-side-header.svg" alt="Arrow Icon" /></span></a>
                   </li>
                   <li>
-                    Fotografowanie i filmowanie <span><img src="/icons/arrow-side-header.svg" alt="Arrow Icon" /></span>
+                    <a href="/oferta/fotografowanie-i-filmowanie">Fotografowanie i filmowanie <span><img src="/icons/arrow-side-header.svg" alt="Arrow Icon" /></span></a>
                   </li>
                 </ul>
               </div>
@@ -43,19 +43,19 @@
                 </div>
                 <ul class="header__offer-list">
                   <li>
-                    Loty widokowe <span><img src="/icons/arrow-side-header.svg" alt="Arrow Icon" /></span>
+                    <a href="/oferta/loty-widokowe">Loty widokowe <span><img src="/icons/arrow-side-header.svg" alt="Arrow Icon" /></span></a>
                   </li>
                   <li>
-                    Loty grupowe <span><img src="/icons/arrow-side-header.svg" alt="Arrow Icon" /></span>
+                    <a href="/oferta/loty-grupowe">Loty grupowe <span><img src="/icons/arrow-side-header.svg" alt="Arrow Icon" /></span></a>
                   </li>
                   <li>
-                    Loty zapoznawcze <span><img src="/icons/arrow-side-header.svg" alt="Arrow Icon" /></span>
+                    <a href="/oferta/loty-zapoznawcze">Loty zapoznawcze <span><img src="/icons/arrow-side-header.svg" alt="Arrow Icon" /></span></a>
                   </li>
                   <li>
-                    Zaręczyny <span><img src="/icons/arrow-side-header.svg" alt="Arrow Icon" /></span>
+                    <a href="/oferta/zareczyny">Zaręczyny <span><img src="/icons/arrow-side-header.svg" alt="Arrow Icon" /></span></a>
                   </li>
                   <li>
-                    Szkolenia licencyjne dla pilotów <span><img src="/icons/arrow-side-header.svg" alt="Arrow Icon" /></span>
+                    <a href="/oferta/szkolenia-licencyjne-dla-pilotow">Szkolenia licencyjne dla pilotów <span><img src="/icons/arrow-side-header.svg" alt="Arrow Icon" /></span></a>
                   </li>
                 </ul>
               </div>
@@ -91,7 +91,7 @@
             <a href="/blog" :style="splitedUrl === 'blog' ? {'text-decoration': 'underline'} : {}">Blog</a>
           </li>
           <li>
-            <a>Kontakt</a>
+            <a href="/kontakt" :style="splitedUrl === 'kontakt' ? {'text-decoration': 'underline'} : {}">Kontakt</a>
           </li>
         </ul>
       </div>
@@ -136,7 +136,9 @@
           </div>
           <div class="header__mobile-top-main" :style="{ transform: `${(offerMobile || heliportsMobile) && mobileMenu ? 'translateX(-100%)' : 'translateX(0%)'}` }">
             <ul>
-              <li>Strona główna</li>
+              <li>
+                <a href="/">Strona główna</a>
+              </li>
               <li id="mobile-offer" @click="offerMobile = true">
                 Oferta <span><img src="/icons/arrow-mobile.svg" alt="Arrow" /></span>
                 <div class="header__mobile-offer" :style="{ transform: `${heliportsMobile ? 'translateX(224%)' : 'translateX(112%)'}` }">
@@ -144,15 +146,15 @@
                     <span><img src="/icons/arrow-mobile.svg" alt="Arrow Icon" /></span>Oferta
                   </p>
                   <ul>
-                    <li>Air Taxi</li>
-                    <li>Loty widokowe</li>
-                    <li>Cargo</li>
-                    <li>Eventy i wydarzenia</li>
-                    <li>Loty grupowe</li>
-                    <li>Zaręczyny</li>
-                    <li>Loty zapoznawcze</li>
-                    <li>Fotografowanie i filmowanie</li>
-                    <li>Szkolenia do licencji</li>
+                    <li><a href="/oferta/air-taxi">Air Taxi</a></li>
+                    <li><a href="/oferta/loty-widokowe">Loty widokowe</a></li>
+                    <li><a href="/oferta/cargo">Cargo</a></li>
+                    <li><a href="/oferta/eventy-i-wydarzenia">Eventy i wydarzenia</a></li>
+                    <li><a href="/oferta/loty-grupowe">Loty grupowe</a></li>
+                    <li><a href="/oferta/zareczyny">Zaręczyny</a></li>
+                    <li><a href="/oferta/loty-zapoznawcze">Zaręczyny</a></li>
+                    <li><a href="/oferta/fotografowanie-i-filmowanie">Fotografowanie i filmowanie</a></li>
+                    <li><a href="/oferta/szkolenia-licencyjne-dla-pilotow">Szkolenia do licencji</a></li>
                   </ul>
                 </div>
               </li>
@@ -176,7 +178,9 @@
               <li>
                 <a href="/blog">Blog</a>
               </li>
-              <li>Kontakt</li>
+              <li>
+                <a href="/kontakt">Kontakt</a>
+              </li>
             </ul>
           </div>
         </div>
