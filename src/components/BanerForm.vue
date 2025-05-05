@@ -19,7 +19,8 @@
     <div class="baner__form-label">
       <label>
         Temat
-        <Multiselect v-model="selectedTopic" :options="topics" :canClear="false" :canDeselect="false" :caret="false"></Multiselect>
+        <Multiselect v-model="selectedTopic" :options="topics" :canClear="false" :canDeselect="false" :caret="false" :placeholder="'Wybierz temat'"></Multiselect>
+        <img src="/icons/arrow-search.svg" />
       </label>
     </div>
     <div class="baner__form-label">
@@ -37,6 +38,7 @@
         </label>
       </label>
     </div>
+    <div class="baner__form-submit">Wyślij wiadomość</div>
   </form>
 </template>
 

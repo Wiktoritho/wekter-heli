@@ -201,6 +201,9 @@
     }
     &__filters-input {
       width: 200px;
+      outline: none;
+      border: none;
+      font-family: $font-family-primary;
     }
     .multiselect {
       width: 200px;

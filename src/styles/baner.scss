@@ -142,6 +142,24 @@
         display: flex;
         flex-direction: column;
         gap: 32px;
+        .multiselect {
+          font-weight: 400;
+          font-size: 14px;
+        }
+        .multiselect.is-active,
+        .multiselect.is-open {
+          box-shadow: none;
+        }
+        .multiselect-option.is-selected,
+        .multiselect-option.is-selected.is-pointed {
+          background: $select;
+        }
+        .multiselect-placeholder {
+          line-height: 1;
+          font-family: $font-family-primary;
+          color: $black;
+          opacity: 0.5;
+        }
       }
       label {
         font-weight: 500;
@@ -151,6 +169,12 @@
         gap: 6px;
         width: 100%;
         position: relative;
+        img {
+          position: absolute;
+          top: 50%;
+          transform: translateY(75%);
+          right: 12px;
+        }
         label {
           display: flex;
           flex-direction: row;
@@ -180,6 +204,10 @@
         textarea {
           height: 150px;
           font-weight: 400;
+        }
+        input[type="text"] {
+          height: 40px;
+          min-height: 40px;
         }
         input[type="checkbox"] {
           min-width: 24px;
@@ -213,6 +241,21 @@
     &__form-labels {
       display: flex;
       gap: 16px;
+    }
+    &__form-submit {
+      width: 100%;
+      background-color: $blue;
+      color: $white;
+      cursor: pointer;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding-block: 16px;
+      font-family: $font-family-secondary;
+      line-height: 20px;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      font-weight: 700;
     }
   }
   @include respond-to("large") {
