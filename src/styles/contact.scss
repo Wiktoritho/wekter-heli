@@ -1,174 +1,227 @@
 @use "variables" as *;
 .contact {
-  padding-inline: 24px;
-  background-color: $white;
-  font-family: $font-family-primary;
-  &__container {
-    padding: 90px 80px 128px 80px;
-  }
-  &__header {
-    font-weight: 500;
-    font-size: clamp(36px, 2vw, 24px);
-    line-height: 40px;
-    max-width: 570px;
-    margin-block: 20px $margin-large;
-  }
-  &__map {
-    display: flex;
-    justify-content: space-between;
-  }
-  &__map-infos {
-    width: 32%;
-    padding: 24px;
-    display: flex;
-    flex-direction: column;
-    gap: 32px;
-    border: 1px solid $grayborder;
-  }
-  &__map-infos-icon {
-    width: 64px;
-    height: 64px;
-    background-color: $blue;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  &__map-infos-text {
-    font-weight: 500;
-    font-size: clamp(24px, 2vw, 18px);
-    line-height: 32px;
-  }
-  &__map-infos-medias {
-    display: flex;
-    flex-direction: column;
-    gap: 16px;
-    a {
+  @include respond-to("desktop") {
+    padding-inline: 24px;
+    background-color: $white;
+    font-family: $font-family-primary;
+    &__container {
+      padding: 90px 80px 128px 80px;
+    }
+    &__header {
+      font-weight: 500;
+      font-size: clamp(36px, 2vw, 24px);
+      line-height: 40px;
+      max-width: 570px;
+      margin-block: 20px $margin-large;
+    }
+    &__map {
       display: flex;
+      justify-content: space-between;
+    }
+    &__map-infos {
+      width: 32%;
+      padding: 24px;
+      display: flex;
+      flex-direction: column;
+      gap: 32px;
+      border: 1px solid $grayborder;
+    }
+    &__map-infos-icon {
+      width: 64px;
+      height: 64px;
+      background-color: $blue;
+      display: flex;
+      justify-content: center;
       align-items: center;
-      gap: 8px;
-      color: $blue;
-      span {
-        text-decoration: underline;
-        text-underline-offset: 3px;
+    }
+    &__map-infos-text {
+      font-weight: 500;
+      font-size: clamp(24px, 2vw, 18px);
+      line-height: 32px;
+    }
+    &__map-infos-medias {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      a {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        color: $blue;
+        span {
+          text-decoration: underline;
+          text-underline-offset: 3px;
+        }
       }
     }
-  }
-  &__map-content {
-    width: 67%;
-    height: 550px;
-    position: relative;
-  }
-  &__map-panel {
-    position: absolute;
-    right: 24px;
-    bottom: 24px;
-    border: 1px solid $grayborder;
-    background-color: $white;
-    padding: 24px;
-    z-index: 400;
-    display: flex;
-    flex-direction: column;
-    gap: 24px;
-    max-width: 40%;
-  }
-  &__map-panel-icon {
-    width: 48px;
-    height: 48px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: $blue;
-  }
-  &__map-panel-switcher {
-    display: flex;
-    flex-direction: column;
-    gap: 16px;
-    p {
-      font-weight: 500;
-      font-size: 18px;
-      line-height: 24px;
+    &__map-content {
+      width: 67%;
+      height: 550px;
+      position: relative;
     }
-  }
-  &__map-switch {
-    background-color: $ringoutside;
-    border-radius: 8px;
-    padding: 3px;
-    display: flex;
-    position: relative;
-    div {
-        position: absolute;
-        top: 3px;
-        width: 33%;
-        background-color: $white;
-        height: calc(100% - 6px);
-        border-radius: 8px;
-        transition: all 0.2s ease-in-out;
+    &__map-panel {
+      position: absolute;
+      right: 24px;
+      bottom: 24px;
+      border: 1px solid $grayborder;
+      background-color: $white;
+      padding: 24px;
+      z-index: 400;
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+      max-width: 40%;
     }
-  }
-  &__map-button {
-    padding: 5px 18px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: calc(100% / 3);
-    font-size: 14px;
-    font-weight: 400;
-    line-height: 24px;
-    color: $headergraysmall;
-    cursor: pointer;
-    z-index: 2;
-    &--active {
+    &__map-panel-icon {
+      width: 48px;
+      height: 48px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: $blue;
+    }
+    &__map-panel-switcher {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      p {
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 24px;
+      }
+    }
+    &__map-switch {
+      background-color: $ringoutside;
+      border-radius: 8px;
+      padding: 3px;
+      display: flex;
+      position: relative;
+      div {
+          position: absolute;
+          top: 3px;
+          width: 33%;
+          background-color: $white;
+          height: calc(100% - 6px);
+          border-radius: 8px;
+          transition: all 0.2s ease-in-out;
+      }
+    }
+    &__map-button {
       padding: 5px 18px;
       display: flex;
       align-items: center;
       justify-content: center;
       width: calc(100% / 3);
       font-size: 14px;
-      font-weight: 500;
+      font-weight: 400;
       line-height: 24px;
+      color: $headergraysmall;
+      cursor: pointer;
       z-index: 2;
-    }
-  }
-  &__map-details {
-    background-color: $beige;
-    padding: $padding-medium;
-    display: flex;
-    flex-direction: column;
-    gap: 16px;
-  }
-  &__map-details-name {
-    display: flex;
-    flex-direction: column;
-    gap: 4px;
-    p:first-of-type {
+      &--active {
+        padding: 5px 18px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: calc(100% / 3);
+        font-size: 14px;
         font-weight: 500;
         line-height: 24px;
+        z-index: 2;
+      }
     }
-    p:last-of-type {
-        font-weight: 400;
-        color: $gray;
+    &__map-details {
+      background-color: $beige;
+      padding: $padding-medium;
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+    &__map-details-name {
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+      p:first-of-type {
+          font-weight: 500;
+          line-height: 24px;
+      }
+      p:last-of-type {
+          font-weight: 400;
+          color: $gray;
+      }
+    }
+    &__map-details-button {
+      background-color: $white;
+      color: $blue;
+      display: flex;
+      justify-content: center;
+      padding-block: 12px;
+      font-weight: 700;
+      font-family: $font-family-secondary;
+      font-size: 14px;
+      line-height: 14px;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      border: 1px solid $white;
+      cursor: pointer;
+      transition: all 0.2s ease-in-out;
+      &:hover {
+          transition: all 0.2s ease-in-out;
+          color: $white;
+          background-color: $blue;
+          border: 1px solid $white;
+      }
     }
   }
-  &__map-details-button {
-    background-color: $white;
-    color: $blue;
-    display: flex;
-    justify-content: center;
-    padding-block: 12px;
-    font-weight: 700;
-    font-family: $font-family-secondary;
-    font-size: 14px;
-    line-height: 14px;
-    letter-spacing: 0.08em;
-    text-transform: uppercase;
-    border: 1px solid $white;
-    cursor: pointer;
-    transition: all 0.2s ease-in-out;
-    &:hover {
-        transition: all 0.2s ease-in-out;
-        color: $white;
-        background-color: $blue;
-        border: 1px solid $white;
+  @include respond-to("large") {
+    &__container {
+      padding: 90px 20px 128px 20px;
+    }
+    &__header {
+      max-width: 450px;
+      margin-block: 20px 108px;
+    }
+  }
+  @include respond-to("medium") {
+    &__container {
+      padding: 40px 20px;
+    }
+    &__header {
+      max-width: 100%;
+      margin-block: 20px 25px;
+      font-size: 24px;
+      line-height: 32px;
+    }
+    &__map {
+      flex-direction: column;
+      gap: 20px;
+    }
+    &__map-infos {
+      width: 100%;
+    }
+    &__map-content {
+      width: 100%;
+    }
+  }
+  @include respond-to("small") {
+    &__container {
+      padding: 40px 0px;
+    }
+    &__map-panel {
+      padding: 16px;
+      max-width: 100%;
+      left: 24px;
+    }
+    &__map-panel-icon {
+      display: none;
+    }
+    &__map-panel-switcher {
+      p {
+        display: none;
+      }
+    }
+    &__map-details-name {
+      display: none;
     }
   }
 }
