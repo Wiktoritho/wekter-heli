@@ -9,6 +9,7 @@ import AboutPage from "./views/About.vue";
 import BlogPage from "./views/Blog.vue";
 import OfertaPage from "./views/Oferta.vue";
 import KontaktPage from "./views/Kontakt.vue";
+import PolitykaPrywatnosci from "./views/polityka-prywatnosci.vue";
 
 const blogRoutes = {
   "trendsetter-transportu-lotniczego-air-taxi-podróżuj-szybko-i-wygodnie": () => import("./views/blogs/trendsetter-transportu-lotniczego-air-taxi-podróżuj-szybko-i-wygodnie.vue"),
@@ -26,6 +27,7 @@ export const router = createRouter({
     { path: "/o-nas", component: AboutPage },
     { path: "/blog", component: BlogPage },
     { path: "/kontakt", component: KontaktPage },
+    { path: "/polityka-prywatnosci", component: PolitykaPrywatnosci },
     {
       path: "/blog/:slug",
       component: blogRoutes["trendsetter-transportu-lotniczego-air-taxi-podróżuj-szybko-i-wygodnie"],

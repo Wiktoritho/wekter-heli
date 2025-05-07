@@ -335,10 +335,6 @@ export default {
         window.location.pathname.split("/").slice(1).length - 1
       ];
       const currentBlog = useStore().blogs.filter((blog) => blog.url === slug);
-      console.log(slug);
-      console.log(useStore().blogs);
-      
-      
       return currentBlog[0];
     },
     similarBlogs() {

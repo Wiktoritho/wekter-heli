@@ -1,0 +1,125 @@
+@use "variables" as *;
+.policy {
+  background-color: $white;
+  padding: 80px 195px 80px 100px;
+  display: flex;
+  gap: 100px;
+  font-family: $font-family-primary;
+  &__side {
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+    gap: 24px;
+    position: sticky;
+    height: 350px;
+    top: 150px;
+  }
+  &__side-bar {
+    width: 100%;
+    height: 2px;
+  }
+  &__side-header {
+    font-weight: 500;
+    text-align: center;
+    width: 100%;
+    font-size: 20px;
+    line-height: 28px;
+  }
+  &__side-list {
+    margin-left: 22px;
+    padding: 10px 12px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    color: $headergray;
+    line-height: 24px;
+    li {
+      transition: all 0.2s ease-in-out;
+      cursor: pointer;
+      &:hover {
+        color: $blue;
+      }
+    }
+  }
+  &__side-print {
+    display: flex;
+    border-top: 1px solid $grayborder;
+    justify-content: center;
+    p {
+      margin-top: 24px;
+      font-family: $font-family-secondary;
+      line-height: 20px;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      font-weight: 700;
+      color: $blue;
+      cursor: pointer;
+      position: relative;
+      &::after {
+        content: "";
+        display: block;
+        position: absolute;
+        width: 100%;
+        height: 2px;
+        background-color: $blue;
+        bottom: -8px;
+        left: 0;
+      }
+    }
+  }
+  &__main {
+    display: flex;
+    flex-direction: column;
+    gap: 64px;
+    width: 100%;
+  }
+  &__main-element {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+    h2 {
+      font-weight: 500;
+      font-size: 40px;
+      line-height: 120%;
+    }
+    p {
+      font-size: 18px;
+      line-height: 140%;
+      color: $footerborder;
+      b {
+        font-weight: 600;
+      }
+      a {
+        color: $blue;
+        cursor: pointer;
+        text-decoration: underline;
+      }
+    }
+    ul {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      padding-left: 30px;
+    }
+    li {
+      font-size: 18px;
+      line-height: 140%;
+      color: $footerborder;
+      position: relative;
+      span {
+        font-weight: 600;
+      }
+      &::before {
+        content: "";
+        left: -30px;
+        top: 5px;
+        position: absolute;
+        background-color: #3b5eab;
+        border-radius: 50%;
+        width: 16px;
+        height: 16px;
+        border: 4px solid $grayborder;
+      }
+    }
+  }
+}
