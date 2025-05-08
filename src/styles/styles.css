@@ -29,6 +29,11 @@ table, th, td {
   padding: 0;
 }
 
+sub {
+  font-size: x-large;
+  vertical-align: super;
+}
+
 /* Fix mobile Safari increase font-size on landscape mode */
 html {
   -moz-text-size-adjust: none;
@@ -138,7 +143,7 @@ strong {
     position: absolute;
     top: 0;
     left: 0;
-    z-index: 3;
+    z-index: 2000;
     width: 100%;
     background-color: transparent;
     color: #fff;
@@ -5689,129 +5694,290 @@ strong {
   }
 }
 
-.policy {
-  background-color: #fff;
-  padding: 80px 195px 80px 100px;
-  display: flex;
-  gap: 100px;
+@media screen and (max-width: 2600px) {
+  .policy {
+    background-color: #fff;
+    padding: 80px 195px 80px 100px;
+    display: flex;
+    gap: 100px;
+    font-family: "Outfit", sans-serif;
+  }
+  .policy__side {
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+    gap: 24px;
+    position: sticky;
+    height: 350px;
+    top: 150px;
+  }
+  .policy__side-bar {
+    width: 100%;
+    height: 2px;
+  }
+  .policy__side-header {
+    font-weight: 500;
+    text-align: center;
+    width: 100%;
+    font-size: 20px;
+    line-height: 28px;
+  }
+  .policy__side-list {
+    margin-left: 22px;
+    padding: 10px 12px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    color: #727272;
+    line-height: 24px;
+  }
+  .policy__side-list li {
+    transition: all 0.2s ease-in-out;
+    cursor: pointer;
+  }
+  .policy__side-list li:hover {
+    color: #3b5eab;
+  }
+  .policy__side-print {
+    display: flex;
+    border-top: 1px solid #dedede;
+    justify-content: center;
+  }
+  .policy__side-print p {
+    margin-top: 24px;
+    font-family: "Poppins", sans-serif;
+    line-height: 20px;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    font-weight: 700;
+    color: #3b5eab;
+    cursor: pointer;
+    position: relative;
+  }
+  .policy__side-print p::after {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background-color: #3b5eab;
+    bottom: -8px;
+    left: 0;
+  }
+  .policy__main {
+    display: flex;
+    flex-direction: column;
+    gap: 64px;
+    width: 100%;
+  }
+  .policy__main-element {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+  }
+  .policy__main-element h2 {
+    font-weight: 500;
+    font-size: 40px;
+    line-height: 120%;
+  }
+  .policy__main-element p {
+    font-size: 18px;
+    line-height: 140%;
+    color: #3a3a3a;
+  }
+  .policy__main-element p b {
+    font-weight: 600;
+  }
+  .policy__main-element p a {
+    color: #3b5eab;
+    cursor: pointer;
+    text-decoration: underline;
+  }
+  .policy__main-element ul {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    padding-left: 30px;
+  }
+  .policy__main-element li {
+    font-size: 18px;
+    line-height: 140%;
+    color: #3a3a3a;
+    position: relative;
+  }
+  .policy__main-element li span {
+    font-weight: 600;
+  }
+  .policy__main-element li::before {
+    content: "";
+    left: -30px;
+    top: 5px;
+    position: absolute;
+    background-color: #3b5eab;
+    border-radius: 50%;
+    width: 16px;
+    height: 16px;
+    border: 4px solid #dedede;
+  }
+}
+@media screen and (max-width: 1400px) {
+  .policy {
+    padding: 40px 80px 40px 40px;
+    gap: 40px;
+  }
+}
+@media screen and (max-width: 1120px) {
+  .policy__side {
+    display: none;
+  }
+  .policy__main-element h2 {
+    font-size: 28px;
+  }
+  .policy__main-element p, .policy__main-element li {
+    font-size: 14px;
+  }
+}
+
+.heliports {
   font-family: "Outfit", sans-serif;
-}
-.policy__side {
-  display: flex;
-  flex-direction: column;
-  width: 30%;
-  gap: 24px;
-  position: sticky;
-  height: 350px;
-  top: 150px;
-}
-.policy__side-bar {
-  width: 100%;
-  height: 2px;
-}
-.policy__side-header {
-  font-weight: 500;
-  text-align: center;
-  width: 100%;
-  font-size: 20px;
-  line-height: 28px;
-}
-.policy__side-list {
-  margin-left: 22px;
-  padding: 10px 12px;
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-  color: #727272;
-  line-height: 24px;
-}
-.policy__side-list li {
-  transition: all 0.2s ease-in-out;
-  cursor: pointer;
-}
-.policy__side-list li:hover {
-  color: #3b5eab;
-}
-.policy__side-print {
-  display: flex;
-  border-top: 1px solid #dedede;
-  justify-content: center;
-}
-.policy__side-print p {
-  margin-top: 24px;
-  font-family: "Poppins", sans-serif;
-  line-height: 20px;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  font-weight: 700;
-  color: #3b5eab;
-  cursor: pointer;
+  background-color: #fff;
+  padding-inline: 20px;
   position: relative;
+  padding-top: 470px;
 }
-.policy__side-print p::after {
-  content: "";
-  display: block;
+.heliports__info {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  padding-inline: 60px;
   position: absolute;
-  width: 100%;
-  height: 2px;
-  background-color: #3b5eab;
-  bottom: -8px;
-  left: 0;
+  top: -300px;
+  left: 20px;
+  color: #fff;
 }
-.policy__main {
-  display: flex;
-  flex-direction: column;
-  gap: 64px;
-  width: 100%;
-}
-.policy__main-element {
-  display: flex;
-  flex-direction: column;
-  gap: 32px;
-}
-.policy__main-element h2 {
-  font-weight: 500;
-  font-size: 40px;
-  line-height: 120%;
-}
-.policy__main-element p {
-  font-size: 18px;
-  line-height: 140%;
-  color: #3a3a3a;
-}
-.policy__main-element p b {
-  font-weight: 600;
-}
-.policy__main-element p a {
-  color: #3b5eab;
-  cursor: pointer;
-  text-decoration: underline;
-}
-.policy__main-element ul {
+.heliports__weather {
+  width: 32%;
+  border: 1px solid #727272;
+  padding: 16px;
   display: flex;
   flex-direction: column;
   gap: 16px;
-  padding-left: 30px;
+  backdrop-filter: blur(8px);
+  background-color: rgba(255, 255, 255, 0.1);
 }
-.policy__main-element li {
+.heliports__weather-main {
+  padding-block: 10px;
+  display: flex;
+  justify-content: space-between;
+}
+.heliports__weather-main div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 4px;
+}
+.heliports__weather-main div p {
+  font-weight: 500;
   font-size: 18px;
-  line-height: 140%;
-  color: #3a3a3a;
+  line-height: 18px;
+  letter-spacing: 0.04em;
+  display: flex;
+  gap: 8px;
+}
+.heliports__weather-main div p span {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 18px;
+  letter-spacing: 0.04em;
+  color: #727272;
+  display: flex;
+  gap: 5px;
+  align-items: center;
+  flex-direction: row;
+}
+.heliports__weather-temperature {
+  font-family: "DrukWide", sans-serif;
+  font-size: 40px;
+  line-height: 150%;
+  letter-spacing: 0.04em;
+}
+.heliports__weather-days {
+  padding-top: 8px;
+  border-top: 1px solid #3a3a3a;
+  display: flex;
+  justify-content: space-between;
+}
+.heliports__weather-days div {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  align-items: center;
+  justify-content: center;
+}
+.heliports__weather-days div img {
+  width: 24px;
+  height: 24px;
+}
+.heliports__weather-days div p {
+  font-size: 14px;
+  line-height: 18px;
+  letter-spacing: 0.04em;
+  color: #727272;
+}
+.heliports__weather-days div span {
+  font-family: "DrukWide", sans-serif;
+  font-size: 14px;
+  line-height: 150%;
+  letter-spacing: 0.04em;
+}
+.heliports__weather-days div span sub {
+  font-size: xx-small;
+  vertical-align: text-bottom;
+}
+.heliports__heliport {
+  padding: 48px 48px 88px;
   position: relative;
+  border: 1px solid #dedede;
+  width: 100%;
+  background-color: #fff;
 }
-.policy__main-element li span {
+.heliports__heliport-content {
+  width: 37%;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  color: #000;
+}
+.heliports__heliport-content h3 {
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 32px;
+}
+.heliports__heliport-content p {
+  font-size: 18px;
+  line-height: 28px;
+}
+.heliports__heliport-content p span {
   font-weight: 600;
+  color: #3b5eab;
 }
-.policy__main-element li::before {
-  content: "";
-  left: -30px;
-  top: 5px;
+.heliports__map {
   position: absolute;
-  background-color: #3b5eab;
-  border-radius: 50%;
-  width: 16px;
-  height: 16px;
-  border: 4px solid #dedede;
+  top: -80%;
+  right: -1px;
+  width: 60%;
+  height: 550px;
+}
+.heliports__icon {
+  position: absolute;
+  bottom: -1px;
+  right: -1px;
+  background-color: #AFBDDD;
+  width: 48px;
+  height: 48px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 /*# sourceMappingURL=styles.css.map */

@@ -1,6 +1,7 @@
 @use "variables" as *;
 .policy {
-  background-color: $white;
+ @include respond-to("desktop") {
+   background-color: $white;
   padding: 80px 195px 80px 100px;
   display: flex;
   gap: 100px;
@@ -122,4 +123,23 @@
       }
     }
   }
+ }
+ @include respond-to("large") {
+  padding: 40px 80px 40px 40px;
+  gap: 40px;
+ }
+ @include respond-to("medium") {
+  &__side {
+    display: none;
+  }
+  &__main-element {
+    h2 {
+      font-size: 28px;
+    }
+    p, li {
+      font-size: 14px;
+    }
+
+  }
+ }
 }

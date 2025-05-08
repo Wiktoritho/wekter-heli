@@ -19,6 +19,10 @@ const ofertaRoutes = {
   "air-taxi": () => import("./views/oferta/Oferta-Air-Taxi.vue"),
 };
 
+const heliportRoutes = {
+  sosnowka: () => import("./views/heliporty/Sosnowka.vue"),
+};
+
 export const router = createRouter({
   history: createWebHistory(),
   routes: [
@@ -35,6 +39,10 @@ export const router = createRouter({
     {
       path: "/oferta/:slug",
       component: ofertaRoutes["air-taxi"],
+    },
+    {
+      path: "/heliporty/:slug",
+      component: heliportRoutes["sosnowka"],
     },
   ],
 });
