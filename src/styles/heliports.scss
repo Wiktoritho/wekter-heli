@@ -4,7 +4,7 @@
   background-color: $white;
   padding-inline: 20px;
   position: relative;
-  padding-top: 470px;
+  padding-top: 500px;
   &__info {
     display: flex;
     flex-direction: column;
@@ -138,5 +138,134 @@
     display: flex;
     justify-content: center;
     align-items: center;
+  }
+  &__container {
+    max-width: 65%;
+    margin-inline: auto;
+    margin-block: 0px 160px;
+  }
+  &__tiles {
+    display: flex;
+    gap: 48px;
+    margin-block: 80px;
+  }
+  &__column-border {
+    width: 5px;
+    background-color: $grayborder;
+  }
+  &__column {
+    display: flex;
+    flex-direction: column;
+    gap: 80px;
+    width: 100%;
+    img {
+      max-height: 315px;
+      width: 100%;
+      object-fit: cover;
+    }
+  }
+  &__column-block {
+    &--left {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      align-items: flex-end;
+      height: 315px;
+      justify-content: center;
+      ul {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+      }
+      li {
+        display: flex;
+        align-items: center;
+        gap: 16px;
+        font-size: 18px;
+        color: $footerborder;
+        justify-content: flex-end;
+        position: relative;
+        img {
+          width: unset;
+        }
+        &:not(:last-of-type):after {
+          position: absolute;
+          content: "";
+          display: block;
+          background-color: $blue;
+          width: 2px;
+          height: 34px;
+          top: 14px;
+          right: 3px;
+        }
+      }
+    }
+    &--right {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      align-items: flex-start;
+      height: 315px;
+      justify-content: center;
+      ul {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+      }
+      li {
+        display: flex;
+        align-items: center;
+        flex-direction: row-reverse;
+        gap: 16px;
+        font-size: 18px;
+        color: $footerborder;
+        justify-content: flex-end;
+        position: relative;
+        img {
+          width: unset;
+        }
+        &:not(:last-of-type):after {
+          position: absolute;
+          content: "";
+          display: block;
+          background-color: $blue;
+          width: 2px;
+          height: 34px;
+          top: 14px;
+          left: 3px;
+        }
+      }
+    }
+  }
+  &__column-time {
+    display: flex;
+    gap: 9px;
+    align-items: center;
+    font-family: $font-family-header;
+    font-size: 24px;
+    line-height: 32px;
+    color: $blue;
+    text-transform: uppercase;
+    img {
+      width: unset;
+    }
+  }
+  &__column-header {
+    &--left {
+      font-weight: 500;
+      font-size: 24px;
+      line-height: 32px;
+      max-width: 310px;
+      text-align: right;
+      margin-bottom: 12px;
+    }
+    &--right {
+      font-weight: 500;
+      font-size: 24px;
+      line-height: 32px;
+      max-width: 310px;
+      text-align: left;
+      margin-bottom: 12px;
+    }
   }
 }

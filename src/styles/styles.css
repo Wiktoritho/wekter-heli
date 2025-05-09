@@ -5843,7 +5843,7 @@ strong {
   background-color: #fff;
   padding-inline: 20px;
   position: relative;
-  padding-top: 470px;
+  padding-top: 500px;
 }
 .heliports__info {
   display: flex;
@@ -5978,6 +5978,131 @@ strong {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+.heliports__container {
+  max-width: 65%;
+  margin-inline: auto;
+  margin-block: 0px 160px;
+}
+.heliports__tiles {
+  display: flex;
+  gap: 48px;
+  margin-block: 80px;
+}
+.heliports__column-border {
+  width: 5px;
+  background-color: #dedede;
+}
+.heliports__column {
+  display: flex;
+  flex-direction: column;
+  gap: 80px;
+  width: 100%;
+}
+.heliports__column img {
+  max-height: 315px;
+  width: 100%;
+  object-fit: cover;
+}
+.heliports__column-block--left {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  align-items: flex-end;
+  height: 315px;
+  justify-content: center;
+}
+.heliports__column-block--left ul {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.heliports__column-block--left li {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  font-size: 18px;
+  color: #3a3a3a;
+  justify-content: flex-end;
+  position: relative;
+}
+.heliports__column-block--left li img {
+  width: unset;
+}
+.heliports__column-block--left li:not(:last-of-type):after {
+  position: absolute;
+  content: "";
+  display: block;
+  background-color: #3b5eab;
+  width: 2px;
+  height: 34px;
+  top: 14px;
+  right: 3px;
+}
+.heliports__column-block--right {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  align-items: flex-start;
+  height: 315px;
+  justify-content: center;
+}
+.heliports__column-block--right ul {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.heliports__column-block--right li {
+  display: flex;
+  align-items: center;
+  flex-direction: row-reverse;
+  gap: 16px;
+  font-size: 18px;
+  color: #3a3a3a;
+  justify-content: flex-end;
+  position: relative;
+}
+.heliports__column-block--right li img {
+  width: unset;
+}
+.heliports__column-block--right li:not(:last-of-type):after {
+  position: absolute;
+  content: "";
+  display: block;
+  background-color: #3b5eab;
+  width: 2px;
+  height: 34px;
+  top: 14px;
+  left: 3px;
+}
+.heliports__column-time {
+  display: flex;
+  gap: 9px;
+  align-items: center;
+  font-family: "DrukWide", sans-serif;
+  font-size: 24px;
+  line-height: 32px;
+  color: #3b5eab;
+  text-transform: uppercase;
+}
+.heliports__column-time img {
+  width: unset;
+}
+.heliports__column-header--left {
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 32px;
+  max-width: 310px;
+  text-align: right;
+  margin-bottom: 12px;
+}
+.heliports__column-header--right {
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 32px;
+  max-width: 310px;
+  text-align: left;
+  margin-bottom: 12px;
 }
 
 /*# sourceMappingURL=styles.css.map */

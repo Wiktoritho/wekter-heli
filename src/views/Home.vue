@@ -27,7 +27,7 @@
   </section>
   <Offers></Offers>
   <Fleet></Fleet>
-  <Prices></Prices>
+  <Prices :showLocalizations="true" :showAnimation="true"></Prices>
   <Footer></Footer>
 </template>
 

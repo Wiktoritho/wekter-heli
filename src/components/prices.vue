@@ -1,5 +1,5 @@
 <template>
-  <section class="prices section--animated" ref="sectionAnimated">
+  <section class="prices" :class="{'section--animated' : showAnimation}" ref="sectionAnimated">
     <h4 class="headers headers--small headers--gray">Ceny voucherów</h4>
     <h2 class="headers headers--big headers--margin-small">Cennik lotów w formule Flight Sharing</h2>
     <div class="prices__buttons">
@@ -88,7 +88,7 @@
       </div>
     </div>
   </section>
-  <section class="prices section--animated" ref="sectionAnimated">
+  <section v-if="showLocalizations" class="prices section--animated" ref="sectionAnimated">
     <div class="prices__border"></div>
     <h4 class="headers headers--small headers--gray">{{ switchValue === "Loty widokowe" ? "Lokalizacje heliportów" : "Oferta dla firm" }}</h4>
     <h2 class="headers headers--big headers--margin-semi-medium">
@@ -168,6 +168,10 @@ export default {
     Carousel,
     Slide,
     Pagination,
+  },
+  props: {
+    showLocalizations: Boolean,
+    showAnimation: Boolean,
   },
   computed: {
     switchValue() {

@@ -75,13 +75,13 @@
                 </div>
                 <ul class="header__offer-list">
                   <li>
-                    Sosnówka <span><img src="/icons/arrow-side-header.svg" alt="Arrow Icon" /></span>
+                    <a href="/heliporty/sosnowka">Sosnówka <span><img src="/icons/arrow-side-header.svg" alt="Arrow Icon" /></span></a>
                   </li>
                   <li>
-                    Polkowice <span><img src="/icons/arrow-side-header.svg" alt="Arrow Icon" /></span>
+                    <a href="/heliporty/polkowice">Polkowice <span><img src="/icons/arrow-side-header.svg" alt="Arrow Icon" /></span></a>
                   </li>
                   <li>
-                    Wrocław <span><img src="/icons/arrow-side-header.svg" alt="Arrow Icon" /></span>
+                    <a href="/heliporty/wroclaw">Wrocław <span><img src="/icons/arrow-side-header.svg" alt="Arrow Icon" /></span></a>
                   </li>
                 </ul>
               </div>
@@ -169,9 +169,15 @@
                     <span><img src="/icons/arrow-mobile.svg" alt="Arrow Icon" /></span>Heliporty
                   </p>
                   <ul>
-                    <li>Sosnówka</li>
-                    <li>Polkowice</li>
-                    <li>Wrocław</li>
+                    <li>
+                      <a href="/heliporty/sosnowka">Sosnówka</a>
+                    </li>
+                    <li>
+                      <a href="/heliporty/polkowice">Polkowice</a>
+                    </li>
+                    <li>
+                      <a href="/heliporty/wroclaw">Wrocław</a>
+                    </li>
                   </ul>
                 </div>
               </li>
