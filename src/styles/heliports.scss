@@ -1,271 +1,387 @@
 @use "variables" as *;
 .heliports {
-  font-family: $font-family-primary;
-  background-color: $white;
-  padding-inline: 20px;
-  position: relative;
-  padding-top: 500px;
-  &__info {
-    display: flex;
-    flex-direction: column;
-    gap: 24px;
-    padding-inline: 60px;
-    position: absolute;
-    top: -300px;
-    left: 20px;
-    color: $white;
-  }
-  &__weather {
-    width: 32%;
-    border: 1px solid $headergray;
-    padding: 16px;
-    display: flex;
-    flex-direction: column;
-    gap: 16px;
-    backdrop-filter: blur(8px);
-    background-color: rgba($white, 0.1);
-  }
-  &__weather-main {
-    padding-block: 10px;
-    display: flex;
-    justify-content: space-between;
-    div {
+  @include respond-to("desktop") {
+    font-family: $font-family-primary;
+    background-color: $white;
+    padding-inline: 20px;
+    position: relative;
+    padding-top: 500px;
+    &__info {
       display: flex;
       flex-direction: column;
-      justify-content: center;
-      gap: 4px;
-      p {
-        font-weight: 500;
-        font-size: 18px;
-        line-height: 18px;
-        letter-spacing: 0.04em;
+      gap: 24px;
+      padding-inline: 60px;
+      position: absolute;
+      top: -300px;
+      left: 20px;
+      color: $white;
+    }
+    &__weather {
+      width: 32%;
+      border: 1px solid $headergray;
+      padding: 16px;
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      backdrop-filter: blur(8px);
+      background-color: rgba($white, 0.1);
+    }
+    &__weather-main {
+      padding-block: 10px;
+      display: flex;
+      justify-content: space-between;
+      div {
         display: flex;
-        gap: 8px;
-        span {
-          font-weight: 400;
+        flex-direction: column;
+        justify-content: center;
+        gap: 4px;
+        p {
+          font-weight: 500;
           font-size: 18px;
           line-height: 18px;
           letter-spacing: 0.04em;
-          color: $headergray;
           display: flex;
-          gap: 5px;
-          align-items: center;
-          flex-direction: row;
+          gap: 8px;
+          span {
+            font-weight: 400;
+            font-size: 18px;
+            line-height: 18px;
+            letter-spacing: 0.04em;
+            color: $headergray;
+            display: flex;
+            gap: 5px;
+            align-items: center;
+            flex-direction: row;
+          }
         }
       }
     }
-  }
-  &__weather-temperature {
-    font-family: $font-family-header;
-    font-size: 40px;
-    line-height: 150%;
-    letter-spacing: 0.04em;
-  }
-  &__weather-days {
-    padding-top: 8px;
-    border-top: 1px solid $footerborder;
-    display: flex;
-    justify-content: space-between;
-    div {
+    &__weather-temperature {
+      font-family: $font-family-header;
+      font-size: 40px;
+      line-height: 150%;
+      letter-spacing: 0.04em;
+    }
+    &__weather-days {
+      padding-top: 8px;
+      border-top: 1px solid $footerborder;
+      display: flex;
+      justify-content: space-between;
+      div {
+        display: flex;
+        flex-direction: column;
+        gap: 4px;
+        align-items: center;
+        justify-content: center;
+        img {
+          width: 24px;
+          height: 24px;
+        }
+        p {
+          font-size: 14px;
+          line-height: 18px;
+          letter-spacing: 0.04em;
+          color: $headergray;
+        }
+        span {
+          font-family: $font-family-header;
+          font-size: 14px;
+          line-height: 150%;
+          letter-spacing: 0.04em;
+          sub {
+            font-size: xx-small;
+            vertical-align: text-bottom;
+          }
+        }
+      }
+    }
+    &__heliport {
+      padding: 48px 48px 88px;
+      position: relative;
+      border: 1px solid $grayborder;
+      width: 100%;
+      background-color: $white;
+    }
+    &__heliport-content {
+      width: 37%;
       display: flex;
       flex-direction: column;
-      gap: 4px;
-      align-items: center;
-      justify-content: center;
-      img {
-        width: 24px;
-        height: 24px;
+      gap: 16px;
+      color: $black;
+      h3 {
+        font-weight: 500;
+        font-size: 24px;
+        line-height: 32px;
       }
       p {
-        font-size: 14px;
-        line-height: 18px;
-        letter-spacing: 0.04em;
-        color: $headergray;
-      }
-      span {
-        font-family: $font-family-header;
-        font-size: 14px;
-        line-height: 150%;
-        letter-spacing: 0.04em;
-        sub {
-          font-size: xx-small;
-          vertical-align: text-bottom;
+        font-size: 18px;
+        line-height: 28px;
+        span {
+          font-weight: 600;
+          color: $blue;
         }
       }
     }
-  }
-  &__heliport {
-    padding: 48px 48px 88px;
-    position: relative;
-    border: 1px solid $grayborder;
-    width: 100%;
-    background-color: $white;
-  }
-  &__heliport-content {
-    width: 37%;
-    display: flex;
-    flex-direction: column;
-    gap: 16px;
-    color: $black;
-    h3 {
-      font-weight: 500;
-      font-size: 24px;
-      line-height: 32px;
+    &__map {
+      position: absolute;
+      top: -80%;
+      right: -1px;
+      width: 50%;
+      height: 550px;
     }
-    p {
-      font-size: 18px;
-      line-height: 28px;
-      span {
-        font-weight: 600;
-        color: $blue;
-      }
+    &__icon {
+      position: absolute;
+      bottom: -1px;
+      right: -1px;
+      background-color: $lightblue;
+      width: 48px;
+      height: 48px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
     }
-  }
-  &__map {
-    position: absolute;
-    top: -80%;
-    right: -1px;
-    width: 60%;
-    height: 550px;
-  }
-  &__icon {
-    position: absolute;
-    bottom: -1px;
-    right: -1px;
-    background-color: $lightblue;
-    width: 48px;
-    height: 48px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  &__container {
-    max-width: 65%;
-    margin-inline: auto;
-    margin-block: 0px 160px;
-  }
-  &__tiles {
-    display: flex;
-    gap: 48px;
-    margin-block: 80px;
-  }
-  &__column-border {
-    width: 5px;
-    background-color: $grayborder;
-  }
-  &__column {
-    display: flex;
-    flex-direction: column;
-    gap: 80px;
-    width: 100%;
-    img {
-      max-height: 315px;
+    &__container {
+      max-width: 65%;
+      margin-inline: auto;
+      margin-block: 0px 160px;
+    }
+    &__tiles {
+      display: flex;
+      gap: 48px;
+      margin-block: 80px;
+    }
+    &__column-border {
+      width: 5px;
+      background-color: $grayborder;
+    }
+    &__column {
+      display: flex;
+      flex-direction: column;
+      gap: 80px;
       width: 100%;
-      object-fit: cover;
+      img {
+        max-height: 315px;
+        width: 100%;
+        object-fit: cover;
+      }
     }
-  }
-  &__column-block {
-    &--left {
-      display: flex;
-      flex-direction: column;
-      gap: 12px;
-      align-items: flex-end;
-      height: 315px;
-      justify-content: center;
-      ul {
+    &__column-block {
+      &--left {
         display: flex;
         flex-direction: column;
-        gap: 16px;
-      }
-      li {
-        display: flex;
-        align-items: center;
-        gap: 16px;
-        font-size: 18px;
-        color: $footerborder;
-        justify-content: flex-end;
-        position: relative;
-        img {
-          width: unset;
+        gap: 12px;
+        align-items: flex-end;
+        height: 315px;
+        justify-content: center;
+        ul {
+          display: flex;
+          flex-direction: column;
+          gap: 16px;
         }
-        &:not(:last-of-type):after {
-          position: absolute;
-          content: "";
-          display: block;
-          background-color: $blue;
-          width: 2px;
-          height: 34px;
-          top: 14px;
-          right: 3px;
+        li {
+          display: flex;
+          align-items: center;
+          gap: 16px;
+          font-size: 18px;
+          color: $footerborder;
+          justify-content: flex-end;
+          position: relative;
+          img {
+            width: unset;
+          }
+          &:not(:last-of-type):after {
+            position: absolute;
+            content: "";
+            display: block;
+            background-color: $blue;
+            width: 2px;
+            height: 34px;
+            top: 14px;
+            right: 3px;
+          }
         }
       }
-    }
-    &--right {
-      display: flex;
-      flex-direction: column;
-      gap: 12px;
-      align-items: flex-start;
-      height: 315px;
-      justify-content: center;
-      ul {
+      &--right {
         display: flex;
         flex-direction: column;
-        gap: 16px;
+        gap: 12px;
+        align-items: flex-start;
+        height: 315px;
+        justify-content: center;
+        ul {
+          display: flex;
+          flex-direction: column;
+          gap: 16px;
+        }
+        li {
+          display: flex;
+          align-items: center;
+          flex-direction: row-reverse;
+          gap: 16px;
+          font-size: 18px;
+          color: $footerborder;
+          justify-content: flex-end;
+          position: relative;
+          img {
+            width: unset;
+          }
+          &:not(:last-of-type):after {
+            position: absolute;
+            content: "";
+            display: block;
+            background-color: $blue;
+            width: 2px;
+            height: 34px;
+            top: 14px;
+            left: 3px;
+          }
+        }
       }
-      li {
-        display: flex;
-        align-items: center;
-        flex-direction: row-reverse;
-        gap: 16px;
-        font-size: 18px;
-        color: $footerborder;
-        justify-content: flex-end;
-        position: relative;
-        img {
-          width: unset;
-        }
-        &:not(:last-of-type):after {
-          position: absolute;
-          content: "";
-          display: block;
-          background-color: $blue;
-          width: 2px;
-          height: 34px;
-          top: 14px;
-          left: 3px;
-        }
+    }
+    &__column-time {
+      display: flex;
+      gap: 9px;
+      align-items: center;
+      font-family: $font-family-header;
+      font-size: 24px;
+      line-height: 32px;
+      color: $blue;
+      text-transform: uppercase;
+      img {
+        width: unset;
+      }
+    }
+    &__column-header {
+      &--left {
+        font-weight: 500;
+        font-size: 24px;
+        line-height: 32px;
+        max-width: 310px;
+        text-align: right;
+        margin-bottom: 12px;
+      }
+      &--right {
+        font-weight: 500;
+        font-size: 24px;
+        line-height: 32px;
+        max-width: 310px;
+        text-align: left;
+        margin-bottom: 12px;
       }
     }
   }
-  &__column-time {
-    display: flex;
-    gap: 9px;
-    align-items: center;
-    font-family: $font-family-header;
-    font-size: 24px;
-    line-height: 32px;
-    color: $blue;
-    text-transform: uppercase;
-    img {
-      width: unset;
+  @include respond-to("large") {
+    &__info {
+      top: -170px;
+    }
+    &__weather {
+      padding: 8px;
+      gap: 8px;
+    }
+    &__weather-main {
+      padding-block: 4px;
+      div {
+        p {
+          font-size: 14px;
+          span {
+            font-size: 14px;
+          }
+        }
+      }
+    }
+    &__weather-days {
+      padding-block: 4px;
+    }
+    &__weather-temperature {
+      font-size: 24px;
+      sub {
+        font-size: small;
+      }
+    }
+    &__map {
+      top: -20%;
+      height: 450px;
     }
   }
-  &__column-header {
-    &--left {
-      font-weight: 500;
-      font-size: 24px;
-      line-height: 32px;
-      max-width: 310px;
-      text-align: right;
-      margin-bottom: 12px;
+  @include respond-to("medium") {
+    &__info {
+      padding-inline: 20px;
+      top: -120px;
     }
-    &--right {
-      font-weight: 500;
-      font-size: 24px;
-      line-height: 32px;
-      max-width: 310px;
-      text-align: left;
-      margin-bottom: 12px;
+    &__weather {
+      width: 40%;
+    }
+    &__weather-days {
+      display: none;
+    }
+    &__heliport {
+      padding: 24px 24px 60px;
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+    &__heliport-content {
+      width: 100%;
+    }
+    &__map {
+      position: relative;
+      top: 0;
+      right: 0;
+      width: 100%;
+    }
+    &__container {
+      margin-inline: 20px;
+      max-width: 100%;
+    }
+  }
+  @include respond-to("small"){
+    padding-top: 850px;
+    &__info {
+      right: 20px;
+    }
+    &__weather {
+      width: 100%;
+    }
+    &__heliport-content {
+      p {
+        font-size: 16px;
+      }
+    }
+    &__map {
+      height: 280px;
+    }
+    &__container {
+      margin-inline: 0;
+    }
+    &__tiles {
+      gap: 8px;
+    }
+    &__column-time {
+      font-size: 12px;
+      line-height: 16px;
+    }
+    &__column-header {
+      &--left, &--right {
+        font-size: 16px;
+        line-height: 18px;
+      }
+    }
+    &__column-block {
+      &--left, &--right {
+        height: 130px;
+        ul {
+          gap: 8px;
+        }
+        li {
+          font-size: 10px;
+          line-height: 14px;
+          text-wrap: nowrap;
+        }
+        li:not(:last-of-type):after {
+          top: 11px;
+          height: 15px;
+        }
+      }
     }
   }
 }

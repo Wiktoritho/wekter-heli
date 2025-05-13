@@ -5838,271 +5838,381 @@ strong {
   }
 }
 
-.heliports {
-  font-family: "Outfit", sans-serif;
-  background-color: #fff;
-  padding-inline: 20px;
-  position: relative;
-  padding-top: 500px;
+@media screen and (max-width: 2600px) {
+  .heliports {
+    font-family: "Outfit", sans-serif;
+    background-color: #fff;
+    padding-inline: 20px;
+    position: relative;
+    padding-top: 500px;
+  }
+  .heliports__info {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    padding-inline: 60px;
+    position: absolute;
+    top: -300px;
+    left: 20px;
+    color: #fff;
+  }
+  .heliports__weather {
+    width: 32%;
+    border: 1px solid #727272;
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    backdrop-filter: blur(8px);
+    background-color: rgba(255, 255, 255, 0.1);
+  }
+  .heliports__weather-main {
+    padding-block: 10px;
+    display: flex;
+    justify-content: space-between;
+  }
+  .heliports__weather-main div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 4px;
+  }
+  .heliports__weather-main div p {
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 18px;
+    letter-spacing: 0.04em;
+    display: flex;
+    gap: 8px;
+  }
+  .heliports__weather-main div p span {
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 18px;
+    letter-spacing: 0.04em;
+    color: #727272;
+    display: flex;
+    gap: 5px;
+    align-items: center;
+    flex-direction: row;
+  }
+  .heliports__weather-temperature {
+    font-family: "DrukWide", sans-serif;
+    font-size: 40px;
+    line-height: 150%;
+    letter-spacing: 0.04em;
+  }
+  .heliports__weather-days {
+    padding-top: 8px;
+    border-top: 1px solid #3a3a3a;
+    display: flex;
+    justify-content: space-between;
+  }
+  .heliports__weather-days div {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    align-items: center;
+    justify-content: center;
+  }
+  .heliports__weather-days div img {
+    width: 24px;
+    height: 24px;
+  }
+  .heliports__weather-days div p {
+    font-size: 14px;
+    line-height: 18px;
+    letter-spacing: 0.04em;
+    color: #727272;
+  }
+  .heliports__weather-days div span {
+    font-family: "DrukWide", sans-serif;
+    font-size: 14px;
+    line-height: 150%;
+    letter-spacing: 0.04em;
+  }
+  .heliports__weather-days div span sub {
+    font-size: xx-small;
+    vertical-align: text-bottom;
+  }
+  .heliports__heliport {
+    padding: 48px 48px 88px;
+    position: relative;
+    border: 1px solid #dedede;
+    width: 100%;
+    background-color: #fff;
+  }
+  .heliports__heliport-content {
+    width: 37%;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    color: #000;
+  }
+  .heliports__heliport-content h3 {
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 32px;
+  }
+  .heliports__heliport-content p {
+    font-size: 18px;
+    line-height: 28px;
+  }
+  .heliports__heliport-content p span {
+    font-weight: 600;
+    color: #3b5eab;
+  }
+  .heliports__map {
+    position: absolute;
+    top: -80%;
+    right: -1px;
+    width: 50%;
+    height: 550px;
+  }
+  .heliports__icon {
+    position: absolute;
+    bottom: -1px;
+    right: -1px;
+    background-color: #AFBDDD;
+    width: 48px;
+    height: 48px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .heliports__container {
+    max-width: 65%;
+    margin-inline: auto;
+    margin-block: 0px 160px;
+  }
+  .heliports__tiles {
+    display: flex;
+    gap: 48px;
+    margin-block: 80px;
+  }
+  .heliports__column-border {
+    width: 5px;
+    background-color: #dedede;
+  }
+  .heliports__column {
+    display: flex;
+    flex-direction: column;
+    gap: 80px;
+    width: 100%;
+  }
+  .heliports__column img {
+    max-height: 315px;
+    width: 100%;
+    object-fit: cover;
+  }
+  .heliports__column-block--left {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    align-items: flex-end;
+    height: 315px;
+    justify-content: center;
+  }
+  .heliports__column-block--left ul {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+  .heliports__column-block--left li {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    font-size: 18px;
+    color: #3a3a3a;
+    justify-content: flex-end;
+    position: relative;
+  }
+  .heliports__column-block--left li img {
+    width: unset;
+  }
+  .heliports__column-block--left li:not(:last-of-type):after {
+    position: absolute;
+    content: "";
+    display: block;
+    background-color: #3b5eab;
+    width: 2px;
+    height: 34px;
+    top: 14px;
+    right: 3px;
+  }
+  .heliports__column-block--right {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    align-items: flex-start;
+    height: 315px;
+    justify-content: center;
+  }
+  .heliports__column-block--right ul {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+  .heliports__column-block--right li {
+    display: flex;
+    align-items: center;
+    flex-direction: row-reverse;
+    gap: 16px;
+    font-size: 18px;
+    color: #3a3a3a;
+    justify-content: flex-end;
+    position: relative;
+  }
+  .heliports__column-block--right li img {
+    width: unset;
+  }
+  .heliports__column-block--right li:not(:last-of-type):after {
+    position: absolute;
+    content: "";
+    display: block;
+    background-color: #3b5eab;
+    width: 2px;
+    height: 34px;
+    top: 14px;
+    left: 3px;
+  }
+  .heliports__column-time {
+    display: flex;
+    gap: 9px;
+    align-items: center;
+    font-family: "DrukWide", sans-serif;
+    font-size: 24px;
+    line-height: 32px;
+    color: #3b5eab;
+    text-transform: uppercase;
+  }
+  .heliports__column-time img {
+    width: unset;
+  }
+  .heliports__column-header--left {
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 32px;
+    max-width: 310px;
+    text-align: right;
+    margin-bottom: 12px;
+  }
+  .heliports__column-header--right {
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 32px;
+    max-width: 310px;
+    text-align: left;
+    margin-bottom: 12px;
+  }
 }
-.heliports__info {
-  display: flex;
-  flex-direction: column;
-  gap: 24px;
-  padding-inline: 60px;
-  position: absolute;
-  top: -300px;
-  left: 20px;
-  color: #fff;
+@media screen and (max-width: 1400px) {
+  .heliports__info {
+    top: -170px;
+  }
+  .heliports__weather {
+    padding: 8px;
+    gap: 8px;
+  }
+  .heliports__weather-main {
+    padding-block: 4px;
+  }
+  .heliports__weather-main div p {
+    font-size: 14px;
+  }
+  .heliports__weather-main div p span {
+    font-size: 14px;
+  }
+  .heliports__weather-days {
+    padding-block: 4px;
+  }
+  .heliports__weather-temperature {
+    font-size: 24px;
+  }
+  .heliports__weather-temperature sub {
+    font-size: small;
+  }
+  .heliports__map {
+    top: -20%;
+    height: 450px;
+  }
 }
-.heliports__weather {
-  width: 32%;
-  border: 1px solid #727272;
-  padding: 16px;
-  display: flex;
-  flex-direction: column;
-  gap: 16px;
-  backdrop-filter: blur(8px);
-  background-color: rgba(255, 255, 255, 0.1);
+@media screen and (max-width: 1120px) {
+  .heliports__info {
+    padding-inline: 20px;
+    top: -120px;
+  }
+  .heliports__weather {
+    width: 40%;
+  }
+  .heliports__weather-days {
+    display: none;
+  }
+  .heliports__heliport {
+    padding: 24px 24px 60px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+  .heliports__heliport-content {
+    width: 100%;
+  }
+  .heliports__map {
+    position: relative;
+    top: 0;
+    right: 0;
+    width: 100%;
+  }
+  .heliports__container {
+    margin-inline: 20px;
+    max-width: 100%;
+  }
 }
-.heliports__weather-main {
-  padding-block: 10px;
-  display: flex;
-  justify-content: space-between;
-}
-.heliports__weather-main div {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  gap: 4px;
-}
-.heliports__weather-main div p {
-  font-weight: 500;
-  font-size: 18px;
-  line-height: 18px;
-  letter-spacing: 0.04em;
-  display: flex;
-  gap: 8px;
-}
-.heliports__weather-main div p span {
-  font-weight: 400;
-  font-size: 18px;
-  line-height: 18px;
-  letter-spacing: 0.04em;
-  color: #727272;
-  display: flex;
-  gap: 5px;
-  align-items: center;
-  flex-direction: row;
-}
-.heliports__weather-temperature {
-  font-family: "DrukWide", sans-serif;
-  font-size: 40px;
-  line-height: 150%;
-  letter-spacing: 0.04em;
-}
-.heliports__weather-days {
-  padding-top: 8px;
-  border-top: 1px solid #3a3a3a;
-  display: flex;
-  justify-content: space-between;
-}
-.heliports__weather-days div {
-  display: flex;
-  flex-direction: column;
-  gap: 4px;
-  align-items: center;
-  justify-content: center;
-}
-.heliports__weather-days div img {
-  width: 24px;
-  height: 24px;
-}
-.heliports__weather-days div p {
-  font-size: 14px;
-  line-height: 18px;
-  letter-spacing: 0.04em;
-  color: #727272;
-}
-.heliports__weather-days div span {
-  font-family: "DrukWide", sans-serif;
-  font-size: 14px;
-  line-height: 150%;
-  letter-spacing: 0.04em;
-}
-.heliports__weather-days div span sub {
-  font-size: xx-small;
-  vertical-align: text-bottom;
-}
-.heliports__heliport {
-  padding: 48px 48px 88px;
-  position: relative;
-  border: 1px solid #dedede;
-  width: 100%;
-  background-color: #fff;
-}
-.heliports__heliport-content {
-  width: 37%;
-  display: flex;
-  flex-direction: column;
-  gap: 16px;
-  color: #000;
-}
-.heliports__heliport-content h3 {
-  font-weight: 500;
-  font-size: 24px;
-  line-height: 32px;
-}
-.heliports__heliport-content p {
-  font-size: 18px;
-  line-height: 28px;
-}
-.heliports__heliport-content p span {
-  font-weight: 600;
-  color: #3b5eab;
-}
-.heliports__map {
-  position: absolute;
-  top: -80%;
-  right: -1px;
-  width: 60%;
-  height: 550px;
-}
-.heliports__icon {
-  position: absolute;
-  bottom: -1px;
-  right: -1px;
-  background-color: #AFBDDD;
-  width: 48px;
-  height: 48px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.heliports__container {
-  max-width: 65%;
-  margin-inline: auto;
-  margin-block: 0px 160px;
-}
-.heliports__tiles {
-  display: flex;
-  gap: 48px;
-  margin-block: 80px;
-}
-.heliports__column-border {
-  width: 5px;
-  background-color: #dedede;
-}
-.heliports__column {
-  display: flex;
-  flex-direction: column;
-  gap: 80px;
-  width: 100%;
-}
-.heliports__column img {
-  max-height: 315px;
-  width: 100%;
-  object-fit: cover;
-}
-.heliports__column-block--left {
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
-  align-items: flex-end;
-  height: 315px;
-  justify-content: center;
-}
-.heliports__column-block--left ul {
-  display: flex;
-  flex-direction: column;
-  gap: 16px;
-}
-.heliports__column-block--left li {
-  display: flex;
-  align-items: center;
-  gap: 16px;
-  font-size: 18px;
-  color: #3a3a3a;
-  justify-content: flex-end;
-  position: relative;
-}
-.heliports__column-block--left li img {
-  width: unset;
-}
-.heliports__column-block--left li:not(:last-of-type):after {
-  position: absolute;
-  content: "";
-  display: block;
-  background-color: #3b5eab;
-  width: 2px;
-  height: 34px;
-  top: 14px;
-  right: 3px;
-}
-.heliports__column-block--right {
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
-  align-items: flex-start;
-  height: 315px;
-  justify-content: center;
-}
-.heliports__column-block--right ul {
-  display: flex;
-  flex-direction: column;
-  gap: 16px;
-}
-.heliports__column-block--right li {
-  display: flex;
-  align-items: center;
-  flex-direction: row-reverse;
-  gap: 16px;
-  font-size: 18px;
-  color: #3a3a3a;
-  justify-content: flex-end;
-  position: relative;
-}
-.heliports__column-block--right li img {
-  width: unset;
-}
-.heliports__column-block--right li:not(:last-of-type):after {
-  position: absolute;
-  content: "";
-  display: block;
-  background-color: #3b5eab;
-  width: 2px;
-  height: 34px;
-  top: 14px;
-  left: 3px;
-}
-.heliports__column-time {
-  display: flex;
-  gap: 9px;
-  align-items: center;
-  font-family: "DrukWide", sans-serif;
-  font-size: 24px;
-  line-height: 32px;
-  color: #3b5eab;
-  text-transform: uppercase;
-}
-.heliports__column-time img {
-  width: unset;
-}
-.heliports__column-header--left {
-  font-weight: 500;
-  font-size: 24px;
-  line-height: 32px;
-  max-width: 310px;
-  text-align: right;
-  margin-bottom: 12px;
-}
-.heliports__column-header--right {
-  font-weight: 500;
-  font-size: 24px;
-  line-height: 32px;
-  max-width: 310px;
-  text-align: left;
-  margin-bottom: 12px;
+@media screen and (max-width: 900px) {
+  .heliports {
+    padding-top: 850px;
+  }
+  .heliports__info {
+    right: 20px;
+  }
+  .heliports__weather {
+    width: 100%;
+  }
+  .heliports__heliport-content p {
+    font-size: 16px;
+  }
+  .heliports__map {
+    height: 280px;
+  }
+  .heliports__container {
+    margin-inline: 0;
+  }
+  .heliports__tiles {
+    gap: 8px;
+  }
+  .heliports__column-time {
+    font-size: 12px;
+    line-height: 16px;
+  }
+  .heliports__column-header--left, .heliports__column-header--right {
+    font-size: 16px;
+    line-height: 18px;
+  }
+  .heliports__column-block--left, .heliports__column-block--right {
+    height: 130px;
+  }
+  .heliports__column-block--left ul, .heliports__column-block--right ul {
+    gap: 8px;
+  }
+  .heliports__column-block--left li, .heliports__column-block--right li {
+    font-size: 10px;
+    line-height: 14px;
+    text-wrap: nowrap;
+  }
+  .heliports__column-block--left li:not(:last-of-type):after, .heliports__column-block--right li:not(:last-of-type):after {
+    top: 11px;
+    height: 15px;
+  }
 }
 
 /*# sourceMappingURL=styles.css.map */
