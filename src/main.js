@@ -9,6 +9,7 @@ import AboutPage from "./views/About.vue";
 import BlogPage from "./views/Blog.vue";
 import OfertaPage from "./views/Oferta.vue";
 import KontaktPage from "./views/Kontakt.vue";
+import VoucheryPage from "./views/Vouchery.vue";
 import PolitykaPrywatnosci from "./views/polityka-prywatnosci.vue";
 
 const blogRoutes = {
@@ -23,6 +24,10 @@ const heliportRoutes = {
   sosnowka: () => import("./views/heliporty/Sosnowka.vue"),
 };
 
+const vouchersRoutes = {
+  "okolo-15-minut-lotu-helikopterem": () => import("./views/vouchery/okolo-15-minut-lotu-helikopterem.vue")
+}
+
 export const router = createRouter({
   history: createWebHistory(),
   routes: [
@@ -31,6 +36,7 @@ export const router = createRouter({
     { path: "/o-nas", component: AboutPage },
     { path: "/blog", component: BlogPage },
     { path: "/kontakt", component: KontaktPage },
+    { path: "/vouchery", component: VoucheryPage },
     { path: "/polityka-prywatnosci", component: PolitykaPrywatnosci },
     {
       path: "/blog/:slug",
@@ -44,6 +50,10 @@ export const router = createRouter({
       path: "/heliporty/:slug",
       component: heliportRoutes["sosnowka"],
     },
+    {
+      path: "/vouchery/:slug",
+      component: vouchersRoutes["okolo-15-minut-lotu-helikopterem"]
+    }
   ],
 });
 

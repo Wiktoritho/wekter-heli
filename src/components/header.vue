@@ -62,9 +62,9 @@
             </div>
           </li>
           <li><a href="/o-nas" :style="splitedUrl === 'o-nas' ? {'text-decoration': 'underline'} : {}">O nas</a></li>
-          <li><a>Vouchery</a></li>
+          <li><a href="/vouchery" :style="splitedUrl === 'vouchery' ? {'text-decoration' : 'underline'} : {}">Vouchery</a></li>
           <li>
-            <span>Heliporty</span> <span><img src="/icons/arrow-down.svg" alt="Arrow Icon" /></span>
+            <a><span>Heliporty</span> <span><img src="/icons/arrow-down.svg" alt="Arrow Icon" /></span></a>
             <div class="header__offers">
               <div class="header__offer">
                 <div class="header__offer-header">
@@ -161,7 +161,7 @@
               <li>
                 <a href="/o-nas">O nas</a>
               </li>
-              <li>Vouchery</li>
+              <li href="/vouchery">Vouchery</li>
               <li id="mobile-heliports" @click="heliportsMobile = true">
                 Heliporty <span><img src="/icons/arrow-mobile.svg" alt="Arrow" /></span>
                 <div class="header__mobile-heliports" :style="{ transform: `${offerMobile ? 'translateX(224%)' : 'translateX(112%)'}` }">
@@ -309,7 +309,9 @@ export default {
     }
   },
   mounted() {
-    this.scrollMenu();
+    if (!window.location.pathname.includes('/vouchery/')) {
+      this.scrollMenu();
+    }
     this.checkUrl();
   },
   watch: {

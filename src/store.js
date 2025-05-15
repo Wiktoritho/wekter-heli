@@ -6,6 +6,7 @@ export const useStore = defineStore({
     switch: "Loty widokowe",
     blogs: [],
     opinions: [],
+    vouchers: [],
   }),
   actions: {
     set(key, value) {

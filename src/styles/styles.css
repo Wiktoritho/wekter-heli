@@ -6215,4 +6215,146 @@ strong {
   }
 }
 
+.vouchers {
+  padding: 80px 80px 120px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  font-family: "Outfit", sans-serif;
+  background-color: #fff;
+}
+.vouchers__voucher {
+  background-color: #f3f3f3;
+  padding-block: 80px;
+  display: flex;
+  align-items: center;
+}
+.vouchers__image {
+  width: 40%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+.vouchers__image-popular {
+  position: absolute;
+  top: -56px;
+  left: 24px;
+  background-color: #BB1D21;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  color: #fff;
+  font-family: "DrukWide", sans-serif;
+  font-size: 10px;
+  line-height: 18px;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  padding: 5px 10px;
+  border-radius: 20px;
+}
+.vouchers__content {
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+.vouchers__content-text {
+  max-width: 552px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.vouchers__content-text h4 {
+  font-size: 24px;
+  line-height: 32px;
+  font-family: "DrukWide", sans-serif;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+.vouchers__content-text p {
+  line-height: 24px;
+  color: #2b2b2b;
+}
+.vouchers__icons {
+  display: flex;
+  gap: 28px;
+}
+.vouchers__icons div {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  align-items: center;
+  justify-content: center;
+}
+.vouchers__icons div img {
+  height: 43px;
+}
+.vouchers__icons div p {
+  font-size: 14px;
+  line-height: 20px;
+  color: #2b2b2b;
+  text-align: center;
+}
+.vouchers__links {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+}
+.vouchers__links p {
+  font-family: "DrukWide", sans-serif;
+  font-size: 24px;
+  line-height: 32px;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  width: 180px;
+}
+.vouchers__links div {
+  display: flex;
+  gap: 16px;
+}
+.vouchers__links div a {
+  font-family: "Poppins", sans-serif;
+  padding: 16px 48px;
+  border: 2px solid #3b5eab;
+  color: #3b5eab;
+  background-color: transparent;
+  line-height: 20px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  transition: all 0.2s ease-in-out;
+}
+.vouchers__links div a:hover {
+  background-color: #3b5eab;
+  color: #fff;
+}
+.vouchers__details {
+  background-color: #f7f7f7;
+  padding: 0px 80px 136px;
+  position: relative;
+  margin-top: 120px;
+  font-family: "Outfit", sans-serif;
+}
+.vouchers__nav {
+  display: flex;
+  padding-block: 22px;
+  gap: 8px;
+  align-items: center;
+}
+.vouchers--black-header .header {
+  color: #000;
+}
+.vouchers--black-header .header__nav a:first-of-type img {
+  filter: invert(1);
+}
+.vouchers--black-header .header__buttons img:not(:first-of-type) {
+  filter: invert(1);
+}
+.vouchers--black-header .header__buttons div img {
+  filter: invert(1);
+}
+
 /*# sourceMappingURL=styles.css.map */

@@ -1,0 +1,152 @@
+@use "variables" as *;
+.vouchers {
+  padding: 80px 80px 120px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  font-family: $font-family-primary;
+  background-color: $white;
+  &__voucher {
+    background-color: $ringoutside;
+    padding-block: 80px;
+    display: flex;
+    align-items: center;
+  }
+  &__image {
+    width: 40%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+  }
+  &__image-popular {
+    position: absolute;
+    top: -56px;
+    left: 24px;
+    background-color: $red;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    color: $white;
+    font-family: $font-family-header;
+    font-size: 10px;
+    line-height: 18px;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    padding: 5px 10px;
+    border-radius: 20px;
+  }
+  &__content {
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+  }
+  &__content-text {
+    max-width: 552px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    h4 {
+      font-size: 24px;
+      line-height: 32px;
+      font-family: $font-family-header;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+    }
+    p {
+      line-height: 24px;
+      color: $textdark;
+    }
+  }
+  &__icons {
+    display: flex;
+    gap: 28px;
+    div {
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+      align-items: center;
+      justify-content: center;
+      img {
+        height: 43px;
+      }
+      p {
+        font-size: 14px;
+        line-height: 20px;
+        color: $textdark;
+        text-align: center;
+      }
+    }
+  }
+  &__links {
+    display: flex;
+    align-items: center;
+    gap: 32px;
+    p {
+      font-family: $font-family-header;
+      font-size: 24px;
+      line-height: 32px;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      width: 180px;
+    }
+    div {
+      display: flex;
+      gap: 16px;
+      a {
+        font-family: $font-family-secondary;
+        padding: $padding-medium $padding-extra;
+        border: 2px solid $blue;
+        color: $blue;
+        background-color: transparent;
+        line-height: 20px;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+        font-weight: 700;
+        display: flex;
+        align-items: center;
+        transition: all 0.2s ease-in-out;
+        &:hover {
+          background-color: $blue;
+          color: $white;
+        }
+      }
+    }
+  }
+  &__details {
+    background-color: $beige;
+    padding: 0px 80px 136px;
+    position: relative;
+    margin-top: 120px;
+    font-family: $font-family-primary;
+  }
+  &__nav {
+    display: flex;
+    padding-block: 22px;
+    gap: 8px;
+    align-items: center;
+  }
+  &--black-header {
+    .header {
+      color: $black;
+    }
+    .header__nav {
+      a:first-of-type {
+        img {
+          filter: invert(1);
+        }
+      }
+    }
+    .header__buttons {
+      img:not(:first-of-type) {
+        filter: invert(1);
+      }
+      div {
+        img {
+          filter: invert(1);
+        }
+      }
+    }
+  }
+}
