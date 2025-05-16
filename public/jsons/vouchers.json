@@ -15,7 +15,8 @@
         "time": "18-20 minut",
         "distance": "około 75km",
         "price": "1 200",
-        "details": "Termin umówionych lotów może ulec zmianie ze względu na brak odpowiednich warunków pogodowych, dyspozycji pilota lub innych losowych sytuacji. Cena dotyczy czasu wynajmu śmigłowca bez względu na ilość pasażerów, których maksymalnie może być 3. Waga pasażerów max 250kg.<br><br>Opisane trasy są tylko sugerowanymi wycieczkami. Kierunek lotu uzależniony jest od warunków pogodowych, a ostateczna decyzja należy do pilota.<br><br>Voucher ważny jest rok kalendarzowy od daty zakupu!"
+        "details": "Termin umówionych lotów może ulec zmianie ze względu na brak odpowiednich warunków pogodowych, dyspozycji pilota lub innych losowych sytuacji. Cena dotyczy czasu wynajmu śmigłowca bez względu na ilość pasażerów, których maksymalnie może być 3. Waga pasażerów max 250kg.<br><br>Opisane trasy są tylko sugerowanymi wycieczkami. Kierunek lotu uzależniony jest od warunków pogodowych, a ostateczna decyzja należy do pilota.<br><br>Voucher ważny jest rok kalendarzowy od daty zakupu!",
+        "slug": "okolo-20-minut-lotu-helikopterem"
     },
     {
         "title": "Około 30 minut lotu helikopterem",
@@ -23,7 +24,8 @@
         "time": "28-30 minut",
         "distance": "około 110km",
         "price": "1 800",
-        "details": "Termin umówionych lotów może ulec zmianie ze względu na brak odpowiednich warunków pogodowych, dyspozycji pilota lub innych losowych sytuacji. Cena dotyczy czasu wynajmu śmigłowca bez względu na ilość pasażerów, których maksymalnie może być 3. Waga pasażerów max 250kg.<br><br>Opisane trasy są tylko sugerowanymi wycieczkami. Kierunek lotu uzależniony jest od warunków pogodowych, a ostateczna decyzja należy do pilota.<br><br>Voucher ważny jest rok kalendarzowy od daty zakupu!"
+        "details": "Termin umówionych lotów może ulec zmianie ze względu na brak odpowiednich warunków pogodowych, dyspozycji pilota lub innych losowych sytuacji. Cena dotyczy czasu wynajmu śmigłowca bez względu na ilość pasażerów, których maksymalnie może być 3. Waga pasażerów max 250kg.<br><br>Opisane trasy są tylko sugerowanymi wycieczkami. Kierunek lotu uzależniony jest od warunków pogodowych, a ostateczna decyzja należy do pilota.<br><br>Voucher ważny jest rok kalendarzowy od daty zakupu!",
+        "slug": "okolo-30-minut-lotu-helikopterem"
     },
     {
         "title": "Około 40 minut lotu helikopterem",
@@ -31,7 +33,8 @@
         "time": "38-40 minut",
         "distance": "około 150km",
         "price": "2 400",
-        "details": "Termin umówionych lotów może ulec zmianie ze względu na brak odpowiednich warunków pogodowych, dyspozycji pilota lub innych losowych sytuacji. Cena dotyczy czasu wynajmu śmigłowca bez względu na ilość pasażerów, których maksymalnie może być 3. Waga pasażerów max 250kg.<br><br>Opisane trasy są tylko sugerowanymi wycieczkami. Kierunek lotu uzależniony jest od warunków pogodowych, a ostateczna decyzja należy do pilota.<br><br>Voucher ważny jest rok kalendarzowy od daty zakupu!"
+        "details": "Termin umówionych lotów może ulec zmianie ze względu na brak odpowiednich warunków pogodowych, dyspozycji pilota lub innych losowych sytuacji. Cena dotyczy czasu wynajmu śmigłowca bez względu na ilość pasażerów, których maksymalnie może być 3. Waga pasażerów max 250kg.<br><br>Opisane trasy są tylko sugerowanymi wycieczkami. Kierunek lotu uzależniony jest od warunków pogodowych, a ostateczna decyzja należy do pilota.<br><br>Voucher ważny jest rok kalendarzowy od daty zakupu!",
+        "slug": "okolo-40-minut-lotu-helikopterem"
     },
     {
         "title": "Około 60 minut lotu helikopterem",
@@ -39,6 +42,7 @@
         "time": "58-60 minut",
         "distance": "około 220km",
         "price": "3 600",
-        "details": "Termin umówionych lotów może ulec zmianie ze względu na brak odpowiednich warunków pogodowych, dyspozycji pilota lub innych losowych sytuacji. Cena dotyczy czasu wynajmu śmigłowca bez względu na ilość pasażerów, których maksymalnie może być 3. Waga pasażerów max 250kg.<br><br>Opisane trasy są tylko sugerowanymi wycieczkami. Kierunek lotu uzależniony jest od warunków pogodowych, a ostateczna decyzja należy do pilota.<br><br>Voucher ważny jest rok kalendarzowy od daty zakupu!"
+        "details": "Termin umówionych lotów może ulec zmianie ze względu na brak odpowiednich warunków pogodowych, dyspozycji pilota lub innych losowych sytuacji. Cena dotyczy czasu wynajmu śmigłowca bez względu na ilość pasażerów, których maksymalnie może być 3. Waga pasażerów max 250kg.<br><br>Opisane trasy są tylko sugerowanymi wycieczkami. Kierunek lotu uzależniony jest od warunków pogodowych, a ostateczna decyzja należy do pilota.<br><br>Voucher ważny jest rok kalendarzowy od daty zakupu!",
+        "slug": "okolo-60-minut-lotu-helikopterem"
     }
 ]
