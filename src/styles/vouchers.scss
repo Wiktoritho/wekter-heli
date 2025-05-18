@@ -1,6 +1,7 @@
 @use "variables" as *;
 .vouchers {
-  padding: 80px 80px 120px;
+  @include respond-to("desktop") {
+    padding: 80px 80px 120px;
   display: flex;
   flex-direction: column;
   gap: 24px;
@@ -186,7 +187,6 @@
   }
   &__details-image {
     width: 100%;
-    height: 100%;
     object-fit: cover;
   }
   &__details-abs {
@@ -403,5 +403,125 @@
     letter-spacing: 0.04em;
     text-transform: uppercase;
     padding: 4px 8px;
+  }
+  }
+  @include respond-to("large") {
+    padding: 30px;
+    &__image-popular {
+      top: -10px;
+      left: -10px;
+    }
+    &__image {
+      width: 35%;
+    }
+    &__voucher {
+      padding: 30px;
+      gap: 30px;
+    }
+    &__content-text{
+      h4 {
+        font-size: 18px;
+        line-height: 24px;
+      }
+    }
+    &__links {
+      gap: 16px;
+      p {
+        font-size: 18px;
+        line-height: 24px;
+        text-wrap: nowrap;
+      }
+    }
+    &__details-photo {
+      width: 35%;
+    }
+    &__details-block {
+      width: 60%;
+    }
+    &__similar-header {
+      font-size: 14px;
+    }
+  }
+  @include respond-to("medium") {
+    &__voucher {
+      gap: 0px;
+      flex-direction: column;
+    }
+    &__image {
+      width: 100%;
+    }
+    &__content {
+      width: 100%;
+    }
+    &__details {
+      margin-top: 80px;
+      padding: 0px 30px 30px; 
+    }
+    &__details-main {
+      flex-direction: column;
+      padding: 0px;
+    }
+    &__details-photo {
+      width: 100%;
+    }
+    &__details-block {
+      width: 100%;
+    }
+    &__similar {
+      padding: 30px;
+    }
+    &__similar-list {
+      flex-wrap: wrap;
+      gap: 28px;
+      li {
+        width: calc((100% - 28px)/2);
+      }
+    }
+  }
+  @include respond-to("small") {
+    &__links {
+      flex-direction: column;
+      align-items: flex-start;
+      width: 100%;
+      div {
+        flex-direction: column;
+      }
+      a {
+        font-size: 12px;
+      }
+    }
+    &__nav {
+      a {
+        font-size: 8px;
+        text-wrap: nowrap;
+      }
+      img {
+        transform: translateY(-2px);
+      }
+    }
+    &__details-abs {
+      font-size: 7px;
+      left: 12px;
+      top: 12px;
+      padding: 4px 10px;
+    }
+    &__details-main {
+      gap: 16px;
+    }
+    &__details-container {
+      h3 {
+        font-size: 18px;
+        line-height: 24px;
+      }
+    }
+    &__details-counter {
+      width: 100%;
+      max-width: fit-content;
+    }
+    &__similar-list {
+      li {
+        width: 100%;
+      }
+    }
   }
 }

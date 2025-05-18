@@ -31,7 +31,7 @@
         <div class="vouchers__links">
             <p>{{ voucher.price }} zł</p>
             <div>
-                <button class="button button--blue">Dodaj do koszyka</button>
+                <button class="button button--blue button--long">Dodaj do koszyka</button>
                 <a :href="`/vouchery/${voucher.slug}`">szczegóły</a>
             </div>
         </div>

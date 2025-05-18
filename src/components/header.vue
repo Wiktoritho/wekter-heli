@@ -266,7 +266,7 @@ export default {
             gsap.set(".header__switch", { color: "white" });
           }
           gsap.set(".header__nav > a img", { filter: "invert(1)" });
-          gsap.set(".header__list > li > span img", { filter: "invert(1)" });
+          gsap.set(".header__list > li > a > span img", { filter: "invert(1)" });
           gsap.set(".header__buttons div img:last-of-type", { filter: "invert(1)" });
           gsap.set(".header__buttons img:nth-of-type(2)", { filter: "invert(1)" });
           gsap.set("#menu-icon", { filter: "invert(1)" });
@@ -289,7 +289,7 @@ export default {
         if (window.innerWidth > 900) {
           gsap.set(this.$refs.headerRef, { position: "absolute", top: 0, backgroundColor: "transparent", marginTop: "40px", paddingBlock: "0px", overflow: "visible", color: "white", borderBottom: "none" });
           gsap.set(".header__nav > a img", { filter: "invert(0)" });
-          gsap.set(".header__list > li > span img", { filter: "invert(0)" });
+          gsap.set(".header__list > li >  a > span img", { filter: "invert(0)" });
           gsap.set(".header__buttons div img:last-of-type", { filter: "invert(0)" });
           gsap.set(".header__buttons img:nth-of-type(2)", { filter: "invert(0)" });
           gsap.set("#menu-icon", { filter: "invert(0)" });
