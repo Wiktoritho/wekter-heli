@@ -161,7 +161,9 @@
               <li>
                 <a href="/o-nas">O nas</a>
               </li>
-              <li href="/vouchery">Vouchery</li>
+              <li>
+              <a href="/vouchery">Vouchery</a>
+              </li>
               <li id="mobile-heliports" @click="heliportsMobile = true">
                 Heliporty <span><img src="/icons/arrow-mobile.svg" alt="Arrow" /></span>
                 <div class="header__mobile-heliports" :style="{ transform: `${offerMobile ? 'translateX(224%)' : 'translateX(112%)'}` }">
